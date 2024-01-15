@@ -34,7 +34,7 @@
     "StandardName" : {"@id" : "ssno:StandardName"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "defined in standard name table" : {"@id" : "ssno:definedInStandardNameTable", "@type" : ":StandardNameTable"},
-    "standard_name" : {"@id" : "ssno:hasStandardName", "@type" : ":StandardName"},
+    "standard name" : {"@id" : "ssno:hasStandardName", "@type" : ":StandardName"},
     "canonical_units" : {"@id" : "ssno:canonicalUnits", "@type" : "xsd:string"},
     "description" : {"@id" : "schema:description", "@type" : "xsd:string"},
     "dbpediaMatch" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
