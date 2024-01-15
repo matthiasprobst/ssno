@@ -8,3 +8,4 @@ docs/readme.md
 examples/*.jsonld
 examples/*.jsonld
 __pycache__/*
+*/.ipynb_checkpoints/*
