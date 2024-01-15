@@ -83,17 +83,17 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
-                            owl:inverseOf :hasStandardName ;
-                            rdfs:domain :StandardName ;
-                            rdfs:range :StandardNameTable ;
+                            owl:inverseOf ssno:hasStandardName ;
+                            rdfs:domain ssno:StandardName ;
+                            rdfs:range ssno:StandardNameTable ;
                             <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en ;
                             skos:prefLabel "defined in standard name table" .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
-                 rdfs:domain :StandardNameTable ;
-                 rdfs:range :StandardName ;
+                 rdfs:domain ssno:StandardNameTable ;
+                 rdfs:range ssno:StandardName ;
 				 skos:prefLabel "standard name" .
 
 
@@ -103,7 +103,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#canonicalUnits
 <https://matthiasprobst.github.io/ssno#canonicalUnits> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:domain :StandardName ;
+                                                       rdfs:domain ssno:StandardName ;
                                                        rdfs:range xsd:string ;
                                                        rdfs:comment "Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical."@en ;
                                                        rdfs:seeAlso <http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name> ;
@@ -115,8 +115,8 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 ###  schema:description
 schema:description rdf:type owl:DatatypeProperty ;
                                 rdfs:subPropertyOf owl:topDataProperty ;
-                                rdfs:domain :StandardName ,
-                                            :StandardNameTable ;
+                                rdfs:domain ssno:StandardName ,
+                                            ssno:StandardNameTable ;
                                 rdfs:range xsd:string ;
                                 skos:prefLabel "description" ;
                                 rdfs:isDefinedBy <https://schema.org/> .
@@ -128,14 +128,14 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  https://matthiasprobst.github.io/ssno#dbpediaMatch
 ssno:dbpediaMatch rdf:type owl:DatatypeProperty ;
-              rdfs:domain :StandardName ;
+              rdfs:domain ssno:StandardName ;
               rdfs:range xsd:anyURI ;
 			  skos:prefLabel "dbpediaMatch" .
 
 
 ###  https://matthiasprobst.github.io/ssno#guidelines
 ssno:guidelines rdf:type owl:DatatypeProperty ;
-            rdfs:domain :StandardNameTable ;
+            rdfs:domain ssno:StandardNameTable ;
             rdfs:range xsd:anyURI ;
             <http://www.w3.org/2004/02/skos/core#definition> "Link to the guidelines document stating how to construct standard names."@en ;
 			skos:prefLabel "guidelines" .
@@ -143,11 +143,19 @@ ssno:guidelines rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#standard_name
 ssno:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :StandardName ;
+      rdfs:domain ssno:StandardName ;
       rdfs:range xsd:string ;
       <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
       <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" ;
 	  skos:prefLabel "name" .
+
+
+###  https://matthiasprobst.github.io/ssno#doi
+ssno:doi rdf:type owl:DatatypeProperty ;
+      rdfs:domain ssno:StandardNameTable ;
+      rdfs:range xsd:string ;
+      <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name."@en ;
+	  skos:prefLabel "doi" .
 
 
 #################################################################
