@@ -1,0 +1,160 @@
+@prefix : <https://matthiasprobst.github.io/ssno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://matthiasprobst.github.io/ssno#> .
+
+<https://matthiasprobst.github.io/ssno> rdf:type owl:Ontology ;
+                                         owl:versionIRI <https://matthiasprobst.github.io/ssno/1.0.0> ;
+                                         <http://purl.org/dc/terms/abstract> "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
+                                         <http://purl.org/dc/terms/created> "2024-01-15" ;
+                                         <http://purl.org/dc/terms/creator> "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ;
+                                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                         <http://purl.org/dc/terms/title> "sSNO: A simple Standard Name Ontology"@en ;
+                                         rdfs:label "sSNO" ;
+                                         owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#m4i:ContactPerson
+<http://w3id.org/nfdi4ing/metadata4ing#m4i:ContactPerson> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
+:definedInStandardNameTable rdf:type owl:ObjectProperty ;
+                            owl:inverseOf :hasStandardName ;
+                            rdfs:domain :StandardName ;
+                            rdfs:range :StandardNameTable ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "defined in standard name table" .
+
+
+###  https://matthiasprobst.github.io/ssno#hasStandardName
+:hasStandardName rdf:type owl:ObjectProperty ;
+                 rdfs:domain :StandardNameTable ;
+                 rdfs:range :StandardName .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://mmisw.org/ont/cf/parameter/canonicalUnits
+<http://mmisw.org/ont/cf/parameter/canonicalUnits> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain :StandardName ;
+                                                   rdfs:range xsd:string ;
+                                                   rdfs:comment "Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical."@en ;
+                                                   rdfs:seeAlso <http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name> ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Representative units of the physical quantity as defined by the cf-conventions."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
+
+
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain :StandardName ,
+                                            :StandardNameTable ;
+                                rdfs:range xsd:string ;
+                                rdfs:isDefinedBy <http://schema.org/> .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  https://matthiasprobst.github.io/ssno#dbpediaMatch
+:dbpediaMatch rdf:type owl:DatatypeProperty ;
+              rdfs:domain :StandardName ;
+              rdfs:range xsd:anyURI .
+
+
+###  https://matthiasprobst.github.io/ssno#guidelines
+:guidelines rdf:type owl:DatatypeProperty ;
+            rdfs:domain :StandardNameTable ;
+            rdfs:range xsd:anyURI ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Link to the guidelines document stating how to construct standard names."@en .
+
+
+###  https://matthiasprobst.github.io/ssno#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :StandardName ;
+      rdfs:range xsd:string ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
+      <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardName
+:StandardName rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardNameTable
+:StandardNameTable rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
