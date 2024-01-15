@@ -31,13 +31,14 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "ssno" : "https://matthiasprobst.github.io/ssno#",
-    "StandardName" : {"@id" : ":StandardName"},
-    "StandardNameTable" : {"@id" : ":StandardNameTable"},
-    "defined in standard name table" : {"@id" : ":definedInStandardNameTable", "@type" : ":StandardNameTable"},
-    "has standard name" : {"@id" : ":hasStandardName", "@type" : ":StandardName"},
-    "canonical_units" : {"@id" : "<http://mmisw.org/ont/cf/parameter/canonicalUnits>", "@type" : "xsd:string"},
-    "dbpediaMatch" : {"@id" : ":dbpediaMatch", "@type" : "xsd:anyURI"},
-    "guidelines" : {"@id" : ":guidelines", "@type" : "xsd:anyURI"},
-    "standard_name" : {"@id" : ":name", "@type" : "xsd:string"}
+    "StandardName" : {"@id" : "ssno:StandardName"},
+    "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
+    "defined in standard name table" : {"@id" : "ssno:definedInStandardNameTable", "@type" : ":StandardNameTable"},
+    "standard_name" : {"@id" : "ssno:hasStandardName", "@type" : ":StandardName"},
+    "canonical_units" : {"@id" : "ssno:canonicalUnits", "@type" : "xsd:string"},
+    "description" : {"@id" : "schema:description", "@type" : "xsd:string"},
+    "dbpediaMatch" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
+    "guidelines" : {"@id" : "ssno:guidelines", "@type" : "xsd:anyURI"},
+    "name" : {"@id" : "ssno:name", "@type" : "xsd:string"}
   }
 }
