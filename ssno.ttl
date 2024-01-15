@@ -133,6 +133,13 @@ ssno:dbpediaMatch rdf:type owl:DatatypeProperty ;
 			  skos:prefLabel "dbpediaMatch" .
 
 
+###  https://matthiasprobst.github.io/ssno#hasTitle
+ssno:hasTitle rdf:type owl:DatatypeProperty ;
+              rdfs:domain ssno:StandardNameTable ;
+              rdfs:range xsd:string ;
+			  skos:prefLabel "has title" .
+
+
 ###  https://matthiasprobst.github.io/ssno#guidelines
 ssno:guidelines rdf:type owl:DatatypeProperty ;
             rdfs:domain ssno:StandardNameTable ;
@@ -147,15 +154,15 @@ ssno:name rdf:type owl:DatatypeProperty ;
       rdfs:range xsd:string ;
       <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
       <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" ;
-	  skos:prefLabel "name" .
+	  skos:prefLabel "standard_name" .
 
 
-###  https://matthiasprobst.github.io/ssno#doi
-ssno:doi rdf:type owl:DatatypeProperty ;
+###  https://matthiasprobst.github.io/ssno#hasDOI
+ssno:hasDOI rdf:type owl:DatatypeProperty ;
       rdfs:domain ssno:StandardNameTable ;
       rdfs:range xsd:string ;
       <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name."@en ;
-	  skos:prefLabel "doi" .
+	  skos:prefLabel "has doi" .
 
 
 #################################################################
