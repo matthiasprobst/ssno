@@ -28,4 +28,10 @@ def copy_version_to_docs():
 
 
 if __name__ == "__main__":
+    import sys
+
+    sys.path.insert(0, '.')
+    from generate_context import generate
+
+    generate()
     copy_version_to_docs()
