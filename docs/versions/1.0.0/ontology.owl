@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://matthiasprobst.github.io/ssno#"
      xml:base="https://matthiasprobst.github.io/ssno"
-     xmlns:m4i="http://w3id.org/nfdi4ing/metadata4ing#m4i:"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,13 +9,16 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://matthiasprobst.github.io/ssno">
+    <owl:Ontology rdf:about="https://matthiasprobst.github.io/ssno#">
         <owl:versionIRI rdf:resource="https://matthiasprobst.github.io/ssno/1.0.0"/>
         <terms:abstract xml:lang="en">This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called &quot;simple&quot;. With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.</terms:abstract>
         <terms:created>2024-01-15</terms:created>
         <terms:creator>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen</terms:creator>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:rights rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">sSNO: A simple Standard Name Ontology</terms:title>
+        <vann:preferredNamespacePrefix>ssno</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://matthiasprobst.github.io/ssno#</vann:preferredNamespaceUri>
         <rdfs:label>sSNO</rdfs:label>
         <owl:versionInfo>v1.0.0</owl:versionInfo>
     </owl:Ontology>
@@ -70,6 +72,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
     <!-- http://purl.org/dc/terms/title -->
 
 
@@ -88,13 +97,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
-
-
-    <!-- http://w3id.org/nfdi4ing/metadata4ing#m4i:ContactPerson -->
-
-
-    <owl:AnnotationProperty rdf:about="http://w3id.org/nfdi4ing/metadata4ing#m4i:ContactPerson"/>
     
 
 
@@ -157,6 +159,7 @@
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardName">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <skos:prefLabel>standard name</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -173,37 +176,24 @@
     
 
 
-    <!-- http://mmisw.org/ont/cf/parameter/canonicalUnits -->
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
 
 
-    <owl:DatatypeProperty rdf:about="http://mmisw.org/ont/cf/parameter/canonicalUnits">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#canonicalUnits -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#canonicalUnits">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name"/>
         <skos:definition xml:lang="en">Representative units of the physical quantity as defined by the cf-conventions.</skos:definition>
-        <skos:prefLabel xml:lang="en">canonical units</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">canonical_units</skos:prefLabel>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://schema.org/description -->
-
-
-    <owl:DatatypeProperty rdf:about="http://schema.org/description">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
     
 
 
@@ -213,6 +203,7 @@
     <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#dbpediaMatch">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <skos:prefLabel>dbpediaMatch</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -224,6 +215,30 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <skos:definition xml:lang="en">Link to the guidelines document stating how to construct standard names.</skos:definition>
+        <skos:prefLabel>guidelines</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#hasDOI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#hasDOI">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">DOI of the standard name.</skos:definition>
+        <skos:prefLabel>has doi</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#hasTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#hasTitle">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:prefLabel>has title</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -236,6 +251,21 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Name for a standard name, e.g. &quot;x_velocity&quot;. The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.</skos:definition>
         <skos:example>x_derivative_of_y_velocity</skos:example>
+        <skos:prefLabel>standard_name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://schema.org/description -->
+
+
+    <owl:DatatypeProperty rdf:about="https://schema.org/description">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="https://schema.org/"/>
+        <skos:prefLabel>description</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -264,6 +294,7 @@
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardName">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>StandardName</skos:prefLabel>
     </owl:Class>
     
 
@@ -273,6 +304,7 @@
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>StandardNameTable</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 
