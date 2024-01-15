@@ -1,6 +1,6 @@
 {
   "@context": {
-    "@vocab": "https://matthiasprobst.github.io/ssno",
+    "@vocab": "https://matthiasprobst.github.io/ssno#",
     "brick" : "https://brickschema.org/schema/Brick#",
     "csvw" : "http://www.w3.org/ns/csvw#",
     "dc" : "http://purl.org/dc/elements/1.1/",
@@ -30,6 +30,7 @@
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "xml" : "http://www.w3.org/XML/1998/namespace",
+    "ssno" : "https://matthiasprobst.github.io/ssno#",
     "StandardName" : {"@id" : ":StandardName"},
     "StandardNameTable" : {"@id" : ":StandardNameTable"},
     "defined in standard name table" : {"@id" : ":definedInStandardNameTable", "@type" : ":StandardNameTable"},
