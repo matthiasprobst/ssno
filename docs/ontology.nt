@@ -92,7 +92,7 @@
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name" .
+<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 # 
 # https://matthiasprobst.github.io/ssno#quantityKind
 <https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -108,6 +108,7 @@
 <https://matthiasprobst.github.io/ssno#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 <https://matthiasprobst.github.io/ssno#unit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> .
 <https://matthiasprobst.github.io/ssno#unit> <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
+<https://matthiasprobst.github.io/ssno#unit> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 # 
 # 
 # 
@@ -160,7 +161,7 @@
 <https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/2004/02/skos/core#prefLabel> "dbpediaMatch" .
+<https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/2004/02/skos/core#prefLabel> "dbpedia match"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasDOI
 <https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -184,7 +185,7 @@
 <https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
 <https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard_name" .
+<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
 # 
 # 
 # 

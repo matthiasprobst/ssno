@@ -37,16 +37,17 @@
     "has distribution" : {"@id" : "dcat:distribution", "@type" : "dcat:Distribution"},
     "download URL" : {"@id" : "dcat:downloadURL", "@type" : "rdfs:Resource"},
     "defined in standard name table" : {"@id" : "ssno:definedInStandardNameTable", "@type" : "ssno:StandardNameTable"},
-    "standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
+    "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
     "kind of quantity" : {"@id" : "ssno:quantityKind", "@type" : "<http://qudt.org/schema/qudt/QuantityKind>"},
+    "canonical units" : {"@id" : "ssno:unit", "@type" : "<http://qudt.org/schema/qudt/Unit>"},
     "description" : {"@id" : "dcterms:description", "@type" : "xsd:string"},
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "rdfs:Literal"},
     "title" : {"@id" : "dcterms:title", "@type" : "xsd:string"},
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
     "canonical_units" : {"@id" : "ssno:canonicalUnits", "@type" : "xsd:string"},
-    "dbpediaMatch" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
+    "dbpedia match" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
     "has doi" : {"@id" : "ssno:hasDOI", "@type" : "xsd:string"},
     "has latex symbol" : {"@id" : "ssno:latexSymbol", "@type" : "xsd:string"},
-    "standard_name" : {"@id" : "ssno:name", "@type" : "xsd:string"}
+    "standard name" : {"@id" : "ssno:name", "@type" : "xsd:string"}
   }
 }

@@ -107,7 +107,7 @@
 :hasStandardName rdf:type owl:ObjectProperty ;
                  rdfs:domain :StandardNameTable ;
                  rdfs:range :StandardName ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name" .
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind
@@ -124,7 +124,8 @@
       rdfs:domain :StandardName ;
       rdfs:range <http://qudt.org/schema/qudt/Unit> ;
       rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-      <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
+      <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 
 
 #################################################################
@@ -179,7 +180,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 :dbpediaMatch rdf:type owl:DatatypeProperty ;
               rdfs:domain :StandardName ;
               rdfs:range xsd:anyURI ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "dbpediaMatch" .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "dbpedia match"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasDOI
@@ -206,7 +207,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
       rdfs:range xsd:string ;
       <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
       <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "standard_name" .
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
 
 
 #################################################################

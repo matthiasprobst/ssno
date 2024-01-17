@@ -111,7 +111,7 @@ ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      rdfs:domain ssno:StandardNameTable ;
                      rdfs:range ssno:StandardName ;
-                     skos:prefLabel "standard name" .
+                     skos:prefLabel "has standard name"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind
@@ -128,7 +128,8 @@ ssno:unit rdf:type owl:ObjectProperty ;
           rdfs:domain ssno:StandardName ;
           rdfs:range <http://qudt.org/schema/qudt/Unit> ;
           rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-          skos:definition "The canonical unit of the standard name"@en .
+          skos:definition "The canonical unit of the standard name"@en ;
+          skos:prefLabel "canonical units"@en .
 
 
 #################################################################
@@ -184,7 +185,7 @@ ssno:canonicalUnits rdf:type owl:DatatypeProperty ;
 ssno:dbpediaMatch rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
                   rdfs:range xsd:anyURI ;
-                  skos:prefLabel "dbpediaMatch" .
+                  skos:prefLabel "dbpedia match"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasDOI
@@ -211,7 +212,7 @@ ssno:name rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
           skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
           skos:example "x_derivative_of_y_velocity" ;
-          skos:prefLabel "standard_name" .
+          skos:prefLabel "standard name"@en .
 
 
 #################################################################

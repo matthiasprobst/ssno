@@ -244,7 +244,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "dbpediaMatch"
+    "@language" : "en",
+    "@value" : "dbpedia match"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#definedInStandardNameTable",
@@ -291,7 +292,8 @@
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "standard name"
+    "@language" : "en",
+    "@value" : "has standard name"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#latexSymbol",
@@ -333,7 +335,8 @@
     "@value" : "x_derivative_of_y_velocity"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "standard_name"
+    "@language" : "en",
+    "@value" : "standard name"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#quantityKind",
@@ -371,6 +374,10 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The canonical unit of the standard name"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "canonical units"
   } ]
 }, {
   "@id" : "https://schema.org/Intangible",
