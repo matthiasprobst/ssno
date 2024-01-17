@@ -16,7 +16,8 @@ a [jupyter notebook](./examples/Tutorial.ipynb) is provided, too.
 
 ## Documentation
 
-The documentation of the ontology is available [here](https://matthiasprobst.github.io/ssno/).
+The documentation of the ontology is available [online](https://matthiasprobst.github.io/ssno/) and 
+a tutorial guide is available [here](Guide.md).
 
 ## Contribution
 
