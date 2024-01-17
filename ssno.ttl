@@ -9,6 +9,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -117,7 +118,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#quantityKind
 ssno:quantityKind rdf:type owl:ObjectProperty ;
                   rdfs:domain ssno:StandardName ;
-                  rdfs:range <http://qudt.org/schema/qudt/QuantityKind> ;
+                  rdfs:range qudt:QuantityKind ;
                   rdfs:comment "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en ;
                   skos:example "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en ;
                   skos:prefLabel "kind of quantity"@en .
@@ -126,7 +127,7 @@ ssno:quantityKind rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#unit
 ssno:unit rdf:type owl:ObjectProperty ;
           rdfs:domain ssno:StandardName ;
-          rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+          rdfs:range qudt:Unit ;
           rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
           skos:definition "The canonical unit of the standard name"@en ;
           skos:prefLabel "canonical units"@en .
@@ -210,14 +211,14 @@ ssno:name rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://qudt.org/schema/qudt/QuantityKind
-<http://qudt.org/schema/qudt/QuantityKind> rdf:type owl:Class ;
-                                           rdfs:subClassOf schema:Intangible ;
-                                           skos:definition "Kind of quantity of the variable, which the standard name describes"@en .
+qudt:QuantityKind rdf:type owl:Class ;
+                   rdfs:subClassOf schema:Intangible ;
+                   skos:definition "Kind of quantity of the variable, which the standard name describes"@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
-<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
-                                   rdfs:subClassOf schema:Intangible .
+qudt:Unit rdf:type owl:Class ;
+                   rdfs:subClassOf schema:Intangible .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource

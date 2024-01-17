@@ -279,20 +279,6 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#canonicalUnits -->
-
-
-    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#canonicalUnits">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name"/>
-        <skos:definition xml:lang="en">Representative units of the physical quantity as defined by the cf-conventions.</skos:definition>
-        <skos:prefLabel xml:lang="en">canonical_units</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://matthiasprobst.github.io/ssno#dbpediaMatch -->
 
 

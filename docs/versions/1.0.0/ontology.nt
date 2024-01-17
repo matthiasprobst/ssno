@@ -148,15 +148,6 @@
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
 # 
-# https://matthiasprobst.github.io/ssno#canonicalUnits
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical."@en .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#definition> "Representative units of the physical quantity as defined by the cf-conventions."@en .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical_units"@en .
-# 
 # https://matthiasprobst.github.io/ssno#dbpediaMatch
 <https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#dbpediaMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .

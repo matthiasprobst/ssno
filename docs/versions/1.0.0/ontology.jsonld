@@ -211,30 +211,6 @@
     "@value" : "StandardNameTable"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://cfconventions.org/cf-conventions/cf-conventions.html#standard-name"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Representative units of the physical quantity as defined by the cf-conventions."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "canonical_units"
-  } ]
-}, {
   "@id" : "https://matthiasprobst.github.io/ssno#dbpediaMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {

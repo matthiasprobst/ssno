@@ -148,10 +148,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#canonicalUnits"
-         title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical_units</a>
-   </li>
-   <li>
       <a href="#dbpediaMatch"
          title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
    </li>
@@ -260,9 +256,7 @@ This section provides details for each class and property defined by sSNO.
          <dt>is in domain of</dt>
          <dd>
             <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">canonical units</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#canonicalUnits"
-               title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical_units</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#dbpediaMatch"
+            <sup class="type-op" title="object property">op</sup>, <a href="#dbpediaMatch"
                title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#definedInStandardNameTable"
                title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">defined in standard name table</a>
@@ -544,10 +538,6 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#canonicalUnits"
-            title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical_units</a>
-      </li>
-      <li>
          <a href="#dbpediaMatch"
             title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
       </li>
@@ -576,36 +566,6 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
       </li>
    </ul>
-   <div class="entity" id="canonicalUnits">
-      <h3>canonical_units<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#canonicalUnits</p>
-      <div class="comment">
-         <span class="markdown">Dimensionless variables have an empty string. Individuals of a standard name object must have units that are physically equivalent to the canoncical units. This means, they must be convertable into the canoncical units but re not necessarily identical.</span>
-      </div>
-      <div class="comment">
-         <span class="markdown">Representative units of the physical quantity as defined by the cf-conventions.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="dbpediaMatch">
       <h3>dbpedia match<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>

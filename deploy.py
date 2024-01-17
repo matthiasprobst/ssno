@@ -5,10 +5,9 @@
 3. run this script
 """
 import pathlib
+import shutil
 
 __this_dir__ = pathlib.Path(__file__).parent
-
-import shutil
 
 
 def copy_version_to_docs():
