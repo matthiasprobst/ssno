@@ -33,14 +33,20 @@
     "ssno" : "https://matthiasprobst.github.io/ssno#",
     "StandardName" : {"@id" : "ssno:StandardName"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
+    "title" : {"@id" : "dcterms:title", "@type" : "xsd:string"},
+    "has distribution" : {"@id" : "dcat:distribution", "@type" : "dcat:Distribution"},
+    "download URL" : {"@id" : "dcat:downloadURL", "@type" : "rdfs:Resource"},
     "defined in standard name table" : {"@id" : "ssno:definedInStandardNameTable", "@type" : "ssno:StandardNameTable"},
     "standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
+    "kind of quantity" : {"@id" : "ssno:quantityKind", "@type" : "<http://qudt.org/schema/qudt/QuantityKind>"},
+    "description" : {"@id" : "dcterms:description", "@type" : "xsd:string"},
+    "identifier" : {"@id" : "dcterms:identifier", "@type" : "rdfs:Literal"},
+    "title" : {"@id" : "dcterms:title", "@type" : "xsd:string"},
+    "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
     "canonical_units" : {"@id" : "ssno:canonicalUnits", "@type" : "xsd:string"},
-    "description" : {"@id" : "schema:description", "@type" : "xsd:string"},
     "dbpediaMatch" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
-    "has title" : {"@id" : "ssno:hasTitle", "@type" : "xsd:string"},
-    "guidelines" : {"@id" : "ssno:guidelines", "@type" : "xsd:anyURI"},
-    "standard_name" : {"@id" : "ssno:name", "@type" : "xsd:string"},
-    "has doi" : {"@id" : "ssno:hasDOI", "@type" : "xsd:string"}
+    "has doi" : {"@id" : "ssno:hasDOI", "@type" : "xsd:string"},
+    "has latex symbol" : {"@id" : "ssno:latexSymbol", "@type" : "xsd:string"},
+    "standard_name" : {"@id" : "ssno:name", "@type" : "xsd:string"}
   }
 }

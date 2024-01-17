@@ -48,7 +48,8 @@
 
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:range xsd:string .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -79,6 +80,20 @@
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :StandardNameTable ;
+                                         rdfs:range <http://www.w3.org/ns/dcat#Distribution> ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
+
+
+###  http://www.w3.org/ns/dcat#downloadURL
+<http://www.w3.org/ns/dcat#downloadURL> rdf:type owl:ObjectProperty ;
+                                        rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
+                                        rdfs:range rdfs:Resource ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "download URL"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 :definedInStandardNameTable rdf:type owl:ObjectProperty ;
                             owl:inverseOf :hasStandardName ;
@@ -95,12 +110,59 @@
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name" .
 
 
+###  https://matthiasprobst.github.io/ssno#quantityKind
+:quantityKind rdf:type owl:ObjectProperty ;
+              rdfs:domain :StandardName ;
+              rdfs:range <http://qudt.org/schema/qudt/QuantityKind> ;
+              rdfs:comment "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "kind of quantity"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#unit
+:unit rdf:type owl:ObjectProperty ;
+      rdfs:domain :StandardName ;
+      rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+      rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+      <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain :StandardName ,
+                                                   :StandardNameTable ;
+                                       rdfs:range xsd:string ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name or a standard name table"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :StandardNameTable ;
+                                      rdfs:range rdfs:Literal ;
+                                      rdfs:comment "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs." ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier"@en .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain :StandardNameTable .
+
+
 ###  http://www.w3.org/2002/07/owl#topDataProperty
 owl:topDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/dcat#version
+<http://www.w3.org/ns/dcat#version> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain :StandardNameTable ;
+                                    rdfs:range rdfs:Literal ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
 
 
 ###  https://matthiasprobst.github.io/ssno#canonicalUnits
@@ -120,27 +182,22 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
               <http://www.w3.org/2004/02/skos/core#prefLabel> "dbpediaMatch" .
 
 
-###  https://matthiasprobst.github.io/ssno#guidelines
-:guidelines rdf:type owl:DatatypeProperty ;
-            rdfs:domain :StandardNameTable ;
-            rdfs:range xsd:anyURI ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Link to the guidelines document stating how to construct standard names."@en ;
-            <http://www.w3.org/2004/02/skos/core#prefLabel> "guidelines" .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasDOI
 :hasDOI rdf:type owl:DatatypeProperty ;
         rdfs:domain :StandardNameTable ;
         rdfs:range xsd:string ;
-        <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name."@en ;
+        <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name table."@en ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "has doi" .
 
 
-###  https://matthiasprobst.github.io/ssno#hasTitle
-:hasTitle rdf:type owl:DatatypeProperty ;
-          rdfs:domain :StandardNameTable ;
-          rdfs:range xsd:string ;
-          <http://www.w3.org/2004/02/skos/core#prefLabel> "has title" .
+###  https://matthiasprobst.github.io/ssno#latexSymbol
+:latexSymbol rdf:type owl:DatatypeProperty ;
+             rdfs:domain :StandardName ;
+             rdfs:range xsd:string ;
+             rdfs:seeAlso <http://www.ontology-of-units-of-measure.org/resource/om-2/LaTeXSymbol> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "LaTeX symbol associated to the standard name."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "$\\dot V$" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "has latex symbol"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#name
@@ -152,22 +209,35 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
       <http://www.w3.org/2004/02/skos/core#prefLabel> "standard_name" .
 
 
-###  https://schema.org/description
-<https://schema.org/description> rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf owl:topDataProperty ;
-                                 rdfs:domain :StandardName ,
-                                             :StandardNameTable ;
-                                 rdfs:range xsd:string ;
-                                 rdfs:isDefinedBy <https://schema.org/> ;
-                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "description" .
-
-
 #################################################################
 #    Classes
 #################################################################
 
+###  http://qudt.org/schema/qudt/QuantityKind
+<http://qudt.org/schema/qudt/QuantityKind> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://schema.org/Intangible> ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Kind of quantity of the variable, which the standard name describes"@en .
+
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:subClassOf <https://schema.org/Intangible> .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardName
@@ -178,8 +248,19 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameTable
 :StandardNameTable rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
+
+
+###  https://schema.org/Intangible
+<https://schema.org/Intangible> rdf:type owl:Class .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/title> <http://www.w3.org/2004/02/skos/core#prefLabel> "title"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
