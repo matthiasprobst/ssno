@@ -316,10 +316,10 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#name -->
+    <!-- https://matthiasprobst.github.io/ssno#standard_name -->
 
 
-    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#name">
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#standard_name">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Name for a standard name, e.g. &quot;x_velocity&quot;. The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.</skos:definition>

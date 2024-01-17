@@ -170,13 +170,13 @@
 <https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2004/02/skos/core#example> "$\\dot V$" .
 <https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2004/02/skos/core#prefLabel> "has latex symbol"@en .
 # 
-# https://matthiasprobst.github.io/ssno#name
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
-<https://matthiasprobst.github.io/ssno#name> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
+# https://matthiasprobst.github.io/ssno#standard_name
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
+<https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
 # 
 # 
 # 

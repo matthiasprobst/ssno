@@ -48,6 +48,6 @@
     "dbpedia match" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
     "has doi" : {"@id" : "ssno:hasDOI", "@type" : "xsd:string"},
     "has latex symbol" : {"@id" : "ssno:latexSymbol", "@type" : "xsd:string"},
-    "standard name" : {"@id" : "ssno:name", "@type" : "xsd:string"}
+    "standard name" : {"@id" : "ssno:standard_name", "@type" : "xsd:string"}
   }
 }

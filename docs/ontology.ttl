@@ -191,13 +191,13 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
              <http://www.w3.org/2004/02/skos/core#prefLabel> "has latex symbol"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :StandardName ;
-      rdfs:range xsd:string ;
-      <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
-      <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
+###  https://matthiasprobst.github.io/ssno#standard_name
+:standard_name rdf:type owl:DatatypeProperty ;
+               rdfs:domain :StandardName ;
+               rdfs:range xsd:string ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
+               <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
 
 
 #################################################################
