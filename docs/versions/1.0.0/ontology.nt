@@ -86,7 +86,7 @@
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "defined in standard name table" .
+<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasStandardName
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

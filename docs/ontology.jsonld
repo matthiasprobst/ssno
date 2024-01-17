@@ -240,7 +240,8 @@
     "@value" : "A standard name can be part of a StandardNameTable."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "defined in standard name table"
+    "@language" : "en",
+    "@value" : "standard name table"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#hasDOI",

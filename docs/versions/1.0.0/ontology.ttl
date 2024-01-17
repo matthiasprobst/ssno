@@ -100,7 +100,7 @@
                             rdfs:domain :StandardName ;
                             rdfs:range :StandardNameTable ;
                             <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en ;
-                            <http://www.w3.org/2004/02/skos/core#prefLabel> "defined in standard name table" .
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName

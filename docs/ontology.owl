@@ -172,7 +172,7 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">A standard name can be part of a StandardNameTable.</skos:definition>
-        <skos:prefLabel>defined in standard name table</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
     </owl:ObjectProperty>
     
 
