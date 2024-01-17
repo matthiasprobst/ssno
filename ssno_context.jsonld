@@ -44,7 +44,6 @@
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "rdfs:Literal"},
     "title" : {"@id" : "dcterms:title", "@type" : "xsd:string"},
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
-    "canonical_units" : {"@id" : "ssno:canonicalUnits", "@type" : "xsd:string"},
     "dbpedia match" : {"@id" : "ssno:dbpediaMatch", "@type" : "xsd:anyURI"},
     "has doi" : {"@id" : "ssno:hasDOI", "@type" : "xsd:string"},
     "has latex symbol" : {"@id" : "ssno:latexSymbol", "@type" : "xsd:string"},
