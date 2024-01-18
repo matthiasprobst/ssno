@@ -164,6 +164,18 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#contact -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#contact">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <skos:definition xml:lang="en">Contact person for the standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">contact</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#definedInStandardNameTable -->
 
 
@@ -385,6 +397,16 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Person -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <skos:prefLabel xml:lang="en">Person</skos:prefLabel>
+    </owl:Class>
     
 
 

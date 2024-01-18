@@ -94,6 +94,14 @@
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "download URL"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#contact
+:contact rdf:type owl:ObjectProperty ;
+         rdfs:domain :StandardNameTable ;
+         rdfs:range <http://www.w3.org/ns/prov#Person> ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Contact person for the standard name table."@en ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 :definedInStandardNameTable rdf:type owl:ObjectProperty ;
                             owl:inverseOf :hasStandardName ;
@@ -229,6 +237,12 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Distribution
 <http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardName

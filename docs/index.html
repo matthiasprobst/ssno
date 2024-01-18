@@ -103,6 +103,9 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+   </li>
+   <li>
       <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
          <span>quantity kind</span>
       </a>
@@ -125,6 +128,9 @@ This ontology has the following classes and properties.</span>
     class="hlist">
    <li>
       <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">canonical units</a>
+   </li>
+   <li>
+      <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
@@ -195,6 +201,9 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+      </li>
+      <li>
          <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
             <span>quantity kind</span>
          </a>
@@ -213,6 +222,27 @@ This section provides details for each class and property defined by sSNO.
          </a>
       </li>
    </ul>
+   <div class="entity" id="http://www.w3.org/ns/prov#Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Person</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://qudt.org/schema/qudt/QuantityKind">
       <h3>quantity kind<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -295,7 +325,8 @@ This section provides details for each class and property defined by sSNO.
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
+            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardName"
@@ -344,6 +375,9 @@ This section provides details for each class and property defined by sSNO.
          <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">canonical units</a>
       </li>
       <li>
+         <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
       </li>
       <li>
@@ -383,6 +417,32 @@ This section provides details for each class and property defined by sSNO.
             <dt>has range</dt>
             <dd>
                <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="contact">
+      <h3>contact<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#contact</p>
+      <div class="comment">
+         <span class="markdown">Contact person for the standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

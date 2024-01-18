@@ -100,6 +100,14 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                                         skos:prefLabel "download URL"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#contact
+ssno:contact rdf:type owl:ObjectProperty ;
+             rdfs:domain ssno:StandardNameTable ;
+             rdfs:range <http://www.w3.org/ns/prov#Person> ;
+             skos:definition "Contact person for the standard name table."@en ;
+             skos:prefLabel "contact"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
                                 owl:inverseOf ssno:hasStandardName ;
@@ -235,6 +243,12 @@ skos:Concept rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Distribution
 <http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                   skos:prefLabel "Person"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardName
