@@ -3,13 +3,13 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ssno: <https://matthiasprobst.github.io/ssno#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -110,18 +110,18 @@ ssno:contact rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
-                                owl:inverseOf ssno:hasStandardName ;
+                                owl:inverseOf ssno:has_standard_names ;
                                 rdfs:domain ssno:StandardName ;
                                 rdfs:range ssno:StandardNameTable ;
                                 skos:definition "A standard name can be part of a StandardNameTable."@en ;
                                 skos:prefLabel "standard name table"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasStandardName
-ssno:hasStandardName rdf:type owl:ObjectProperty ;
-                     rdfs:domain ssno:StandardNameTable ;
-                     rdfs:range ssno:StandardName ;
-                     skos:prefLabel "has standard name"@en .
+###  https://matthiasprobst.github.io/ssno#has_standard_names
+ssno:has_standard_names rdf:type owl:ObjectProperty ;
+                        rdfs:domain ssno:StandardNameTable ;
+                        rdfs:range ssno:StandardName ;
+                        skos:prefLabel "standard names"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind
@@ -220,13 +220,13 @@ ssno:standard_name rdf:type owl:DatatypeProperty ;
 
 ###  http://qudt.org/schema/qudt/QuantityKind
 qudt:QuantityKind rdf:type owl:Class ;
-                                           rdfs:subClassOf schema:Intangible ;
-                                           skos:definition "Kind of quantity of the variable, which the standard name describes"@en .
+                  rdfs:subClassOf schema:Intangible ;
+                  skos:definition "Kind of quantity of the variable, which the standard name describes"@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
 qudt:Unit rdf:type owl:Class ;
-                                   rdfs:subClassOf schema:Intangible .
+          rdfs:subClassOf schema:Intangible .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource

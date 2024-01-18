@@ -104,18 +104,18 @@
 
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 :definedInStandardNameTable rdf:type owl:ObjectProperty ;
-                            owl:inverseOf :hasStandardName ;
+                            owl:inverseOf :has_standard_names ;
                             rdfs:domain :StandardName ;
                             rdfs:range :StandardNameTable ;
                             <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasStandardName
-:hasStandardName rdf:type owl:ObjectProperty ;
-                 rdfs:domain :StandardNameTable ;
-                 rdfs:range :StandardName ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
+###  https://matthiasprobst.github.io/ssno#has_standard_names
+:has_standard_names rdf:type owl:ObjectProperty ;
+                    rdfs:domain :StandardNameTable ;
+                    rdfs:range :StandardName ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind

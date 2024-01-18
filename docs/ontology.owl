@@ -180,7 +180,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasStandardName"/>
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#has_standard_names"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">A standard name can be part of a StandardNameTable.</skos:definition>
@@ -189,13 +189,13 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#hasStandardName -->
+    <!-- https://matthiasprobst.github.io/ssno#has_standard_names -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardName">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#has_standard_names">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <skos:prefLabel xml:lang="en">has standard name</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">standard names</skos:prefLabel>
     </owl:ObjectProperty>
     
 

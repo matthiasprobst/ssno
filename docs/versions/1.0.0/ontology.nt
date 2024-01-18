@@ -89,17 +89,17 @@
 # 
 # https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#hasStandardName> .
+<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#has_standard_names> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 # 
-# https://matthiasprobst.github.io/ssno#hasStandardName
-<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
+# https://matthiasprobst.github.io/ssno#has_standard_names
+<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
+<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
 # 
 # https://matthiasprobst.github.io/ssno#quantityKind
 <https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
