@@ -177,7 +177,7 @@ dcterms:description rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:domain ssno:StandardNameTable ;
-                   rdfs:range rdfs:Literal ;
+                   rdfs:range xsd:anyURI ;
                    rdfs:comment "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs." ;
                    rdfs:isDefinedBy dcterms: ;
                    skos:prefLabel "identifier"@en .
@@ -190,6 +190,13 @@ dcterms:title rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
 owl:topDataProperty rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/dcat#keyword
+<http://www.w3.org/ns/dcat#keyword> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                    rdfs:range rdfs:Literal ;
+                                    skos:prefLabel "keyword"@en .
 
 
 ###  http://www.w3.org/ns/dcat#version
@@ -211,13 +218,6 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                      rdfs:domain <http://www.w3.org/ns/prov#Person> ;
                                      rdfs:range rdfs:Literal ;
                                      skos:prefLabel "last name"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#dbpediaMatch
-ssno:dbpediaMatch rdf:type owl:DatatypeProperty ;
-                  rdfs:domain ssno:StandardName ;
-                  rdfs:range xsd:anyURI ;
-                  skos:prefLabel "dbpedia match"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasDOI

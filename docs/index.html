@@ -168,10 +168,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#dbpediaMatch"
-         title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
-   </li>
-   <li>
       <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
    </li>
    <li>
@@ -186,6 +182,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
@@ -353,9 +352,7 @@ This section provides details for each class and property defined by sSNO.
          <dt>is in domain of</dt>
          <dd>
             <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">canonical units</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#dbpediaMatch"
-               title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#latexSymbol"
                title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#quantityKind"
@@ -723,10 +720,6 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#dbpediaMatch"
-            title="https://matthiasprobst.github.io/ssno#dbpediaMatch">dbpedia match</a>
-      </li>
-      <li>
          <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
       </li>
       <li>
@@ -741,6 +734,9 @@ This section provides details for each class and property defined by sSNO.
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a>
       </li>
       <li>
          <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
@@ -758,30 +754,6 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
       </li>
    </ul>
-   <div class="entity" id="dbpediaMatch">
-      <h3>dbpedia match<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#dbpediaMatch</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#anyURI">anyURI</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="http://purl.org/dc/terms/description">
       <h3>description<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -919,6 +891,31 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="#StandardNameTable"
                   title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#anyURI"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#anyURI">anyURI</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/dcat#keyword">
+      <h3>keyword<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/dcat#keyword</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/ns/dcat#Dataset"
+                  target="_blank"
+                  title="http://www.w3.org/ns/dcat#Dataset">dataset</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

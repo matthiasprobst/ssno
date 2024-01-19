@@ -31,17 +31,17 @@
         "value" : "2024-01-15",
         "type" : "label"
       } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/4.0/",
-        "type" : "iri"
-      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "ssno",
         "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -101,23 +101,23 @@
     "id" : "40",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "14",
+    "id" : "44",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "43",
+    "id" : "14",
     "type" : "rdfs:Literal"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "43",
     "type" : "rdfs:Literal"
   }, {
     "id" : "28",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
-    "type" : "rdfs:Datatype"
+    "id" : "33",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "17",
     "type" : "rdfs:Datatype"
@@ -125,7 +125,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "23",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "46",
@@ -137,8 +137,8 @@
     "id" : "35",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "23",
-    "type" : "rdfs:Literal"
+    "id" : "21",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "10",
     "type" : "owl:Class"
@@ -248,7 +248,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "14",
+    "id" : "44",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -256,7 +256,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "43",
+    "id" : "14",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -281,7 +281,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "33",
+    "id" : "43",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -296,11 +296,12 @@
     "attributes" : [ "external" ],
     "id" : "28"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "45",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "33",
     "label" : {
-      "IRI-based" : "anyURI"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -329,7 +330,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "21",
+    "id" : "23",
     "label" : {
       "IRI-based" : "string"
     }
@@ -355,12 +356,11 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "23",
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "IRI-based" : "anyURI"
     }
   }, {
     "iri" : "http://www.w3.org/ns/dcat#Dataset",
@@ -471,7 +471,7 @@
     "id" : "42",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "44",
+    "id" : "45",
     "type" : "owl:objectProperty"
   }, {
     "id" : "47",
@@ -639,9 +639,36 @@
     "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "1",
+    "comment" : {
+      "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "20"
+  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#latexSymbol",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "21",
+    "range" : "23",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -673,33 +700,6 @@
     },
     "domain" : "4",
     "attributes" : [ "datatype" ],
-    "id" : "20"
-  }, {
-    "iri" : "http://purl.org/dc/terms/identifier",
-    "baseIri" : "http://purl.org/dc/terms",
-    "range" : "23",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.org/dc/terms/",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "identifier",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "identifier"
-    },
-    "domain" : "1",
-    "comment" : {
-      "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
-    },
-    "attributes" : [ "datatype", "external" ],
     "id" : "22"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#has_standard_names",
@@ -864,24 +864,24 @@
     },
     "domain" : "19",
     "attributes" : [ "object", "external" ],
-    "id" : "44"
+    "id" : "45"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#dbpediaMatch",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "45",
+    "iri" : "http://www.w3.org/ns/dcat#keyword",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "range" : "44",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
         "language" : "en",
-        "value" : "dbpedia match",
+        "value" : "keyword",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "dbpediaMatch"
+      "IRI-based" : "keyword"
     },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
+    "domain" : "10",
+    "attributes" : [ "datatype", "external" ],
     "id" : "47"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#downloadURL",
