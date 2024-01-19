@@ -103,6 +103,11 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">
+         <span>organization</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
    </li>
    <li>
@@ -143,6 +148,9 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
    </li>
    <li>
+      <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+   </li>
+   <li>
       <a href="#definedInStandardNameTable"
          title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
    </li>
@@ -161,6 +169,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
    </li>
    <li>
+      <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
+   </li>
+   <li>
       <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
    </li>
    <li>
@@ -169,6 +180,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
    </li>
    <li>
       <a href="#standard_name"
@@ -201,6 +215,11 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">
+            <span>organization</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
       </li>
       <li>
@@ -222,6 +241,33 @@ This section provides details for each class and property defined by sSNO.
          </a>
       </li>
    </ul>
+   <div class="entity" id="http://www.w3.org/ns/prov#Organization">
+      <h3>organization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Organization</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Agent"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Agent">agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/prov#Person">
       <h3>Person<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -236,6 +282,20 @@ This section provides details for each class and property defined by sSNO.
          </dd>
       </dl>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#Agent"
+               target="_blank"
+               title="http://www.w3.org/ns/prov#Agent">agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
@@ -388,6 +448,9 @@ This section provides details for each class and property defined by sSNO.
             title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
       </li>
       <li>
+         <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+      </li>
+      <li>
          <a href="#definedInStandardNameTable"
             title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
       </li>
@@ -441,6 +504,10 @@ This section provides details for each class and property defined by sSNO.
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
                <sup class="type-c" title="class">c</sup>
@@ -531,6 +598,34 @@ This section provides details for each class and property defined by sSNO.
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/mbox">
+      <h3>mbox<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/mbox</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">organization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="definedInStandardNameTable">
       <h3>standard name table<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -607,6 +702,9 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
       </li>
       <li>
+         <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
+      </li>
+      <li>
          <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
       </li>
       <li>
@@ -615,6 +713,9 @@ This section provides details for each class and property defined by sSNO.
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
       </li>
       <li>
          <a href="#standard_name"
@@ -681,6 +782,29 @@ This section provides details for each class and property defined by sSNO.
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/firstName">
+      <h3>first name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/firstName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -767,6 +891,29 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="#StandardNameTable"
                   title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/lastName">
+      <h3>last name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/lastName</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

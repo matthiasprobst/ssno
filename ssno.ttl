@@ -100,10 +100,19 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
                                         skos:prefLabel "download URL"@en .
 
 
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://www.w3.org/ns/prov#Organization> ,
+                                             <http://www.w3.org/ns/prov#Person> ;
+                                 rdfs:range owl:Thing ;
+                                 skos:prefLabel "mbox"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#contact
 ssno:contact rdf:type owl:ObjectProperty ;
              rdfs:domain ssno:StandardNameTable ;
-             rdfs:range <http://www.w3.org/ns/prov#Person> ;
+             rdfs:range <http://www.w3.org/ns/prov#Organization> ,
+                        <http://www.w3.org/ns/prov#Person> ;
              skos:definition "Contact person for the standard name table."@en ;
              skos:prefLabel "contact"@en .
 
@@ -180,6 +189,20 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                     skos:prefLabel "version" .
 
 
+###  http://xmlns.com/foaf/0.1/firstName
+<http://xmlns.com/foaf/0.1/firstName> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <http://www.w3.org/ns/prov#Person> ;
+                                      rdfs:range rdfs:Literal ;
+                                      skos:prefLabel "first name"@en .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+<http://xmlns.com/foaf/0.1/lastName> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain <http://www.w3.org/ns/prov#Person> ;
+                                     rdfs:range rdfs:Literal ;
+                                     skos:prefLabel "last name"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#dbpediaMatch
 ssno:dbpediaMatch rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
@@ -245,8 +268,18 @@ skos:Concept rdf:type owl:Class .
 <http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
 ###  http://www.w3.org/ns/prov#Person
 <http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
                                    rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
                                    skos:prefLabel "Person"@en .
 

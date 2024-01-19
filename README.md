@@ -11,13 +11,16 @@ concept. Very briefly it goes like this:
 - The construction rules are defined in "guidelines" associated with the standard name table.
 
 The ontology is stored in the turtle file [ssno.ttl](ssno.ttl), the context JSON-LD file
-is [ssno_context.jsonld](https://raw.githubusercontent.com/matthiasprobst/ssno/main/ssno_context.jsonld). A [Guide](Guide.md) helps with the first steps,
-a [jupyter notebook](./examples/Tutorial.ipynb) is provided, too.
+is [ssno_context.jsonld](https://raw.githubusercontent.com/matthiasprobst/ssno/main/ssno_context.jsonld).
+A [Guide](Guide.md) helps with the first steps, a [jupyter notebook](./examples/Tutorial.ipynb) is provided, too.
 
 ## Documentation
 
-The documentation of the ontology is available [online](https://matthiasprobst.github.io/ssno/) and 
-a tutorial guide is available [here](Guide.md).
+The documentation of the ontology is available [online](https://matthiasprobst.github.io/ssno/) and a tutorial guide is
+available [here](Guide.md).
+
+If you wont to integrate the ontology into your Python scripts, please find a corresponding library with
+the [SSNOlib](https://github.com/matthiasprobst/SSNOlib/).
 
 ## Contribution
 

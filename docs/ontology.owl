@@ -164,11 +164,24 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Organization"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel xml:lang="en">mbox</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#contact -->
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#contact">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Organization"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Person"/>
         <skos:definition xml:lang="en">Contact person for the standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">contact</skos:prefLabel>
@@ -291,6 +304,28 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/firstName">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <skos:prefLabel xml:lang="en">first name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/lastName">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <skos:prefLabel xml:lang="en">last name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#dbpediaMatch -->
 
 
@@ -400,10 +435,27 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Organization -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/prov#Person -->
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
         <skos:prefLabel xml:lang="en">Person</skos:prefLabel>
     </owl:Class>
