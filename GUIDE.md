@@ -16,15 +16,15 @@ beginning of the JSON-LD file to be validated. It contains the translation of ke
     {
       "@id": "_:b0",
       "@type": "StandardName",
-      "standard_name": "x_velocity",
-      "canonical_units": "m/s",
+      "standard name": "x_velocity",
+      "canonical units": "m/s",
       "description": "Velocity in x-axis direction.",
-      "defined in standard name table": "www.my_table.com"
+      "standard name table": "https://doi.org/10.5281/zenodo.10428817"
     },
     {
       "@id": "https://doi.org/10.5281/zenodo.10428817",
       "@type": "StandardNameTable",
-      "has doi": "https://doi.org/10.5281/zenodo.10428817"
+      "identifier": "https://doi.org/10.5281/zenodo.10428817"
     }
   ]
 }
@@ -44,24 +44,24 @@ In the previous example, we used an external StandardNameTable. We can also defi
       "@id": "https://doi.org/10.5281/zenodo.10428817",
       "@type": "StandardNameTable",
       "doi": "https://doi.org/10.5281/zenodo.10428817",
-      "has title": "My Table",
+      "title": "My Table",
       "description": "My table description",
-      "standard name": [
+      "standard names": [
         {
           "@id": "_:b0",
           "@type": "StandardName",
-          "standard_name": "x_velocity",
-          "canonical_units": "m/s",
+          "standard name": "x_velocity",
+          "canonical units": "m/s",
           "description": "Velocity in x-axis direction.",
-          "defined in standard name table": "https://doi.org/10.5281/zenodo.10428817"
+          "standard name table": "https://doi.org/10.5281/zenodo.10428817"
         },
         {
           "@id": "_:b1",
           "@type": "StandardName",
-          "standard_name": "y_velocity",
-          "canonical_units": "m/s",
+          "standard name": "y_velocity",
+          "canonical units": "m/s",
           "description": "Velocity in y-axis direction.",
-          "defined in standard name table": "https://doi.org/10.5281/zenodo.10428817"
+          "standard name table": "https://doi.org/10.5281/zenodo.10428817"
         }
       ]
     }
