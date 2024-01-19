@@ -142,6 +142,15 @@
     
 
 
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#byteSize">
+        <skos:prefLabel xml:lang="en">byte size</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/dcat#distribution -->
 
 
@@ -160,6 +169,15 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
         <skos:prefLabel xml:lang="en">download URL</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#mediaType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#mediaType">
+        <skos:prefLabel xml:lang="en">media type</skos:prefLabel>
     </owl:ObjectProperty>
     
 
