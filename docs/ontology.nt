@@ -68,15 +68,14 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Distribution> .
+# 
 # http://www.w3.org/ns/dcat#byteSize
 <http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/2004/02/skos/core#prefLabel> "byte size"@en .
-# 
-# http://www.w3.org/ns/dcat#distribution
-<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Distribution> .
-<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 # 
 # http://www.w3.org/ns/dcat#downloadURL
 <http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -90,17 +89,15 @@
 # 
 # http://xmlns.com/foaf/0.1/mbox
 <http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Organization> .
-<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Person> .
+<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Agent> .
 <http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
 <http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 # 
 # https://matthiasprobst.github.io/ssno#contact
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Organization> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Person> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#definition> "Contact person for the standard name table."@en .
+<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#definition> "Contact agent (person or organization) for the standard name table."@en .
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
 # 
 # https://matthiasprobst.github.io/ssno#definedInStandardNameTable
@@ -148,7 +145,7 @@
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name or a standard name table"@en .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name description"@en .
 # 
 # http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -176,18 +173,6 @@
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
-# 
-# http://xmlns.com/foaf/0.1/firstName
-<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Person> .
-<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2004/02/skos/core#prefLabel> "first name"@en .
-# 
-# http://xmlns.com/foaf/0.1/lastName
-<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Person> .
-<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://xmlns.com/foaf/0.1/lastName> <http://www.w3.org/2004/02/skos/core#prefLabel> "last name"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasDOI
 <https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -246,16 +231,6 @@
 # http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://www.w3.org/ns/prov#Organization
-<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/prov#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-# 
-# http://www.w3.org/ns/prov#Person
-<http://www.w3.org/ns/prov#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/prov#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<http://www.w3.org/ns/prov#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> .
-<http://www.w3.org/ns/prov#Person> <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en .
-# 
 # https://matthiasprobst.github.io/ssno#StandardName
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -279,5 +254,7 @@
 # 
 # 
 <http://purl.org/dc/terms/title> <http://www.w3.org/2004/02/skos/core#prefLabel> "title"@en .
+# 
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

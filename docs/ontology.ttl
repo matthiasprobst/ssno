@@ -80,16 +80,15 @@
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :StandardNameTable ;
+                                         rdfs:range <http://www.w3.org/ns/dcat#Distribution> .
+
+
 ###  http://www.w3.org/ns/dcat#byteSize
 <http://www.w3.org/ns/dcat#byteSize> rdf:type owl:ObjectProperty ;
                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "byte size"@en .
-
-
-###  http://www.w3.org/ns/dcat#distribution
-<http://www.w3.org/ns/dcat#distribution> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain :StandardNameTable ;
-                                         rdfs:range <http://www.w3.org/ns/dcat#Distribution> ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
@@ -106,8 +105,7 @@
 
 ###  http://xmlns.com/foaf/0.1/mbox
 <http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain <http://www.w3.org/ns/prov#Organization> ,
-                                             <http://www.w3.org/ns/prov#Person> ;
+                                 rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
                                  rdfs:range owl:Thing ;
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 
@@ -115,9 +113,8 @@
 ###  https://matthiasprobst.github.io/ssno#contact
 :contact rdf:type owl:ObjectProperty ;
          rdfs:domain :StandardNameTable ;
-         rdfs:range <http://www.w3.org/ns/prov#Organization> ,
-                    <http://www.w3.org/ns/prov#Person> ;
-         <http://www.w3.org/2004/02/skos/core#definition> "Contact person for the standard name table."@en ;
+         rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Contact agent (person or organization) for the standard name table."@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
 
 
@@ -165,7 +162,7 @@
                                                    :StandardNameTable ;
                                        rdfs:range xsd:string ;
                                        <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name or a standard name table"@en ;
-                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name description"@en .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -198,20 +195,6 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                     rdfs:domain :StandardNameTable ;
                                     rdfs:range rdfs:Literal ;
                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
-
-
-###  http://xmlns.com/foaf/0.1/firstName
-<http://xmlns.com/foaf/0.1/firstName> rdf:type owl:DatatypeProperty ;
-                                      rdfs:domain <http://www.w3.org/ns/prov#Person> ;
-                                      rdfs:range rdfs:Literal ;
-                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "first name"@en .
-
-
-###  http://xmlns.com/foaf/0.1/lastName
-<http://xmlns.com/foaf/0.1/lastName> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://www.w3.org/ns/prov#Person> ;
-                                     rdfs:range rdfs:Literal ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "last name"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasDOI
@@ -276,18 +259,6 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
-###  http://www.w3.org/ns/prov#Organization
-<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
-
-
-###  http://www.w3.org/ns/prov#Person
-<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
-                                   rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
-                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#StandardName
 :StandardName rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -309,6 +280,9 @@ rdfs:Resource rdf:type owl:Class .
 #################################################################
 
 <http://purl.org/dc/terms/title> <http://www.w3.org/2004/02/skos/core#prefLabel> "title"@en .
+
+
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

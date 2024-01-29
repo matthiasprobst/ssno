@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"sSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the cf-conventions (http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.", "dateReleased":"2024-01-15", "dateModified":"2024-01-22", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"sSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the cf-conventions (http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.", "dateReleased":"2024-01-15", "dateModified":"2024-01-29", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -59,7 +59,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-01-22</dt>
+<dt>Modified on: 2024-01-29</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.0.0">https://matthiasprobst.github.io/ssno/1.0.0</a></dd>
 <dt>Latest version:</dt>
@@ -104,14 +104,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">
-         <span>organization</span>
-      </a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
-   </li>
-   <li>
       <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
          <span>quantity kind</span>
       </a>
@@ -145,7 +137,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
+      <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">
+         <span>has distribution</span>
+      </a>
    </li>
    <li>
       <a href="#quantityKind"
@@ -169,12 +163,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
-   </li>
-   <li>
-      <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
-   </li>
-   <li>
       <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
    </li>
    <li>
@@ -182,13 +170,13 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
    </li>
    <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a>
-   </li>
-   <li>
-      <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
    </li>
    <li>
       <a href="#standard_name"
@@ -221,14 +209,6 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">
-            <span>organization</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
-      </li>
-      <li>
          <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
             <span>quantity kind</span>
          </a>
@@ -247,68 +227,6 @@ This section provides details for each class and property defined by sSNO.
          </a>
       </li>
    </ul>
-   <div class="entity" id="http://www.w3.org/ns/prov#Organization">
-      <h3>organization<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/prov#Organization</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/prov#Agent"
-               target="_blank"
-               title="http://www.w3.org/ns/prov#Agent">agent</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://www.w3.org/ns/prov#Person">
-      <h3>Person<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/prov#Person</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/ns/prov#Agent"
-               target="_blank"
-               title="http://www.w3.org/ns/prov#Agent">agent</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="http://qudt.org/schema/qudt/QuantityKind">
       <h3>quantity kind<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -353,9 +271,9 @@ This section provides details for each class and property defined by sSNO.
          <dt>is in domain of</dt>
          <dd>
             <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">canonical units</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#latexSymbol"
+            <sup class="type-op" title="object property">op</sup>, <a href="#latexSymbol"
                title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#quantityKind"
                title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#standard_name"
@@ -390,9 +308,9 @@ This section provides details for each class and property defined by sSNO.
          <dt>is in domain of</dt>
          <dd>
             <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#has_standard_names"
                title="https://matthiasprobst.github.io/ssno#has_standard_names">standard names</a>
@@ -448,7 +366,9 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
+         <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">
+            <span>has distribution</span>
+         </a>
       </li>
       <li>
          <a href="#quantityKind"
@@ -511,7 +431,7 @@ This section provides details for each class and property defined by sSNO.
       <p>
          <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#contact</p>
       <div class="comment">
-         <span class="markdown">Contact person for the standard name table.</span>
+         <span class="markdown">Contact agent (person or organization) for the standard name table.</span>
       </div>
       <div class="description">
          <dl>
@@ -523,11 +443,9 @@ This section provides details for each class and property defined by sSNO.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">organization</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+               <a href="http://www.w3.org/ns/prov#Agent"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#Agent">agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -546,7 +464,7 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="http://www.w3.org/ns/dcat#Distribution"
                   target="_blank"
-                  title="http://www.w3.org/ns/dcat#Distribution">distribution</a>
+                  title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -559,13 +477,13 @@ This section provides details for each class and property defined by sSNO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://www.w3.org/ns/dcat#distribution">
+   <div class="entity" id="http://www.w3.org/ns/dcat#Distribution">
       <h3>has distribution<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/dcat#distribution</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/dcat#Distribution</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -578,9 +496,11 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="http://www.w3.org/ns/dcat#Distribution"
                   target="_blank"
-                  title="http://www.w3.org/ns/dcat#Distribution">distribution</a>
+                  title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>is also defined as</dt>
+            <dd>class</dd>
          </dl>
       </div>
    </div>
@@ -627,11 +547,9 @@ This section provides details for each class and property defined by sSNO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">organization</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
+               <a href="http://www.w3.org/ns/prov#Agent"
+                  target="_blank"
+                  title="http://www.w3.org/ns/prov#Agent">agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -721,12 +639,6 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
-      </li>
-      <li>
-         <a href="#http://xmlns.com/foaf/0.1/firstName" title="http://xmlns.com/foaf/0.1/firstName">first name</a>
-      </li>
-      <li>
          <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
       </li>
       <li>
@@ -734,13 +646,13 @@ This section provides details for each class and property defined by sSNO.
             title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
+      </li>
+      <li>
          <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a>
-      </li>
-      <li>
-         <a href="#http://xmlns.com/foaf/0.1/lastName" title="http://xmlns.com/foaf/0.1/lastName">last name</a>
       </li>
       <li>
          <a href="#standard_name"
@@ -755,61 +667,6 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
       </li>
    </ul>
-   <div class="entity" id="http://purl.org/dc/terms/description">
-      <h3>description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
-      <div class="comment">
-         <span class="markdown">Description of a standard name or a standard name table</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://xmlns.com/foaf/0.1/firstName">
-      <h3>first name<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/firstName</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
-                  target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasDOI">
       <h3>has doi<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -870,6 +727,38 @@ This section provides details for each class and property defined by sSNO.
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>has standard name description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+      <div class="comment">
+         <span class="markdown">Description of a standard name or a standard name table</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardName"
+                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://purl.org/dc/terms/identifier">
       <h3>identifier<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -917,29 +806,6 @@ This section provides details for each class and property defined by sSNO.
                <a href="http://www.w3.org/ns/dcat#Dataset"
                   target="_blank"
                   title="http://www.w3.org/ns/dcat#Dataset">dataset</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
-                  target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://xmlns.com/foaf/0.1/lastName">
-      <h3>last name<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/lastName</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#http://www.w3.org/ns/prov#Person" title="http://www.w3.org/ns/prov#Person">Person</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
