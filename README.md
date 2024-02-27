@@ -25,3 +25,17 @@ the [SSNOlib](https://github.com/matthiasprobst/SSNOlib/).
 ## Contribution
 
 Contributions are happily taken via issues in the repository.
+
+
+## Developer instructions:
+
+1. Updating the ontology:
+
+- Update the `.ttl` file [ssno.ttl](ssno.ttl)
+- You may use Protege or any other ontology editor to do so.
+
+2. Generate the context file:
+
+- Run `deploy.py`
+- It will build the ontology web page (using [widoco](https://dgarijo.github.io/Widoco/doc/tutorial/))
+- It will also generate the context file [ssno_context.jsonld](ssno_context.jsonld)

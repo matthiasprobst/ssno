@@ -1,11 +1,12 @@
 """This code is taken from https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/blob/1.2.1/ci/generate_context_file.py
 and only slightly adjusted. The original code is licensed under the CC-BY-4 license."""
+import logging
 from pathlib import Path
-
 from rdflib import Graph
 from rdflib.namespace import NamespaceManager
 from rdflib.term import URIRef
 
+logger = logging.getLogger('ssno')
 __this_dir__ = Path(__file__).parent
 
 
@@ -55,21 +56,21 @@ def generate():
                       '  ?id skos:prefLabel ?label.\n'
                       '  OPTIONAL {?id rdfs:range ?type .}. \n'
                       '}')
-        print(f'*** Adding entities of type "{entity}" to the context file ***')
+        logger.debug(f'*** Adding entities of type "{entity}" to the context file ***')
         query_result = g.query(query)
 
-        print(f'Total: {len(query_result)}')
+        logger.debug(f'Total: {len(query_result)}')
         for row in query_result:
             typestr = ""
             if type(row.type) == URIRef:
                 typestr = f', "@type" : "{nm.normalizeUri(row.type)}"'
-            #            print(row.id, row.type, type(row.type))
+            #            logger.debug(row.id, row.type, type(row.type))
             if row.label not in ids:
-                print(row.label)
+                logger.debug(row.label)
                 f.write(f',\n    "{row.label}" : {{"@id" : "{nm.normalizeUri(row.id)}"{typestr}}}')
                 ids.append(row.label.lower())
             else:
-                print(f'"{row.label}" is already used as a label, therefore {row.id} will be skipped')
+                logger.debug(f'"{row.label}" is already used as a label, therefore {row.id} will be skipped')
 
     f.write("\n  }\n}")
     f.close()

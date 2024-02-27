@@ -1,8 +1,10 @@
 """This thest is mainly taken from: https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/blob/develop/tests/graph-test.py?ref_type=heads"""
-from pathlib import Path
-
+import logging
 import rdflib
+from pathlib import Path
 from rdflib import Graph
+
+logger = logging.getLogger('ssno')
 
 
 def parse_onto(onto_purl, onto_format):
@@ -17,7 +19,7 @@ def parse_onto(onto_purl, onto_format):
 
 
 if __name__ == '__main__':
-    print('Start testing graph')
+    logger.debug('Start testing graph')
     m4i = Path(__file__).parent.parent / 'ssno.ttl'
     parse_onto(str(m4i), onto_format="ttl")
-    print('Finished testing graph')
+    logger.debug('Finished testing graph')
