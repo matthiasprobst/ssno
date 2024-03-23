@@ -60,6 +60,10 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#sameas
+owl:sameas rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#closeMatch
 <http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
 
@@ -107,6 +111,7 @@
 <http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ;
                                  rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
                                  rdfs:range owl:Thing ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."@en ;
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 
 
@@ -123,15 +128,24 @@
                             owl:inverseOf :has_standard_names ;
                             rdfs:domain :StandardName ;
                             rdfs:range :StandardNameTable ;
-                            <http://www.w3.org/2004/02/skos/core#definition> "A standard name can be part of a StandardNameTable."@en ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."@en ;
                             <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#hasStandardName
+:hasStandardName rdf:type owl:ObjectProperty ;
+                 rdfs:domain owl:Thing ;
+                 rdfs:range :StandardName ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#has_standard_names
 :has_standard_names rdf:type owl:ObjectProperty ;
                     rdfs:domain :StandardNameTable ;
                     rdfs:range :StandardName ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
+                    <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind
@@ -213,6 +227,12 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
              <http://www.w3.org/2004/02/skos/core#definition> "LaTeX symbol associated to the standard name."@en ;
              <http://www.w3.org/2004/02/skos/core#example> "$\\dot V$" ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "has latex symbol"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#long_name
+:long_name rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is associated with a standard_name."@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standard_name

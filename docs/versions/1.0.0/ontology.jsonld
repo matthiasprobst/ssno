@@ -93,6 +93,9 @@
   "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://www.w3.org/2002/07/owl#sameas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
@@ -190,6 +193,10 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "mbox"
@@ -281,7 +288,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A standard name can be part of a StandardNameTable."
+    "@value" : "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -304,6 +311,23 @@
     "@value" : "has doi"
   } ]
 }, {
+  "@id" : "https://matthiasprobst.github.io/ssno#hasStandardName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "has standard name"
+  } ]
+}, {
   "@id" : "https://matthiasprobst.github.io/ssno#has_standard_names",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -312,9 +336,13 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
   } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to multiple standard names of a standard name table."
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard names"
+    "@value" : "has standard names"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#latexSymbol",
@@ -338,6 +366,16 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "has latex symbol"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#long_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A human-readable label of a variable which is associated with a standard_name."
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#quantityKind",

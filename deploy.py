@@ -69,7 +69,7 @@ if __name__ == "__main__":
         for k, v in cfg_data.items():
             f.write(f'\n{k}={v}')
     script_path = __this_dir__ / 'build_onto_doc.bat'
-    logger.debug('calling ', script_path.absolute())
+    logger.debug(f'calling script {script_path.absolute()}')
     subprocess.run(str(script_path.absolute()))
 
     from generate_context import generate

@@ -102,6 +102,13 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#sameas -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#sameas"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
 
@@ -187,6 +194,7 @@
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:definition xml:lang="en">A personal mailbox, ie. an Internet mailbox associated with exactly one owner.</skos:definition>
         <skos:prefLabel xml:lang="en">mbox</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -211,8 +219,20 @@
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#has_standard_names"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <skos:definition xml:lang="en">A standard name can be part of a StandardNameTable.</skos:definition>
+        <skos:definition xml:lang="en">The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#hasStandardName -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <skos:definition xml:lang="en">Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit.</skos:definition>
+        <skos:prefLabel xml:lang="en">has standard name</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -223,7 +243,8 @@
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#has_standard_names">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <skos:prefLabel xml:lang="en">standard names</skos:prefLabel>
+        <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">has standard names</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -352,6 +373,16 @@
         <skos:definition xml:lang="en">LaTeX symbol associated to the standard name.</skos:definition>
         <skos:example>$\dot V$</skos:example>
         <skos:prefLabel xml:lang="en">has latex symbol</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#long_name -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#long_name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">A human-readable label of a variable which is associated with a standard_name.</skos:definition>
     </owl:DatatypeProperty>
     
 
