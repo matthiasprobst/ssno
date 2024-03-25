@@ -115,6 +115,15 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#canonicalUnits
+:canonicalUnits rdf:type owl:ObjectProperty ;
+                rdfs:domain :StandardName ;
+                rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+                rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#contact
 :contact rdf:type owl:ObjectProperty ;
          rdfs:domain :StandardNameTable ;
@@ -155,15 +164,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
               rdfs:comment "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en ;
               <http://www.w3.org/2004/02/skos/core#example> "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "kind of quantity"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#unit
-:unit rdf:type owl:ObjectProperty ;
-      rdfs:domain :StandardName ;
-      rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-      rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-      <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 
 
 #################################################################
