@@ -128,8 +128,8 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/dcat#byteSize" title="http://www.w3.org/ns/dcat#byteSize">byte size</a>
    </li>
    <li>
-      <a href="#canonicalUnits"
-         title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
+      <a href="#canonical_units"
+         title="https://matthiasprobst.github.io/ssno#canonical_units">canonical units</a>
    </li>
    <li>
       <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
@@ -149,10 +149,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasStandardNames"
          title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
-   </li>
-   <li>
-      <a href="#quantityKind"
-         title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
@@ -255,12 +251,6 @@ This section provides details for each class and property defined by sSNO.
                title="https://schema.org/Intangible">intangible</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#quantityKind"
-               title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="StandardName">
@@ -280,14 +270,12 @@ This section provides details for each class and property defined by sSNO.
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#canonicalUnits"
-               title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
+            <a href="#canonical_units"
+               title="https://matthiasprobst.github.io/ssno#canonical_units">canonical units</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#latexSymbol"
                title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#quantityKind"
-               title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#standard_name"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#standard_name"
                title="https://matthiasprobst.github.io/ssno#standard_name">standard name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#definedInStandardNameTable"
                title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
@@ -356,8 +344,8 @@ This section provides details for each class and property defined by sSNO.
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#canonicalUnits"
-               title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
+            <a href="#canonical_units"
+               title="https://matthiasprobst.github.io/ssno#canonical_units">canonical units</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -371,8 +359,8 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#byteSize" title="http://www.w3.org/ns/dcat#byteSize">byte size</a>
       </li>
       <li>
-         <a href="#canonicalUnits"
-            title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
+         <a href="#canonical_units"
+            title="https://matthiasprobst.github.io/ssno#canonical_units">canonical units</a>
       </li>
       <li>
          <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
@@ -394,10 +382,6 @@ This section provides details for each class and property defined by sSNO.
             title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
       </li>
       <li>
-         <a href="#quantityKind"
-            title="https://matthiasprobst.github.io/ssno#quantityKind">kind of quantity</a>
-      </li>
-      <li>
          <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
       </li>
       <li>
@@ -416,13 +400,13 @@ This section provides details for each class and property defined by sSNO.
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/dcat#byteSize</p>
    </div>
-   <div class="entity" id="canonicalUnits">
+   <div class="entity" id="canonical_units">
       <h3>canonical units<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#canonicalUnits</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#canonical_units</p>
       <div class="comment">
          <span class="markdown">The canonical unit of the standard name</span>
       </div>
@@ -580,38 +564,6 @@ This section provides details for each class and property defined by sSNO.
                <a href="#definedInStandardNameTable"
                   title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="quantityKind">
-      <h3>kind of quantity<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#quantityKind</p>
-      <div class="comment">
-         <span class="markdown">Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless</span>
-      </div>
-      <dl>
-         <dt>Example</dt>
-         <dd>
-            <pre>The standard name "x_velocity" has quantity kind "https://qudt.org/vocab/quantitykind/Velocity"</pre>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">quantity kind</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

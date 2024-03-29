@@ -200,10 +200,10 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#canonicalUnits -->
+    <!-- https://matthiasprobst.github.io/ssno#canonical_units -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#canonicalUnits">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#canonical_units">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#hasUnit"/>
@@ -258,19 +258,6 @@
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">has standard names</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#quantityKind -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#quantityKind">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityKind"/>
-        <rdfs:comment xml:lang="en">Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless</rdfs:comment>
-        <skos:example xml:lang="en">The standard name &quot;x_velocity&quot; has quantity kind &quot;https://qudt.org/vocab/quantitykind/Velocity&quot;</skos:example>
-        <skos:prefLabel xml:lang="en">kind of quantity</skos:prefLabel>
     </owl:ObjectProperty>
     
 

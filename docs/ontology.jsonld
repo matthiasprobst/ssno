@@ -258,7 +258,7 @@
     "@value" : "StandardNameTable"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
+  "@id" : "https://matthiasprobst.github.io/ssno#canonical_units",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
@@ -396,27 +396,6 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A human-readable label of a variable which is associated with a standard_name."
-  } ]
-}, {
-  "@id" : "https://matthiasprobst.github.io/ssno#quantityKind",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://qudt.org/schema/qudt/QuantityKind"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@language" : "en",
-    "@value" : "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "kind of quantity"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standard_name",

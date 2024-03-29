@@ -97,13 +97,13 @@
 <http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2004/02/skos/core#definition> "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."@en .
 <http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 # 
-# https://matthiasprobst.github.io/ssno#canonicalUnits
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
-<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
+# https://matthiasprobst.github.io/ssno#canonical_units
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> .
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
+<https://matthiasprobst.github.io/ssno#canonical_units> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 # 
 # https://matthiasprobst.github.io/ssno#contact
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -133,14 +133,6 @@
 <https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en .
 <https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
-# 
-# https://matthiasprobst.github.io/ssno#quantityKind
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityKind> .
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en .
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/2004/02/skos/core#example> "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en .
-<https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/2004/02/skos/core#prefLabel> "kind of quantity"@en .
 # 
 # 
 # 

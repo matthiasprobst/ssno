@@ -115,13 +115,13 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#canonicalUnits
-:canonicalUnits rdf:type owl:ObjectProperty ;
-                rdfs:domain :StandardName ;
-                rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-                rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
+###  https://matthiasprobst.github.io/ssno#canonical_units
+:canonical_units rdf:type owl:ObjectProperty ;
+                 rdfs:domain :StandardName ;
+                 rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+                 rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#contact
@@ -155,15 +155,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                   rdfs:range :StandardName ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#quantityKind
-:quantityKind rdf:type owl:ObjectProperty ;
-              rdfs:domain :StandardName ;
-              rdfs:range <http://qudt.org/schema/qudt/QuantityKind> ;
-              rdfs:comment "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en ;
-              <http://www.w3.org/2004/02/skos/core#example> "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "kind of quantity"@en .
 
 
 #################################################################

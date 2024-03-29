@@ -124,13 +124,13 @@ foaf:mbox rdf:type owl:ObjectProperty ;
           skos:prefLabel "mbox"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#canonicalUnits
-ssno:canonicalUnits rdf:type owl:ObjectProperty ;
-                    rdfs:domain ssno:StandardName ;
-                    rdfs:range qudt:Unit ;
-                    rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-                    skos:definition "The canonical unit of the standard name"@en ;
-                    skos:prefLabel "canonical units"@en .
+###  https://matthiasprobst.github.io/ssno#canonical_units
+ssno:canonical_units rdf:type owl:ObjectProperty ;
+                     rdfs:domain ssno:StandardName ;
+                     rdfs:range qudt:Unit ;
+                     rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                     skos:definition "The canonical unit of the standard name"@en ;
+                     skos:prefLabel "canonical units"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#contact
@@ -164,15 +164,6 @@ ssno:hasStandardNames rdf:type owl:ObjectProperty ;
                       rdfs:range ssno:StandardName ;
                       skos:definition "Points to multiple standard names of a standard name table."@en ;
                       skos:prefLabel "has standard names"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#quantityKind
-ssno:quantityKind rdf:type owl:ObjectProperty ;
-                  rdfs:domain ssno:StandardName ;
-                  rdfs:range qudt:QuantityKind ;
-                  rdfs:comment "Dimensionless quantities should use http://qudt.org/vocab/quantitykind/Dimensionless"@en ;
-                  skos:example "The standard name \"x_velocity\" has quantity kind \"https://qudt.org/vocab/quantitykind/Velocity\""@en ;
-                  skos:prefLabel "kind of quantity"@en .
 
 
 #################################################################
