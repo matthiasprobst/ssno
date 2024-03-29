@@ -304,7 +304,7 @@
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#has_standard_names"
+    "@id" : "https://matthiasprobst.github.io/ssno#hasStandardNames"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -348,7 +348,7 @@
     "@value" : "has standard name"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#has_standard_names",
+  "@id" : "https://matthiasprobst.github.io/ssno#hasStandardNames",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"

@@ -143,7 +143,7 @@ ssno:contact rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
-                                owl:inverseOf ssno:has_standard_names ;
+                                owl:inverseOf ssno:hasStandardNames ;
                                 rdfs:domain ssno:StandardName ;
                                 rdfs:range ssno:StandardNameTable ;
                                 skos:definition "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."@en ;
@@ -158,12 +158,12 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      skos:prefLabel "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#has_standard_names
-ssno:has_standard_names rdf:type owl:ObjectProperty ;
-                        rdfs:domain ssno:StandardNameTable ;
-                        rdfs:range ssno:StandardName ;
-                        skos:definition "Points to multiple standard names of a standard name table."@en ;
-                        skos:prefLabel "has standard names"@en .
+###  https://matthiasprobst.github.io/ssno#hasStandardNames
+ssno:hasStandardNames rdf:type owl:ObjectProperty ;
+                      rdfs:domain ssno:StandardNameTable ;
+                      rdfs:range ssno:StandardName ;
+                      skos:definition "Points to multiple standard names of a standard name table."@en ;
+                      skos:prefLabel "has standard names"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#quantityKind

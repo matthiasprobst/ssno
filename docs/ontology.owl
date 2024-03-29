@@ -229,7 +229,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#has_standard_names"/>
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasStandardNames"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit.</skos:definition>
@@ -250,10 +250,10 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#has_standard_names -->
+    <!-- https://matthiasprobst.github.io/ssno#hasStandardNames -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#has_standard_names">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardNames">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>

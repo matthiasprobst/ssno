@@ -114,7 +114,7 @@
 # 
 # https://matthiasprobst.github.io/ssno#definedInStandardNameTable
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#has_standard_names> .
+<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#hasStandardNames> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."@en .
@@ -127,12 +127,12 @@
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en .
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 # 
-# https://matthiasprobst.github.io/ssno#has_standard_names
-<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#has_standard_names> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
+# https://matthiasprobst.github.io/ssno#hasStandardNames
+<https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
+<https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en .
+<https://matthiasprobst.github.io/ssno#hasStandardNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
 # 
 # https://matthiasprobst.github.io/ssno#quantityKind
 <https://matthiasprobst.github.io/ssno#quantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
