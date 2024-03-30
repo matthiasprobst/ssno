@@ -99,15 +99,8 @@ dcat:byteSize rdf:type owl:ObjectProperty ;
               skos:prefLabel "byte size"@en .
 
 
-###  http://www.w3.org/ns/dcat#distribution
-dcat:distribution rdf:type owl:ObjectProperty ;
-                  rdfs:domain ssno:StandardNameTable ;
-                  skos:prefLabel "has distribution"@en .
-
-
 ###  http://www.w3.org/ns/dcat#downloadURL
 dcat:downloadURL rdf:type owl:ObjectProperty ;
-                 rdfs:domain dcat:Distribution ;
                  rdfs:range rdfs:Resource ;
                  skos:prefLabel "download URL"@en .
 
@@ -261,10 +254,6 @@ skos:Concept rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dcat#Distribution
-dcat:Distribution rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Agent

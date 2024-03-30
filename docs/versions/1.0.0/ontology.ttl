@@ -90,15 +90,8 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "byte size"@en .
 
 
-###  http://www.w3.org/ns/dcat#distribution
-<http://www.w3.org/ns/dcat#distribution> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain :StandardNameTable ;
-                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
-
-
 ###  http://www.w3.org/ns/dcat#downloadURL
 <http://www.w3.org/ns/dcat#downloadURL> rdf:type owl:ObjectProperty ;
-                                        rdfs:domain <http://www.w3.org/ns/dcat#Distribution> ;
                                         rdfs:range rdfs:Resource ;
                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "download URL"@en .
 
@@ -252,10 +245,6 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/dcat#Distribution
-<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Agent

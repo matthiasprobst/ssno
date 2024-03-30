@@ -35,7 +35,6 @@
     "StandardName" : {"@id" : "ssno:StandardName"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "byte size" : {"@id" : "dcat:byteSize"},
-    "has distribution" : {"@id" : "dcat:distribution"},
     "download URL" : {"@id" : "dcat:downloadURL", "@type" : "rdfs:Resource"},
     "media type" : {"@id" : "dcat:mediaType"},
     "mbox" : {"@id" : "foaf:mbox", "@type" : "owl:Thing"},
