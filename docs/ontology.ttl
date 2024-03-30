@@ -115,7 +115,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#definedIn
 :definedIn rdf:type owl:ObjectProperty ;
-           owl:inverseOf :hasStandardNames ;
+           owl:inverseOf :standardNames ;
            rdfs:domain :StandardName ;
            rdfs:range :StandardNameTable ;
            <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
@@ -131,20 +131,20 @@ owl:sameas rdf:type owl:AnnotationProperty .
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasStandardNames
-:hasStandardNames rdf:type owl:ObjectProperty ;
-                  rdfs:domain :StandardNameTable ;
-                  rdfs:range :StandardName ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard names"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 :isStandardNameOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :StandardName ;
                   rdfs:range owl:Thing ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name of"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNames
+:standardNames rdf:type owl:ObjectProperty ;
+               rdfs:domain :StandardNameTable ;
+               rdfs:range :StandardName ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
 
 
 #################################################################
@@ -251,7 +251,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 ###  https://matthiasprobst.github.io/ssno#StandardName
 :StandardName rdf:type owl:Class ;
               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                    owl:onProperty [ owl:inverseOf :hasStandardNames
+                                    owl:onProperty [ owl:inverseOf :standardNames
                                                    ] ;
                                     owl:someValuesFrom :StandardNameTable
                                   ] ;

@@ -124,7 +124,7 @@ ssno:contact rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#definedIn
 ssno:definedIn rdf:type owl:ObjectProperty ;
-               owl:inverseOf ssno:hasStandardNames ;
+               owl:inverseOf ssno:standardNames ;
                rdfs:domain ssno:StandardName ;
                rdfs:range ssno:StandardNameTable ;
                skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
@@ -140,20 +140,20 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      skos:prefLabel "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasStandardNames
-ssno:hasStandardNames rdf:type owl:ObjectProperty ;
-                      rdfs:domain ssno:StandardNameTable ;
-                      rdfs:range ssno:StandardName ;
-                      skos:definition "Points to multiple standard names of a standard name table."@en ;
-                      skos:prefLabel "has standard names"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       rdfs:domain ssno:StandardName ;
                       rdfs:range owl:Thing ;
                       skos:definition "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en ;
                       skos:prefLabel "is standard name of"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNames
+ssno:standardNames rdf:type owl:ObjectProperty ;
+                   rdfs:domain ssno:StandardNameTable ;
+                   rdfs:range ssno:StandardName ;
+                   skos:definition "Points to multiple standard names of a standard name table."@en ;
+                   skos:prefLabel "standard names"@en .
 
 
 #################################################################
@@ -260,7 +260,7 @@ prov:Agent rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#StandardName
 ssno:StandardName rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                        owl:onProperty [ owl:inverseOf ssno:hasStandardNames
+                                        owl:onProperty [ owl:inverseOf ssno:standardNames
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;

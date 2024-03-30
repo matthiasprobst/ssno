@@ -15,4 +15,15 @@ class TestUserGuide(unittest.TestCase):
 
     def test_json_1(self):
         json1 = __this_dir__ / 'json1.json'
-        ssno.StandardName.from_json(json1)
+        sn = ssno.StandardName.from_jsonld(source=str(json1))
+        snt = ssno.StandardNameTable.from_jsonld(source=str(json1))
+        self.assertEqual(len(sn), 1)
+        self.assertEqual(len(snt), 1)
+        self.assertEqual(sn[0].standard_name, 'x_velocity')
+        self.assertEqual(sn[0].canonical_units, 'http://qudt.org/vocab/unit/M-PER-SEC')
+
+    def test_json_2(self):
+        json2 = __this_dir__ / 'json2.json'
+        snt = ssno.StandardNameTable.from_jsonld(source=str(json2))
+        self.assertEqual(len(snt), 1)
+        self.assertEqual(len(snt[0].standard_name), 2)

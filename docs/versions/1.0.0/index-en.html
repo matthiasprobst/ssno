@@ -138,15 +138,15 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
    </li>
    <li>
-      <a href="#hasStandardNames"
-         title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
-   </li>
-   <li>
       <a href="#isStandardNameOf"
          title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+   </li>
+   <li>
+      <a href="#standardNames"
+         title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -288,8 +288,8 @@ This section provides details for each class and property defined by sSNO.
          <dt>is equivalent to</dt>
          <dd>
             <span class="logic">inverse</span> 
-            <a href="#hasStandardNames"
-               title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
+            <a href="#standardNames"
+               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#StandardNameTable"
@@ -311,8 +311,8 @@ This section provides details for each class and property defined by sSNO.
          <dd>
             <a href="#hasStandardName"
                title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasStandardNames"
-               title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#standardNames"
+               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -347,10 +347,10 @@ This section provides details for each class and property defined by sSNO.
          <dd>
             <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">doi</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardNames"
-               title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="http://purl.org/dc/terms/title"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNames"
+               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title"
                target="_blank"
                title="http://purl.org/dc/terms/title">title</a>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -401,15 +401,15 @@ This section provides details for each class and property defined by sSNO.
             title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
       </li>
       <li>
-         <a href="#hasStandardNames"
-            title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
-      </li>
-      <li>
          <a href="#isStandardNameOf"
             title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
       </li>
       <li>
          <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+      </li>
+      <li>
+         <a href="#standardNames"
+            title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
       </li>
    </ul>
    <div class="entity" id="canonicalUnits">
@@ -490,8 +490,8 @@ This section provides details for each class and property defined by sSNO.
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasStandardNames"
-                  title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
+               <a href="#standardNames"
+                  title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -526,38 +526,6 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="#isStandardNameOf"
                   title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasStandardNames">
-      <h3>has standard names<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasStandardNames</p>
-      <div class="comment">
-         <span class="markdown">Points to multiple standard names of a standard name table.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -629,6 +597,38 @@ This section provides details for each class and property defined by sSNO.
                   target="_blank"
                   title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="standardNames">
+      <h3>standard names<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardNames</p>
+      <div class="comment">
+         <span class="markdown">Points to multiple standard names of a standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StandardName"
+                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
+               <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>

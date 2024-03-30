@@ -14,15 +14,17 @@ __this_dir__ = pathlib.Path(__file__).parent
 class TestGraph(unittest.TestCase):
 
     def test_parse_onto(self):
-        m4i_ttl = __this_dir__.parent / 'ssno.ttl'
-        onto_purl = str(m4i_ttl)
-        onto_format = "ttl"
+        ssno_ttl = __this_dir__.parent / 'ssno.ttl'
+        onto_purl = str(ssno_ttl)
 
         g = Graph()
-        g.parse(onto_purl, format=onto_format)
+        g.parse(onto_purl, format="ttl")
         for s, p, o in g:
-            assert isinstance(s, rdflib.URIRef), f'Error: {s} is not a URIRef'
+            print(s, p, o)
+
             assert isinstance(p, rdflib.URIRef), f'Error: {s} is not a URIRef'
-            assert isinstance(p, str), f'Error: {s} is not a str'
+            if p not in (rdflib.RDF.first, rdflib.RDF.rest,
+                         rdflib.OWL.unionOf) and o != rdflib.OWL.Class and o != rdflib.OWL.Restriction and p != rdflib.OWL.onProperty and p != rdflib.OWL.inverseOf and p != rdflib.OWL.someValuesFrom and p != rdflib.OWL.allValuesFrom:
+                assert isinstance(s, rdflib.URIRef), f'Error: {s} is not a URIRef'
         assert len(g) > 0, f'Error: No triples found in {onto_purl}.'
         assert g, f'Error: {onto_purl} is not a graph'

@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "@import": "https://raw.githubusercontent.com/matthiasprobst/ssno/main/ssno_context.jsonld"
+  },
+  "@graph": [
+    {
+      "@id": "https://doi.org/10.5281/zenodo.10428817",
+      "@type": "StandardNameTable",
+      "doi": "https://doi.org/10.5281/zenodo.10428817",
+      "title": "My Table",
+      "description": "My table description",
+      "standard names": [
+        {
+          "@id": "_:b0",
+          "@type": "StandardName",
+          "standard name": "x_velocity",
+          "canonical units": "m/s",
+          "description": "Velocity in x-axis direction.",
+          "standard name table": "https://doi.org/10.5281/zenodo.10428817"
+        },
+        {
+          "@id": "_:b1",
+          "@type": "StandardName",
+          "standard name": "y_velocity",
+          "canonical units": "m/s",
+          "description": "Velocity in y-axis direction.",
+          "standard name table": "https://doi.org/10.5281/zenodo.10428817"
+        }
+      ]
+    }
+  ]
+}

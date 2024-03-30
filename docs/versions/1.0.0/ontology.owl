@@ -194,7 +194,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#definedIn">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasStandardNames"/>
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Points to the ssno:StandardNameTable defining the ssno:StandardName.</skos:definition>
@@ -216,18 +216,6 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#hasStandardNames -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardNames">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">has standard names</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://matthiasprobst.github.io/ssno#isStandardNameOf -->
 
 
@@ -236,6 +224,18 @@
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <skos:definition xml:lang="en">Points to a Thing (generally a numerical variable in a distribution), that uses the standard name.</skos:definition>
         <skos:prefLabel xml:lang="en">is standard name of</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#standardNames -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNames">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">standard names</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -415,7 +415,7 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasStandardNames"/>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
