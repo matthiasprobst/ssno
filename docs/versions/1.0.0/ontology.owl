@@ -444,6 +444,16 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardName">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasStandardNames"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel>StandardName</skos:prefLabel>
     </owl:Class>
@@ -454,6 +464,16 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#definedIn"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <skos:prefLabel>StandardNameTable</skos:prefLabel>
     </owl:Class>

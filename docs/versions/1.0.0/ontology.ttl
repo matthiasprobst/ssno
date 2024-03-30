@@ -264,12 +264,22 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://matthiasprobst.github.io/ssno#StandardName
 :StandardName rdf:type owl:Class ;
+              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf :hasStandardNames
+                                                   ] ;
+                                    owl:someValuesFrom :StandardNameTable
+                                  ] ;
               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName" .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameTable
 :StandardNameTable rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf :definedIn
+                                                        ] ;
+                                         owl:someValuesFrom :StandardName
+                                       ] ;
                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
 
