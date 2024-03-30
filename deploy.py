@@ -70,7 +70,7 @@ def create_version(version_string):
     def read_lines(filename) -> str:
         with open(filename, encoding='utf-8') as f:
             lines = f.readlines()
-            return '\\n'.join([l.strip() for l in lines])
+            return '<br>'.join([l.strip() for l in lines])
 
     cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
     cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
