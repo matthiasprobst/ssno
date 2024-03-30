@@ -171,6 +171,7 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <rdfs:seeAlso rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#hasUnit"/>
+        <skos:closeMatch rdf:resource="http://qudt.org/schema/qudt/unit"/>
         <skos:definition xml:lang="en">The canonical unit of the standard name</skos:definition>
         <skos:prefLabel xml:lang="en">canonical units</skos:prefLabel>
     </owl:ObjectProperty>

@@ -328,6 +328,9 @@
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit"
   } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://qudt.org/schema/qudt/unit"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The canonical unit of the standard name"

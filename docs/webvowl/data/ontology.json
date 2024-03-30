@@ -31,17 +31,17 @@
         "value" : "2024-01-15",
         "type" : "label"
       } ],
-      "preferredNamespacePrefix" : [ {
-        "identifier" : "preferredNamespacePrefix",
-        "language" : "undefined",
-        "value" : "ssno",
-        "type" : "label"
-      } ],
       "rights" : [ {
         "identifier" : "rights",
         "language" : "undefined",
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "ssno",
+        "type" : "label"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
@@ -49,16 +49,16 @@
         "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "v1.0.0",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://matthiasprobst.github.io/ssno#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -497,7 +497,7 @@
       "IRI-based" : "keyword"
     },
     "domain" : "12",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "17"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
@@ -630,7 +630,7 @@
       "IRI-based" : "mbox"
     },
     "domain" : "4",
-    "attributes" : [ "object", "inverse functional", "external" ],
+    "attributes" : [ "external", "object", "inverse functional" ],
     "id" : "24"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#version",
@@ -654,7 +654,7 @@
       "IRI-based" : "version"
     },
     "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "26"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#longName",
@@ -679,6 +679,12 @@
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "13",
     "annotations" : {
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/unit",
+        "type" : "iri"
+      } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
         "language" : "en",
@@ -754,7 +760,7 @@
     "comment" : {
       "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "30"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#definedIn",
@@ -789,32 +795,8 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "19",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "32"
-  }, {
-    "iri" : "http://purl.org/ontology/bibo/doi",
-    "baseIri" : "http://purl.org/ontology/bibo",
-    "range" : "10",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "doi",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "DOI of the standard name table.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "doi"
-    },
-    "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "34"
   }, {
     "iri" : "http://purl.org/dc/terms/description",
     "baseIri" : "http://purl.org/dc/terms",
@@ -837,7 +819,31 @@
       "IRI-based" : "description"
     },
     "domain" : "5",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/doi",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "range" : "10",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "doi",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "DOI of the standard name table.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "doi"
+    },
+    "domain" : "1",
+    "attributes" : [ "external", "datatype" ],
     "id" : "35"
   }, {
     "range" : "12",

@@ -86,6 +86,7 @@
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> .
+<https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> .
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 # 

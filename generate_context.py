@@ -11,12 +11,12 @@ __this_dir__ = Path(__file__).parent
 
 
 def generate():
-    ssno = __this_dir__ / 'ssno.ttl'
-    assert ssno.exists()
+    ttl_file = __this_dir__ / 'ssno.ttl'
+    assert ttl_file.exists()
     context_file = __this_dir__ / 'ssno_context.jsonld'
 
     g = Graph()
-    g.parse(str(ssno))
+    g.parse(str(ttl_file), format='ttl')
 
     outfile = str(context_file)
     f = open(outfile, "w", encoding="utf-8")

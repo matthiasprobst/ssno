@@ -100,6 +100,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                 rdfs:domain :StandardName ;
                 rdfs:range <http://qudt.org/schema/qudt/Unit> ;
                 rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> ;
                 <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 

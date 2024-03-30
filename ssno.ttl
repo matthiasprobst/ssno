@@ -109,6 +109,7 @@ ssno:canonicalUnits rdf:type owl:ObjectProperty ;
                     rdfs:domain ssno:StandardName ;
                     rdfs:range qudt:Unit ;
                     rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                    skos:closeMatch qudt:unit ;
                     skos:definition "The canonical unit of the standard name"@en ;
                     skos:prefLabel "canonical units"@en .
 
