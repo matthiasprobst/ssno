@@ -201,6 +201,7 @@ dcat:version rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#ancillary_variables
 ssno:ancillary_variables rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
                          rdfs:range xsd:string ;
                          skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
                          skos:prefLabel "ancillary variables"@en .
@@ -208,6 +209,7 @@ ssno:ancillary_variables rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#long_name
 ssno:long_name rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
                rdfs:range xsd:string ;
                skos:definition "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 

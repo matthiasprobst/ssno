@@ -302,6 +302,9 @@
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#ancillary_variables",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
@@ -407,6 +410,9 @@
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#long_name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
