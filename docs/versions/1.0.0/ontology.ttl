@@ -86,9 +86,11 @@ owl:sameas rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://xmlns.com/foaf/0.1/mbox
-<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ;
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ,
+                                          owl:InverseFunctionalProperty ;
                                  rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
                                  rdfs:range owl:Thing ;
+                                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
                                  <http://www.w3.org/2004/02/skos/core#definition> "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."@en ;
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en .
 
@@ -220,10 +222,6 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
@@ -245,7 +243,6 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                                    ] ;
                                     owl:someValuesFrom :StandardNameTable
                                   ] ;
-              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
               <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName" .
 

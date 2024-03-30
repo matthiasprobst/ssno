@@ -154,8 +154,10 @@
 
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/mbox">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <skos:definition xml:lang="en">A personal mailbox, ie. an Internet mailbox associated with exactly one owner.</skos:definition>
         <skos:prefLabel xml:lang="en">mbox</skos:prefLabel>
     </owl:ObjectProperty>
@@ -367,13 +369,6 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
-
-
     <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
@@ -410,7 +405,6 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:definition xml:lang="en">A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table.</skos:definition>
         <skos:prefLabel>StandardName</skos:prefLabel>
     </owl:Class>

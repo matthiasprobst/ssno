@@ -95,9 +95,11 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://xmlns.com/foaf/0.1/mbox
-foaf:mbox rdf:type owl:ObjectProperty ;
+foaf:mbox rdf:type owl:ObjectProperty ,
+                   owl:InverseFunctionalProperty ;
           rdfs:domain prov:Agent ;
           rdfs:range owl:Thing ;
+          rdfs:isDefinedBy foaf: ;
           skos:definition "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."@en ;
           skos:prefLabel "mbox"@en .
 
@@ -229,10 +231,6 @@ qudt:Unit rdf:type owl:Class ;
           skos:prefLabel "Unit"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class .
-
-
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              rdfs:isDefinedBy dcat: ;
@@ -254,7 +252,6 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
-                  rdfs:subClassOf skos:Concept ;
                   skos:definition "A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "StandardName" .
 
