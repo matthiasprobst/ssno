@@ -300,7 +300,7 @@
     "@value" : "StandardNameTable"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#ancillary_variables",
+  "@id" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -317,7 +317,7 @@
     "@value" : "ancillary variables"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#canonical_units",
+  "@id" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
@@ -408,7 +408,7 @@
     "@value" : "has standard names"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#long_name",
+  "@id" : "https://matthiasprobst.github.io/ssno#longName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
@@ -421,7 +421,7 @@
     "@value" : "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standard_name",
+  "@id" : "https://matthiasprobst.github.io/ssno#standardName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"

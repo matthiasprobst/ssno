@@ -107,22 +107,22 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
+    "id" : "32",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "16",
+    "id" : "28",
     "type" : "owl:Thing"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "21",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "25",
+    "id" : "17",
     "type" : "owl:Thing"
   }, {
-    "id" : "22",
+    "id" : "23",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -282,7 +282,7 @@
     "id" : "10"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "31",
+    "id" : "32",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -290,7 +290,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "16",
+    "id" : "28",
     "label" : {
       "undefined" : "Thing"
     }
@@ -326,21 +326,21 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
+    "id" : "21",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "25",
+    "id" : "17",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "22",
+    "id" : "23",
     "label" : {
       "undefined" : "Thing"
     }
@@ -355,40 +355,40 @@
     "id" : "15",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "17",
+    "id" : "16",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "18",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "19",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "20",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "21",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "23",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "24",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "26",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "28",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "30",
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "32",
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "33",
@@ -449,30 +449,6 @@
     "attributes" : [ "object" ],
     "id" : "3"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#ancillary_variables",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "13",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "ancillary variables",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ancillary_variables"
-    },
-    "domain" : "16",
-    "attributes" : [ "datatype" ],
-    "id" : "15"
-  }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
     "baseIri" : "http://www.w3.org/ns/dcat",
     "range" : "9",
@@ -495,37 +471,31 @@
     },
     "domain" : "10",
     "attributes" : [ "datatype", "external" ],
-    "id" : "17"
+    "id" : "15"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#canonical_units",
+    "iri" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "11",
+    "range" : "13",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
         "language" : "en",
-        "value" : "canonical units",
+        "value" : "ancillary variables",
         "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "The canonical unit of the standard name",
+        "value" : "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)",
         "type" : "label"
-      } ],
-      "seeAlso" : [ {
-        "identifier" : "seeAlso",
-        "language" : "undefined",
-        "value" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit",
-        "type" : "iri"
       } ]
     },
     "label" : {
-      "IRI-based" : "canonical_units"
+      "IRI-based" : "ancillaryVariables"
     },
-    "domain" : "2",
-    "attributes" : [ "object" ],
-    "id" : "18"
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "16"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasStandardNames",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -549,7 +519,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object", "someValues" ],
-    "id" : "19"
+    "id" : "18"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#definedIn",
     "inverse" : "0",
@@ -574,11 +544,41 @@
     },
     "domain" : "1",
     "attributes" : [ "object", "someValues" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#standardName",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "21",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "standard name",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "x_derivative_of_y_velocity",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "standardName"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
     "id" : "20"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/mbox",
     "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "22",
+    "range" : "23",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -603,8 +603,8 @@
       "IRI-based" : "mbox"
     },
     "domain" : "4",
-    "attributes" : [ "object", "inverse functional", "external" ],
-    "id" : "21"
+    "attributes" : [ "object", "external", "inverse functional" ],
+    "id" : "22"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#version",
     "baseIri" : "http://www.w3.org/ns/dcat",
@@ -628,7 +628,55 @@
     },
     "domain" : "1",
     "attributes" : [ "datatype", "external" ],
-    "id" : "23"
+    "id" : "24"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#longName",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "14",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "longName"
+    },
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "11",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "canonical units",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The canonical unit of the standard name",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "canonicalUnits"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "26"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasStandardName",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -650,39 +698,9 @@
     "label" : {
       "IRI-based" : "hasStandardName"
     },
-    "domain" : "25",
+    "domain" : "28",
     "attributes" : [ "object" ],
-    "id" : "24"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#standard_name",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "27",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "standard name",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.",
-        "type" : "label"
-      } ],
-      "example" : [ {
-        "identifier" : "example",
-        "language" : "undefined",
-        "value" : "x_derivative_of_y_velocity",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "standard_name"
-    },
-    "domain" : "2",
-    "attributes" : [ "datatype" ],
-    "id" : "26"
+    "id" : "27"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
     "baseIri" : "http://purl.org/dc/terms",
@@ -709,7 +727,7 @@
       "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "28"
+    "id" : "29"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#definedIn",
     "inverse" : "0",
@@ -734,59 +752,17 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "29"
+    "id" : "30"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
-    "range" : "31",
+    "range" : "32",
     "label" : {
       "IRI-based" : "topDataProperty"
     },
-    "domain" : "16",
+    "domain" : "17",
     "attributes" : [ "datatype", "external" ],
-    "id" : "30"
-  }, {
-    "iri" : "http://purl.org/ontology/bibo/doi",
-    "baseIri" : "http://purl.org/ontology/bibo",
-    "range" : "8",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "doi",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "DOI of the standard name table.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "doi"
-    },
-    "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "32"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#long_name",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "14",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "long_name"
-    },
-    "domain" : "16",
-    "attributes" : [ "datatype" ],
-    "id" : "33"
+    "id" : "31"
   }, {
     "iri" : "http://purl.org/dc/terms/description",
     "baseIri" : "http://purl.org/dc/terms",
@@ -809,6 +785,30 @@
       "IRI-based" : "description"
     },
     "domain" : "5",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://purl.org/ontology/bibo/doi",
+    "baseIri" : "http://purl.org/ontology/bibo",
+    "range" : "8",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "doi",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "DOI of the standard name table.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "doi"
+    },
+    "domain" : "1",
     "attributes" : [ "datatype", "external" ],
     "id" : "34"
   }, {

@@ -38,7 +38,7 @@
     "StandardName" : {"@id" : "ssno:StandardName"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "mbox" : {"@id" : "foaf:mbox", "@type" : "owl:Thing"},
-    "canonical units" : {"@id" : "ssno:canonical_units", "@type" : "qudt:Unit"},
+    "canonical units" : {"@id" : "ssno:canonicalUnits", "@type" : "qudt:Unit"},
     "contact" : {"@id" : "ssno:contact", "@type" : "prov:Agent"},
     "defined in" : {"@id" : "ssno:definedIn", "@type" : "ssno:StandardNameTable"},
     "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
@@ -48,7 +48,7 @@
     "doi" : {"@id" : "<http://purl.org/ontology/bibo/doi>", "@type" : "rdfs:Literal"},
     "keyword" : {"@id" : "dcat:keyword", "@type" : "rdfs:Literal"},
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
-    "ancillary variables" : {"@id" : "ssno:ancillary_variables", "@type" : "xsd:string"},
-    "standard name" : {"@id" : "ssno:standard_name", "@type" : "xsd:string"}
+    "ancillary variables" : {"@id" : "ssno:ancillaryVariables", "@type" : "xsd:string"},
+    "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"}
   }
 }
