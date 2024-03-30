@@ -122,15 +122,6 @@ ssno:contact rdf:type owl:ObjectProperty ;
              skos:prefLabel "contact"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#definedIn
-ssno:definedIn rdf:type owl:ObjectProperty ;
-               owl:inverseOf ssno:standardNames ;
-               rdfs:domain ssno:StandardName ;
-               rdfs:range ssno:StandardNameTable ;
-               skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
-               skos:prefLabel "defined in"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
@@ -148,6 +139,15 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       skos:prefLabel "is standard name of"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#standardNameTable
+ssno:standardNameTable rdf:type owl:ObjectProperty ;
+                       owl:inverseOf ssno:standardNames ;
+                       rdfs:domain ssno:StandardName ;
+                       rdfs:range ssno:StandardNameTable ;
+                       skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
+                       skos:prefLabel "standard name table"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#standardNames
 ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
@@ -160,18 +160,6 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/terms/description
-dcterms:description rdf:type owl:DatatypeProperty ;
-                    rdfs:domain [ rdf:type owl:Class ;
-                                  owl:unionOf ( ssno:StandardName
-                                                ssno:StandardNameTable
-                                              )
-                                ] ;
-                    rdfs:range xsd:string ;
-                    skos:definition "Description of a standard name or a standard name table"@en ;
-                    skos:prefLabel "description"@en .
-
-
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:domain ssno:StandardNameTable ;
@@ -179,14 +167,6 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:comment "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs." ;
                    rdfs:isDefinedBy dcterms: ;
                    skos:prefLabel "identifier"@en .
-
-
-###  http://purl.org/ontology/bibo/doi
-<http://purl.org/ontology/bibo/doi> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain ssno:StandardNameTable ;
-                                    rdfs:range rdfs:Literal ;
-                                    skos:definition "DOI of the standard name table."@en ;
-                                    skos:prefLabel "doi"@en .
 
 
 ###  http://www.w3.org/2002/07/owl#topDataProperty
@@ -215,6 +195,19 @@ ssno:ancillaryVariables rdf:type owl:DatatypeProperty ;
                         rdfs:range xsd:string ;
                         skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
                         skos:prefLabel "ancillary variables"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#description
+ssno:description rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( ssno:StandardName
+                                             ssno:StandardNameTable
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 skos:closeMatch dcterms:description ;
+                 skos:definition "Description of a standard name or a standard name table"@en ;
+                 skos:prefLabel "description"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#longName
@@ -271,7 +264,7 @@ ssno:StandardName rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#StandardNameTable
 ssno:StandardNameTable rdf:type owl:Class ;
                        owl:equivalentClass [ rdf:type owl:Restriction ;
-                                             owl:onProperty [ owl:inverseOf ssno:definedIn
+                                             owl:onProperty [ owl:inverseOf ssno:standardNameTable
                                                             ] ;
                                              owl:someValuesFrom ssno:StandardName
                                            ] ;
