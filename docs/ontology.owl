@@ -206,6 +206,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardName">
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isStandardNameOf"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit.</skos:definition>
@@ -222,6 +223,18 @@
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">has standard names</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#isStandardNameOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isStandardNameOf">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:definition xml:lang="en">Points to a Thing (generally a numerical variable in a distribution), that uses the standard name.</skos:definition>
+        <skos:prefLabel xml:lang="en">is standard name of</skos:prefLabel>
     </owl:ObjectProperty>
     
 

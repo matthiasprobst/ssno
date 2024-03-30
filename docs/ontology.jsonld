@@ -382,6 +382,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
   } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameOf"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."
@@ -406,6 +409,23 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "has standard names"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "is standard name of"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#longName",

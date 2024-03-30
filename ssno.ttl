@@ -132,6 +132,7 @@ ssno:definedIn rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
+                     owl:inverseOf ssno:isStandardNameOf ;
                      rdfs:domain owl:Thing ;
                      rdfs:range ssno:StandardName ;
                      skos:definition "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en ;
@@ -144,6 +145,14 @@ ssno:hasStandardNames rdf:type owl:ObjectProperty ;
                       rdfs:range ssno:StandardName ;
                       skos:definition "Points to multiple standard names of a standard name table."@en ;
                       skos:prefLabel "has standard names"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#isStandardNameOf
+ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain ssno:StandardName ;
+                      rdfs:range owl:Thing ;
+                      skos:definition "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en ;
+                      skos:prefLabel "is standard name of"@en .
 
 
 #################################################################
