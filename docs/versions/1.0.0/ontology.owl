@@ -361,7 +361,8 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
+        <skos:definition xml:lang="en">Unit of measure.</skos:definition>
+        <skos:prefLabel xml:lang="en">Unit</skos:prefLabel>
     </owl:Class>
     
 
@@ -376,14 +377,22 @@
     <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
+        <skos:definition xml:lang="en">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
+        <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/ns/prov#Agent -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <skos:definition xml:lang="en">Person or Organization related to a StandardNameTable.</skos:definition>
+        <skos:prefLabel xml:lang="en">Agent</skos:prefLabel>
+    </owl:Class>
     
 
 
@@ -402,6 +411,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table.</skos:definition>
         <skos:prefLabel>StandardName</skos:prefLabel>
     </owl:Class>
     
@@ -422,15 +432,9 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <skos:definition xml:lang="en">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</skos:definition>
         <skos:prefLabel>StandardNameTable</skos:prefLabel>
     </owl:Class>
-    
-
-
-    <!-- https://schema.org/Intangible -->
-
-
-    <owl:Class rdf:about="https://schema.org/Intangible"/>
 </rdf:RDF>
 
 

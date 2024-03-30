@@ -104,6 +104,12 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+   </li>
+   <li>
       <a href="#StandardName"
          title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
    </li>
@@ -112,9 +118,7 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
    </li>
    <li>
-      <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">
-         <span>unit</span>
-      </a>
+      <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -190,6 +194,12 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+      </li>
+      <li>
          <a href="#StandardName"
             title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
       </li>
@@ -198,11 +208,68 @@ This section provides details for each class and property defined by sSNO.
             title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
       </li>
       <li>
-         <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">
-            <span>unit</span>
-         </a>
+         <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
       </li>
    </ul>
+   <div class="entity" id="http://www.w3.org/ns/prov#Agent">
+      <h3>Agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
+      <div class="comment">
+         <span class="markdown">Person or Organization related to a StandardNameTable.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/prov#">http://www.w3.org/ns/prov#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/dcat#Dataset">
+      <h3>Dataset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/dcat#Dataset</p>
+      <div class="comment">
+         <span class="markdown">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/dcat#">http://www.w3.org/ns/dcat#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StandardNameTable"
+               title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="StandardName">
       <h3>StandardName<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -210,6 +277,9 @@ This section provides details for each class and property defined by sSNO.
       </h3>
       <p>
          <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardName</p>
+      <div class="comment">
+         <span class="markdown">A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table.</span>
+      </div>
       <dl class="description">
          <dt>is equivalent to</dt>
          <dd>
@@ -255,6 +325,9 @@ This section provides details for each class and property defined by sSNO.
       </h3>
       <p>
          <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardNameTable</p>
+      <div class="comment">
+         <span class="markdown">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</span>
+      </div>
       <dl class="description">
          <dt>is equivalent to</dt>
          <dd>
@@ -268,9 +341,7 @@ This section provides details for each class and property defined by sSNO.
          </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://www.w3.org/ns/dcat#Dataset"
-               target="_blank"
-               title="http://www.w3.org/ns/dcat#Dataset">dataset</a>
+            <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -293,20 +364,16 @@ This section provides details for each class and property defined by sSNO.
       </dl>
    </div>
    <div class="entity" id="http://qudt.org/schema/qudt/Unit">
-      <h3>unit<sup class="type-c" title="class">c</sup>
+      <h3>Unit<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+      <div class="comment">
+         <span class="markdown">Unit of measure.</span>
+      </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://schema.org/Intangible"
-               target="_blank"
-               title="https://schema.org/Intangible">intangible</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#canonical_units"
@@ -362,7 +429,7 @@ This section provides details for each class and property defined by sSNO.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -388,9 +455,7 @@ This section provides details for each class and property defined by sSNO.
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/ns/prov#Agent"
-                  target="_blank"
-                  title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -503,9 +568,7 @@ This section provides details for each class and property defined by sSNO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/ns/prov#Agent"
-                  target="_blank"
-                  title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -678,9 +741,7 @@ This section provides details for each class and property defined by sSNO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/ns/dcat#Dataset"
-                  target="_blank"
-                  title="http://www.w3.org/ns/dcat#Dataset">dataset</a>
+               <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
