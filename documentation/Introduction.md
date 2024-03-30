@@ -1,2 +1,6 @@
-The ontology is still under development. Please participate in this ontology by posting problems or contributions 
-in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.
+The core idea is to provide the class <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> and <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardNameTable</a> with a minimal set of properties. A [_StandardName_](#StandardName) at its core is a simple string value, based on specific construction rules. By enriching numerical data with a [_StandardName_](#StandardName), complex information can be added by only using one attribute. An example of a such a name is "x_derivative_of_y_velocity". The name itself already suggests its meaning, however, a lookup in the respective standard name table would reveals the precise meaning (the name describes the derivative of the y-velocity w.r.t. the x-coordinate).
+
+The rules of standard name construction is defined in a document associated with the <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardNameTable</a>. The table contains all standard names defied by a project or community. Instances of <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> and StandardNameTable can be used e.g. in combinations with other ontologies like <a href="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/" target="_blank">metadata4ing</a> for a concise description of a numerical variable.
+
+The below class diagram gives a quick overview of the central classes of the ontology. The ontology is still under development.
+![Overview central classes](https://github.com/matthiasprobst/ssno/blob/main/documentation/classdiagram.png)

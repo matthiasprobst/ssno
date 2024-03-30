@@ -113,7 +113,7 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "24",
     "type" : "owl:Thing"
   }, {
     "id" : "18",
@@ -315,7 +315,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "25",
+    "id" : "24",
     "label" : {
       "undefined" : "Thing"
     }
@@ -356,14 +356,14 @@
     "id" : "22",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "23",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
+    "id" : "23",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "26",
     "type" : "owl:datatypeProperty"
@@ -459,7 +459,7 @@
       "IRI-based" : "keyword"
     },
     "domain" : "11",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "16"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
@@ -565,6 +565,60 @@
     "attributes" : [ "datatype" ],
     "id" : "22"
   }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "5",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "standard names",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to multiple standard names of a standard name table.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "standardNames"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/mbox",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "mbox",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mbox"
+    },
+    "domain" : "2",
+    "attributes" : [ "inverse functional", "object", "external" ],
+    "id" : "23"
+  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "13",
@@ -593,61 +647,7 @@
     },
     "domain" : "10",
     "attributes" : [ "datatype" ],
-    "id" : "23"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "5",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "standard names",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Points to multiple standard names of a standard name table.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "standardNames"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "21"
-  }, {
-    "iri" : "http://xmlns.com/foaf/0.1/mbox",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "25",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "mbox",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "mbox"
-    },
-    "domain" : "2",
-    "attributes" : [ "inverse functional", "external", "object" ],
-    "id" : "24"
+    "id" : "25"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#version",
     "baseIri" : "http://www.w3.org/ns/dcat",
@@ -670,7 +670,7 @@
       "IRI-based" : "version"
     },
     "domain" : "1",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "26"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
@@ -801,7 +801,7 @@
     "comment" : {
       "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "31"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
@@ -811,7 +811,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "18",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "32"
   }, {
     "range" : "11",

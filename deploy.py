@@ -28,8 +28,8 @@ logger.setLevel(DEFAULT_LOGGING_LEVEL)
 __this_dir__ = pathlib.Path(__file__).parent
 
 
-def copy_version_to_docs():
-    version_path = __this_dir__ / 'docs/versions' / '1.0.0'
+def copy_version_to_docs(version_string):
+    version_path = __this_dir__ / 'docs/versions' / version_string.strip('v')
     target_path = __this_dir__ / 'docs'
 
     assert version_path.exists()
@@ -45,8 +45,8 @@ def copy_version_to_docs():
     logger.debug('done copying version to docs')
 
 
-if __name__ == "__main__":
-
+def create_version(version_string):
+    assert version_string.startswith('v')
     sys.path.insert(0, '.')
     # call batch script build.bat
     logger.info('Start building docs')
@@ -58,25 +58,32 @@ if __name__ == "__main__":
     # open widoco config file
     cfg_file = __this_dir__ / 'widoco.cfg'
     config = configparser.ConfigParser()
-    with open('widoco.cfg', 'r') as f:
+    with open('widoco.cfg', 'r', encoding='utf-8') as f:
         lines = [l.strip().split('=') for l in f.readlines()]
 
     cfg_data = {l[0]: l[1] for l in lines if len(l) == 2}
     today = datetime.datetime.today()
     cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
-
+    cfg_data['ontologyRevisionNumber'] = version_string
 
     def read_lines(filename) -> str:
-        with open(filename) as f:
+        with open(filename, encoding='utf-8') as f:
             lines = f.readlines()
-            return ' '.join([l.strip() for l in lines])
-
+            return '\\n'.join([l.strip() for l in lines])
 
     cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
     cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
+    cfg_data['thisVersionURI'] = f'https://matthiasprobst.github.io/ssno/{version_string.strip("v")}'
+    cfg_data['authors'] = 'Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institut ' \
+                          'für Technologie, Institut für Thermische Strömungsmaschinen'
 
-    with open(cfg_file, 'w') as f:
+    cfg_data['citeAs'] = 'Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institut ' \
+                         'für Technologie, Institut für Thermische Strömungsmaschinen. SSNO: A simple Standard ' \
+                         f'Name Ontology. Revision: {version_string}. Retrieved from: ' \
+                         f'https://matthiasprobst.github.io/ssno/{version_string.strip("v")}'
+
+    with open(cfg_file, 'w', encoding='utf-8') as f:
         for k, v in cfg_data.items():
             f.write(f'\n{k}={v}')
     script_path = __this_dir__ / 'build_onto_doc.bat'
@@ -86,6 +93,10 @@ if __name__ == "__main__":
     from generate_context import generate
 
     generate()
-    copy_version_to_docs()
+    copy_version_to_docs(version_string)
 
     logger.info('Finished building docs')
+
+
+if __name__ == "__main__":
+    create_version('v1.0.0')
