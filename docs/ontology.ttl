@@ -85,22 +85,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/ns/dcat#byteSize
-<http://www.w3.org/ns/dcat#byteSize> rdf:type owl:ObjectProperty ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "byte size"@en .
-
-
-###  http://www.w3.org/ns/dcat#downloadURL
-<http://www.w3.org/ns/dcat#downloadURL> rdf:type owl:ObjectProperty ;
-                                        rdfs:range rdfs:Resource ;
-                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "download URL"@en .
-
-
-###  http://www.w3.org/ns/dcat#mediaType
-<http://www.w3.org/ns/dcat#mediaType> rdf:type owl:ObjectProperty ;
-                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "media type"@en .
-
-
 ###  http://xmlns.com/foaf/0.1/mbox
 <http://xmlns.com/foaf/0.1/mbox> rdf:type owl:ObjectProperty ;
                                  rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
@@ -233,10 +217,6 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 ###  http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://schema.org/Intangible> .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept

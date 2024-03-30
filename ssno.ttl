@@ -94,22 +94,6 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/ns/dcat#byteSize
-dcat:byteSize rdf:type owl:ObjectProperty ;
-              skos:prefLabel "byte size"@en .
-
-
-###  http://www.w3.org/ns/dcat#downloadURL
-dcat:downloadURL rdf:type owl:ObjectProperty ;
-                 rdfs:range rdfs:Resource ;
-                 skos:prefLabel "download URL"@en .
-
-
-###  http://www.w3.org/ns/dcat#mediaType
-dcat:mediaType rdf:type owl:ObjectProperty ;
-               skos:prefLabel "media type"@en .
-
-
 ###  http://xmlns.com/foaf/0.1/mbox
 foaf:mbox rdf:type owl:ObjectProperty ;
           rdfs:domain prov:Agent ;
@@ -242,10 +226,6 @@ ssno:standard_name rdf:type owl:DatatypeProperty ;
 ###  http://qudt.org/schema/qudt/Unit
 qudt:Unit rdf:type owl:Class ;
           rdfs:subClassOf schema:Intangible .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#Resource
-rdfs:Resource rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
