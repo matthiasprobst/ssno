@@ -93,15 +93,15 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.w3.org/ns/dcat#Distribution
-dcat:Distribution rdf:type owl:ObjectProperty ;
-                  rdfs:domain ssno:StandardNameTable ;
-                  rdfs:range dcat:Distribution .
-
-
 ###  http://www.w3.org/ns/dcat#byteSize
 dcat:byteSize rdf:type owl:ObjectProperty ;
               skos:prefLabel "byte size"@en .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+dcat:distribution rdf:type owl:ObjectProperty ;
+                  rdfs:domain ssno:StandardNameTable ;
+                  skos:prefLabel "has distribution"@en .
 
 
 ###  http://www.w3.org/ns/dcat#downloadURL
@@ -141,13 +141,13 @@ ssno:contact rdf:type owl:ObjectProperty ;
              skos:prefLabel "contact"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#definedInStandardNameTable
-ssno:definedInStandardNameTable rdf:type owl:ObjectProperty ;
-                                owl:inverseOf ssno:hasStandardNames ;
-                                rdfs:domain ssno:StandardName ;
-                                rdfs:range ssno:StandardNameTable ;
-                                skos:definition "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."@en ;
-                                skos:prefLabel "standard name table"@en .
+###  https://matthiasprobst.github.io/ssno#definedIn
+ssno:definedIn rdf:type owl:ObjectProperty ;
+               owl:inverseOf ssno:hasStandardNames ;
+               rdfs:domain ssno:StandardName ;
+               rdfs:range ssno:StandardNameTable ;
+               skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
+               skos:prefLabel "defined in"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
@@ -176,7 +176,7 @@ dcterms:description rdf:type owl:DatatypeProperty ;
                                 ssno:StandardNameTable ;
                     rdfs:range xsd:string ;
                     skos:definition "Description of a standard name or a standard name table"@en ;
-                    skos:prefLabel "has standard name description"@en .
+                    skos:prefLabel "description"@en .
 
 
 ###  http://purl.org/dc/terms/identifier
@@ -193,6 +193,14 @@ dcterms:title rdf:type owl:DatatypeProperty ;
               rdfs:domain ssno:StandardNameTable .
 
 
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain ssno:StandardNameTable ;
+                                    rdfs:range rdfs:Literal ;
+                                    skos:definition "DOI of the standard name table."@en ;
+                                    skos:prefLabel "doi"@en .
+
+
 ###  http://www.w3.org/2002/07/owl#topDataProperty
 owl:topDataProperty rdf:type owl:DatatypeProperty .
 
@@ -201,6 +209,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 dcat:keyword rdf:type owl:DatatypeProperty ;
              rdfs:domain dcat:Dataset ;
              rdfs:range rdfs:Literal ;
+             skos:definition "A keyword or tag describing the resource."@en ;
              skos:prefLabel "keyword"@en .
 
 
@@ -208,31 +217,21 @@ dcat:keyword rdf:type owl:DatatypeProperty ;
 dcat:version rdf:type owl:DatatypeProperty ;
              rdfs:domain ssno:StandardNameTable ;
              rdfs:range rdfs:Literal ;
+             skos:definition "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
              skos:prefLabel "version" .
 
 
-###  https://matthiasprobst.github.io/ssno#hasDOI
-ssno:hasDOI rdf:type owl:DatatypeProperty ;
-            rdfs:domain ssno:StandardNameTable ;
-            rdfs:range xsd:string ;
-            skos:definition "DOI of the standard name table."@en ;
-            skos:prefLabel "has doi" .
-
-
-###  https://matthiasprobst.github.io/ssno#latexSymbol
-ssno:latexSymbol rdf:type owl:DatatypeProperty ;
-                 rdfs:domain ssno:StandardName ;
-                 rdfs:range xsd:string ;
-                 rdfs:seeAlso <http://www.ontology-of-units-of-measure.org/resource/om-2/LaTeXSymbol> ;
-                 skos:definition "LaTeX symbol associated to the standard name."@en ;
-                 skos:example "$\\dot V$" ;
-                 skos:prefLabel "has latex symbol"@en .
+###  https://matthiasprobst.github.io/ssno#ancillary_variables
+ssno:ancillary_variables rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:string ;
+                         skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
+                         skos:prefLabel "ancillary variables"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#long_name
 ssno:long_name rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
-               skos:definition "A human-readable label of a variable which is associated with a standard_name."@en .
+               skos:definition "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standard_name
@@ -247,12 +246,6 @@ ssno:standard_name rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
-
-###  http://qudt.org/schema/qudt/QuantityKind
-qudt:QuantityKind rdf:type owl:Class ;
-                  rdfs:subClassOf schema:Intangible ;
-                  skos:definition "Kind of quantity of the variable, which the standard name describes"@en .
-
 
 ###  http://qudt.org/schema/qudt/Unit
 qudt:Unit rdf:type owl:Class ;
@@ -299,10 +292,8 @@ schema:Intangible rdf:type owl:Class .
 #    Annotations
 #################################################################
 
-dcterms:title skos:prefLabel "title"@en .
-
-
-dcat:Distribution skos:prefLabel "has distribution"@en .
+dcterms:title skos:definition "The title of the Standard Name Table."@en ;
+              skos:prefLabel "title"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

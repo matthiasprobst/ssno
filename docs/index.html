@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"sSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the cf-conventions (http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.", "dateReleased":"2024-01-15", "dateModified":"2024-03-29", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"sSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the cf-conventions (http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.", "dateReleased":"2024-01-15", "dateModified":"2024-03-30", "version":"v1.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -59,7 +59,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-03-29</dt>
+<dt>Modified on: 2024-03-30</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.0.0">https://matthiasprobst.github.io/ssno/1.0.0</a></dd>
 <dt>Latest version:</dt>
@@ -104,11 +104,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
-         <span>quantity kind</span>
-      </a>
-   </li>
-   <li>
       <a href="#StandardName"
          title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
    </li>
@@ -135,12 +130,13 @@ This ontology has the following classes and properties.</span>
       <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
    </li>
    <li>
+      <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
+   </li>
+   <li>
       <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">
-         <span>has distribution</span>
-      </a>
+      <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
    </li>
    <li>
       <a href="#hasStandardName"
@@ -156,22 +152,18 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://www.w3.org/ns/dcat#mediaType" title="http://www.w3.org/ns/dcat#mediaType">media type</a>
    </li>
-   <li>
-      <a href="#definedInStandardNameTable"
-         title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
-   </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
+      <a href="#ancillary_variables"
+         title="https://matthiasprobst.github.io/ssno#ancillary_variables">ancillary variables</a>
    </li>
    <li>
-      <a href="#latexSymbol"
-         title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
    </li>
    <li>
-      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
+      <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">doi</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
@@ -215,11 +207,6 @@ This section provides details for each class and property defined by sSNO.
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://qudt.org/schema/qudt/QuantityKind" title="http://qudt.org/schema/qudt/QuantityKind">
-            <span>quantity kind</span>
-         </a>
-      </li>
-      <li>
          <a href="#StandardName"
             title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
       </li>
@@ -233,26 +220,6 @@ This section provides details for each class and property defined by sSNO.
          </a>
       </li>
    </ul>
-   <div class="entity" id="http://qudt.org/schema/qudt/QuantityKind">
-      <h3>quantity kind<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://qudt.org/schema/qudt/QuantityKind</p>
-      <div class="comment">
-         <span class="markdown">Kind of quantity of the variable, which the standard name describes</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="https://schema.org/Intangible"
-               target="_blank"
-               title="https://schema.org/Intangible">intangible</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="StandardName">
       <h3>StandardName<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -272,14 +239,11 @@ This section provides details for each class and property defined by sSNO.
          <dd>
             <a href="#canonical_units"
                title="https://matthiasprobst.github.io/ssno#canonical_units">canonical units</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#latexSymbol"
-               title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#standard_name"
                title="https://matthiasprobst.github.io/ssno#standard_name">standard name</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#definedInStandardNameTable"
-               title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -309,10 +273,10 @@ This section provides details for each class and property defined by sSNO.
          <dt>is in domain of</dt>
          <dd>
             <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardNames"
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">doi</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasStandardNames"
                title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">title</a>
@@ -321,8 +285,7 @@ This section provides details for each class and property defined by sSNO.
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#definedInStandardNameTable"
-               title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
+            <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -366,12 +329,13 @@ This section provides details for each class and property defined by sSNO.
          <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
       </li>
       <li>
+         <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/ns/dcat#downloadURL" title="http://www.w3.org/ns/dcat#downloadURL">download URL</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">
-            <span>has distribution</span>
-         </a>
+         <a href="#http://www.w3.org/ns/dcat#distribution" title="http://www.w3.org/ns/dcat#distribution">has distribution</a>
       </li>
       <li>
          <a href="#hasStandardName"
@@ -386,10 +350,6 @@ This section provides details for each class and property defined by sSNO.
       </li>
       <li>
          <a href="#http://www.w3.org/ns/dcat#mediaType" title="http://www.w3.org/ns/dcat#mediaType">media type</a>
-      </li>
-      <li>
-         <a href="#definedInStandardNameTable"
-            title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
       </li>
    </ul>
    <div class="entity" id="http://www.w3.org/ns/dcat#byteSize">
@@ -454,6 +414,39 @@ This section provides details for each class and property defined by sSNO.
          </dl>
       </div>
    </div>
+   <div class="entity" id="definedIn">
+      <h3>defined in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#definedIn</p>
+      <div class="comment">
+         <span class="markdown">Points to the ssno:StandardNameTable defining the ssno:StandardName.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardName"
+                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasStandardNames"
+                  title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://www.w3.org/ns/dcat#downloadURL">
       <h3>download URL<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -467,7 +460,7 @@ This section provides details for each class and property defined by sSNO.
             <dd>
                <a href="http://www.w3.org/ns/dcat#Distribution"
                   target="_blank"
-                  title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
+                  title="http://www.w3.org/ns/dcat#Distribution">distribution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -480,13 +473,13 @@ This section provides details for each class and property defined by sSNO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="http://www.w3.org/ns/dcat#Distribution">
+   <div class="entity" id="http://www.w3.org/ns/dcat#distribution">
       <h3>has distribution<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/dcat#Distribution</p>
+         <strong>IRI:</strong> http://www.w3.org/ns/dcat#distribution</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -495,15 +488,6 @@ This section provides details for each class and property defined by sSNO.
                   title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/ns/dcat#Distribution"
-                  target="_blank"
-                  title="http://www.w3.org/ns/dcat#Distribution">has distribution</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>class</dd>
          </dl>
       </div>
    </div>
@@ -561,8 +545,7 @@ This section provides details for each class and property defined by sSNO.
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#definedInStandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#definedInStandardNameTable">standard name table</a>
+               <a href="#definedIn" title="https://matthiasprobst.github.io/ssno#definedIn">defined in</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -605,53 +588,20 @@ This section provides details for each class and property defined by sSNO.
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/dcat#mediaType</p>
    </div>
-   <div class="entity" id="definedInStandardNameTable">
-      <h3>standard name table<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#definedInStandardNameTable</p>
-      <div class="comment">
-         <span class="markdown">The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#hasStandardNames"
-                  title="https://matthiasprobst.github.io/ssno#hasStandardNames">has standard names</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasDOI" title="https://matthiasprobst.github.io/ssno#hasDOI">has doi</a>
+         <a href="#ancillary_variables"
+            title="https://matthiasprobst.github.io/ssno#ancillary_variables">ancillary variables</a>
       </li>
       <li>
-         <a href="#latexSymbol"
-            title="https://matthiasprobst.github.io/ssno#latexSymbol">has latex symbol</a>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">description</a>
       </li>
       <li>
-         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">has standard name description</a>
+         <a href="#http://purl.org/ontology/bibo/doi" title="http://purl.org/ontology/bibo/doi">doi</a>
       </li>
       <li>
          <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
@@ -677,57 +627,18 @@ This section provides details for each class and property defined by sSNO.
          <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
       </li>
    </ul>
-   <div class="entity" id="hasDOI">
-      <h3>has doi<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="ancillary_variables">
+      <h3>ancillary variables<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasDOI</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#ancillary_variables</p>
       <div class="comment">
-         <span class="markdown">DOI of the standard name table.</span>
+         <span class="markdown">Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the "nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)</span>
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="latexSymbol">
-      <h3>has latex symbol<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#latexSymbol</p>
-      <div class="comment">
-         <span class="markdown">LaTeX symbol associated to the standard name.</span>
-      </div>
-      <dl>
-         <dt>Example</dt>
-         <dd>
-            <pre>$\dot V$</pre>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#string"
@@ -738,7 +649,7 @@ This section provides details for each class and property defined by sSNO.
       </div>
    </div>
    <div class="entity" id="http://purl.org/dc/terms/description">
-      <h3>has standard name description<sup class="type-dp" title="data property">dp</sup>
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -765,6 +676,33 @@ This section provides details for each class and property defined by sSNO.
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/ontology/bibo/doi">
+      <h3>doi<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/bibo/doi</p>
+      <div class="comment">
+         <span class="markdown">DOI of the standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -809,6 +747,9 @@ This section provides details for each class and property defined by sSNO.
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/dcat#keyword</p>
+      <div class="comment">
+         <span class="markdown">A keyword or tag describing the resource.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -835,7 +776,7 @@ This section provides details for each class and property defined by sSNO.
       <p>
          <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#long_name</p>
       <div class="comment">
-         <span class="markdown">A human-readable label of a variable which is associated with a standard_name.</span>
+         <span class="markdown">A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots.</span>
       </div>
       <div class="description">
          <dl>
@@ -910,6 +851,9 @@ This section provides details for each class and property defined by sSNO.
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/ns/dcat#version</p>
+      <div class="comment">
+         <span class="markdown">The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>

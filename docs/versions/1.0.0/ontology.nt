@@ -71,14 +71,14 @@
 # #################################################################
 # 
 # 
-# http://www.w3.org/ns/dcat#Distribution
-<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Distribution> .
-# 
 # http://www.w3.org/ns/dcat#byteSize
 <http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/dcat#byteSize> <http://www.w3.org/2004/02/skos/core#prefLabel> "byte size"@en .
+# 
+# http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<http://www.w3.org/ns/dcat#distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 # 
 # http://www.w3.org/ns/dcat#downloadURL
 <http://www.w3.org/ns/dcat#downloadURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -112,13 +112,13 @@
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#definition> "Contact agent (person or organization) for the standard name table."@en .
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
 # 
-# https://matthiasprobst.github.io/ssno#definedInStandardNameTable
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#hasStandardNames> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "The standard name table defines multiple standard name objects which in turn provide a human-readable description of the standard name and the canonical unit."@en .
-<https://matthiasprobst.github.io/ssno#definedInStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
+# https://matthiasprobst.github.io/ssno#definedIn
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#hasStandardNames> .
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en .
+<https://matthiasprobst.github.io/ssno#definedIn> <http://www.w3.org/2004/02/skos/core#prefLabel> "defined in"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasStandardName
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -149,7 +149,7 @@
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name or a standard name table"@en .
-<http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name description"@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 # 
 # http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -163,6 +163,13 @@
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 # 
+# http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name table."@en .
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/2004/02/skos/core#prefLabel> "doi"@en .
+# 
 # http://www.w3.org/2002/07/owl#topDataProperty
 <http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
@@ -170,34 +177,26 @@
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#definition> "A keyword or tag describing the resource."@en .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#prefLabel> "keyword"@en .
 # 
 # http://www.w3.org/ns/dcat#version
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
 # 
-# https://matthiasprobst.github.io/ssno#hasDOI
-<https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/2004/02/skos/core#definition> "DOI of the standard name table."@en .
-<https://matthiasprobst.github.io/ssno#hasDOI> <http://www.w3.org/2004/02/skos/core#prefLabel> "has doi" .
-# 
-# https://matthiasprobst.github.io/ssno#latexSymbol
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ontology-of-units-of-measure.org/resource/om-2/LaTeXSymbol> .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2004/02/skos/core#definition> "LaTeX symbol associated to the standard name."@en .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2004/02/skos/core#example> "$\\dot V$" .
-<https://matthiasprobst.github.io/ssno#latexSymbol> <http://www.w3.org/2004/02/skos/core#prefLabel> "has latex symbol"@en .
+# https://matthiasprobst.github.io/ssno#ancillary_variables
+<https://matthiasprobst.github.io/ssno#ancillary_variables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#ancillary_variables> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#ancillary_variables> <http://www.w3.org/2004/02/skos/core#definition> "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en .
+<https://matthiasprobst.github.io/ssno#ancillary_variables> <http://www.w3.org/2004/02/skos/core#prefLabel> "ancillary variables"@en .
 # 
 # https://matthiasprobst.github.io/ssno#long_name
 <https://matthiasprobst.github.io/ssno#long_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#long_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#long_name> <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is associated with a standard_name."@en .
+<https://matthiasprobst.github.io/ssno#long_name> <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 # 
 # https://matthiasprobst.github.io/ssno#standard_name
 <https://matthiasprobst.github.io/ssno#standard_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -215,11 +214,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://qudt.org/schema/qudt/QuantityKind
-<http://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Intangible> .
-<http://qudt.org/schema/qudt/QuantityKind> <http://www.w3.org/2004/02/skos/core#definition> "Kind of quantity of the variable, which the standard name describes"@en .
 # 
 # http://qudt.org/schema/qudt/Unit
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -262,8 +256,7 @@
 # #################################################################
 # 
 # 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2004/02/skos/core#definition> "The title of the Standard Name Table."@en .
 <http://purl.org/dc/terms/title> <http://www.w3.org/2004/02/skos/core#prefLabel> "title"@en .
-# 
-<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "has distribution"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
