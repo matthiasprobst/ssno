@@ -84,6 +84,7 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
     </owl:AnnotationProperty>
     
 
@@ -278,8 +279,14 @@
 
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Description of a standard name or a standard name table</skos:definition>
         <skos:prefLabel xml:lang="en">description</skos:prefLabel>
@@ -296,15 +303,6 @@
         <rdfs:comment>Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <skos:prefLabel xml:lang="en">identifier</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
     </owl:DatatypeProperty>
     
 
@@ -466,22 +464,6 @@
 
 
     <owl:Class rdf:about="https://schema.org/Intangible"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-        <skos:definition xml:lang="en">The title of the Standard Name Table.</skos:definition>
-        <skos:prefLabel xml:lang="en">title</skos:prefLabel>
-    </rdf:Description>
 </rdf:RDF>
 
 
