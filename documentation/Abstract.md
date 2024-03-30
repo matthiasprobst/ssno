@@ -1,0 +1,4 @@
+This is an ontology draft for the usage of standard names as a simple way of describing complex data.
+It is motivated by the <a href="http://cfconventions.org/" target="_blank">cf-conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.
+
+The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.

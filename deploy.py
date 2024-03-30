@@ -72,8 +72,9 @@ def create_version(version_string):
             lines = f.readlines()
             return '<br>'.join([l.strip() for l in lines])
 
-    cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
+    cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Abstract.md')
     cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
+    cfg_data['description'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
     cfg_data['thisVersionURI'] = f'https://matthiasprobst.github.io/ssno/{version_string.strip("v")}'
     cfg_data['authors'] = 'Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institut ' \
                           'für Technologie, Institut für Thermische Strömungsmaschinen'
