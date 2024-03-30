@@ -7,6 +7,6 @@
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://matthiasprobst.github.io/ssno>;
-	 prov:wasGeneratedAt "2024-01-15";
+	 prov:wasGeneratedAt "2024-03-30";
 .
 :agent0 a prov:Agent; foaf:name "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen".

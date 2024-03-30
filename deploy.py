@@ -63,7 +63,18 @@ if __name__ == "__main__":
 
     cfg_data = {l[0]: l[1] for l in lines if len(l) == 2}
     today = datetime.datetime.today()
+    cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
+
+
+    def read_lines(filename) -> str:
+        with open(filename) as f:
+            lines = f.readlines()
+            return ' '.join([l.strip() for l in lines])
+
+
+    cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
+    cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
 
     with open(cfg_file, 'w') as f:
         for k, v in cfg_data.items():
