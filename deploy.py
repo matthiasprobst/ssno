@@ -29,7 +29,7 @@ __this_dir__ = pathlib.Path(__file__).parent
 
 
 def copy_version_to_docs(version_string):
-    version_path = __this_dir__ / 'docs/versions' / version_string.strip('v')
+    version_path = __this_dir__ / 'docs' / version_string.strip('v')
     target_path = __this_dir__ / 'docs'
 
     assert version_path.exists()
@@ -39,8 +39,13 @@ def copy_version_to_docs(version_string):
 
     shutil.copytree(version_path, target_path, dirs_exist_ok=True)
     index_en = target_path / 'index-en.html'
+    vers_index_en = version_path / 'index-en.html'
+    assert vers_index_en.exists()
+    vers_index_en.rename(vers_index_en.with_name('index.html'))
+
     (target_path / 'index.html').unlink(missing_ok=True)
     index_en.rename(target_path / 'index.html')
+
     assert index_en.exists() is False
     logger.debug('done copying version to docs')
 
@@ -57,7 +62,7 @@ def create_version(version_string):
     logger.debug('update modification data')
     # open widoco config file
     cfg_file = __this_dir__ / 'widoco.cfg'
-    config = configparser.ConfigParser()
+    # config = configparser.ConfigParser()
     with open('widoco.cfg', 'r', encoding='utf-8') as f:
         lines = [l.strip().split('=') for l in f.readlines()]
 
@@ -87,9 +92,20 @@ def create_version(version_string):
     with open(cfg_file, 'w', encoding='utf-8') as f:
         for k, v in cfg_data.items():
             f.write(f'\n{k}={v}')
+
     script_path = __this_dir__ / 'build_onto_doc.bat'
     logger.debug(f'calling script {script_path.absolute()}')
-    subprocess.run(str(script_path.absolute()))
+    # open script and replace <version> with version_string
+    with open(script_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+        lines = [l.replace('<version>', version_string.strip('v')) for l in lines]
+
+    # write script to file
+    script_path_vers = __this_dir__ / 'build_onto_doc_tmp.bat'
+    with open(script_path_vers, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+
+    subprocess.run(str(script_path_vers.absolute()))
 
     from generate_context import generate
 

@@ -1,1 +1,1 @@
-widoco.jar -ontFile ssno.ttl -outFolder docs/versions/1.0.0 -webVowl -uniteSections -oops -rewriteAll -confFile widoco.cfg
+widoco.jar -ontFile ssno.ttl -outFolder docs/<version> -webVowl -uniteSections -oops -rewriteAll -confFile widoco.cfg
