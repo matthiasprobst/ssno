@@ -1,10 +1,9 @@
 """semi manual task
 
-Running this script will create a
+Running this script will create a the documentation for a new version of the ontology.
 
-1. update the ontology in versions/X.X.X/ontology.ttl
-2. run widoco
-3. run this script
+So first change the ttl file with Protege (), then change the version string in this script
+(see in bottom of the script) and then run the script.
 """
 import datetime
 import logging
@@ -152,6 +151,6 @@ if __name__ == "__main__":
     if version_dir.exists():
         raise ValueError(f'Version {version_dir} already exists. You might be about to create '
                          f'a new version. Please provide a new version number if something has changed!.')
-    
+
     create_version(__this_dir__, version_string, previousVersionURI=None)
     # create_version(__this_dir__, 'v1.1.0', previousVersionURI='https://matthiasprobst.github.io/ssno/1.0.0')
