@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://matthiasprobst.github.io/ssno/1.1.0> a prov:Entity;
+<https://matthiasprobst.github.io/ssno/1.0.0> a prov:Entity;
 	 dc:title "SSNO: A simple Standard Name Ontology";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;

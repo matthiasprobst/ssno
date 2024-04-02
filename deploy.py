@@ -1,5 +1,7 @@
 """semi manual task
 
+Running this script will create a
+
 1. update the ontology in versions/X.X.X/ontology.ttl
 2. run widoco
 3. run this script
@@ -143,5 +145,13 @@ if __name__ == "__main__":
     #     version_string = vers_folder.name
     #     assert version_string.startswith('v')
     #     print(f'Processing version "{version_string}"')
-    create_version(__this_dir__, 'v1.0.0', previousVersionURI=None)
-    create_version(__this_dir__, 'v1.1.0', previousVersionURI='https://matthiasprobst.github.io/ssno/1.0.0')
+
+    version_string = 'v1.0.0'
+
+    version_dir = __this_dir__ / 'docs' / version_string.strip('v')
+    if version_dir.exists():
+        raise ValueError(f'Version {version_dir} already exists. You might be about to create '
+                         f'a new version. Please provide a new version number if something has changed!.')
+    
+    create_version(__this_dir__, version_string, previousVersionURI=None)
+    # create_version(__this_dir__, 'v1.1.0', previousVersionURI='https://matthiasprobst.github.io/ssno/1.0.0')
