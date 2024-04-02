@@ -10,9 +10,10 @@ logger = logging.getLogger('ssno')
 __this_dir__ = Path(__file__).parent
 
 
-def generate():
-    ttl_file = __this_dir__ / 'ssno.ttl'
+def generate(ttl_file):
+    assert ttl_file.suffix == '.ttl'
     assert ttl_file.exists()
+
     context_file = __this_dir__ / 'ssno_context.jsonld'
 
     g = Graph()

@@ -4,7 +4,6 @@
 2. run widoco
 3. run this script
 """
-import configparser
 import datetime
 import logging
 import pathlib
@@ -41,6 +40,7 @@ def copy_version_to_docs(version_string):
     index_en = target_path / 'index-en.html'
     vers_index_en = version_path / 'index-en.html'
     assert vers_index_en.exists()
+    vers_index_en.with_name('index.html').unlink(missing_ok=True)
     vers_index_en.rename(vers_index_en.with_name('index.html'))
 
     (target_path / 'index.html').unlink(missing_ok=True)
@@ -50,7 +50,7 @@ def copy_version_to_docs(version_string):
     logger.debug('done copying version to docs')
 
 
-def create_version(version_string):
+def create_version(version_folder, version_string, previousVersionURI: str = None):
     assert version_string.startswith('v')
     sys.path.insert(0, '.')
     # call batch script build.bat
@@ -61,16 +61,19 @@ def create_version(version_string):
 
     logger.debug('update modification data')
     # open widoco config file
-    cfg_file = __this_dir__ / 'widoco.cfg'
-    # config = configparser.ConfigParser()
-    with open('widoco.cfg', 'r', encoding='utf-8') as f:
+    widico_cfg_filename = version_folder / 'widoco.cfg'
+    assert widico_cfg_filename.exists()
+
+    with open(widico_cfg_filename, 'r', encoding='utf-8') as f:
         lines = [l.strip().split('=') for l in f.readlines()]
 
     cfg_data = {l[0]: l[1] for l in lines if len(l) == 2}
     today = datetime.datetime.today()
-    cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
+    # cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
     cfg_data['ontologyRevisionNumber'] = version_string
+    if previousVersionURI:
+        cfg_data['previousVersionURI'] = previousVersionURI
 
     def read_lines(filename) -> str:
         with open(filename, encoding='utf-8') as f:
@@ -89,7 +92,7 @@ def create_version(version_string):
                          f'Name Ontology. Revision: {version_string}. Retrieved from: ' \
                          f'https://matthiasprobst.github.io/ssno/{version_string.strip("v")}'
 
-    with open(cfg_file, 'w', encoding='utf-8') as f:
+    with open(widico_cfg_filename, 'w', encoding='utf-8') as f:
         for k, v in cfg_data.items():
             f.write(f'\n{k}={v}')
 
@@ -109,11 +112,18 @@ def create_version(version_string):
 
     from generate_context import generate
 
-    generate()
+    generate(version_folder / 'ssno.ttl')
+
     copy_version_to_docs(version_string)
 
     logger.info('Finished building docs')
 
 
 if __name__ == "__main__":
-    create_version('v1.0.0')
+    # # get ttl files from version/ folder
+    # version_dir = __this_dir__ / 'versions'
+    # for vers_folder in version_dir.glob('*'):
+    #     version_string = vers_folder.name
+    #     assert version_string.startswith('v')
+    #     print(f'Processing version "{version_string}"')
+    create_version(__this_dir__, 'v1.1.0', previousVersionURI='https://matthiasprobst.github.io/ssno/1.0.0')

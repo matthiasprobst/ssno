@@ -356,10 +356,10 @@
     "id" : "22",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "23",
+    "id" : "21",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "21",
+    "id" : "23",
     "type" : "owl:objectProperty"
   }, {
     "id" : "25",
@@ -459,7 +459,7 @@
       "IRI-based" : "keyword"
     },
     "domain" : "11",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "16"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
@@ -565,6 +565,30 @@
     "attributes" : [ "datatype" ],
     "id" : "22"
   }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "5",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "standard names",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to multiple standard names of a standard name table.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "standardNames"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
     "iri" : "http://xmlns.com/foaf/0.1/mbox",
     "baseIri" : "http://xmlns.com/foaf/0.1",
     "range" : "24",
@@ -592,32 +616,8 @@
       "IRI-based" : "mbox"
     },
     "domain" : "2",
-    "attributes" : [ "object", "inverse functional", "external" ],
+    "attributes" : [ "inverse functional", "object", "external" ],
     "id" : "23"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "5",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "standard names",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Points to multiple standard names of a standard name table.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "standardNames"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "21"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -670,7 +670,7 @@
       "IRI-based" : "version"
     },
     "domain" : "1",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "26"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
@@ -716,31 +716,6 @@
     "attributes" : [ "datatype" ],
     "id" : "28"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#hasStandardName",
-    "inverse" : "4",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "5",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "has standard name",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasStandardName"
-    },
-    "domain" : "6",
-    "attributes" : [ "object" ],
-    "id" : "29"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "12",
@@ -775,6 +750,31 @@
     },
     "domain" : "5",
     "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#hasStandardName",
+    "inverse" : "4",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "5",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "has standard name",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStandardName"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
     "id" : "30"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
@@ -801,7 +801,7 @@
     "comment" : {
       "undefined" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "31"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
@@ -811,7 +811,7 @@
       "IRI-based" : "topDataProperty"
     },
     "domain" : "18",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "32"
   }, {
     "range" : "11",

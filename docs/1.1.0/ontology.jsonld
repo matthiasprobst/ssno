@@ -1,0 +1,452 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+    }, {
+      "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid5"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNames"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "identifier"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/Unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Unit of measure."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Unit"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#sameas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Dataset"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#keyword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A keyword or tag describing the resource."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "keyword"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#version",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "version"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/prov#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.w3.org/ns/prov#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Person or Organization related to a StandardNameTable."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Agent"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "mbox"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2024-01-15"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "sSNO: A simple Standard Name Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "ssno"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://matthiasprobst.github.io/ssno#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sSNO"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno/1.0.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#StandardName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "StandardName"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "StandardNameTable"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "ancillary variables"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#canonicalUnits",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/Unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://qudt.org/schema/qudt/unit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The canonical unit of the standard name"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "canonical units"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#contact",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Contact agent (person or organization) for the standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "contact"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Description of a standard name or a standard name table"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "description"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#hasStandardName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "has standard name"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "is standard name of"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#longName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#standardName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "x_derivative_of_y_velocity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "standard name"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNames"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to the ssno:StandardNameTable defining the ssno:StandardName."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "standard name table"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#standardNames",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to multiple standard names of a standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "standard names"
+  } ]
+} ]
