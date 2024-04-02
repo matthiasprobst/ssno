@@ -10,4 +10,4 @@
 	 prov:wasRevisionOf <https://matthiasprobst.github.io/ssno>;
 	 prov:wasGeneratedAt "2024-04-02";
 .
-:agent0 a prov:Agent; foaf:name "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institut für Technologie, Institut für Thermische Strömungsmaschinen".
+:agent0 a prov:Agent; foaf:name "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery".
