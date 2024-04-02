@@ -34,6 +34,8 @@ def copy_version_to_docs(version_string):
     version_path = __this_dir__ / 'docs' / version_string.strip('v')
     target_path = __this_dir__ / 'docs'
 
+    version_path.mkdir(exist_ok=True, parents=True)
+
     assert version_path.exists()
     assert version_path.is_dir()
 
@@ -136,6 +138,8 @@ def create_version(version_folder, version_string, previousVersionURI: str = Non
     generate(version_folder / f'{ONTOLOGY_NAME}.ttl')
 
     copy_version_to_docs(version_string)
+
+    script_path_vers.unlink(missing_ok=True)
 
     logger.info('Finished building docs')
 
