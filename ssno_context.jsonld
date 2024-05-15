@@ -32,6 +32,7 @@
     "xml" : "http://www.w3.org/XML/1998/namespace",
     "qudt" : "http://qudt.org/schema/qudt/",
     "ssno" : "https://matthiasprobst.github.io/ssno#",
+    "HDF5 Root Group" : {"@id" : "<http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>"},
     "Unit" : {"@id" : "qudt:Unit"},
     "Dataset" : {"@id" : "dcat:Dataset"},
     "Agent" : {"@id" : "prov:Agent"},
