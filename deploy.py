@@ -31,11 +31,11 @@ __this_dir__ = pathlib.Path(__file__).parent
 
 
 def copy_version_to_docs(version_string):
-    version_path = __this_dir__ / 'docs' / version_string.strip('v')
+    version_path = __this_dir__ / 'docs' / version_string.strip('v') / 'doc'
     target_path = __this_dir__ / 'docs'
 
-    assert version_path.exists()
-    assert version_path.is_dir()
+    assert version_path.exists(), f'Version path {version_path} does not exist'
+    assert version_path.is_dir(), f'Version path {version_path} is not a directory'
 
     target_path.mkdir(exist_ok=True, parents=True)
 
@@ -70,7 +70,10 @@ def copy_version_to_docs(version_string):
     logger.debug('done copying version to docs')
 
 
-def create_version(version_folder, version_string, previousVersionURI: str = None):
+def create_version(widico_cfg_filename,
+                   ttl_filename: pathlib.Path,
+                   version_string: str,
+                   previous_version_string: str = None):
     assert version_string.startswith('v')
     sys.path.insert(0, '.')
     # call batch script build.bat
@@ -81,7 +84,7 @@ def create_version(version_folder, version_string, previousVersionURI: str = Non
 
     logger.debug('update modification data')
     # open widoco config file
-    widico_cfg_filename = version_folder / 'widoco.cfg'
+    # widico_cfg_filename = version_folder / 'widoco.cfg'
     assert widico_cfg_filename.exists()
 
     with open(widico_cfg_filename, 'r', encoding='utf-8') as f:
@@ -92,8 +95,14 @@ def create_version(version_folder, version_string, previousVersionURI: str = Non
     # cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
     cfg_data['ontologyRevisionNumber'] = version_string
-    if previousVersionURI:
-        cfg_data['previousVersionURI'] = previousVersionURI
+
+    this_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
+    latest_version_uri = this_version_uri
+
+    cfg_data['latestVersionURI'] = latest_version_uri
+    if previous_version_string:
+        prev_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{previous_version_string.strip("v")}'
+        cfg_data['previousVersionURI'] =prev_version_uri
 
     def read_lines(filename) -> str:
         with open(filename, encoding='utf-8') as f:
@@ -104,7 +113,7 @@ def create_version(version_folder, version_string, previousVersionURI: str = Non
     cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
     cfg_data['description'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
 
-    cfg_data['thisVersionURI'] = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
+    cfg_data['thisVersionURI'] = this_version_uri
     cfg_data['authors'] = 'Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute ' \
                           'of Technology, Institute of Thermal Turbomachinery'
 
@@ -129,11 +138,12 @@ def create_version(version_folder, version_string, previousVersionURI: str = Non
     with open(script_path_vers, 'w', encoding='utf-8') as f:
         f.writelines(lines)
 
-    subprocess.run(str(script_path_vers.absolute()))
+    r = subprocess.run(str(script_path_vers.absolute()))
+    assert r.returncode == 0, f'Error running script {script_path_vers}.'
 
     from generate_context import generate
 
-    generate(version_folder / f'{ONTOLOGY_NAME}.ttl')
+    generate(ttl_filename)
 
     copy_version_to_docs(version_string)
 
@@ -148,13 +158,18 @@ if __name__ == "__main__":
     #     assert version_string.startswith('v')
     #     print(f'Processing version "{version_string}"')
 
-    version_string = 'v1.0.0'
+    prev_version_string='v1.0.0'
+    version_string = 'v1.1.0'
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
     if version_dir.exists():
         raise ValueError(f'Version {version_dir} already exists. You might be about to create '
                          f'a new version. Please provide a new version number if something has changed!.')
 
-    create_version(__this_dir__, version_string, previousVersionURI=None)
+    create_version(
+        widico_cfg_filename=__this_dir__ / 'widoco.cfg',
+        ttl_filename=__this_dir__ / f'{ONTOLOGY_NAME}.ttl',
+        version_string=version_string,
+        previous_version_string=prev_version_string)
     # create_version(__this_dir__, 'v1.1.0',
     #                previousVersionURI=f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/1.0.0')

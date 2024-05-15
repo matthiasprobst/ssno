@@ -148,12 +148,29 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        skos:prefLabel "standard name table"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#standardNameUsedBy
+ssno:standardNameUsedBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf ssno:usesStandardNameTable ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range ssno:StandardNameTable ;
+                        skos:definition "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
+                        skos:prefLabel "standard name used by"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#standardNames
 ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
                    rdfs:range ssno:StandardName ;
                    skos:definition "Points to multiple standard names of a standard name table."@en ;
                    skos:prefLabel "standard names"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
+ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range ssno:StandardNameTable ;
+                           skos:definition "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
+                           skos:prefLabel "uses standard name table"@en .
 
 
 #################################################################

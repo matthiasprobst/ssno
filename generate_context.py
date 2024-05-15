@@ -1,18 +1,21 @@
 """This code is taken from https://git.rwth-aachen.de/nfdi4ing/metadata4ing/metadata4ing/-/blob/1.2.1/ci/generate_context_file.py
 and only slightly adjusted. The original code is licensed under the CC-BY-4 license."""
 import logging
-from pathlib import Path
 from rdflib import Graph
 from rdflib.namespace import NamespaceManager
 from rdflib.term import URIRef
+import pathlib
+from typing import Union
 
 logger = logging.getLogger('ssno')
-__this_dir__ = Path(__file__).parent
+__this_dir__ = pathlib.Path(__file__).parent
 
 
-def generate(ttl_file):
+def generate(ttl_file: Union[pathlib.Path, str]):
+    ttl_file = pathlib.Path(ttl_file)
     assert ttl_file.suffix == '.ttl'
-    assert ttl_file.exists()
+    assert ttl_file.exists(), f'Error: {ttl_file} does not exist'
+    assert ttl_file.is_file(), f'Error: {ttl_file} is not a file'
 
     context_file = __this_dir__ / 'ssno_context.jsonld'
 

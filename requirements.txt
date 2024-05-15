@@ -1,0 +1,2 @@
+# requirements for running deploy.py
+rdflib

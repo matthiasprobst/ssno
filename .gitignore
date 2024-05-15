@@ -9,3 +9,5 @@ examples/*.jsonld
 __pycache__/*
 */.ipynb_checkpoints/*
 *.pyc
+widoco.jar
+build_onto_doc_tmp.bat
