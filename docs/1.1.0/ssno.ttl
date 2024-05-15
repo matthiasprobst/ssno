@@ -242,6 +242,11 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty [ owl:inverseOf :standardNameTableUsedBy
+                                                                                               ] ;
+                                                                                owl:someValuesFrom :StandardNameTable
+                                                                              ] ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "An HDF5 file root group"@en ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "HDF5 Root Group"@en .
 
@@ -283,6 +288,11 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                          owl:onProperty [ owl:inverseOf :standardNameTable
                                                         ] ;
                                          owl:someValuesFrom :StandardName
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf :usesStandardNameTable
+                                                        ] ;
+                                         owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
                                        ] ;
                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;

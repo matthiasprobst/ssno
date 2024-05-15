@@ -251,6 +251,11 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdf:type owl:Class ;
+                                                          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty [ owl:inverseOf ssno:standardNameTableUsedBy
+                                                                                               ] ;
+                                                                                owl:someValuesFrom ssno:StandardNameTable
+                                                                              ] ;
                                                           skos:definition "An HDF5 file root group"@en ;
                                                           skos:prefLabel "HDF5 Root Group"@en .
 
@@ -292,6 +297,11 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:onProperty [ owl:inverseOf ssno:standardNameTable
                                                             ] ;
                                              owl:someValuesFrom ssno:StandardName
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
+                                                            ] ;
+                                             owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
