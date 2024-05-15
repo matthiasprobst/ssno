@@ -43,10 +43,10 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -55,10 +55,10 @@
         "value" : "https://matthiasprobst.github.io/ssno#",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "v1.0.0",
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -226,7 +226,7 @@
   }, {
     "instances" : 0,
     "union" : [ "4", "1" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "16"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -474,7 +474,7 @@
       "IRI-based" : "standardNameTable"
     },
     "domain" : "1",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "3"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
@@ -522,7 +522,7 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "1",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "8"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
@@ -595,7 +595,7 @@
       "IRI-based" : "standardNameTableUsedBy"
     },
     "domain" : "9",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "21"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
@@ -619,7 +619,7 @@
       "IRI-based" : "standardNames"
     },
     "domain" : "4",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "23"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
@@ -727,7 +727,7 @@
       "IRI-based" : "mbox"
     },
     "domain" : "2",
-    "attributes" : [ "inverse functional", "external", "object" ],
+    "attributes" : [ "object", "inverse functional", "external" ],
     "id" : "26"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
@@ -812,7 +812,7 @@
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
     "inverse" : "22",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "1",
+    "range" : "9",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -830,7 +830,7 @@
     "label" : {
       "IRI-based" : "standardNameTableUsedBy"
     },
-    "domain" : "9",
+    "domain" : "1",
     "attributes" : [ "object" ],
     "id" : "31"
   }, {

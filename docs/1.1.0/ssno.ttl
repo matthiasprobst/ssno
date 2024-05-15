@@ -142,8 +142,8 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 :standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                          owl:inverseOf :usesStandardNameTable ;
-                         rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
-                         rdfs:range :StandardNameTable ;
+                         rdfs:domain :StandardNameTable ;
+                         rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
 

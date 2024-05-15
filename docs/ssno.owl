@@ -233,8 +233,8 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
-        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
         <skos:definition xml:lang="en">Points to a thing, e.g. a file resource, where the standard name table is used.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table used by</skos:prefLabel>
     </owl:ObjectProperty>
