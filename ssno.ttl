@@ -253,6 +253,14 @@ qudt:Unit rdf:type owl:Class ;
           skos:prefLabel "Unit"@en .
 
 
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
+                                               ] ;
+                                owl:someValuesFrom ssno:StandardNameTable
+                              ] .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              rdfs:isDefinedBy dcat: ;

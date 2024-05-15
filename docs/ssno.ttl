@@ -244,6 +244,14 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 
 
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf :usesStandardNameTable
+                                               ] ;
+                                owl:someValuesFrom :StandardNameTable
+                              ] .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
