@@ -31,7 +31,7 @@ __this_dir__ = pathlib.Path(__file__).parent
 
 
 def copy_version_to_docs(version_string):
-    version_path = __this_dir__ / 'docs' / version_string.strip('v') / 'doc'
+    version_path = __this_dir__ / 'docs' / version_string.strip('v')
     target_path = __this_dir__ / 'docs'
 
     assert version_path.exists(), f'Version path {version_path} does not exist'

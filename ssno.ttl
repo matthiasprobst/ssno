@@ -284,6 +284,11 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:onProperty [ owl:inverseOf ssno:standardNameTable
                                                             ] ;
                                              owl:someValuesFrom ssno:StandardName
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
+                                                            ] ;
+                                             owl:someValuesFrom owl:Thing
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;

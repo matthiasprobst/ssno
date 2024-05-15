@@ -5,7 +5,6 @@
 docs/1.0.0/readme.md
 docs/readme.md
 examples/*.jsonld
-examples/*.jsonld
 __pycache__/*
 */.ipynb_checkpoints/*
 *.pyc

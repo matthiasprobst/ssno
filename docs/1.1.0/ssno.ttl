@@ -275,6 +275,11 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                          owl:onProperty [ owl:inverseOf :standardNameTable
                                                         ] ;
                                          owl:someValuesFrom :StandardName
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty [ owl:inverseOf :usesStandardNameTable
+                                                        ] ;
+                                         owl:someValuesFrom owl:Thing
                                        ] ;
                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
