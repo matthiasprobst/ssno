@@ -142,8 +142,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 :standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                          owl:inverseOf :usesStandardNameTable ;
-                         rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
-                                     <http://www.w3.org/ns/dcat#Dataset> ;
+                         rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                          rdfs:range :StandardNameTable ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
@@ -159,8 +158,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 :usesStandardNameTable rdf:type owl:ObjectProperty ;
-                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
-                                   <http://www.w3.org/ns/dcat#Dataset> ;
+                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                        rdfs:range :StandardNameTable ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .

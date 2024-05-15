@@ -151,8 +151,7 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              owl:inverseOf ssno:usesStandardNameTable ;
-                             rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
-                                         dcat:Dataset ;
+                             rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                              rdfs:range ssno:StandardNameTable ;
                              skos:definition "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
                              skos:prefLabel "standard name table used by"@en .
@@ -168,8 +167,7 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
-                           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
-                                       dcat:Dataset ;
+                           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                            rdfs:range ssno:StandardNameTable ;
                            skos:definition "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                            skos:prefLabel "uses standard name table"@en .
