@@ -228,15 +228,15 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#standardNameUsedBy -->
+    <!-- https://matthiasprobst.github.io/ssno#standardNameTableUsedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameUsedBy">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Points to a thing, e.g. a file resource, where the standard name table is used.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard name used by</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">standard name table used by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -257,7 +257,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#usesStandardNameTable">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
@@ -399,10 +399,10 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty>
@@ -413,14 +413,6 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#Dataset -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
         <skos:definition xml:lang="en">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
         <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
@@ -480,7 +472,7 @@
                         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>

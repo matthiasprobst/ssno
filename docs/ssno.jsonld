@@ -15,7 +15,7 @@
     "@id" : "_:genid11"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -128,11 +128,6 @@
     "@value" : "Unit"
   } ]
 }, {
-  "@id" : "http://www.w3.org/2002/07/owl#Thing",
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid4"
-  } ]
-}, {
   "@id" : "http://www.w3.org/2002/07/owl#sameas",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -155,6 +150,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/dcat#"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -468,10 +466,10 @@
     "@value" : "standard name table"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standardNameUsedBy",
+  "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
@@ -485,7 +483,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard name used by"
+    "@value" : "standard name table used by"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardNames",
@@ -508,7 +506,7 @@
   "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"

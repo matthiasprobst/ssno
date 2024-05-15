@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="159mm"
+   height="50mm"
+   viewBox="0 0 159 50"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="things_and_snt.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.3190696"
+     inkscape:cx="181.56737"
+     inkscape:cy="184.59981"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="1341"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker5-3-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5-5-9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-0)"
+       d="M 104.48968,29.12752 C 78.221688,39.709014 52.343606,41.420135 27.081719,29.11282"
+       id="path7"
+       sodipodi:nodetypes="cc" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.041, 1.041;stroke-dashoffset:0"
+       id="path1-9-7-3-6"
+       cx="18.460499"
+       cy="25.346313"
+       r="7.6270418" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="12.445056"
+       y="26.661774"
+       id="text1-9-36"><tspan
+         sodipodi:role="line"
+         id="tspan1-7-2"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="12.445056"
+         y="26.661774">Thing</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6-1-06-0"
+       width="61.645962"
+       height="6.0811768"
+       x="33.720936"
+       y="31.632214" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="36.24477"
+       y="36.020794"
+       id="text1-0-9-6-9-36-7"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-5-4-6-2-5"
+         style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="36.24477"
+         y="36.020794">standardNameTableUsedBy</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="105.34581"
+       y="27.105297"
+       id="text1-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan1-4-7"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="105.34581"
+         y="27.105297">StandardNameTable</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="ellipse1-3"
+       cx="126.10553"
+       cy="25.517773"
+       ry="7.3239794"
+       rx="24.045576" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-0)"
+       d="M 25.578948,21.077972 C 51.846937,10.496476 77.725019,8.7853552 102.98691,21.092672"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6-1-06-0-2"
+       width="56.445263"
+       height="6.0811768"
+       x="36.690331"
+       y="10.852264" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       x="39.214165"
+       y="15.240841"
+       id="text1-0-9-6-9-36-7-0"><tspan
+         sodipodi:role="line"
+         id="tspan1-5-5-4-6-2-5-4"
+         style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="39.214165"
+         y="15.240841">usesStandardNameTable</tspan></text>
+  </g>
+</svg>

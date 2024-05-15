@@ -43,7 +43,7 @@
     "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
     "is standard name of" : {"@id" : "ssno:isStandardNameOf", "@type" : "owl:Thing"},
     "standard name table" : {"@id" : "ssno:standardNameTable", "@type" : "ssno:StandardNameTable"},
-    "standard name used by" : {"@id" : "ssno:standardNameUsedBy", "@type" : "ssno:StandardNameTable"},
+    "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy", "@type" : "ssno:StandardNameTable"},
     "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
     "uses standard name table" : {"@id" : "ssno:usesStandardNameTable", "@type" : "ssno:StandardNameTable"},
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:anyURI"},

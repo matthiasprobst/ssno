@@ -120,13 +120,13 @@
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en .
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 # 
-# https://matthiasprobst.github.io/ssno#standardNameUsedBy
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en .
-<https://matthiasprobst.github.io/ssno#standardNameUsedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name used by"@en .
+# https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
 # 
 # https://matthiasprobst.github.io/ssno#standardNames
 <https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -137,7 +137,7 @@
 # 
 # https://matthiasprobst.github.io/ssno#usesStandardNameTable
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .
@@ -227,15 +227,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#definition> "Unit of measure."@en .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 # 
-# http://www.w3.org/2002/07/owl#Thing
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+# http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> _:genid5 .
 _:genid5 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-# 
-# http://www.w3.org/ns/dcat#Dataset
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
@@ -264,7 +262,7 @@ _:genid8 <http://www.w3.org/2002/07/owl#onProperty> _:genid9 .
 _:genid9 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTable> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/dcat#Dataset> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> _:genid11 .
 _:genid11 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

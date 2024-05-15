@@ -139,13 +139,13 @@ owl:sameas rdf:type owl:AnnotationProperty .
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#standardNameUsedBy
-:standardNameUsedBy rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :usesStandardNameTable ;
-                    rdfs:domain owl:Thing ;
-                    rdfs:range :StandardNameTable ;
-                    <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name used by"@en .
+###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
+:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf :usesStandardNameTable ;
+                         rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                         rdfs:range :StandardNameTable ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standardNames
@@ -158,7 +158,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 :usesStandardNameTable rdf:type owl:ObjectProperty ;
-                       rdfs:domain owl:Thing ;
+                       rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
                        rdfs:range :StandardNameTable ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .
@@ -244,16 +244,13 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 
 
-###  http://www.w3.org/2002/07/owl#Thing
-owl:Thing owl:equivalentClass [ rdf:type owl:Restriction ;
-                                owl:onProperty [ owl:inverseOf :usesStandardNameTable
-                                               ] ;
-                                owl:someValuesFrom :StandardNameTable
-                              ] .
-
-
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
+                                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                          owl:onProperty [ owl:inverseOf :usesStandardNameTable
+                                                                         ] ;
+                                                          owl:someValuesFrom :StandardNameTable
+                                                        ] ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
                                     <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en ;
                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
@@ -287,7 +284,7 @@ owl:Thing owl:equivalentClass [ rdf:type owl:Restriction ;
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty [ owl:inverseOf :usesStandardNameTable
                                                         ] ;
-                                         owl:someValuesFrom owl:Thing
+                                         owl:someValuesFrom <http://www.w3.org/ns/dcat#Dataset>
                                        ] ;
                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;

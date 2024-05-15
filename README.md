@@ -19,7 +19,7 @@ A [Guide](Guide.md) helps with the first steps, a [jupyter notebook](./examples/
 The documentation of the ontology is available [online](https://matthiasprobst.github.io/ssno/) and a tutorial guide is
 available [here](Guide.md).
 
-If you wont to integrate the ontology into your Python scripts, please find a corresponding library with
+If you want to integrate the ontology into your Python scripts, please find a corresponding library with
 the [SSNOlib](https://github.com/matthiasprobst/SSNOlib/).
 
 ## Contribution

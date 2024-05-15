@@ -4,3 +4,7 @@ The rules of standard name construction is defined in a document associated with
 
 The below class diagram gives a quick overview of the central classes of the ontology. The ontology is still under development.
 <img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/classdiagram.png?raw=true" height="300 px">
+
+Standard names are intended to be used as attributes in netCDF4 or HDF5 files. To indicate which standard 
+name table is used for the file a relation between the file and the standard name table can be established as shown below
+<img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/things_and_snt.png?raw=true" height="300 px">
