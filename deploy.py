@@ -96,13 +96,15 @@ def create_version(widico_cfg_filename,
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
     cfg_data['ontologyRevisionNumber'] = version_string
 
-    this_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
+    striped_version_string = version_string.strip("v")
+
+    this_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{striped_version_string}'
     latest_version_uri = this_version_uri
 
     cfg_data['latestVersionURI'] = latest_version_uri
     if previous_version_string:
         prev_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{previous_version_string.strip("v")}'
-        cfg_data['previousVersionURI'] =prev_version_uri
+        cfg_data['previousVersionURI'] = prev_version_uri
 
     def read_lines(filename) -> str:
         with open(filename, encoding='utf-8') as f:
@@ -110,7 +112,10 @@ def create_version(widico_cfg_filename,
             return '<br>'.join([l.strip() for l in lines])
 
     cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Abstract.md')
-    cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
+    cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md').replace(
+        '<VERSION>',
+        version_string.replace('.', '')
+    )
     cfg_data['description'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
 
     cfg_data['thisVersionURI'] = this_version_uri
@@ -120,7 +125,7 @@ def create_version(widico_cfg_filename,
     cfg_data['citeAs'] = 'Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institute ' \
                          f'of Technology, Institute of Thermal Turbomachinery. {ONTOLOGY_NAME}: A simple Standard ' \
                          f'Name Ontology. Revision: {version_string}. Retrieved from: ' \
-                         f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
+                         f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{striped_version_string}'
 
     with open(widico_cfg_filename, 'w', encoding='utf-8') as f:
         for k, v in cfg_data.items():
@@ -158,8 +163,10 @@ if __name__ == "__main__":
     #     assert version_string.startswith('v')
     #     print(f'Processing version "{version_string}"')
 
-    prev_version_string='v1.0.0'
-    version_string = 'v1.1.0'
+    # prev_version_string='v1.0.0'
+    # version_string = 'v1.1.0'
+    prev_version_string = 'v1.1.0'
+    version_string = 'v2.0.0'
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
     if version_dir.exists():

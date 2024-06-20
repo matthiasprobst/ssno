@@ -19,7 +19,7 @@
                                           owl:versionIRI <https://matthiasprobst.github.io/ssno/1.0.0> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
-                                          dcterms:creator "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ;
+                                          dcterms:creator "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institute of Thermal Turbomachinery" ;
                                           dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                           dcterms:rights <https://creativecommons.org/licenses/by/4.0/> ;
                                           dcterms:title "sSNO: A simple Standard Name Ontology"@en ;
@@ -114,12 +114,22 @@ ssno:canonicalUnits rdf:type owl:ObjectProperty ;
                     skos:prefLabel "canonical units"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#contact
-ssno:contact rdf:type owl:ObjectProperty ;
+###  https://matthiasprobst.github.io/ssno#components
+ssno:components rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ssno:qualifications ;
+                rdfs:domain ssno:ReferenceFrame ;
+                rdfs:range ssno:Component ;
+                skos:definition "Points to the components of a reference frame."@en ;
+                skos:prefLabel "components"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#devices
+ssno:devices rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf ssno:qualifications ;
              rdfs:domain ssno:StandardNameTable ;
-             rdfs:range prov:Agent ;
-             skos:definition "Contact agent (person or organization) for the standard name table."@en ;
-             skos:prefLabel "contact"@en .
+             rdfs:range ssno:Device ;
+             skos:definition "Points to standard device defined by a standard name table."@en ;
+             skos:prefLabel "devices"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
@@ -127,7 +137,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
                      rdfs:domain owl:Thing ;
                      rdfs:range ssno:StandardName ;
-                     skos:definition "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en ;
+                     skos:definition "Points to a ssno:StandardName associated with the Thing. The Thing should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
                      skos:prefLabel "has standard name"@en .
 
 
@@ -139,13 +149,49 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       skos:prefLabel "is standard name of"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#locations
+ssno:locations rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf ssno:qualifications ;
+               rdfs:domain ssno:StandardNameTable ;
+               rdfs:range ssno:Location ;
+               skos:definition "Points to standard locations defined by a standard name table."@en ;
+               skos:prefLabel "locations"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#media
+ssno:media rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ssno:qualifications ;
+           rdfs:domain ssno:StandardNameTable ;
+           rdfs:range ssno:Medium ;
+           skos:definition "Points to the medium defined by the standard name table."@en ;
+           skos:prefLabel "media"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#qualifications
+ssno:qualifications rdf:type owl:ObjectProperty ;
+                    rdfs:domain ssno:StandardNameTable ;
+                    rdfs:range ssno:Qualification .
+
+
+###  https://matthiasprobst.github.io/ssno#referenceFrames
+ssno:referenceFrames rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ssno:qualifications ;
+                     rdfs:domain ssno:StandardNameTable ;
+                     rdfs:range ssno:ReferenceFrame ;
+                     skos:definition "Points to standard reference frame defined by a standard name table."@en ;
+                     skos:prefLabel "reference frames"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#standardNameTable
 ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        owl:inverseOf ssno:standardNames ;
-                       rdfs:domain ssno:StandardName ;
+                       rdfs:domain ssno:Device ,
+                                   ssno:Location ,
+                                   ssno:ReferenceFrame ,
+                                   ssno:StandardName ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
-                       skos:prefLabel "standard name table"@en .
+                       skos:prefLabel "table"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
@@ -154,7 +200,7 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              rdfs:domain ssno:StandardNameTable ;
                              rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
                              skos:definition "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
-                             skos:prefLabel "standard name table used by"@en .
+                             skos:prefLabel "name table used by"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standardNames
@@ -162,7 +208,24 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
                    rdfs:range ssno:StandardName ;
                    skos:definition "Points to multiple standard names of a standard name table."@en ;
-                   skos:prefLabel "standard names"@en .
+                   skos:prefLabel "names"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#surfaces
+ssno:surfaces rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf ssno:qualifications ;
+              rdfs:domain ssno:StandardNameTable ;
+              rdfs:range ssno:Surface ;
+              skos:definition "Points to standard surface defined by a standard name table."@en ;
+              skos:prefLabel "surfaces"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#transformations
+ssno:transformations rdf:type owl:ObjectProperty ;
+                     rdfs:domain ssno:StandardNameTable ;
+                     rdfs:range ssno:Transformation ;
+                     skos:definition "Points to the a Transforrmation."@en ;
+                     skos:prefLabel "transformations"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
@@ -210,14 +273,15 @@ dcat:version rdf:type owl:DatatypeProperty ;
 ssno:ancillaryVariables rdf:type owl:DatatypeProperty ;
                         rdfs:domain owl:Thing ;
                         rdfs:range xsd:string ;
-                        skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
+                        skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationship between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
                         skos:prefLabel "ancillary variables"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#description
 ssno:description rdf:type owl:DatatypeProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( ssno:StandardName
+                               owl:unionOf ( ssno:Qualification
+                                             ssno:StandardName
                                              ssno:StandardNameTable
                                            )
                              ] ;
@@ -234,13 +298,24 @@ ssno:longName rdf:type owl:DatatypeProperty ;
               skos:definition "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 
 
+###  https://matthiasprobst.github.io/ssno#qualification
+ssno:qualification rdf:type owl:DatatypeProperty ;
+                   skos:prefLabel "qualification"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#standardName
 ssno:standardName rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
                   rdfs:range xsd:string ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
                   skos:example "x_derivative_of_y_velocity" ;
-                  skos:prefLabel "standard name"@en .
+                  skos:prefLabel "standard_name"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#transformation
+ssno:transformation rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    skos:prefLabel "transformation"@en .
 
 
 #################################################################
@@ -278,6 +353,60 @@ prov:Agent rdf:type owl:Class ;
            skos:prefLabel "Agent"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#Component
+ssno:Component rdf:type owl:Class ;
+               rdfs:subClassOf ssno:Qualification ;
+               skos:definition "A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector."@en ;
+               skos:example "x_velocity"@en ;
+               skos:prefLabel "Component"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Condition
+ssno:Condition rdf:type owl:Class ;
+               rdfs:subClassOf ssno:Qualification ;
+               skos:definition "A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix 'assuming_': <standard_name>_assuming_<condition>."@en ;
+               skos:example "z_velocity_assuming_incompressible_medium"@en ;
+               skos:prefLabel "Condition"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Device
+ssno:Device rdf:type owl:Class ;
+            rdfs:subClassOf ssno:Qualification ;
+            skos:definition "A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names."@en ;
+            skos:example "'difference_of_static_pressure_across_orifice', where 'static_pressure' is an existing standard_name and 'orifice' is the device"@en ;
+            skos:prefLabel "Device"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Location
+ssno:Location rdf:type owl:Class ;
+              rdfs:subClassOf ssno:Qualification ;
+              skos:definition "A standard location is a point or surface in space defined within the scope of the standard name table intended to be constructed in standard names using at or to describe differences between to quantities using between or across."@en ;
+              skos:example "velocity_at_inlet, difference_of_static_pressure_across_orifice, difference_of_static_pressure_between_point1_and_point2"@en ;
+              skos:prefLabel "Location"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Medium
+ssno:Medium rdf:type owl:Class ;
+            rdfs:subClassOf ssno:Qualification ;
+            skos:definition "A standard medium defined within the scope of the standard name table used to qualify a standard name using suffix 'at_MEDIUM'."@en ;
+            skos:example "air, water, oil, ..."@en ;
+            skos:prefLabel "Medium"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Qualification
+ssno:Qualification rdf:type owl:Class ;
+                   skos:definition "Abstract class for qualifications that adds phrases to the standard name to construct new standard names without changing the units. This class is therefore not intended to be used directly, but by its subclasses. It only has a description as a property."@en ;
+                   skos:prefLabel "Qualification"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#ReferenceFrame
+ssno:ReferenceFrame rdf:type owl:Class ;
+                    rdfs:subClassOf ssno:Qualification ;
+                    skos:definition "A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names."@en ;
+                    skos:example "'x_velocity_in_rotating_reference_frame', where 'x_velocity' is an existing standard_name and 'rotating_reference_frame' is the frame of reference which is well defined in the description of it."@en ;
+                    skos:prefLabel "Reference Frame"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#StandardName
 ssno:StandardName rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -285,8 +414,8 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
-                  skos:definition "A standard name is defined by a canoncial unit and a description. It generally is defined by a standard name table."@en ;
-                  skos:prefLabel "StandardName" .
+                  skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
+                  skos:prefLabel "Standard Name" .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameTable
@@ -302,8 +431,21 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ;
-                       skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
-                       skos:prefLabel "StandardNameTable" .
+                       skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creator."@en ;
+                       skos:prefLabel "Standard Name Table" .
+
+
+###  https://matthiasprobst.github.io/ssno#Surface
+ssno:Surface rdf:type owl:Class ;
+             rdfs:subClassOf ssno:Qualification ;
+             skos:definition "A surface is a single word for referring quantities more generic positions in the problem. Unlike locations, a surface is not locatable geometrically, e.g. se 'wall' in the example."@en ;
+             skos:example "wall_static_pressure"@en ;
+             skos:prefLabel "Surface"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#Transformation
+ssno:Transformation rdf:type owl:Class ;
+                    skos:prefLabel "Transformation"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
