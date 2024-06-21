@@ -4,6 +4,14 @@ import ssno
 import unittest
 from ontolutils import parse_unit, QUDT_UNIT
 
+
+import json
+import pathlib
+import unittest
+
+import ssno
+
+
 # ignore User Warnings:
 
 __this_dir__ = pathlib.Path(__file__).parent
@@ -88,3 +96,17 @@ class TestSSNO(unittest.TestCase):
         self.assertEqual(sn_loaded[0].canonical_units, str(parse_unit('m s-1')))
 
         pathlib.Path('sn.jsonld').unlink(missing_ok=True)
+
+
+
+class TestVersion(unittest.TestCase):
+
+    def test_version(self):
+        this_version = 'x.x.x'
+        setupcfg_filename = __this_dir__ / '../setup.cfg'
+        with open(setupcfg_filename, 'r') as f:
+            lines = f.readlines()
+            for line in lines:
+                if 'version' in line:
+                    this_version = line.split(' = ')[-1].strip()
+        self.assertEqual(ssno.__version__, this_version)
