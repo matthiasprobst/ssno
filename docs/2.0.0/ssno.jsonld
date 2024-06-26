@@ -3,11 +3,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
+    }, {
       "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
     }, {
       "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
-    }, {
-      "@id" : "https://matthiasprobst.github.io/ssno#StandardX"
     } ]
   } ]
 }, {
@@ -162,24 +162,20 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/ns/dcat#Dataset",
+  "@id" : "http://www.w3.org/ns/dcat#Distribution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/dcat#"
   } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."
-  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Dataset"
+    "@value" : "Distribution"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat#keyword",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -281,10 +277,10 @@
     "@value" : "v1.0.0"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardComponent",
+  "@id" : "https://matthiasprobst.github.io/ssno#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardX"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -296,13 +292,13 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "StandardComponent"
+    "@value" : "Component"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardCondition",
+  "@id" : "https://matthiasprobst.github.io/ssno#Condition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardX"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -314,13 +310,13 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "StandardCondition"
+    "@value" : "Condition"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardDevice",
+  "@id" : "https://matthiasprobst.github.io/ssno#Device",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardX"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -332,47 +328,60 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "StandardDevice"
+    "@value" : "Device"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardName",
+  "@id" : "https://matthiasprobst.github.io/ssno#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid7"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."
+    "@value" : "A standard location is a point or surface in space defined within the scope of the standard name table intended to be constructed in standard names using at or to describe differences between to quantities using between or across."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "velocity_at_inlet, difference_of_static_pressure_across_orifice, difference_of_static_pressure_between_point1_and_point2"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "StandardName"
+    "@language" : "en",
+    "@value" : "Location"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable",
+  "@id" : "https://matthiasprobst.github.io/ssno#Medium",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Dataset"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid9"
-  }, {
-    "@id" : "_:genid11"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."
+    "@value" : "A standard medium defined within the scope of the standard name table used to qualify a standard name using suffix 'at_MEDIUM'."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "air, water, oil, ..."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "StandardNameTable"
+    "@language" : "en",
+    "@value" : "Medium"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardReferenceFrame",
+  "@id" : "https://matthiasprobst.github.io/ssno#Qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Abstract class for qualifications that adds phrases to the standard name to construct new standard names without changing the units. This class is therefore not intended to be used directly, but by its subclasses. It only has a description as a property."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Qualification"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#ReferenceFrame",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardX"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -384,18 +393,67 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "StandardReferenceFrame"
+    "@value" : "Reference Frame"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardX",
+  "@id" : "https://matthiasprobst.github.io/ssno#StandardName",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid7"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Abstract Class for all additional standardized objects like device, location or reference frame using a description as property only. This class is therefore not intended to be used directly but their subclasses."
+    "@value" : "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Standard Name"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Please provide dcat:downloadURL to inidcate, that it is a downloadable distribution (see also https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A standard name table is a published dcat:Distribution, which holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creators as well as qualifications (ssno:Qualification) and transformations (ssno:Transformation)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Standard Name Table"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#Surface",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A surface is a single word for referring quantities more generic positions in the problem. Unlike locations, a surface is not locatable geometrically, e.g. se 'wall' in the example."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "wall_static_pressure"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "StandardX"
+    "@value" : "Surface"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#Transformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Transformation"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
@@ -438,21 +496,24 @@
     "@value" : "canonical units"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#contact",
+  "@id" : "https://matthiasprobst.github.io/ssno#components",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+    "@id" : "https://matthiasprobst.github.io/ssno#ReferenceFrame"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Agent"
+    "@id" : "https://matthiasprobst.github.io/ssno#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Contact agent (person or organization) for the standard name table."
+    "@value" : "Points to the components of a reference frame."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "contact"
+    "@value" : "components"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#description",
@@ -473,6 +534,26 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "description"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#devices",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to standard device defined by a standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "devices"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#hasStandardName",
@@ -512,6 +593,26 @@
     "@value" : "is standard name of"
   } ]
 }, {
+  "@id" : "https://matthiasprobst.github.io/ssno#locations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to standard locations defined by a standard name table."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "locations"
+  } ]
+}, {
   "@id" : "https://matthiasprobst.github.io/ssno#longName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -525,55 +626,60 @@
     "@value" : "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standardComponents",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardReferenceFrame"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardComponent"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "Points to the components of a reference frame."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "has standard components"
-  } ]
-}, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standardDevices",
+  "@id" : "https://matthiasprobst.github.io/ssno#media",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardDevice"
+    "@id" : "https://matthiasprobst.github.io/ssno#Medium"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Points to standard device defined by a standard name table."
+    "@value" : "Points to the medium defined by the standard name table."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard locations"
+    "@value" : "media"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standardLocations",
+  "@id" : "https://matthiasprobst.github.io/ssno#qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "qualification"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#qualifications",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardLocation"
+    "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#referenceFrames",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#ReferenceFrame"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Points to standard locations defined by a standard name table."
+    "@value" : "Points to standard reference frame defined by a standard name table."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard locations"
+    "@value" : "reference frames"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardName",
@@ -593,19 +699,19 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard name"
+    "@value" : "standard_name"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardDevice"
+    "@id" : "https://matthiasprobst.github.io/ssno#Device"
   }, {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardLocation"
+    "@id" : "https://matthiasprobst.github.io/ssno#Location"
+  }, {
+    "@id" : "https://matthiasprobst.github.io/ssno#ReferenceFrame"
   }, {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
-  }, {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardReferenceFrame"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
@@ -619,7 +725,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard name table"
+    "@value" : "table"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
@@ -639,7 +745,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard name table used by"
+    "@value" : "name table used by"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardNames",
@@ -656,24 +762,54 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard names"
+    "@value" : "names"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#standardReferenceFrames",
+  "@id" : "https://matthiasprobst.github.io/ssno#surfaces",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardReferenceFrame"
+    "@id" : "https://matthiasprobst.github.io/ssno#Surface"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#qualifications"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Points to standard reference frame defined by a standard name table."
+    "@value" : "Points to standard surface defined by a standard name table."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "standard locations"
+    "@value" : "surfaces"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#transformation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "transformation"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#transformations",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Transformation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Points to the a Transforrmation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "transformations"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",

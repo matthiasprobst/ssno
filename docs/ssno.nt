@@ -90,12 +90,21 @@
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en .
 <https://matthiasprobst.github.io/ssno#canonicalUnits> <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
 # 
-# https://matthiasprobst.github.io/ssno#contact
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#definition> "Contact agent (person or organization) for the standard name table."@en .
-<https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
+# https://matthiasprobst.github.io/ssno#components
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#ReferenceFrame> .
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Component> .
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/2004/02/skos/core#definition> "Points to the components of a reference frame."@en .
+<https://matthiasprobst.github.io/ssno#components> <http://www.w3.org/2004/02/skos/core#prefLabel> "components"@en .
+# 
+# https://matthiasprobst.github.io/ssno#devices
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Device> .
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard device defined by a standard name table."@en .
+<https://matthiasprobst.github.io/ssno#devices> <http://www.w3.org/2004/02/skos/core#prefLabel> "devices"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasStandardName
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -112,37 +121,45 @@
 <https://matthiasprobst.github.io/ssno#isStandardNameOf> <http://www.w3.org/2004/02/skos/core#definition> "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en .
 <https://matthiasprobst.github.io/ssno#isStandardNameOf> <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name of"@en .
 # 
-# https://matthiasprobst.github.io/ssno#standardComponents
-<https://matthiasprobst.github.io/ssno#standardComponents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#standardComponents> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardReferenceFrame> .
-<https://matthiasprobst.github.io/ssno#standardComponents> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardComponent> .
-<https://matthiasprobst.github.io/ssno#standardComponents> <http://www.w3.org/2004/02/skos/core#definition> "Points to the components of a reference frame."@en .
-<https://matthiasprobst.github.io/ssno#standardComponents> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard components"@en .
+# https://matthiasprobst.github.io/ssno#locations
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Location> .
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard locations defined by a standard name table."@en .
+<https://matthiasprobst.github.io/ssno#locations> <http://www.w3.org/2004/02/skos/core#prefLabel> "locations"@en .
 # 
-# https://matthiasprobst.github.io/ssno#standardDevices
-<https://matthiasprobst.github.io/ssno#standardDevices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#standardDevices> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#standardDevices> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardDevice> .
-<https://matthiasprobst.github.io/ssno#standardDevices> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard device defined by a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#standardDevices> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard locations"@en .
+# https://matthiasprobst.github.io/ssno#media
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Medium> .
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/2004/02/skos/core#definition> "Points to the medium defined by the standard name table."@en .
+<https://matthiasprobst.github.io/ssno#media> <http://www.w3.org/2004/02/skos/core#prefLabel> "media"@en .
 # 
-# https://matthiasprobst.github.io/ssno#standardLocations
-<https://matthiasprobst.github.io/ssno#standardLocations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#standardLocations> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#standardLocations> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardLocation> .
-<https://matthiasprobst.github.io/ssno#standardLocations> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard locations defined by a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#standardLocations> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard locations"@en .
+# https://matthiasprobst.github.io/ssno#qualifications
+<https://matthiasprobst.github.io/ssno#qualifications> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#qualifications> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#qualifications> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Qualification> .
+# 
+# https://matthiasprobst.github.io/ssno#referenceFrames
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#ReferenceFrame> .
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard reference frame defined by a standard name table."@en .
+<https://matthiasprobst.github.io/ssno#referenceFrames> <http://www.w3.org/2004/02/skos/core#prefLabel> "reference frames"@en .
 # 
 # https://matthiasprobst.github.io/ssno#standardNameTable
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
-<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardDevice> .
-<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardLocation> .
+<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Device> .
+<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Location> .
+<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#ReferenceFrame> .
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardReferenceFrame> .
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en .
-<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
+<https://matthiasprobst.github.io/ssno#standardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "table"@en .
 # 
 # https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -150,21 +167,29 @@
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> .
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#definition> "Points to a thing, e.g. a file resource, where the standard name table is used."@en .
-<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "name table used by"@en .
 # 
 # https://matthiasprobst.github.io/ssno#standardNames
 <https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/2004/02/skos/core#definition> "Points to multiple standard names of a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
+<https://matthiasprobst.github.io/ssno#standardNames> <http://www.w3.org/2004/02/skos/core#prefLabel> "names"@en .
 # 
-# https://matthiasprobst.github.io/ssno#standardReferenceFrames
-<https://matthiasprobst.github.io/ssno#standardReferenceFrames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#standardReferenceFrames> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#standardReferenceFrames> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardReferenceFrame> .
-<https://matthiasprobst.github.io/ssno#standardReferenceFrames> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard reference frame defined by a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#standardReferenceFrames> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard locations"@en .
+# https://matthiasprobst.github.io/ssno#surfaces
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://matthiasprobst.github.io/ssno#qualifications> .
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Surface> .
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/2004/02/skos/core#definition> "Points to standard surface defined by a standard name table."@en .
+<https://matthiasprobst.github.io/ssno#surfaces> <http://www.w3.org/2004/02/skos/core#prefLabel> "surfaces"@en .
+# 
+# https://matthiasprobst.github.io/ssno#transformations
+<https://matthiasprobst.github.io/ssno#transformations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#transformations> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#transformations> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#Transformation> .
+<https://matthiasprobst.github.io/ssno#transformations> <http://www.w3.org/2004/02/skos/core#definition> "Points to the a Transforrmation."@en .
+<https://matthiasprobst.github.io/ssno#transformations> <http://www.w3.org/2004/02/skos/core#prefLabel> "transformations"@en .
 # 
 # https://matthiasprobst.github.io/ssno#usesStandardNameTable
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -195,7 +220,7 @@
 # 
 # http://www.w3.org/ns/dcat#keyword
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Distribution> .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#definition> "A keyword or tag describing the resource."@en .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#prefLabel> "keyword"@en .
@@ -221,11 +246,11 @@ _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardX> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardName> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardName> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Qualification> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -239,13 +264,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://matthiasprobst.github.io/ssno#longName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://matthiasprobst.github.io/ssno#longName> <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 # 
+# https://matthiasprobst.github.io/ssno#qualification
+<https://matthiasprobst.github.io/ssno#qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#qualification> <http://www.w3.org/2004/02/skos/core#prefLabel> "qualification"@en .
+# 
 # https://matthiasprobst.github.io/ssno#standardName
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
-<https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
+<https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard_name"@en .
+# 
+# https://matthiasprobst.github.io/ssno#transformation
+<https://matthiasprobst.github.io/ssno#transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#transformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://matthiasprobst.github.io/ssno#transformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "transformation"@en .
 # 
 # 
 # 
@@ -271,11 +305,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#definition> "Unit of measure."@en .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 # 
-# http://www.w3.org/ns/dcat#Dataset
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en .
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
+# http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/2004/02/skos/core#prefLabel> "Distribution"@en .
 # 
 # http://www.w3.org/ns/prov#Agent
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -283,29 +316,52 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2004/02/skos/core#definition> "Person or Organization related to a StandardNameTable."@en .
 <http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2004/02/skos/core#prefLabel> "Agent"@en .
 # 
-# https://matthiasprobst.github.io/ssno#StandardComponent
-<https://matthiasprobst.github.io/ssno#StandardComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardX> .
-<https://matthiasprobst.github.io/ssno#StandardComponent> <http://www.w3.org/2004/02/skos/core#definition> "A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector."@en .
-<https://matthiasprobst.github.io/ssno#StandardComponent> <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en .
-<https://matthiasprobst.github.io/ssno#StandardComponent> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardComponent"@en .
+# https://matthiasprobst.github.io/ssno#Component
+<https://matthiasprobst.github.io/ssno#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Component> <http://www.w3.org/2004/02/skos/core#definition> "A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector."@en .
+<https://matthiasprobst.github.io/ssno#Component> <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en .
+<https://matthiasprobst.github.io/ssno#Component> <http://www.w3.org/2004/02/skos/core#prefLabel> "Component"@en .
 # 
-# https://matthiasprobst.github.io/ssno#StandardCondition
-<https://matthiasprobst.github.io/ssno#StandardCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardX> .
-<https://matthiasprobst.github.io/ssno#StandardCondition> <http://www.w3.org/2004/02/skos/core#definition> "A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix 'assuming_': <standard_name>_assuming_<condition>."@en .
-<https://matthiasprobst.github.io/ssno#StandardCondition> <http://www.w3.org/2004/02/skos/core#example> "z_velocity_assuming_incompressible_medium"@en .
-<https://matthiasprobst.github.io/ssno#StandardCondition> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardCondition"@en .
+# https://matthiasprobst.github.io/ssno#Condition
+<https://matthiasprobst.github.io/ssno#Condition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Condition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Condition> <http://www.w3.org/2004/02/skos/core#definition> "A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix 'assuming_': <standard_name>_assuming_<condition>."@en .
+<https://matthiasprobst.github.io/ssno#Condition> <http://www.w3.org/2004/02/skos/core#example> "z_velocity_assuming_incompressible_medium"@en .
+<https://matthiasprobst.github.io/ssno#Condition> <http://www.w3.org/2004/02/skos/core#prefLabel> "Condition"@en .
 # 
-# https://matthiasprobst.github.io/ssno#StandardDevice
-<https://matthiasprobst.github.io/ssno#StandardDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardX> .
-<https://matthiasprobst.github.io/ssno#StandardDevice> <http://www.w3.org/2004/02/skos/core#definition> "A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names."@en .
-<https://matthiasprobst.github.io/ssno#StandardDevice> <http://www.w3.org/2004/02/skos/core#example> "'difference_of_static_pressure_across_orifice', where 'static_pressure' is an existing standard_name and 'orifice' is the device"@en .
-<https://matthiasprobst.github.io/ssno#StandardDevice> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardDevice"@en .
+# https://matthiasprobst.github.io/ssno#Device
+<https://matthiasprobst.github.io/ssno#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Device> <http://www.w3.org/2004/02/skos/core#definition> "A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names."@en .
+<https://matthiasprobst.github.io/ssno#Device> <http://www.w3.org/2004/02/skos/core#example> "'difference_of_static_pressure_across_orifice', where 'static_pressure' is an existing standard_name and 'orifice' is the device"@en .
+<https://matthiasprobst.github.io/ssno#Device> <http://www.w3.org/2004/02/skos/core#prefLabel> "Device"@en .
 # 
-# https://matthiasprobst.github.io/ssno#StandardLocation
-<https://matthiasprobst.github.io/ssno#StandardLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# https://matthiasprobst.github.io/ssno#Location
+<https://matthiasprobst.github.io/ssno#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Location> <http://www.w3.org/2004/02/skos/core#definition> "A standard location is a point or surface in space defined within the scope of the standard name table intended to be constructed in standard names using at or to describe differences between to quantities using between or across."@en .
+<https://matthiasprobst.github.io/ssno#Location> <http://www.w3.org/2004/02/skos/core#example> "velocity_at_inlet, difference_of_static_pressure_across_orifice, difference_of_static_pressure_between_point1_and_point2"@en .
+<https://matthiasprobst.github.io/ssno#Location> <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
+# 
+# https://matthiasprobst.github.io/ssno#Medium
+<https://matthiasprobst.github.io/ssno#Medium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Medium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Medium> <http://www.w3.org/2004/02/skos/core#definition> "A standard medium defined within the scope of the standard name table used to qualify a standard name using suffix 'at_MEDIUM'."@en .
+<https://matthiasprobst.github.io/ssno#Medium> <http://www.w3.org/2004/02/skos/core#example> "air, water, oil, ..."@en .
+<https://matthiasprobst.github.io/ssno#Medium> <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium"@en .
+# 
+# https://matthiasprobst.github.io/ssno#Qualification
+<https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2004/02/skos/core#definition> "Abstract class for qualifications that adds phrases to the standard name to construct new standard names without changing the units. This class is therefore not intended to be used directly, but by its subclasses. It only has a description as a property."@en .
+<https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification"@en .
+# 
+# https://matthiasprobst.github.io/ssno#ReferenceFrame
+<https://matthiasprobst.github.io/ssno#ReferenceFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#ReferenceFrame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#ReferenceFrame> <http://www.w3.org/2004/02/skos/core#definition> "A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names."@en .
+<https://matthiasprobst.github.io/ssno#ReferenceFrame> <http://www.w3.org/2004/02/skos/core#example> "'x_velocity_in_rotating_reference_frame', where 'x_velocity' is an existing standard_name and 'rotating_reference_frame' is the frame of reference which is well defined in the description of it."@en .
+<https://matthiasprobst.github.io/ssno#ReferenceFrame> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reference Frame"@en .
 # 
 # https://matthiasprobst.github.io/ssno#StandardName
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -315,7 +371,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#onProperty> _:genid8 .
 _:genid8 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en .
-<https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName" .
+<https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name" .
 # 
 # https://matthiasprobst.github.io/ssno#StandardNameTable
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -329,20 +385,20 @@ _:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> _:genid12 .
 _:genid12 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Distribution> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#comment> "Please provide dcat:downloadURL to inidcate, that it is a downloadable distribution (see also https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)"@en .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name table is a published dcat:Distribution, which holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creators as well as qualifications (ssno:Qualification) and transformations (ssno:Transformation)."@en .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name Table" .
 # 
-# https://matthiasprobst.github.io/ssno#StandardReferenceFrame
-<https://matthiasprobst.github.io/ssno#StandardReferenceFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardReferenceFrame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardX> .
-<https://matthiasprobst.github.io/ssno#StandardReferenceFrame> <http://www.w3.org/2004/02/skos/core#definition> "A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names."@en .
-<https://matthiasprobst.github.io/ssno#StandardReferenceFrame> <http://www.w3.org/2004/02/skos/core#example> "'x_velocity_in_rotating_reference_frame', where 'x_velocity' is an existing standard_name and 'rotating_reference_frame' is the frame of reference which is well defined in the description of it."@en .
-<https://matthiasprobst.github.io/ssno#StandardReferenceFrame> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardReferenceFrame"@en .
+# https://matthiasprobst.github.io/ssno#Surface
+<https://matthiasprobst.github.io/ssno#Surface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Surface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#Surface> <http://www.w3.org/2004/02/skos/core#definition> "A surface is a single word for referring quantities more generic positions in the problem. Unlike locations, a surface is not locatable geometrically, e.g. se 'wall' in the example."@en .
+<https://matthiasprobst.github.io/ssno#Surface> <http://www.w3.org/2004/02/skos/core#example> "wall_static_pressure"@en .
+<https://matthiasprobst.github.io/ssno#Surface> <http://www.w3.org/2004/02/skos/core#prefLabel> "Surface"@en .
 # 
-# https://matthiasprobst.github.io/ssno#StandardX
-<https://matthiasprobst.github.io/ssno#StandardX> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardX> <http://www.w3.org/2004/02/skos/core#definition> "Abstract Class for all additional standardized objects like device, location or reference frame using a description as property only. This class is therefore not intended to be used directly but their subclasses."@en .
-<https://matthiasprobst.github.io/ssno#StandardX> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardX"@en .
+# https://matthiasprobst.github.io/ssno#Transformation
+<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

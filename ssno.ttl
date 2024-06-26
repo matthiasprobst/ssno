@@ -255,7 +255,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  http://www.w3.org/ns/dcat#keyword
 dcat:keyword rdf:type owl:DatatypeProperty ;
-             rdfs:domain dcat:Dataset ;
+             rdfs:domain dcat:Distribution ;
              rdfs:range rdfs:Literal ;
              skos:definition "A keyword or tag describing the resource."@en ;
              skos:prefLabel "keyword"@en .
@@ -339,11 +339,10 @@ qudt:Unit rdf:type owl:Class ;
           skos:prefLabel "Unit"@en .
 
 
-###  http://www.w3.org/ns/dcat#Dataset
-dcat:Dataset rdf:type owl:Class ;
-             rdfs:isDefinedBy dcat: ;
-             skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en ;
-             skos:prefLabel "Dataset"@en .
+###  http://www.w3.org/ns/dcat#Distribution
+dcat:Distribution rdf:type owl:Class ;
+                  rdfs:isDefinedBy dcat: ;
+                  skos:prefLabel "Distribution"@en .
 
 
 ###  http://www.w3.org/ns/prov#Agent
@@ -430,8 +429,9 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                                             ] ;
                                              owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
                                            ] ;
-                       rdfs:subClassOf dcat:Dataset ;
-                       skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creator."@en ;
+                       rdfs:subClassOf dcat:Distribution ;
+                       rdfs:comment "Please provide dcat:downloadURL to inidcate, that it is a downloadable distribution (see also https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)"@en ;
+                       skos:definition "A standard name table is a published dcat:Distribution, which holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creators as well as qualifications (ssno:Qualification) and transformations (ssno:Transformation)."@en ;
                        skos:prefLabel "Standard Name Table" .
 
 

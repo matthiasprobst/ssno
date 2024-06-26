@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">cf-conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-06-20", "version":"v2.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">cf-conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-06-26", "version":"v2.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -59,7 +59,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-06-20</dt>
+<dt>Modified on: 2024-06-26</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/2.0.0">https://matthiasprobst.github.io/ssno/2.0.0</a></dd>
 <dt>Latest version:</dt>
@@ -111,38 +111,49 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+      <a href="#Component" title="https://matthiasprobst.github.io/ssno#Component">Component</a>
+   </li>
+   <li>
+      <a href="#Condition" title="https://matthiasprobst.github.io/ssno#Condition">Condition</a>
+   </li>
+   <li>
+      <a href="#Device" title="https://matthiasprobst.github.io/ssno#Device">Device</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">Distribution</a>
    </li>
    <li>
       <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
          title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a>
    </li>
    <li>
-      <a href="#StandardComponent"
-         title="https://matthiasprobst.github.io/ssno#StandardComponent">StandardComponent</a>
+      <a href="#Location" title="https://matthiasprobst.github.io/ssno#Location">Location</a>
    </li>
    <li>
-      <a href="#StandardCondition"
-         title="https://matthiasprobst.github.io/ssno#StandardCondition">StandardCondition</a>
+      <a href="#Medium" title="https://matthiasprobst.github.io/ssno#Medium">Medium</a>
    </li>
    <li>
-      <a href="#StandardDevice"
-         title="https://matthiasprobst.github.io/ssno#StandardDevice">StandardDevice</a>
+      <a href="#Qualification"
+         title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+   </li>
+   <li>
+      <a href="#ReferenceFrame"
+         title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
    </li>
    <li>
       <a href="#StandardName"
-         title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+         title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
    </li>
    <li>
       <a href="#StandardNameTable"
-         title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+         title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
    </li>
    <li>
-      <a href="#StandardReferenceFrame"
-         title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
+      <a href="#Surface" title="https://matthiasprobst.github.io/ssno#Surface">Surface</a>
    </li>
    <li>
-      <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
+      <a href="#Transformation"
+         title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a>
    </li>
    <li>
       <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
@@ -155,11 +166,10 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
    </li>
    <li>
-      <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+      <a href="#components" title="https://matthiasprobst.github.io/ssno#components">components</a>
    </li>
    <li>
-      <a href="#standardComponents"
-         title="https://matthiasprobst.github.io/ssno#standardComponents">has standard components</a>
+      <a href="#devices" title="https://matthiasprobst.github.io/ssno#devices">devices</a>
    </li>
    <li>
       <a href="#hasStandardName"
@@ -170,31 +180,42 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
    </li>
    <li>
+      <a href="#locations" title="https://matthiasprobst.github.io/ssno#locations">locations</a>
+   </li>
+   <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
    </li>
    <li>
-      <a href="#standardDevices"
-         title="https://matthiasprobst.github.io/ssno#standardDevices">standard locations</a>
-   </li>
-   <li>
-      <a href="#standardLocations"
-         title="https://matthiasprobst.github.io/ssno#standardLocations">standard locations</a>
-   </li>
-   <li>
-      <a href="#standardReferenceFrames"
-         title="https://matthiasprobst.github.io/ssno#standardReferenceFrames">standard locations</a>
-   </li>
-   <li>
-      <a href="#standardNameTable"
-         title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+      <a href="#media" title="https://matthiasprobst.github.io/ssno#media">media</a>
    </li>
    <li>
       <a href="#standardNameTableUsedBy"
-         title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+         title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
    </li>
    <li>
       <a href="#standardNames"
-         title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+         title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
+   </li>
+   <li>
+      <a href="#qualifications"
+         title="https://matthiasprobst.github.io/ssno#qualifications">
+         <span>qualifications</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referenceFrames"
+         title="https://matthiasprobst.github.io/ssno#referenceFrames">reference frames</a>
+   </li>
+   <li>
+      <a href="#surfaces" title="https://matthiasprobst.github.io/ssno#surfaces">surfaces</a>
+   </li>
+   <li>
+      <a href="#standardNameTable"
+         title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
+   </li>
+   <li>
+      <a href="#transformations"
+         title="https://matthiasprobst.github.io/ssno#transformations">transformations</a>
    </li>
    <li>
       <a href="#usesStandardNameTable"
@@ -223,8 +244,16 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#qualification"
+         title="https://matthiasprobst.github.io/ssno#qualification">qualification</a>
+   </li>
+   <li>
       <a href="#standardName"
-         title="https://matthiasprobst.github.io/ssno#standardName">standard name</a>
+         title="https://matthiasprobst.github.io/ssno#standardName">standard_name</a>
+   </li>
+   <li>
+      <a href="#transformation"
+         title="https://matthiasprobst.github.io/ssno#transformation">transformation</a>
    </li>
    <li>
       <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
@@ -251,38 +280,49 @@ This section provides details for each class and property defined by SSNO.
          <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+         <a href="#Component" title="https://matthiasprobst.github.io/ssno#Component">Component</a>
+      </li>
+      <li>
+         <a href="#Condition" title="https://matthiasprobst.github.io/ssno#Condition">Condition</a>
+      </li>
+      <li>
+         <a href="#Device" title="https://matthiasprobst.github.io/ssno#Device">Device</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">Distribution</a>
       </li>
       <li>
          <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
             title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a>
       </li>
       <li>
-         <a href="#StandardComponent"
-            title="https://matthiasprobst.github.io/ssno#StandardComponent">StandardComponent</a>
+         <a href="#Location" title="https://matthiasprobst.github.io/ssno#Location">Location</a>
       </li>
       <li>
-         <a href="#StandardCondition"
-            title="https://matthiasprobst.github.io/ssno#StandardCondition">StandardCondition</a>
+         <a href="#Medium" title="https://matthiasprobst.github.io/ssno#Medium">Medium</a>
       </li>
       <li>
-         <a href="#StandardDevice"
-            title="https://matthiasprobst.github.io/ssno#StandardDevice">StandardDevice</a>
+         <a href="#Qualification"
+            title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+      </li>
+      <li>
+         <a href="#ReferenceFrame"
+            title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
       </li>
       <li>
          <a href="#StandardName"
-            title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+            title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
       </li>
       <li>
          <a href="#StandardNameTable"
-            title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+            title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
       </li>
       <li>
-         <a href="#StandardReferenceFrame"
-            title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
+         <a href="#Surface" title="https://matthiasprobst.github.io/ssno#Surface">Surface</a>
       </li>
       <li>
-         <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
+         <a href="#Transformation"
+            title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a>
       </li>
       <li>
          <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a>
@@ -310,23 +350,106 @@ This section provides details for each class and property defined by SSNO.
             <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
-   <div class="entity" id="http://www.w3.org/ns/dcat#Dataset">
-      <h3>Dataset<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Component">
+      <h3>Component<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/ns/dcat#Dataset</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Component</p>
       <div class="comment">
-         <span class="markdown">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</span>
+         <span class="markdown">A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>x_velocity</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#components" title="https://matthiasprobst.github.io/ssno#components">components</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Condition">
+      <h3>Condition<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Condition</p>
+      <div class="comment">
+         <span class="markdown">A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix 'assuming_': &lt;standard_name&gt;_assuming_&lt;condition&gt;.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>z_velocity_assuming_incompressible_medium</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Device">
+      <h3>Device<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Device</p>
+      <div class="comment">
+         <span class="markdown">A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>'difference_of_static_pressure_across_orifice', where 'static_pressure' is an existing standard_name and 'orifice' is the device</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#standardNameTable"
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#devices" title="https://matthiasprobst.github.io/ssno#devices">devices</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/dcat#Distribution">
+      <h3>Distribution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/dcat#Distribution</p>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -337,7 +460,7 @@ This section provides details for each class and property defined by SSNO.
          <dt>has sub-classes</dt>
          <dd>
             <a href="#StandardNameTable"
-               title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -362,11 +485,11 @@ This section provides details for each class and property defined by SSNO.
          <dd>
             <span class="logic">inverse</span> 
             <a href="#standardNameTableUsedBy"
-               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#StandardNameTable"
-               title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -378,103 +501,148 @@ This section provides details for each class and property defined by SSNO.
          <dt>is in range of</dt>
          <dd>
             <a href="#standardNameTableUsedBy"
-               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="StandardComponent">
-      <h3>StandardComponent<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Location">
+      <h3>Location<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardComponent</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Location</p>
       <div class="comment">
-         <span class="markdown">A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector.</span>
+         <span class="markdown">A standard location is a point or surface in space defined within the scope of the standard name table intended to be constructed in standard names using at or to describe differences between to quantities using between or across.</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>x_velocity</pre>
+            <pre>velocity_at_inlet, difference_of_static_pressure_across_orifice, difference_of_static_pressure_between_point1_and_point2</pre>
          </dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#standardComponents"
-               title="https://matthiasprobst.github.io/ssno#standardComponents">has standard components</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="StandardCondition">
-      <h3>StandardCondition<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardCondition</p>
-      <div class="comment">
-         <span class="markdown">A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix 'assuming_': &lt;standard_name&gt;_assuming_&lt;condition&gt;.</span>
-      </div>
-      <dl>
-         <dt>Example</dt>
-         <dd>
-            <pre>z_velocity_assuming_incompressible_medium</pre>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="StandardDevice">
-      <h3>StandardDevice<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardDevice</p>
-      <div class="comment">
-         <span class="markdown">A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names.</span>
-      </div>
-      <dl>
-         <dt>Example</dt>
-         <dd>
-            <pre>'difference_of_static_pressure_across_orifice', where 'static_pressure' is an existing standard_name and 'orifice' is the device</pre>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#standardNameTable"
-               title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#standardDevices"
-               title="https://matthiasprobst.github.io/ssno#standardDevices">standard locations</a>
+            <a href="#locations" title="https://matthiasprobst.github.io/ssno#locations">locations</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Medium">
+      <h3>Medium<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Medium</p>
+      <div class="comment">
+         <span class="markdown">A standard medium defined within the scope of the standard name table used to qualify a standard name using suffix 'at_MEDIUM'.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>air, water, oil, ...</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#media" title="https://matthiasprobst.github.io/ssno#media">media</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Qualification">
+      <h3>Qualification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Qualification</p>
+      <div class="comment">
+         <span class="markdown">Abstract class for qualifications that adds phrases to the standard name to construct new standard names without changing the units. This class is therefore not intended to be used directly, but by its subclasses. It only has a description as a property.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Component" title="https://matthiasprobst.github.io/ssno#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Condition" title="https://matthiasprobst.github.io/ssno#Condition">Condition</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Device" title="https://matthiasprobst.github.io/ssno#Device">Device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Location" title="https://matthiasprobst.github.io/ssno#Location">Location</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Medium" title="https://matthiasprobst.github.io/ssno#Medium">Medium</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ReferenceFrame"
+               title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Surface" title="https://matthiasprobst.github.io/ssno#Surface">Surface</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#qualifications"
+               title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ReferenceFrame">
+      <h3>Reference Frame<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#ReferenceFrame</p>
+      <div class="comment">
+         <span class="markdown">A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names.</span>
+      </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>'x_velocity_in_rotating_reference_frame', where 'x_velocity' is an existing standard_name and 'rotating_reference_frame' is the frame of reference which is well defined in the description of it.</pre>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#components" title="https://matthiasprobst.github.io/ssno#components">components</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTable"
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#referenceFrames"
+               title="https://matthiasprobst.github.io/ssno#referenceFrames">reference frames</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="StandardName">
-      <h3>StandardName<sup class="type-c" title="class">c</sup>
+      <h3>Standard Name<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -488,11 +656,11 @@ This section provides details for each class and property defined by SSNO.
          <dd>
             <span class="logic">inverse</span> 
             <a href="#standardNames"
-               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+               title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#StandardNameTable"
-               title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+               title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -502,9 +670,9 @@ This section provides details for each class and property defined by SSNO.
             <sup class="type-op" title="object property">op</sup>, <a href="#isStandardNameOf"
                title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#standardName"
-               title="https://matthiasprobst.github.io/ssno#standardName">standard name</a>
+               title="https://matthiasprobst.github.io/ssno#standardName">standard_name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTable"
-               title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -512,31 +680,34 @@ This section provides details for each class and property defined by SSNO.
             <a href="#hasStandardName"
                title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#standardNames"
-               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+               title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
    <div class="entity" id="StandardNameTable">
-      <h3>StandardNameTable<sup class="type-c" title="class">c</sup>
+      <h3>Standard Name Table<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardNameTable</p>
       <div class="comment">
-         <span class="markdown">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</span>
+         <span class="markdown">Please provide dcat:downloadURL to inidcate, that it is a downloadable distribution (see also https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)</span>
+      </div>
+      <div class="comment">
+         <span class="markdown">A standard name table is a published dcat:Distribution, which holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creators as well as qualifications (ssno:Qualification) and transformations (ssno:Transformation).</span>
       </div>
       <dl class="description">
          <dt>is equivalent to</dt>
          <dd>
             <span class="logic">inverse</span> 
             <a href="#standardNameTable"
-               title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#StandardName"
-               title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+               title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
@@ -551,98 +722,84 @@ This section provides details for each class and property defined by SSNO.
          </dd>
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+            <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">Distribution</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+            <a href="#devices" title="https://matthiasprobst.github.io/ssno#devices">devices</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#standardDevices"
-               title="https://matthiasprobst.github.io/ssno#standardDevices">standard locations</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#standardLocations"
-               title="https://matthiasprobst.github.io/ssno#standardLocations">standard locations</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#standardReferenceFrames"
-               title="https://matthiasprobst.github.io/ssno#standardReferenceFrames">standard locations</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#locations" title="https://matthiasprobst.github.io/ssno#locations">locations</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#media" title="https://matthiasprobst.github.io/ssno#media">media</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTableUsedBy"
-               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#standardNames"
-               title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+               title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#qualifications"
+               title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#referenceFrames"
+               title="https://matthiasprobst.github.io/ssno#referenceFrames">reference frames</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#surfaces" title="https://matthiasprobst.github.io/ssno#surfaces">surfaces</a>
             <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title"
                target="_blank"
-               title="http://purl.org/dc/terms/title">title</a>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
+               title="http://purl.org/dc/terms/title">title</a>, <a href="#transformations"
+               title="https://matthiasprobst.github.io/ssno#transformations">transformations</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#standardNameTable"
-               title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+               title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable"
                title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="StandardReferenceFrame">
-      <h3>StandardReferenceFrame<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Surface">
+      <h3>Surface<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardReferenceFrame</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Surface</p>
       <div class="comment">
-         <span class="markdown">A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names.</span>
+         <span class="markdown">A surface is a single word for referring quantities more generic positions in the problem. Unlike locations, a surface is not locatable geometrically, e.g. se 'wall' in the example.</span>
       </div>
       <dl>
          <dt>Example</dt>
          <dd>
-            <pre>'x_velocity_in_rotating_reference_frame', where 'x_velocity' is an existing standard_name and 'rotating_reference_frame' is the frame of reference which is well defined in the description of it.</pre>
+            <pre>wall_static_pressure</pre>
          </dd>
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
+            <a href="#Qualification"
+               title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#standardComponents"
-               title="https://matthiasprobst.github.io/ssno#standardComponents">has standard components</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTable"
-               title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#standardReferenceFrames"
-               title="https://matthiasprobst.github.io/ssno#standardReferenceFrames">standard locations</a>
+            <a href="#surfaces" title="https://matthiasprobst.github.io/ssno#surfaces">surfaces</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="StandardX">
-      <h3>StandardX<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Transformation">
+      <h3>Transformation<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardX</p>
-      <div class="comment">
-         <span class="markdown">Abstract Class for all additional standardized objects like device, location or reference frame using a description as property only. This class is therefore not intended to be used directly but their subclasses.</span>
-      </div>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Transformation</p>
       <dl class="description">
-         <dt>has sub-classes</dt>
+         <dt>is in range of</dt>
          <dd>
-            <a href="#StandardComponent"
-               title="https://matthiasprobst.github.io/ssno#StandardComponent">StandardComponent</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StandardCondition"
-               title="https://matthiasprobst.github.io/ssno#StandardCondition">StandardCondition</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StandardDevice"
-               title="https://matthiasprobst.github.io/ssno#StandardDevice">StandardDevice</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#StandardReferenceFrame"
-               title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
-            <sup class="type-c" title="class">c</sup>
+            <a href="#transformations"
+               title="https://matthiasprobst.github.io/ssno#transformations">transformations</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -675,11 +832,10 @@ This section provides details for each class and property defined by SSNO.
             title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
       </li>
       <li>
-         <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
+         <a href="#components" title="https://matthiasprobst.github.io/ssno#components">components</a>
       </li>
       <li>
-         <a href="#standardComponents"
-            title="https://matthiasprobst.github.io/ssno#standardComponents">has standard components</a>
+         <a href="#devices" title="https://matthiasprobst.github.io/ssno#devices">devices</a>
       </li>
       <li>
          <a href="#hasStandardName"
@@ -690,31 +846,42 @@ This section provides details for each class and property defined by SSNO.
             title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
       </li>
       <li>
+         <a href="#locations" title="https://matthiasprobst.github.io/ssno#locations">locations</a>
+      </li>
+      <li>
          <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
       </li>
       <li>
-         <a href="#standardDevices"
-            title="https://matthiasprobst.github.io/ssno#standardDevices">standard locations</a>
-      </li>
-      <li>
-         <a href="#standardLocations"
-            title="https://matthiasprobst.github.io/ssno#standardLocations">standard locations</a>
-      </li>
-      <li>
-         <a href="#standardReferenceFrames"
-            title="https://matthiasprobst.github.io/ssno#standardReferenceFrames">standard locations</a>
-      </li>
-      <li>
-         <a href="#standardNameTable"
-            title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+         <a href="#media" title="https://matthiasprobst.github.io/ssno#media">media</a>
       </li>
       <li>
          <a href="#standardNameTableUsedBy"
-            title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+            title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
       </li>
       <li>
          <a href="#standardNames"
-            title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+            title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
+      </li>
+      <li>
+         <a href="#qualifications"
+            title="https://matthiasprobst.github.io/ssno#qualifications">
+            <span>qualifications</span>
+         </a>
+      </li>
+      <li>
+         <a href="#referenceFrames"
+            title="https://matthiasprobst.github.io/ssno#referenceFrames">reference frames</a>
+      </li>
+      <li>
+         <a href="#surfaces" title="https://matthiasprobst.github.io/ssno#surfaces">surfaces</a>
+      </li>
+      <li>
+         <a href="#standardNameTable"
+            title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
+      </li>
+      <li>
+         <a href="#transformations"
+            title="https://matthiasprobst.github.io/ssno#transformations">transformations</a>
       </li>
       <li>
          <a href="#usesStandardNameTable"
@@ -736,7 +903,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -747,54 +914,65 @@ This section provides details for each class and property defined by SSNO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="contact">
-      <h3>contact<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="components">
+      <h3>components<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#contact</p>
-      <div class="comment">
-         <span class="markdown">Contact agent (person or organization) for the standard name table.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="standardComponents">
-      <h3>has standard components<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardComponents</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#components</p>
       <div class="comment">
          <span class="markdown">Points to the components of a reference frame.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#StandardReferenceFrame"
-                  title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
+               <a href="#ReferenceFrame"
+                  title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#StandardComponent"
-                  title="https://matthiasprobst.github.io/ssno#StandardComponent">StandardComponent</a>
+               <a href="#Component" title="https://matthiasprobst.github.io/ssno#Component">Component</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="devices">
+      <h3>devices<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#devices</p>
+      <div class="comment">
+         <span class="markdown">Points to standard device defined by a standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Device" title="https://matthiasprobst.github.io/ssno#Device">Device</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -822,7 +1000,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has range</dt>
             <dd>
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -849,7 +1027,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -864,6 +1042,38 @@ This section provides details for each class and property defined by SSNO.
                <a href="#hasStandardName"
                   title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locations">
+      <h3>locations<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#locations</p>
+      <div class="comment">
+         <span class="markdown">Points to standard locations defined by a standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Location" title="https://matthiasprobst.github.io/ssno#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -904,139 +1114,40 @@ This section provides details for each class and property defined by SSNO.
          </dl>
       </div>
    </div>
-   <div class="entity" id="standardDevices">
-      <h3>standard locations<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="media">
+      <h3>media<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardDevices</p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#media</p>
       <div class="comment">
-         <span class="markdown">Points to standard device defined by a standard name table.</span>
+         <span class="markdown">Points to the medium defined by the standard name table.</span>
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
+            <dt>has super-properties</dt>
             <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#StandardDevice"
-                  title="https://matthiasprobst.github.io/ssno#StandardDevice">StandardDevice</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="standardLocations">
-      <h3>standard locations<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardLocations</p>
-      <div class="comment">
-         <span class="markdown">Points to standard locations defined by a standard name table.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="https://matthiasprobst.github.io/ssno#StandardLocation"
-                  target="_blank"
-                  title="https://matthiasprobst.github.io/ssno#StandardLocation">standard location</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="standardReferenceFrames">
-      <h3>standard locations<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardReferenceFrames</p>
-      <div class="comment">
-         <span class="markdown">Points to standard reference frame defined by a standard name table.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#StandardReferenceFrame"
-                  title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="standardNameTable">
-      <h3>standard name table<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardNameTable</p>
-      <div class="comment">
-         <span class="markdown">Points to the ssno:StandardNameTable defining the ssno:StandardName.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardDevice"
-                  title="https://matthiasprobst.github.io/ssno#StandardDevice">StandardDevice</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="https://matthiasprobst.github.io/ssno#StandardLocation"
-                  target="_blank"
-                  title="https://matthiasprobst.github.io/ssno#StandardLocation">standard location</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#StandardReferenceFrame"
-                  title="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">StandardReferenceFrame</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#standardNames"
-                  title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Medium" title="https://matthiasprobst.github.io/ssno#Medium">Medium</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
    </div>
    <div class="entity" id="standardNameTableUsedBy">
-      <h3>standard name table used by<sup class="type-op" title="object property">op</sup>
+      <h3>name table used by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1050,7 +1161,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1069,7 +1180,7 @@ This section provides details for each class and property defined by SSNO.
       </div>
    </div>
    <div class="entity" id="standardNames">
-      <h3>standard names<sup class="type-op" title="object property">op</sup>
+      <h3>names<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1083,20 +1194,193 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#standardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
+                  title="https://matthiasprobst.github.io/ssno#standardNameTable">table</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="qualifications">
+      <h3>qualifications<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#qualifications</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#components" title="https://matthiasprobst.github.io/ssno#components">components</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#devices" title="https://matthiasprobst.github.io/ssno#devices">devices</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#locations" title="https://matthiasprobst.github.io/ssno#locations">locations</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#media" title="https://matthiasprobst.github.io/ssno#media">media</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#referenceFrames"
+                  title="https://matthiasprobst.github.io/ssno#referenceFrames">reference frames</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#surfaces" title="https://matthiasprobst.github.io/ssno#surfaces">surfaces</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Qualification"
+                  title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="referenceFrames">
+      <h3>reference frames<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#referenceFrames</p>
+      <div class="comment">
+         <span class="markdown">Points to standard reference frame defined by a standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ReferenceFrame"
+                  title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="surfaces">
+      <h3>surfaces<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#surfaces</p>
+      <div class="comment">
+         <span class="markdown">Points to standard surface defined by a standard name table.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#qualifications"
+                  title="https://matthiasprobst.github.io/ssno#qualifications">qualifications</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Surface" title="https://matthiasprobst.github.io/ssno#Surface">Surface</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="standardNameTable">
+      <h3>table<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardNameTable</p>
+      <div class="comment">
+         <span class="markdown">Points to the ssno:StandardNameTable defining the ssno:StandardName.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Device" title="https://matthiasprobst.github.io/ssno#Device">Device</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#Location" title="https://matthiasprobst.github.io/ssno#Location">Location</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#ReferenceFrame"
+                  title="https://matthiasprobst.github.io/ssno#ReferenceFrame">Reference Frame</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="#StandardName"
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#standardNames"
+                  title="https://matthiasprobst.github.io/ssno#standardNames">names</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="transformations">
+      <h3>transformations<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#transformations</p>
+      <div class="comment">
+         <span class="markdown">Points to the a Transforrmation.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardNameTable"
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Transformation"
+                  title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -1122,13 +1406,13 @@ This section provides details for each class and property defined by SSNO.
             <dt>has range</dt>
             <dd>
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#standardNameTableUsedBy"
-                  title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a>
+                  title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">name table used by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1159,8 +1443,16 @@ This section provides details for each class and property defined by SSNO.
          </a>
       </li>
       <li>
+         <a href="#qualification"
+            title="https://matthiasprobst.github.io/ssno#qualification">qualification</a>
+      </li>
+      <li>
          <a href="#standardName"
-            title="https://matthiasprobst.github.io/ssno#standardName">standard name</a>
+            title="https://matthiasprobst.github.io/ssno#standardName">standard_name</a>
+      </li>
+      <li>
+         <a href="#transformation"
+            title="https://matthiasprobst.github.io/ssno#transformation">transformation</a>
       </li>
       <li>
          <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a>
@@ -1208,15 +1500,16 @@ This section provides details for each class and property defined by SSNO.
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#Qualification"
+                  title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#StandardX" title="https://matthiasprobst.github.io/ssno#StandardX">StandardX</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1249,7 +1542,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1275,7 +1568,7 @@ This section provides details for each class and property defined by SSNO.
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a>
+               <a href="#http://www.w3.org/ns/dcat#Distribution" title="http://www.w3.org/ns/dcat#Distribution">Distribution</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1315,8 +1608,16 @@ This section provides details for each class and property defined by SSNO.
          </dl>
       </div>
    </div>
+   <div class="entity" id="qualification">
+      <h3>qualification<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#qualification</p>
+   </div>
    <div class="entity" id="standardName">
-      <h3>standard name<sup class="type-dp" title="data property">dp</sup>
+      <h3>standard_name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
@@ -1336,7 +1637,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardName"
-                  title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1344,6 +1645,25 @@ This section provides details for each class and property defined by SSNO.
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="transformation">
+      <h3>transformation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://matthiasprobst.github.io/ssno#transformation</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topDataProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
+               <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
       </div>
@@ -1363,7 +1683,7 @@ This section provides details for each class and property defined by SSNO.
             <dt>has domain</dt>
             <dd>
                <a href="#StandardNameTable"
-                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+                  title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard Name Table</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

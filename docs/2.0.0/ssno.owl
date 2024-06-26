@@ -178,14 +178,28 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#contact -->
+    <!-- https://matthiasprobst.github.io/ssno#components -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#contact">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#components">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#ReferenceFrame"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Component"/>
+        <skos:definition xml:lang="en">Points to the components of a reference frame.</skos:definition>
+        <skos:prefLabel xml:lang="en">components</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#devices -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#devices">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <skos:definition xml:lang="en">Contact agent (person or organization) for the standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">contact</skos:prefLabel>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Device"/>
+        <skos:definition xml:lang="en">Points to standard device defined by a standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">devices</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -215,38 +229,51 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#standardComponents -->
+    <!-- https://matthiasprobst.github.io/ssno#locations -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardComponents">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardReferenceFrame"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardComponent"/>
-        <skos:definition xml:lang="en">Points to the components of a reference frame.</skos:definition>
-        <skos:prefLabel xml:lang="en">has standard components</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#standardDevices -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardDevices">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#locations">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardDevice"/>
-        <skos:definition xml:lang="en">Points to standard device defined by a standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard locations</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#standardLocations -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardLocations">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardLocation"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Location"/>
         <skos:definition xml:lang="en">Points to standard locations defined by a standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard locations</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">locations</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#media -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#media">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Medium"/>
+        <skos:definition xml:lang="en">Points to the medium defined by the standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">media</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#qualifications -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#qualifications">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#referenceFrames -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#referenceFrames">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#ReferenceFrame"/>
+        <skos:definition xml:lang="en">Points to standard reference frame defined by a standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">reference frames</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -256,13 +283,13 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTable">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardDevice"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardLocation"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Device"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Location"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#ReferenceFrame"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardReferenceFrame"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Points to the ssno:StandardNameTable defining the ssno:StandardName.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">table</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -275,7 +302,7 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
         <skos:definition xml:lang="en">Points to a thing, e.g. a file resource, where the standard name table is used.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard name table used by</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">name table used by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -287,19 +314,32 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to multiple standard names of a standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard names</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">names</skos:prefLabel>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#standardReferenceFrames -->
+    <!-- https://matthiasprobst.github.io/ssno#surfaces -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardReferenceFrames">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#surfaces">
+        <rdfs:subPropertyOf rdf:resource="https://matthiasprobst.github.io/ssno#qualifications"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardReferenceFrame"/>
-        <skos:definition xml:lang="en">Points to standard reference frame defined by a standard name table.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard locations</skos:prefLabel>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Surface"/>
+        <skos:definition xml:lang="en">Points to standard surface defined by a standard name table.</skos:definition>
+        <skos:prefLabel xml:lang="en">surfaces</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#transformations -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#transformations">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
+        <skos:definition xml:lang="en">Points to the a Transforrmation.</skos:definition>
+        <skos:prefLabel xml:lang="en">transformations</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -352,7 +392,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#keyword">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <skos:definition xml:lang="en">A keyword or tag describing the resource.</skos:definition>
         <skos:prefLabel xml:lang="en">keyword</skos:prefLabel>
@@ -391,9 +431,9 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardX"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -416,6 +456,15 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#qualification -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#qualification">
+        <skos:prefLabel xml:lang="en">qualification</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#standardName -->
 
 
@@ -424,7 +473,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Name for a standard name, e.g. &quot;x_velocity&quot;. The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.</skos:definition>
         <skos:example>x_derivative_of_y_velocity</skos:example>
-        <skos:prefLabel xml:lang="en">standard name</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">standard_name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#transformation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#transformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <skos:prefLabel xml:lang="en">transformation</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -471,13 +530,12 @@
     
 
 
-    <!-- http://www.w3.org/ns/dcat#Dataset -->
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
-        <skos:definition xml:lang="en">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
-        <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Distribution</skos:prefLabel>
     </owl:Class>
     
 
@@ -493,46 +551,85 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardComponent -->
+    <!-- https://matthiasprobst.github.io/ssno#Component -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardComponent">
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardX"/>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Component">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
         <skos:definition xml:lang="en">A standard component is the spatial component of a vector in a reference frame, e.g. x, y and z in an cartesian coordinate system. A component can be added in front of a standard name describing a vector.</skos:definition>
         <skos:example xml:lang="en">x_velocity</skos:example>
-        <skos:prefLabel xml:lang="en">StandardComponent</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Component</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardCondition -->
+    <!-- https://matthiasprobst.github.io/ssno#Condition -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardCondition">
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardX"/>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Condition">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
         <skos:definition xml:lang="en">A standard condition can be added to standard names at the end indicated an assumed condition. The condition is lead by the prefix &apos;assuming_&apos;: &lt;standard_name&gt;_assuming_&lt;condition&gt;.</skos:definition>
         <skos:example xml:lang="en">z_velocity_assuming_incompressible_medium</skos:example>
-        <skos:prefLabel xml:lang="en">StandardCondition</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Condition</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardDevice -->
+    <!-- https://matthiasprobst.github.io/ssno#Device -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardDevice">
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardX"/>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Device">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
         <skos:definition xml:lang="en">A standard device is an object (machine, measurement device, ...) defined within the scope of the standard name table intended to be constructed in standard names.</skos:definition>
         <skos:example xml:lang="en">&apos;difference_of_static_pressure_across_orifice&apos;, where &apos;static_pressure&apos; is an existing standard_name and &apos;orifice&apos; is the device</skos:example>
-        <skos:prefLabel xml:lang="en">StandardDevice</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Device</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardLocation -->
+    <!-- https://matthiasprobst.github.io/ssno#Location -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardLocation"/>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Location">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <skos:definition xml:lang="en">A standard location is a point or surface in space defined within the scope of the standard name table intended to be constructed in standard names using at or to describe differences between to quantities using between or across.</skos:definition>
+        <skos:example xml:lang="en">velocity_at_inlet, difference_of_static_pressure_across_orifice, difference_of_static_pressure_between_point1_and_point2</skos:example>
+        <skos:prefLabel xml:lang="en">Location</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#Medium -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Medium">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <skos:definition xml:lang="en">A standard medium defined within the scope of the standard name table used to qualify a standard name using suffix &apos;at_MEDIUM&apos;.</skos:definition>
+        <skos:example xml:lang="en">air, water, oil, ...</skos:example>
+        <skos:prefLabel xml:lang="en">Medium</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#Qualification -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Qualification">
+        <skos:definition xml:lang="en">Abstract class for qualifications that adds phrases to the standard name to construct new standard names without changing the units. This class is therefore not intended to be used directly, but by its subclasses. It only has a description as a property.</skos:definition>
+        <skos:prefLabel xml:lang="en">Qualification</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#ReferenceFrame -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#ReferenceFrame">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <skos:definition xml:lang="en">A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names.</skos:definition>
+        <skos:example xml:lang="en">&apos;x_velocity_in_rotating_reference_frame&apos;, where &apos;x_velocity&apos; is an existing standard_name and &apos;rotating_reference_frame&apos; is the frame of reference which is well defined in the description of it.</skos:example>
+        <skos:prefLabel xml:lang="en">Reference Frame</skos:prefLabel>
+    </owl:Class>
     
 
 
@@ -551,7 +648,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <skos:definition xml:lang="en">A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table.</skos:definition>
-        <skos:prefLabel>StandardName</skos:prefLabel>
+        <skos:prefLabel>Standard Name</skos:prefLabel>
     </owl:Class>
     
 
@@ -580,31 +677,31 @@
                 <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-        <skos:definition xml:lang="en">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</skos:definition>
-        <skos:prefLabel>StandardNameTable</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdfs:comment xml:lang="en">Please provide dcat:downloadURL to inidcate, that it is a downloadable distribution (see also https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution)</rdfs:comment>
+        <skos:definition xml:lang="en">A standard name table is a published dcat:Distribution, which holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and creators as well as qualifications (ssno:Qualification) and transformations (ssno:Transformation).</skos:definition>
+        <skos:prefLabel>Standard Name Table</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardReferenceFrame -->
+    <!-- https://matthiasprobst.github.io/ssno#Surface -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardReferenceFrame">
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardX"/>
-        <skos:definition xml:lang="en">A standard reference frame is a frame of reference defined within the scope of the standard name table intended to be constructed in standard names.</skos:definition>
-        <skos:example xml:lang="en">&apos;x_velocity_in_rotating_reference_frame&apos;, where &apos;x_velocity&apos; is an existing standard_name and &apos;rotating_reference_frame&apos; is the frame of reference which is well defined in the description of it.</skos:example>
-        <skos:prefLabel xml:lang="en">StandardReferenceFrame</skos:prefLabel>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Surface">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <skos:definition xml:lang="en">A surface is a single word for referring quantities more generic positions in the problem. Unlike locations, a surface is not locatable geometrically, e.g. se &apos;wall&apos; in the example.</skos:definition>
+        <skos:example xml:lang="en">wall_static_pressure</skos:example>
+        <skos:prefLabel xml:lang="en">Surface</skos:prefLabel>
     </owl:Class>
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardX -->
+    <!-- https://matthiasprobst.github.io/ssno#Transformation -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardX">
-        <skos:definition xml:lang="en">Abstract Class for all additional standardized objects like device, location or reference frame using a description as property only. This class is therefore not intended to be used directly but their subclasses.</skos:definition>
-        <skos:prefLabel xml:lang="en">StandardX</skos:prefLabel>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Transformation">
+        <skos:prefLabel xml:lang="en">Transformation</skos:prefLabel>
     </owl:Class>
 </rdf:RDF>
 
