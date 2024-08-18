@@ -1,7 +1,7 @@
 # sSNO - simple Standard Name Ontology
 
 This repository contains the (draft) sSNO ontology. The ontology allows the usage of so-called "standard names", which
-are originally introduced by the [cf-conventions](http://cfconventions.org/). The basic concept, however, is applicable
+are originally introduced by the [CF Conventions](http://cfconventions.org/). The basic concept, however, is applicable
 to other research topics, too. The ontology is called "simple", because, at this stage, it only covers the basic
 concept. Very briefly it goes like this:
 
@@ -37,5 +37,5 @@ Contributions are happily taken via issues in the repository.
 2. Generate the context file:
 
 - Run `deploy.py` (run `pip install -r requirements.txt` to install the required packages)
-- It will build the ontology web page (using [widoco](https://dgarijo.github.io/Widoco/doc/tutorial/))
+- It will build the ontology web page (using [widoco](https://dgarijo.github.io/Widoco/doc/tutorial/)) (needs [java runtime](https://www.java.com/de/download/manual.jsp))
 - It will also generate the context file [ssno_context.jsonld](ssno_context.jsonld)

@@ -11,6 +11,7 @@ import pathlib
 import shutil
 import subprocess
 import sys
+from typing import Optional, Dict
 
 ONTOLOGY_NAME = 'ssno'
 
@@ -67,6 +68,20 @@ def copy_version_to_docs(version_string):
     (version_path / 'ontology.owl').rename(version_path / f'{ONTOLOGY_NAME}.owl')
 
     assert index_en.exists() is False
+
+    # bugfix namespace table
+    (version_path / 'index.html.tmp').unlink(missing_ok=True)
+    with open(version_path / 'index.html', "rt", encoding='utf-8') as f:
+        with open(version_path / 'index.html.tmp', "wt", encoding='utf-8') as f_out:
+            for line in f.readlines():
+                if 'metadata4ing' in line:
+                    f_out.write(line.replace(
+                        '<tr><td><b>metadata4ing</b></td><td>&lt;http://w3id.org/nfdi4ing/metadata4ing#&gt;</td></tr>',
+                        '<tr><td><b>m4i</b></td><td>&lt;http://w3id.org/nfdi4ing/metadata4ing#&gt;</td></tr>'))
+                else:
+                    f_out.write(line)
+    (version_path / 'index.html').unlink(missing_ok=True)
+    (version_path / 'index.html.tmp').rename(version_path / 'index.html')
     logger.debug('done copying version to docs')
 
 
@@ -102,15 +117,19 @@ def create_version(widico_cfg_filename,
     cfg_data['latestVersionURI'] = latest_version_uri
     if previous_version_string:
         prev_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{previous_version_string.strip("v")}'
-        cfg_data['previousVersionURI'] =prev_version_uri
+        cfg_data['previousVersionURI'] = prev_version_uri
 
-    def read_lines(filename) -> str:
+    def read_lines(filename, replace_dict: Optional[Dict] = None) -> str:
+        replace_dict = replace_dict or {}
         with open(filename, encoding='utf-8') as f:
             lines = f.readlines()
+            for k, v in replace_dict.items():
+                lines = [l.replace(k, v) for l in lines]
             return '<br>'.join([l.strip() for l in lines])
 
     cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Abstract.md')
-    cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md')
+    cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md',
+                                          replace_dict={"SSNO_VERSION": version_string.strip("v")})
     cfg_data['description'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
 
     cfg_data['thisVersionURI'] = this_version_uri
@@ -158,13 +177,17 @@ if __name__ == "__main__":
     #     assert version_string.startswith('v')
     #     print(f'Processing version "{version_string}"')
 
-    prev_version_string='v1.0.0'
-    version_string = 'v1.1.0'
+    prev_version_string = 'v1.1.0'
+    version_string = 'v1.2.0'
+    overwrite = True  # False
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
     if version_dir.exists():
-        raise ValueError(f'Version {version_dir} already exists. You might be about to create '
-                         f'a new version. Please provide a new version number if something has changed!.')
+        if overwrite:
+            shutil.rmtree(version_dir)
+        else:
+            raise ValueError(f'Version {version_dir} already exists. You might be about to create '
+                             f'a new version. Please provide a new version number if something has changed!.')
 
     create_version(
         widico_cfg_filename=__this_dir__ / 'widoco.cfg',

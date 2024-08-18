@@ -125,7 +125,13 @@ ssno:contact rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
-                     rdfs:domain owl:Thing ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
+                                                 <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                                 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
+                                               )
+                                 ] ;
                      rdfs:range ssno:StandardName ;
                      skos:definition "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en ;
                      skos:prefLabel "has standard name"@en .
@@ -134,7 +140,13 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       rdfs:domain ssno:StandardName ;
-                      rdfs:range owl:Thing ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
+                                                 <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                                 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
+                                               )
+                                 ] ;
                       skos:definition "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en ;
                       skos:prefLabel "is standard name of"@en .
 
@@ -152,8 +164,9 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
 ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              owl:inverseOf ssno:usesStandardNameTable ;
                              rdfs:domain ssno:StandardNameTable ;
-                             rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
-                             skos:definition "Points to a thing, e.g. a file resource, where the standard name table is used."@en ;
+                             rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
+                                        dcat:Dataset ;
+                             skos:definition "Points to a concept, which uses a standard name table."@en ;
                              skos:prefLabel "standard name table used by"@en .
 
 
@@ -161,13 +174,17 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
 ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
                    rdfs:range ssno:StandardName ;
-                   skos:definition "Points to multiple standard names of a standard name table."@en ;
+                   skos:definition "Points to one or more standard names defined in a standard name table."@en ;
                    skos:prefLabel "standard names"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
-                           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ;
+                           rdfs:domain [ rdf:type owl:Class ;
+                                         owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
+                                                       dcat:Dataset
+                                                     )
+                                       ] ;
                            rdfs:range ssno:StandardNameTable ;
                            skos:definition "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                            skos:prefLabel "uses standard name table"@en .
@@ -247,6 +264,21 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895
+<http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf schema:Intangible ;
+                                                                  rdfs:isDefinedBy <http://emmo.info/emmo#> ;
+                                                                  skos:definition "A 'Variable' is a symbolic object that stands for a numerical defined 'Mathematical' object like e.g. a number, a vector, a matrix."@en ;
+                                                                  skos:prefLabel "Variable"@en .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> rdf:type owl:Class ;
+                                                        rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
+                                                        skos:definition "An HDF5 Dataset."@en ;
+                                                        skos:prefLabel "HDF5 Dataset"@en .
+
+
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdf:type owl:Class ;
                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -254,6 +286,7 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
                                                                                                ] ;
                                                                                 owl:someValuesFrom ssno:StandardNameTable
                                                                               ] ;
+                                                          rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                           skos:definition "An HDF5 file root group"@en ;
                                                           skos:prefLabel "HDF5 Root Group"@en .
 
@@ -262,6 +295,23 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 qudt:Unit rdf:type owl:Class ;
           skos:definition "Unit of measure."@en ;
           skos:prefLabel "Unit"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
+<http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:Class ;
+                                                          rdfs:subClassOf schema:Intangible ;
+                                                          rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                          skos:closeMatch <https://ptb.de/si/Real> ;
+                                                          skos:definition "A variable that expects a float or integer as a value"@en ;
+                                                          skos:prefLabel "numerical variable"@en .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
+<http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue> rdf:type owl:Class ;
+                                                             rdfs:subClassOf schema:Intangible ;
+                                                             rdfs:isDefinedBy <http://www.molmod.info/semantics/pims-ii.ttl#> ;
+                                                             skos:definition "Quantity value, i.e., a value that has a numerical magnitude and a physical unit"@en ;
+                                                             skos:prefLabel "quantity value"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
@@ -300,10 +350,21 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
                                                             ] ;
                                              owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
+                                                            ] ;
+                                             owl:someValuesFrom dcat:Dataset
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:prefLabel "StandardNameTable" .
+
+
+###  https://schema.org/Intangible
+schema:Intangible rdf:type owl:Class ;
+                  skos:definition "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc."@en ;
+                  skos:prefLabel "Intangible"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

@@ -66,7 +66,7 @@ def generate(ttl_file: Union[pathlib.Path, str]):
         logger.debug(f'Total: {len(query_result)}')
         for row in query_result:
             typestr = ""
-            if type(row.type) == URIRef:
+            if isinstance(row.type, URIRef):
                 typestr = f', "@type" : "{nm.normalizeUri(row.type)}"'
             #            logger.debug(row.id, row.type, type(row.type))
             if row.label not in ids:
@@ -85,4 +85,4 @@ def generate(ttl_file: Union[pathlib.Path, str]):
 
 
 if __name__ == '__main__':
-    generate()
+    generate('ssno.ttl')
