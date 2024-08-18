@@ -112,6 +112,7 @@ def create_version(widico_cfg_filename,
     today = datetime.datetime.today()
     # cfg_data['dateCreated'] = today.strftime('%Y-%m-%d')
     cfg_data['dateModified'] = today.strftime('%Y-%m-%d')
+    cfg_data['dateIssued'] = today.strftime('%Y-%m-%d')
     cfg_data['ontologyRevisionNumber'] = version_string
 
     this_version_uri = f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
