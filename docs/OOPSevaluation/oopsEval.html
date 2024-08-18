@@ -74,34 +74,22 @@ P04. Creating unconnected ontology elements<span style="float: right;">1 case de
 <div class="panel-heading">
 <h4 class="panel-title">
 <a data-toggle="collapse" href="#collapse1">
-P05. Defining wrong inverse relationships<span style="float: right;">1 case detected. <span class="label label-danger">Critical</span></span></a>
+P08. Missing annotations<span style="float: right;">27 cases detected. <span class="label label-minor">Minor</span></span></a>
 </h4>
 </div>
 <div id="collapse1" class="panel-collapse collapse">
 <div class="panel-body">
-<p>Two relationships are defined as inverse relations when they are not necessarily inverse.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy" target="_blank">https://matthiasprobst.github.io/ssno#standardNameTableUsedBy</a> may not be inverse of <a href="https://matthiasprobst.github.io/ssno#usesStandardNameTable" target="_blank">https://matthiasprobst.github.io/ssno#usesStandardNameTable</a></li></ul></div>
+<p>This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI</a></li><li><a href=""http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI" target="_blank">"http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI</a></li><li><a href=""http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"^^xsd:anyURI" target="_blank">"http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"^^xsd:anyURI</a></li><li><a href=""http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"^^xsd:anyURI" target="_blank">"http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#version"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#version"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNames"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNames"^^xsd:anyURI</a></li><li><a href=""https://schema.org/Intangible"^^xsd:anyURI" target="_blank">"https://schema.org/Intangible"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/prov#Agent"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/prov#Agent"^^xsd:anyURI</a></li><li><a href=""http://purl.org/dc/terms/identifier"^^xsd:anyURI" target="_blank">"http://purl.org/dc/terms/identifier"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#StandardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#StandardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#StandardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#StandardNameTable"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTable"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#description"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#description"^^xsd:anyURI</a></li><li><a href=""http://qudt.org/schema/qudt/Unit"^^xsd:anyURI" target="_blank">"http://qudt.org/schema/qudt/Unit"^^xsd:anyURI</a></li><li><a href=""http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"^^xsd:anyURI" target="_blank">"http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#longName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#longName"^^xsd:anyURI</a></li><li><a href=""http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"^^xsd:anyURI" target="_blank">"http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#ancillaryVariables"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#ancillaryVariables"^^xsd:anyURI</a></li><li><a href=""http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"^^xsd:anyURI" target="_blank">"http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#Dataset"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#Dataset"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
 <a data-toggle="collapse" href="#collapse2">
-P08. Missing annotations<span style="float: right;">27 cases detected. <span class="label label-minor">Minor</span></span></a>
-</h4>
-</div>
-<div id="collapse2" class="panel-collapse collapse">
-<div class="panel-body">
-<p>This pitfall consists in creating an ontology element and failing to provide human readable annotations attached to it. Consequently, ontology elements lack annotation properties that label them (e.g. rdfs:label, lemon:LexicalEntry, skos:prefLabel or skos:altLabel) or that define them (e.g. rdfs:comment or dc:description). This pitfall is related to the guidelines provided in [5].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://matthiasprobst.github.io/ssno#longName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#longName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#description"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#description"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#ancillaryVariables"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#ancillaryVariables"^^xsd:anyURI</a></li><li><a href=""https://schema.org/Intangible"^^xsd:anyURI" target="_blank">"https://schema.org/Intangible"^^xsd:anyURI</a></li><li><a href=""http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"^^xsd:anyURI" target="_blank">"http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"^^xsd:anyURI</a></li><li><a href=""http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"^^xsd:anyURI" target="_blank">"http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTable"^^xsd:anyURI</a></li><li><a href=""http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"^^xsd:anyURI" target="_blank">"http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#StandardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#StandardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#version"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#version"^^xsd:anyURI</a></li><li><a href=""http://purl.org/dc/terms/identifier"^^xsd:anyURI" target="_blank">"http://purl.org/dc/terms/identifier"^^xsd:anyURI</a></li><li><a href=""http://qudt.org/schema/qudt/Unit"^^xsd:anyURI" target="_blank">"http://qudt.org/schema/qudt/Unit"^^xsd:anyURI</a></li><li><a href=""http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI" target="_blank">"http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/prov#Agent"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/prov#Agent"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#Dataset"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#Dataset"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardNames"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNames"^^xsd:anyURI</a></li><li><a href=""http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"^^xsd:anyURI" target="_blank">"http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#StandardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#StandardNameTable"^^xsd:anyURI</a></li><li><a href=""http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"^^xsd:anyURI" target="_blank">"http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"^^xsd:anyURI</a></li><li><a href=""http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI" target="_blank">"http://www.w3.org/ns/dcat#keyword"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#standardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI</a></li></ul></div>
-</div>
-</div>
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse3">
 P10. Missing disjointness<span style="float: right;"> ontology *<span class="label label-warning">Important</span></span></a>
 </h4>
 </div>
-<div id="collapse3" class="panel-collapse collapse">
+<div id="collapse2" class="panel-collapse collapse">
 <div class="panel-body">
 <p>The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].	</p><p>*This pitfall applies to the ontology in general instead of specific elements</p></div>
 </div>
@@ -109,11 +97,11 @@ P10. Missing disjointness<span style="float: right;"> ontology *<span class="lab
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse4">
+<a data-toggle="collapse" href="#collapse3">
 P13. Inverse relationships not explicitly declared<span style="float: right;">3 cases detected. <span class="label label-minor">Minor</span></span></a>
 </h4>
 </div>
-<div id="collapse4" class="panel-collapse collapse">
+<div id="collapse3" class="panel-collapse collapse">
 <div class="panel-body">
 <p>This pitfall appears when any relationship (except for those that are defined as symmetric properties using owl:SymmetricProperty) does not have an inverse relationship (owl:inverseOf) defined within the ontology.	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI" target="_blank">"http://xmlns.com/foaf/0.1/mbox"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#canonicalUnits"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#contact"^^xsd:anyURI</a></li></ul></div>
 </div>
@@ -121,23 +109,23 @@ P13. Inverse relationships not explicitly declared<span style="float: right;">3 
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse5">
-P19. Defining multiple domains or ranges in properties<span style="float: right;">1 case detected. <span class="label label-danger">Critical</span></span></a>
+<a data-toggle="collapse" href="#collapse4">
+P19. Defining multiple domains or ranges in properties<span style="float: right;">4 cases detected. <span class="label label-danger">Critical</span></span></a>
 </h4>
 </div>
-<div id="collapse5" class="panel-collapse collapse">
+<div id="collapse4" class="panel-collapse collapse">
 <div class="panel-body">
-<p>The domain or range (or both) of a property (relationships and attributes) is defined by stating more than one rdfs:domain or rdfs:range statements. In OWL multiple rdfs:domain or rdfs:range axioms are allowed, but they are interpreted as conjunction, being, therefore, equivalent to the construct owl:intersectionOf. This pitfall is related to the common error that appears when defining domains and ranges described in [7].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI</a></li></ul></div>
+<p>The domain or range (or both) of a property (relationships and attributes) is defined by stating more than one rdfs:domain or rdfs:range statements. In OWL multiple rdfs:domain or rdfs:range axioms are allowed, but they are interpreted as conjunction, being, therefore, equivalent to the construct owl:intersectionOf. This pitfall is related to the common error that appears when defining domains and ranges described in [7].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#hasStandardName"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#usesStandardNameTable"^^xsd:anyURI</a></li><li><a href=""https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI" target="_blank">"https://matthiasprobst.github.io/ssno#isStandardNameOf"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse6">
+<a data-toggle="collapse" href="#collapse5">
 P22. Using different naming conventions in the ontology<span style="float: right;"> ontology *<span class="label label-minor">Minor</span></span></a>
 </h4>
 </div>
-<div id="collapse6" class="panel-collapse collapse">
+<div id="collapse5" class="panel-collapse collapse">
 <div class="panel-body">
 <p>The ontology elements are not named following the same convention (for example CamelCase or use of delimiters as &quot;-&quot; or &quot;_&quot;) . Some notions about naming conventions are provided in [2].	</p><p>*This pitfall applies to the ontology in general instead of specific elements</p></div>
 </div>
@@ -145,13 +133,13 @@ P22. Using different naming conventions in the ontology<span style="float: right
 <div class="panel panel-default">
 <div class="panel-heading">
 <h4 class="panel-title">
-<a data-toggle="collapse" href="#collapse7">
+<a data-toggle="collapse" href="#collapse6">
 P34. Untyped class<span style="float: right;">5 cases detected. <span class="label label-warning">Important</span></span></a>
 </h4>
 </div>
-<div id="collapse7" class="panel-collapse collapse">
+<div id="collapse6" class="panel-collapse collapse">
 <div class="panel-body">
-<p>An ontology element is used as a class without having been explicitly declared as such using the primitives owl:Class or rdfs:Class. This pitfall is related with the common problems listed in [8].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""fbd47c9:1916569b290:-7d31"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7d31"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7d35"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7d35"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7d2f"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7d2f"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7d33"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7d33"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7d2d"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7d2d"^^xsd:anyURI</a></li></ul></div>
+<p>An ontology element is used as a class without having been explicitly declared as such using the primitives owl:Class or rdfs:Class. This pitfall is related with the common problems listed in [8].	</p><p>This pitfall affects to the following ontology elements: </p><ul><li><a href=""fbd47c9:1916569b290:-7c78"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7c78"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7c74"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7c74"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7c7c"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7c7c"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7c7a"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7c7a"^^xsd:anyURI</a></li><li><a href=""fbd47c9:1916569b290:-7c76"^^xsd:anyURI" target="_blank">"fbd47c9:1916569b290:-7c76"^^xsd:anyURI</a></li></ul></div>
 </div>
 </div>
 </div>

@@ -116,13 +116,10 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 :hasStandardName rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isStandardNameOf ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
-                                             <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
-                                             <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
-                                             <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
-                                           )
-                             ] ;
+                 rdfs:domain <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> ,
+                             <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ,
+                             <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> ,
+                             <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue> ;
                  rdfs:range :StandardName ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
@@ -131,13 +128,10 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 :isStandardNameOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :StandardName ;
-                  rdfs:range [ rdf:type owl:Class ;
-                               owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
-                                             <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
-                                             <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
-                                             <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
-                                           )
-                             ] ;
+                  rdfs:range <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> ,
+                             <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ,
+                             <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> ,
+                             <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue> ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Points to a Thing (generally a numerical variable in a distribution), that uses the standard name."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name of"@en .
 
@@ -171,11 +165,8 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 :usesStandardNameTable rdf:type owl:ObjectProperty ;
-                       rdfs:domain [ rdf:type owl:Class ;
-                                     owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
-                                                   <http://www.w3.org/ns/dcat#Dataset>
-                                                 )
-                                   ] ;
+                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> ,
+                                   <http://www.w3.org/ns/dcat#Dataset> ;
                        rdfs:range :StandardNameTable ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .
@@ -192,10 +183,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                       rdfs:comment "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs." ;
                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier"@en .
-
-
-###  http://www.w3.org/2002/07/owl#topDataProperty
-owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.w3.org/ns/dcat#keyword
@@ -216,7 +203,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  https://matthiasprobst.github.io/ssno#ancillaryVariables
 :ancillaryVariables rdf:type owl:DatatypeProperty ;
-                    rdfs:domain owl:Thing ;
+                    rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
                     rdfs:range xsd:string ;
                     <http://www.w3.org/2004/02/skos/core#definition> "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "ancillary variables"@en .
@@ -237,7 +224,7 @@ owl:topDataProperty rdf:type owl:DatatypeProperty .
 
 ###  https://matthiasprobst.github.io/ssno#longName
 :longName rdf:type owl:DatatypeProperty ;
-          rdfs:domain owl:Thing ;
+          rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
           rdfs:range xsd:string ;
           <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en .
 

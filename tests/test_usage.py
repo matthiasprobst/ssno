@@ -18,9 +18,13 @@ class TestUserGuide(unittest.TestCase):
         sn = ssno.StandardName.from_jsonld(source=str(json1))
         snt = ssno.StandardNameTable.from_jsonld(source=str(json1))
         self.assertEqual(len(sn), 1)
+        for _sn in sn:
+            self.assertIsInstance(_sn, ssno.StandardName)
         self.assertEqual(len(snt), 1)
+        self.assertEqual(snt[0].identifier, "https://doi.org/10.5281/zenodo.10428817")
         self.assertEqual(sn[0].standard_name, 'x_velocity')
         self.assertEqual(sn[0].canonical_units, 'http://qudt.org/vocab/unit/M-PER-SEC')
+
 
     def test_json_2(self):
         json2 = __this_dir__ / 'json2.json'

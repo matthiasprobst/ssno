@@ -88,8 +88,11 @@ def copy_version_to_docs(version_string):
 def create_version(widico_cfg_filename,
                    ttl_filename: pathlib.Path,
                    version_string: str,
-                   previous_version_string: str = None):
+                   previous_version_string: str = None,
+                   img_version_string: str = None):
     assert version_string.startswith('v')
+    if img_version_string is None:
+        img_version_string = version_string
     sys.path.insert(0, '.')
     # call batch script build.bat
     logger.info('Start building docs')
@@ -129,7 +132,7 @@ def create_version(widico_cfg_filename,
 
     cfg_data['abstract'] = read_lines(__this_dir__ / 'documentation' / 'Abstract.md')
     cfg_data['introduction'] = read_lines(__this_dir__ / 'documentation' / 'Introduction.md',
-                                          replace_dict={"SSNO_VERSION": version_string.strip("v")})
+                                          replace_dict={"SSNO_VERSION": img_version_string.strip("v")})
     cfg_data['description'] = read_lines(__this_dir__ / 'documentation' / 'Description.md')
 
     cfg_data['thisVersionURI'] = this_version_uri
@@ -179,7 +182,8 @@ if __name__ == "__main__":
 
     prev_version_string = 'v1.1.0'
     version_string = 'v1.2.0'
-    overwrite = True  # False
+    img_version_string = 'v1.2.0'
+    overwrite = True
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
     if version_dir.exists():
@@ -193,6 +197,7 @@ if __name__ == "__main__":
         widico_cfg_filename=__this_dir__ / 'widoco.cfg',
         ttl_filename=__this_dir__ / f'{ONTOLOGY_NAME}.ttl',
         version_string=version_string,
-        previous_version_string=prev_version_string)
+        previous_version_string=prev_version_string,
+        img_version_string=img_version_string)
     # create_version(__this_dir__, 'v1.1.0',
     #                previousVersionURI=f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/1.0.0')

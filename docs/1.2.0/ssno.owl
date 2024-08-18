@@ -195,16 +195,10 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasStandardName">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isStandardNameOf"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
-                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
-                    <rdf:Description rdf:about="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
-                    <rdf:Description rdf:about="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
+        <rdfs:domain rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
+        <rdfs:domain rdf:resource="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <skos:definition xml:lang="en">Points to a ssno:StandardName associated with the Thing. The Thing should is expecte to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by proiding a description and expected canonical unit.</skos:definition>
         <skos:prefLabel xml:lang="en">has standard name</skos:prefLabel>
@@ -217,16 +211,10 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isStandardNameOf">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
-                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
-                    <rdf:Description rdf:about="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
-                    <rdf:Description rdf:about="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
+        <rdfs:range rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
+        <rdfs:range rdf:resource="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
         <skos:definition xml:lang="en">Points to a Thing (generally a numerical variable in a distribution), that uses the standard name.</skos:definition>
         <skos:prefLabel xml:lang="en">is standard name of</skos:prefLabel>
     </owl:ObjectProperty>
@@ -276,14 +264,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#usesStandardNameTable">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
@@ -316,13 +298,6 @@
     
 
 
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    
-
-
     <!-- http://www.w3.org/ns/dcat#keyword -->
 
 
@@ -351,7 +326,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#ancillaryVariables">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the &quot;nature of the relationshup between variables associated via ancillary_variables must be determined by other attributes&quot; https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)</skos:definition>
         <skos:prefLabel xml:lang="en">ancillary variables</skos:prefLabel>
@@ -383,7 +358,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#longName">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots.</skos:definition>
     </owl:DatatypeProperty>
