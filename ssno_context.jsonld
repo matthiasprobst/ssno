@@ -52,7 +52,7 @@
     "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy"},
     "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
     "uses standard name table" : {"@id" : "ssno:usesStandardNameTable", "@type" : "ssno:StandardNameTable"},
-    "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:anyURI"},
+    "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:string"},
     "keyword" : {"@id" : "dcat:keyword", "@type" : "rdfs:Literal"},
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
     "ancillary variables" : {"@id" : "ssno:ancillaryVariables", "@type" : "xsd:string"},
