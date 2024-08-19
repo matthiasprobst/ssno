@@ -211,10 +211,16 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isStandardNameOf">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:range rdf:resource="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
-        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
-        <rdfs:range rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
-        <rdfs:range rdf:resource="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
+                    <rdf:Description rdf:about="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
+                    <rdf:Description rdf:about="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <skos:definition xml:lang="en">Points to a Thing (generally a numerical variable in a distribution), that uses the standard name.</skos:definition>
         <skos:prefLabel xml:lang="en">is standard name of</skos:prefLabel>
     </owl:ObjectProperty>
@@ -240,8 +246,14 @@
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <skos:definition xml:lang="en">Points to a concept, which uses a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table used by</skos:prefLabel>
     </owl:ObjectProperty>
@@ -264,8 +276,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#usesStandardNameTable">
-        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
@@ -473,6 +491,16 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/dcat#"/>
         <skos:definition xml:lang="en">A collection of data, published or curated by a single agent, and available for access or download in one or more representations.</skos:definition>
         <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
