@@ -10,20 +10,22 @@
       "version": "79",
       "doi": "https://doi.org/10.5281/zenodo.10428817",
       "landing page": "http://cfconventions.org/",
-      "distribution": {
-        "@type": "dcat:Distribution",
-        "title": "CF Standard Name Table",
-        "description": "The XML document containing the standard name table.",
-        "dcat:downloadURL": "https://cfconventions.org/Data/cf-standard-names/79/src/cf-standard-name-table.xml",
-        "mediaType": "https://www.iana.org/assignments/media-types/text/xml"
-      },
-      "distribution": {
-        "@type": "dcat:Distribution",
-        "title": "CF Standard Name Guideline",
-        "description": "The document describes the CF conventions for climate and forecast metadata.",
-        "dcat:downloadURL": "http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html",
-        "mediaType": "https://www.iana.org/assignments/media-types/text/html"
-      }
+      "distribution": [
+        {
+          "@type": "dcat:Distribution",
+          "title": "CF Standard Name Table",
+          "description": "The XML document containing the standard name table.",
+          "dcat:downloadURL": "https://cfconventions.org/Data/cf-standard-names/79/src/cf-standard-name-table.xml",
+          "mediaType": "https://www.iana.org/assignments/media-types/text/xml"
+        },
+        {
+          "@type": "dcat:Distribution",
+          "title": "CF Standard Name Guideline",
+          "description": "The document describes the CF conventions for climate and forecast metadata.",
+          "dcat:downloadURL": "http://cfconventions.org/Data/cf-standard-names/docs/guidelines.html",
+          "mediaType": "https://www.iana.org/assignments/media-types/text/html"
+        }
+      ]
     }
   ]
 }

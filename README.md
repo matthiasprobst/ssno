@@ -22,6 +22,11 @@ available [here](Guide.md).
 If you want to integrate the ontology into your Python scripts, please find a corresponding library with
 the [SSNOlib](https://github.com/matthiasprobst/SSNOlib/).
 
+## Usage/Testing
+
+To play around with the ontology, you can use the [jupyter notebook](./examples/Tutorial.ipynb) provided in the 
+repository. For this to work install the required packages via `pip install -r requirements-tutorial.txt`.
+
 ## Contribution
 
 Contributions are happily taken via issues in the repository.

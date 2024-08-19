@@ -1,3 +1,2 @@
 -r requirements.txt
 pytest
-pivmetalib @ git+https://github.com/matthiasprobst/pivmetalib@main
