@@ -42,5 +42,5 @@ Contributions are happily taken via issues in the repository.
 2. Generate the context file:
 
 - Run `deploy.py` (run `pip install -r requirements.txt` to install the required packages)
-- It will build the ontology web page (using [widoco](https://dgarijo.github.io/Widoco/doc/tutorial/)) (needs [java runtime](https://www.java.com/de/download/manual.jsp))
+- It will build the ontology web page (using [widoco](https://dgarijo.github.io/Widoco/doc/tutorial/))
 - It will also generate the context file [ssno_context.jsonld](ssno_context.jsonld)

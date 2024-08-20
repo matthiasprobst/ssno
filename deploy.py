@@ -71,15 +71,20 @@ def copy_version_to_docs(version_string):
 
     # bugfix namespace table
     (version_path / 'index.html.tmp').unlink(missing_ok=True)
-    with open(version_path / 'index.html', "rt", encoding='utf-8') as f:
-        with open(version_path / 'index.html.tmp', "wt", encoding='utf-8') as f_out:
+    with open(version_path / 'index.html', "r", encoding='utf-8') as f:
+        with open(version_path / 'index.html.tmp', "w", encoding='utf-8') as f_out:
             for line in f.readlines():
                 if 'metadata4ing' in line:
                     f_out.write(line.replace(
-                        '<tr><td><b>metadata4ing</b></td><td>&lt;http://w3id.org/nfdi4ing/metadata4ing#&gt;</td></tr>',
-                        '<tr><td><b>m4i</b></td><td>&lt;http://w3id.org/nfdi4ing/metadata4ing#&gt;</td></tr>'))
+                        '<tr><td><b>metadata4ing</b></td><td>',
+                        '<tr><td><b>m4i</b></td><td>'))
+                elif '.after(marked.parse(jQuery' in line:
+                    f_out.write(line.replace(
+                        '.after(marked.parse(jQuery',
+                        '.after(marked(jQuery'))
                 else:
                     f_out.write(line)
+
     (version_path / 'index.html').unlink(missing_ok=True)
     (version_path / 'index.html.tmp').rename(version_path / 'index.html')
     logger.debug('done copying version to docs')
@@ -170,6 +175,7 @@ def create_version(widico_cfg_filename,
 
     copy_version_to_docs(version_string)
 
+    script_path_vers.unlink()
     logger.info('Finished building docs')
 
 
@@ -181,8 +187,8 @@ if __name__ == "__main__":
     #     assert version_string.startswith('v')
     #     print(f'Processing version "{version_string}"')
 
-    prev_version_string = 'v1.1.0'
-    version_string = 'v1.2.0'
+    prev_version_string = 'v1.2.0'
+    version_string = 'v1.2.1'
     img_version_string = 'v1.2.0'
     overwrite = True
 
@@ -200,5 +206,5 @@ if __name__ == "__main__":
         version_string=version_string,
         previous_version_string=prev_version_string,
         img_version_string=img_version_string)
-    # create_version(__this_dir__, 'v1.1.0',
-    #                previousVersionURI=f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/1.0.0')
+
+
