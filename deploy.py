@@ -90,9 +90,11 @@ def copy_version_to_docs(version_string):
     logger.debug('done copying version to docs')
 
 
-def create_version(widico_cfg_filename,
+def create_version(*,
+                   widico_cfg_filename,
                    ttl_filename: pathlib.Path,
                    version_string: str,
+                   doi_url: str,
                    previous_version_string: str = None,
                    img_version_string: str = None):
     assert version_string.startswith('v')
@@ -149,6 +151,7 @@ def create_version(widico_cfg_filename,
                          f'of Technology, Institute of Thermal Turbomachinery. {ONTOLOGY_NAME}: A simple Standard ' \
                          f'Name Ontology. Revision: {version_string}. Retrieved from: ' \
                          f'https://matthiasprobst.github.io/{ONTOLOGY_NAME}/{version_string.strip("v")}'
+    cfg_data['DOI'] = doi_url
 
     with open(widico_cfg_filename, 'w', encoding='utf-8') as f:
         for k, v in cfg_data.items():
@@ -190,6 +193,7 @@ if __name__ == "__main__":
     prev_version_string = 'v1.2.0'
     version_string = 'v1.2.1'
     img_version_string = 'v1.2.0'
+    doi_url = "https://doi.org/10.5281/zenodo.13350852"
     overwrite = True
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
@@ -205,6 +209,7 @@ if __name__ == "__main__":
         ttl_filename=__this_dir__ / f'{ONTOLOGY_NAME}.ttl',
         version_string=version_string,
         previous_version_string=prev_version_string,
-        img_version_string=img_version_string)
+        img_version_string=img_version_string,
+        doi_url=doi_url)
 
 

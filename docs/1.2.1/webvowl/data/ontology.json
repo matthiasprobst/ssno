@@ -137,7 +137,7 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "18",
@@ -434,12 +434,12 @@
     "id" : "7"
   }, {
     "instances" : 0,
-    "union" : [ "36", "18" ],
+    "union" : [ "37", "18" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "23"
   }, {
     "instances" : 0,
-    "union" : [ "36", "18" ],
+    "union" : [ "37", "18" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "14"
   }, {
@@ -500,7 +500,7 @@
       "IRI-based" : "rootGroup"
     },
     "attributes" : [ "external" ],
-    "id" : "36"
+    "id" : "37"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#Dataset",
     "baseIri" : "http://www.w3.org/ns/dcat",
@@ -578,7 +578,7 @@
     "id" : "35",
     "type" : "owl:someValuesFrom"
   }, {
-    "id" : "37",
+    "id" : "36",
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "38",
@@ -894,54 +894,6 @@
     "attributes" : [ "someValues", "object" ],
     "id" : "34"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "36",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "uses standard name table",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usesStandardNameTable"
-    },
-    "domain" : "1",
-    "attributes" : [ "someValues", "object" ],
-    "id" : "35"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "18",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "uses standard name table",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usesStandardNameTable"
-    },
-    "domain" : "1",
-    "attributes" : [ "someValues", "object" ],
-    "id" : "37"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
     "inverse" : "19",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -962,6 +914,54 @@
     },
     "label" : {
       "IRI-based" : "standardNameTable"
+    },
+    "domain" : "1",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "37",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "uses standard name table",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesStandardNameTable"
+    },
+    "domain" : "1",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "18",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "uses standard name table",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "1",
     "attributes" : [ "someValues", "object" ],
@@ -1036,7 +1036,7 @@
     "label" : {
       "IRI-based" : "standardNameTableUsedBy"
     },
-    "domain" : "36",
+    "domain" : "37",
     "attributes" : [ "someValues", "object" ],
     "id" : "43"
   }, {
@@ -1122,7 +1122,7 @@
       "IRI-based" : "mbox"
     },
     "domain" : "2",
-    "attributes" : [ "external", "inverse functional", "object" ],
+    "attributes" : [ "inverse functional", "object", "external" ],
     "id" : "46"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
