@@ -183,17 +183,10 @@ def create_version(*,
 
 
 if __name__ == "__main__":
-    # # get ttl files from version/ folder
-    # version_dir = __this_dir__ / 'versions'
-    # for vers_folder in version_dir.glob('*'):
-    #     version_string = vers_folder.name
-    #     assert version_string.startswith('v')
-    #     print(f'Processing version "{version_string}"')
-
-    prev_version_string = 'v1.2.0'
-    version_string = 'v1.2.1'
-    img_version_string = 'v1.2.0'
-    doi_url = "https://doi.org/10.5281/zenodo.13350852"
+    prev_version_string = 'v1.2.1'
+    version_string = 'v1.3.1'
+    img_version_string = 'v1.3.0'
+    doi_url = "https://doi.org/10.5281/zenodo.13351343"
     overwrite = True
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')
