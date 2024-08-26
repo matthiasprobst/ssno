@@ -104,6 +104,34 @@ foaf:mbox rdf:type owl:ObjectProperty ,
           skos:prefLabel "mbox"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#after
+ssno:after rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf ssno:positioned ;
+           rdf:type owl:TransitiveProperty ;
+           rdfs:domain ssno:Qualification ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( ssno:Qualification
+                                      ssno:StandardName
+                                    )
+                      ] ;
+           skos:definition "Refers to another qualification to indicate the order. The qualification it points to is ordered before this one. It can also point to a standard name, which means that this qualification is used right after it."@en ;
+           skos:prefLabel "after"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#before
+ssno:before rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf ssno:positioned ;
+            rdf:type owl:TransitiveProperty ;
+            rdfs:domain ssno:Qualification ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( ssno:Qualification
+                                       ssno:StandardName
+                                     )
+                       ] ;
+            skos:definition "Refers to another qualification to indicate the order. The qualification it points to is ordered after this one. It can also point to a standard name, which means that this qualification is used right before it."@en ;
+            skos:prefLabel "before"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#canonicalUnits
 ssno:canonicalUnits rdf:type owl:ObjectProperty ;
                     rdfs:domain ssno:StandardName ;
@@ -122,15 +150,6 @@ ssno:contact rdf:type owl:ObjectProperty ;
              skos:prefLabel "contact"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasQualification
-ssno:hasQualification rdf:type owl:ObjectProperty ;
-                      owl:inverseOf ssno:isQualificationOf ;
-                      rdfs:domain ssno:StandardNameTable ;
-                      rdfs:range ssno:Qualification ;
-                      skos:definition "Points to a ssno:Qualification associated with the Standard Name Table."@en ;
-                      skos:prefLabel "has qualification"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
@@ -146,17 +165,9 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      skos:prefLabel "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasTransformation
-ssno:hasTransformation rdf:type owl:ObjectProperty ;
-                       owl:inverseOf ssno:isTransformationOf ;
-                       rdfs:domain ssno:StandardNameTable ;
-                       rdfs:range ssno:Transformation ;
-                       skos:definition "Points to a ssno:Transformation associated with the Standard Name Table."@en ;
-                       skos:prefLabel "has transformation"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#isQualificationOf
 ssno:isQualificationOf rdf:type owl:ObjectProperty ;
+                       owl:inverseOf ssno:usesQualification ;
                        rdfs:domain ssno:Qualification ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to a Standard Name Table, which uses this qualification."@en ;
@@ -179,10 +190,18 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#isTransformationOf
 ssno:isTransformationOf rdf:type owl:ObjectProperty ;
+                        owl:inverseOf ssno:usesTransformation ;
                         rdfs:domain ssno:Transformation ;
                         rdfs:range ssno:StandardNameTable ;
                         skos:definition "Points to a Standard Name Table, which uses this transformation."@en ;
                         skos:prefLabel "is transformation of"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#positioned
+ssno:positioned rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                skos:definition "Relates two qualifiactions or a qualificaiton and a standard name to each other."@en ;
+                skos:prefLabel "positioned"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standardNameTable
@@ -215,6 +234,14 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
                    skos:prefLabel "standard names"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#usesQualification
+ssno:usesQualification rdf:type owl:ObjectProperty ;
+                       rdfs:domain ssno:StandardNameTable ;
+                       rdfs:range ssno:Qualification ;
+                       skos:definition "Points to a ssno:Qualification associated with the Standard Name Table."@en ;
+                       skos:prefLabel "has qualification"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:domain [ rdf:type owl:Class ;
@@ -225,6 +252,14 @@ ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:range ssno:StandardNameTable ;
                            skos:definition "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                            skos:prefLabel "uses standard name table"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#usesTransformation
+ssno:usesTransformation rdf:type owl:ObjectProperty ;
+                        rdfs:domain ssno:StandardNameTable ;
+                        rdfs:range ssno:Transformation ;
+                        skos:definition "Points to a ssno:Transformation associated with the Standard Name Table."@en ;
+                        skos:prefLabel "uses transformation"@en .
 
 
 #################################################################
@@ -279,6 +314,14 @@ ssno:description rdf:type owl:DatatypeProperty ;
                  skos:prefLabel "description"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasValidValues
+ssno:hasValidValues rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ssno:Qualification ;
+                    rdfs:range xsd:string ;
+                    skos:definition "A relationship defining a set of values used by the qualification."@en ;
+                    skos:prefLabel "has valid values"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#longName
 ssno:longName rdf:type owl:DatatypeProperty ;
               rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
@@ -297,6 +340,12 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 
 ###  https://schema.org/name
 schema:name rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( ssno:Qualification
+                                        ssno:Transformation
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
             skos:definition "The name of the item."@en ;
             skos:prefLabel "name"@en .
 
@@ -377,10 +426,13 @@ prov:Agent rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#Qualification
 ssno:Qualification rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                         owl:onProperty [ owl:inverseOf ssno:hasQualification
+                                         owl:onProperty [ owl:inverseOf ssno:usesQualification
                                                         ] ;
                                          owl:someValuesFrom ssno:StandardNameTable
                                        ] ;
+                   rdfs:subClassOf ssno:StandardNameModifification ;
+                   skos:definition "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
+                   skos:example "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
                    skos:prefLabel "Qualification"@en .
 
 
@@ -393,6 +445,12 @@ ssno:StandardName rdf:type owl:Class ;
                                       ] ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "StandardName" .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardNameModifification
+ssno:StandardNameModifification rdf:type owl:Class ;
+                                skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
+                                skos:prefLabel "standard name modification"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameTable
@@ -420,10 +478,12 @@ ssno:StandardNameTable rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#Transformation
 ssno:Transformation rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty [ owl:inverseOf ssno:hasTransformation
+                                          owl:onProperty [ owl:inverseOf ssno:usesTransformation
                                                          ] ;
                                           owl:someValuesFrom ssno:StandardNameTable
                                         ] ;
+                    rdfs:subClassOf ssno:StandardNameModifification ;
+                    skos:definition "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
                     skos:prefLabel "Transformation"@en .
 
 

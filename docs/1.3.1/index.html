@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-08-21", "version":"v1.3.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-08-26", "version":"v1.3.1", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-08-21</dt>
+<dt>Modified on: 2024-08-26</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.3.1">https://matthiasprobst.github.io/ssno/1.3.1</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v1.3.1</dd>
 <dt>Issued on:</dt>
-<dd>2024-08-21</dd>
+<dd>2024-08-26</dd>
 <dt>Authors:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</dd>
 
@@ -92,7 +92,7 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ssno.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ssno.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ssno.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ssno.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY%204.0%20International-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruher Institute of Technology, Institute of Thermal Turbomachinery. ssno: A simple Standard Name Ontology. Revision: v1.3.1. Retrieved from: https://matthiasprobst.github.io/ssno/1.3.1</dd>
 <dt>DOI:</dt>
 <dd><a href="http://dx.doi.org/https://doi.org/10.5281/zenodo.13351343"><img src ="https://img.shields.io/badge/DOI-https://doi.org/10.5281/zenodo.13351343-blue.svg" alt="https://doi.org/10.5281/zenodo.13351343" /></a></dd>
@@ -181,6 +181,10 @@ This ontology has the following classes and properties.</span>
          title="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue">quantity value</a>
    </li>
    <li>
+      <a href="#StandardNameModifification"
+         title="https://matthiasprobst.github.io/ssno#StandardNameModifification">standard name modification</a>
+   </li>
+   <li>
       <a href="#StandardName"
          title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>
    </li>
@@ -203,6 +207,12 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a>
+   </li>
+   <li>
+      <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a>
+   </li>
+   <li>
       <a href="#canonicalUnits"
          title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
    </li>
@@ -210,16 +220,12 @@ This ontology has the following classes and properties.</span>
       <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
    </li>
    <li>
-      <a href="#hasQualification"
-         title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a>
+      <a href="#usesQualification"
+         title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a>
    </li>
    <li>
       <a href="#hasStandardName"
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
-   </li>
-   <li>
-      <a href="#hasTransformation"
-         title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a>
    </li>
    <li>
       <a href="#isQualificationOf"
@@ -237,6 +243,9 @@ This ontology has the following classes and properties.</span>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
    </li>
    <li>
+      <a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a>
+   </li>
+   <li>
       <a href="#standardNameTable"
          title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a>
    </li>
@@ -252,6 +261,10 @@ This ontology has the following classes and properties.</span>
       <a href="#usesStandardNameTable"
          title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a>
    </li>
+   <li>
+      <a href="#usesTransformation"
+         title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a>
+   </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -262,6 +275,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#description"
          title="https://matthiasprobst.github.io/ssno#description">description</a>
+   </li>
+   <li>
+      <a href="#hasValidValues"
+         title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
@@ -308,6 +325,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable" title="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable">numerical variable</a></li>
   <li><a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a></li>
   <li><a href="#http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue" title="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue">quantity value</a></li>
+  <li><a href="#StandardNameModifification" title="https://matthiasprobst.github.io/ssno#StandardNameModifification">standard name modification</a></li>
   <li><a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a></li>
   <li><a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a></li>
   <li><a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a></li>
@@ -501,24 +519,41 @@ This section provides details for each class and property defined by SSNO.
  <div class="entity" id="Qualification">
   <h3>Qualification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Qualification</p>
+  <div class="comment">
+   <span class="markdown">A qualification derives an existing standard name by a rule. This may alter the units.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html</pre>
+   </dd>
+  </dl>
   <dl class="description">
    <dt>
     is equivalent to
    </dt>
    <dd>
-    <span class="logic">inverse</span> <a href="#hasQualification" title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StandardNameModifification" title="https://matthiasprobst.github.io/ssno#StandardNameModifification">standard name modification</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasQualification" title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -557,6 +592,21 @@ This section provides details for each class and property defined by SSNO.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="StandardNameModifification">
+  <h3>standard name modification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardNameModifification</p>
+  <div class="comment">
+   <span class="markdown">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>, <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="StandardName">
   <h3>StandardName<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardName</p>
@@ -580,7 +630,7 @@ This section provides details for each class and property defined by SSNO.
     is in range of
    </dt>
    <dd>
-    <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -613,7 +663,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasQualification" title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTransformation" title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -626,24 +676,33 @@ This section provides details for each class and property defined by SSNO.
  <div class="entity" id="Transformation">
   <h3>Transformation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#Transformation</p>
+  <div class="comment">
+   <span class="markdown">A transfromation is a phrase which may be added to the standard name without changing its unit.</span>
+  </div>
   <dl class="description">
    <dt>
     is equivalent to
    </dt>
    <dd>
-    <span class="logic">inverse</span> <a href="#hasTransformation" title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StandardNameModifification" title="https://matthiasprobst.github.io/ssno#StandardNameModifification">standard name modification</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasTransformation" title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -700,20 +759,83 @@ This section provides details for each class and property defined by SSNO.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a></li>
+  <li><a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a></li>
   <li><a href="#canonicalUnits" title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a></li>
   <li><a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a></li>
-  <li><a href="#hasQualification" title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a></li>
+  <li><a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a></li>
   <li><a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a></li>
-  <li><a href="#hasTransformation" title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a></li>
   <li><a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a></li>
   <li><a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a></li>
   <li><a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a></li>
+  <li><a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a></li>
   <li><a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a></li>
   <li><a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a></li>
   <li><a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a></li>
   <li><a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a></li>
+  <li><a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a></li>
  </ul>
+ <div class="entity" id="after">
+  <h3>after<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#after</p>
+  <div class="comment">
+   <span class="markdown">Refers to another qualification to indicate the order. The qualification it points to is ordered before this one. It can also point to a standard name, which means that this qualification is used right after it.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="before">
+  <h3>before<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#before</p>
+  <div class="comment">
+   <span class="markdown">Refers to another qualification to indicate the order. The qualification it points to is ordered after this one. It can also point to a standard name, which means that this qualification is used right before it.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="canonicalUnits">
   <h3>canonical units<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#canonicalUnits</p>
@@ -760,9 +882,9 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="hasQualification">
+ <div class="entity" id="usesQualification">
   <h3>has qualification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasQualification</p>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#usesQualification</p>
   <div class="comment">
    <span class="markdown">Points to a ssno:Qualification associated with the Standard Name Table.</span>
   </div>
@@ -818,35 +940,6 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="hasTransformation">
-  <h3>has transformation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasTransformation</p>
-  <div class="comment">
-   <span class="markdown">Points to a ssno:Transformation associated with the Standard Name Table.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="isQualificationOf">
   <h3>is qualification of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#isQualificationOf</p>
@@ -871,7 +964,7 @@ This section provides details for each class and property defined by SSNO.
      is inverse of
     </dt>
     <dd>
-     <a href="#hasQualification" title="https://matthiasprobst.github.io/ssno#hasQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -929,7 +1022,7 @@ This section provides details for each class and property defined by SSNO.
      is inverse of
     </dt>
     <dd>
-     <a href="#hasTransformation" title="https://matthiasprobst.github.io/ssno#hasTransformation">has transformation</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -962,6 +1055,24 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="positioned">
+  <h3>positioned<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#positioned</p>
+  <div class="comment">
+   <span class="markdown">Relates two qualifiactions or a qualificaiton and a standard name to each other.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> transitive</p>
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1082,11 +1193,41 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
+ <div class="entity" id="usesTransformation">
+  <h3>uses transformation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#usesTransformation</p>
+  <div class="comment">
+   <span class="markdown">Points to a ssno:Transformation associated with the Standard Name Table.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
   <li><a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a></li>
   <li><a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a></li>
+  <li><a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a></li>
   <li><a href="#longName" title="https://matthiasprobst.github.io/ssno#longName"> <span>long Name</span> </a></li>
@@ -1130,6 +1271,29 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasValidValues">
+  <h3>has valid values<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasValidValues</p>
+  <div class="comment">
+   <span class="markdown">A relationship defining a set of values used by the qualification.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1222,6 +1386,22 @@ This section provides details for each class and property defined by SSNO.
   <p><strong>IRI:</strong> https://schema.org/name</p>
   <div class="comment">
    <span class="markdown">The name of the item.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
   </div>
  </div>
  <div class="entity" id="standardName">
