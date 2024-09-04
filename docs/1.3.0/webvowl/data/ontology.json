@@ -838,7 +838,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#contact",
@@ -915,7 +915,7 @@
   }, {
     "range" : "2",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "15"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
@@ -1103,7 +1103,7 @@
     },
     "superproperty" : [ "36" ],
     "domain" : "17",
-    "attributes" : [ "object", "transitive" ],
+    "attributes" : [ "transitive", "object" ],
     "id" : "34"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
@@ -1155,7 +1155,7 @@
     },
     "domain" : "16",
     "subproperty" : [ "39", "34" ],
-    "attributes" : [ "object", "transitive" ],
+    "attributes" : [ "transitive", "object" ],
     "id" : "36"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#isTransformationOf",
@@ -1334,6 +1334,30 @@
     "attributes" : [ "object", "someValues" ],
     "id" : "56"
   }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "47",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "uses standard name table",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesStandardNameTable"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "57"
+  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
     "inverse" : "28",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -1354,30 +1378,6 @@
     },
     "label" : {
       "IRI-based" : "standardNameTable"
-    },
-    "domain" : "4",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "57"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "47",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "uses standard name table",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "4",
     "attributes" : [ "object", "someValues" ],
@@ -1665,7 +1665,7 @@
     },
     "superproperty" : [ "36" ],
     "domain" : "17",
-    "attributes" : [ "object", "transitive" ],
+    "attributes" : [ "transitive", "object" ],
     "id" : "39"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
@@ -1744,22 +1744,22 @@
   }, {
     "range" : "45",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
     "range" : "2",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
     "range" : "47",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "74"
   }, {
     "range" : "45",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "75"
   } ]
 }

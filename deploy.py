@@ -11,6 +11,7 @@ import pathlib
 import shutil
 import subprocess
 import sys
+import re
 from typing import Optional, Dict
 
 ONTOLOGY_NAME = 'ssno'
@@ -195,6 +196,21 @@ def create_version(*,
     copy_version_to_docs(version_string)
 
     script_path_vers.unlink()
+
+    # now go through all versions in docs/ and update the latest version URL:
+    docs_path = __this_dir__ / 'docs'
+    for d in docs_path.iterdir():
+        if d.is_dir():
+            if re.match(r'^\d+(\.\d+)*$', d.name):
+                html_filename = d / 'index.html'
+                html_filename.exists()
+                with open(html_filename, 'r', encoding='utf-8') as f:
+                    lines = f.readlines()
+                for i, l in enumerate(lines):
+                    if '<dt>Latest version:</dt>' in l:
+                        lines[i+1] = f'            <dd><a href="https://matthiasprobst.github.io/ssno">https://matthiasprobst.github.io/ssno/{version_string.strip("v")}</a></dd>\n'
+                with open(html_filename, 'w', encoding='utf-8') as f:
+                    f.writelines(lines)
     logger.info('Finished building docs')
 
 
