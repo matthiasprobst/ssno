@@ -277,6 +277,10 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#description">description</a>
    </li>
    <li>
+      <a href="#hasPreposition"
+         title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a>
+   </li>
+   <li>
       <a href="#hasValidValues"
          title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a>
    </li>
@@ -552,7 +556,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -1238,6 +1242,7 @@ This section provides details for each class and property defined by SSNO.
  <ul class="hlist">
   <li><a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a></li>
   <li><a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a></li>
+  <li><a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a></li>
   <li><a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a></li>
@@ -1282,6 +1287,37 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPreposition">
+  <h3>has preposition<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasPreposition</p>
+  <div class="comment">
+   <span class="markdown">A data property that stores prepositional qualifiers like "at," "in," "due to," and "assuming." to be used with Qualifications.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton.</pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range

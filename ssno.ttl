@@ -314,6 +314,15 @@ ssno:description rdf:type owl:DatatypeProperty ;
                  skos:prefLabel "description"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasPreposition
+ssno:hasPreposition rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ssno:Qualification ;
+                    rdfs:range xsd:string ;
+                    skos:definition "A data property that stores prepositional qualifiers like \"at,\" \"in,\" \"due to,\" and \"assuming.\" to be used with Qualifications."@en ;
+                    skos:example "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton."@en ;
+                    skos:prefLabel "has preposition"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasValidValues
 ssno:hasValidValues rdf:type owl:DatatypeProperty ;
                     rdfs:domain ssno:Qualification ;

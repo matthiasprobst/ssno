@@ -316,6 +316,14 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name, a standard name table, a qualification or a transformation."@en .
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 # 
+# https://matthiasprobst.github.io/ssno#hasPreposition
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/2004/02/skos/core#definition> "A data property that stores prepositional qualifiers like \"at,\" \"in,\" \"due to,\" and \"assuming.\" to be used with Qualifications."@en .
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/2004/02/skos/core#example> "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton."@en .
+<https://matthiasprobst.github.io/ssno#hasPreposition> <http://www.w3.org/2004/02/skos/core#prefLabel> "has preposition"@en .
+# 
 # https://matthiasprobst.github.io/ssno#hasValidValues
 <https://matthiasprobst.github.io/ssno#hasValidValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#hasValidValues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Qualification> .

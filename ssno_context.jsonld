@@ -67,6 +67,7 @@
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
     "ancillary variables" : {"@id" : "ssno:ancillaryVariables", "@type" : "xsd:string"},
     "description" : {"@id" : "ssno:description", "@type" : "xsd:string"},
+    "has preposition" : {"@id" : "ssno:hasPreposition", "@type" : "xsd:string"},
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "xsd:string"},
     "long name" : {"@id" : "ssno:longName", "@type" : "xsd:string"},
     "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"},

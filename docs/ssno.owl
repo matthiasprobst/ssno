@@ -483,6 +483,19 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#hasPreposition -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#hasPreposition">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">A data property that stores prepositional qualifiers like &quot;at,&quot; &quot;in,&quot; &quot;due to,&quot; and &quot;assuming.&quot; to be used with Qualifications.</skos:definition>
+        <skos:example xml:lang="en">The CF Convention uses the qualification &apos;in process&apos; where &apos;in&apos; is the preposition and &apos;process&apos; the qualificaiton.</skos:example>
+        <skos:prefLabel xml:lang="en">has preposition</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#hasValidValues -->
 
 

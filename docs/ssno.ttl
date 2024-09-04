@@ -305,6 +305,15 @@ owl:sameas rdf:type owl:AnnotationProperty .
              <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasPreposition
+:hasPreposition rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Qualification ;
+                rdfs:range xsd:string ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A data property that stores prepositional qualifiers like \"at,\" \"in,\" \"due to,\" and \"assuming.\" to be used with Qualifications."@en ;
+                <http://www.w3.org/2004/02/skos/core#example> "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "has preposition"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasValidValues
 :hasValidValues rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Qualification ;
