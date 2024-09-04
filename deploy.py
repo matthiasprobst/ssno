@@ -157,13 +157,25 @@ def create_version(*,
         for k, v in cfg_data.items():
             f.write(f'\n{k}={v}')
 
+    logger.debug(f'Updating version in ttl file')
+    shutil.copy(ttl_filename, ttl_filename.with_suffix('.bak'))
+    with open(ttl_filename, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+        for i, l in enumerate(lines):
+            if 'owl:versionInfo' in l:
+                _splitted_line = l.split('owl:versionInfo', 1)
+                _new_line = f"{_splitted_line[0]}owl:versionInfo \"{version_string}\" .\n"
+                lines[i] = _new_line
+    with open(ttl_filename, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+
     script_path = __this_dir__ / 'build_onto_doc.bat'
-    logger.debug(f'calling script {script_path.absolute()}')
     # open script and replace <version> with version_string
     with open(script_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         lines = [l.replace('<version>', version_string.strip('v')) for l in lines]
 
+    logger.debug(f'calling script {script_path.absolute()}')
     # write script to file
     script_path_vers = __this_dir__ / 'build_onto_doc_tmp.bat'
     with open(script_path_vers, 'w', encoding='utf-8') as f:
@@ -184,7 +196,7 @@ def create_version(*,
 
 if __name__ == "__main__":
     prev_version_string = 'v1.2.1'
-    version_string = 'v1.3.1'
+    version_string = 'v1.3.0'
     img_version_string = 'v1.3.0'
     doi_url = "https://doi.org/10.5281/zenodo.13351343"
     overwrite = True
@@ -204,5 +216,3 @@ if __name__ == "__main__":
         previous_version_string=prev_version_string,
         img_version_string=img_version_string,
         doi_url=doi_url)
-
-
