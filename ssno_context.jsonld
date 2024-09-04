@@ -65,6 +65,7 @@
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:string"},
     "keyword" : {"@id" : "dcat:keyword", "@type" : "rdfs:Literal"},
     "version" : {"@id" : "dcat:version", "@type" : "rdfs:Literal"},
+    "alters unit" : {"@id" : "ssno:altersUnit", "@type" : "xsd:string"},
     "ancillary variables" : {"@id" : "ssno:ancillaryVariables", "@type" : "xsd:string"},
     "description" : {"@id" : "ssno:description", "@type" : "xsd:string"},
     "has preposition" : {"@id" : "ssno:hasPreposition", "@type" : "xsd:string"},

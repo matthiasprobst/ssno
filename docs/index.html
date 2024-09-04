@@ -269,6 +269,9 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
+      <a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a>
+   </li>
+   <li>
       <a href="#ancillaryVariables"
          title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a>
    </li>
@@ -711,7 +714,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -1240,6 +1243,7 @@ This section provides details for each class and property defined by SSNO.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
+  <li><a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a></li>
   <li><a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a></li>
   <li><a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a></li>
   <li><a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a></li>
@@ -1251,6 +1255,37 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a></li>
  </ul>
+ <div class="entity" id="altersUnit">
+  <h3>alters unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#altersUnit</p>
+  <div class="comment">
+   <span class="markdown">Concise description on how a unit of a standard name is altered.</span>
+  </div>
+  <dl>
+   <dt>
+    Example
+   </dt>
+   <dd>
+    <pre>The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y].</pre>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="ancillaryVariables">
   <h3>ancillary variables<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#ancillaryVariables</p>

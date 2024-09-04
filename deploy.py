@@ -166,6 +166,10 @@ def create_version(*,
                 _splitted_line = l.split('owl:versionInfo', 1)
                 _new_line = f"{_splitted_line[0]}owl:versionInfo \"{version_string}\" .\n"
                 lines[i] = _new_line
+            elif 'owl:versionIRI' in l:
+                _splitted_line = l.split('owl:versionIRI', 1)
+                _new_line = f"{_splitted_line[0]}owl:versionIRI <https://matthiasprobst.github.io/ssno/{version_string.strip('v')}> ;\n"
+                lines[i] = _new_line
     with open(ttl_filename, 'w', encoding='utf-8') as f:
         f.writelines(lines)
 

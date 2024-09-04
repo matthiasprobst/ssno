@@ -482,7 +482,7 @@
     "@value" : "sSNO"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno/1.0.0"
+    "@id" : "https://matthiasprobst.github.io/ssno/1.3.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "v1.3.0"
@@ -602,6 +602,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "after"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#altersUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Transformation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Concise description on how a unit of a standard name is altered."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y]."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "alters unit"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",

@@ -1,5 +1,5 @@
 <https://matthiasprobst.github.io/ssno#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://matthiasprobst.github.io/ssno#> <http://www.w3.org/2002/07/owl#versionIRI> <https://matthiasprobst.github.io/ssno/1.0.0> .
+<https://matthiasprobst.github.io/ssno#> <http://www.w3.org/2002/07/owl#versionIRI> <https://matthiasprobst.github.io/ssno/1.3.0> .
 <https://matthiasprobst.github.io/ssno#> <http://purl.org/dc/terms/abstract> "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en .
 <https://matthiasprobst.github.io/ssno#> <http://purl.org/dc/terms/created> "2024-01-15" .
 <https://matthiasprobst.github.io/ssno#> <http://purl.org/dc/terms/creator> "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" .
@@ -286,6 +286,14 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en .
 <http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
+# 
+# https://matthiasprobst.github.io/ssno#altersUnit
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Transformation> .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#definition> "Concise description on how a unit of a standard name is altered."@en .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#example> "The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y]."@en .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "alters unit"@en .
 # 
 # https://matthiasprobst.github.io/ssno#ancillaryVariables
 <https://matthiasprobst.github.io/ssno#ancillaryVariables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
