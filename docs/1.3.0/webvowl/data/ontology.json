@@ -161,6 +161,9 @@
     "id" : "59",
     "type" : "owl:unionOf"
   }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
@@ -168,9 +171,6 @@
     "type" : "owl:Class"
   }, {
     "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -589,6 +589,29 @@
     "attributes" : [ "anonymous", "union" ],
     "id" : "59"
   }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#StandardNameModification",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "standard name modification",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StandardNameModification"
+    },
+    "subClasses" : [ "17", "18" ],
+    "id" : "45"
+  }, {
     "iri" : "http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue",
     "baseIri" : "http://www.molmod.info/semantics/pims-ii.ttl",
     "instances" : 0,
@@ -677,29 +700,6 @@
     "subClasses" : [ "4" ],
     "attributes" : [ "external" ],
     "id" : "47"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#StandardNameModifification",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "standard name modification",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "StandardNameModifification"
-    },
-    "subClasses" : [ "17", "18" ],
-    "id" : "45"
   } ],
   "property" : [ {
     "id" : "0",
@@ -1515,36 +1515,6 @@
     "attributes" : [ "object" ],
     "id" : "41"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#description",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "44",
-    "annotations" : {
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://purl.org/dc/terms/description",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "description",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Description of a standard name, a standard name table, a qualification or a transformation.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "description"
-    },
-    "domain" : "42",
-    "attributes" : [ "datatype" ],
-    "id" : "65"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasPreposition",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "22",
@@ -1572,6 +1542,36 @@
       "IRI-based" : "hasPreposition"
     },
     "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#description",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "44",
+    "annotations" : {
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/description",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "description",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Description of a standard name, a standard name table, a qualification or a transformation.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description"
+    },
+    "domain" : "42",
     "attributes" : [ "datatype" ],
     "id" : "66"
   }, {
@@ -1705,17 +1705,17 @@
     "id" : "70"
   }, {
     "range" : "45",
-    "domain" : "17",
+    "domain" : "18",
     "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   }, {
-    "range" : "47",
-    "domain" : "4",
+    "range" : "45",
+    "domain" : "17",
     "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
-    "range" : "45",
-    "domain" : "18",
+    "range" : "47",
+    "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   } ]

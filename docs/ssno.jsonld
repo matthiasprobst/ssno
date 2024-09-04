@@ -505,7 +505,7 @@
   "@id" : "https://matthiasprobst.github.io/ssno#Qualification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModifification"
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid35"
@@ -536,7 +536,7 @@
     "@value" : "StandardName"
   } ]
 }, {
-  "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModifification",
+  "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -570,7 +570,7 @@
   "@id" : "https://matthiasprobst.github.io/ssno#Transformation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModifification"
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid45"

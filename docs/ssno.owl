@@ -689,7 +689,7 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModifification"/>
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <skos:definition xml:lang="en">A qualification derives an existing standard name by a rule. This may alter the units.</skos:definition>
         <skos:example xml:lang="en">See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html</skos:example>
         <skos:prefLabel xml:lang="en">Qualification</skos:prefLabel>
@@ -717,10 +717,10 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#StandardNameModifification -->
+    <!-- https://matthiasprobst.github.io/ssno#StandardNameModification -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModifification">
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification">
         <skos:definition xml:lang="en">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name modification</skos:prefLabel>
     </owl:Class>
@@ -782,7 +782,7 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModifification"/>
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <skos:definition xml:lang="en">A transfromation is a phrase which may be added to the standard name without changing its unit.</skos:definition>
         <skos:prefLabel xml:lang="en">Transformation</skos:prefLabel>
     </owl:Class>

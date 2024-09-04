@@ -42,7 +42,7 @@
     "Agent" : {"@id" : "prov:Agent"},
     "Qualification" : {"@id" : "ssno:Qualification"},
     "StandardName" : {"@id" : "ssno:StandardName"},
-    "standard name modification" : {"@id" : "ssno:StandardNameModifification"},
+    "standard name modification" : {"@id" : "ssno:StandardNameModification"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "Transformation" : {"@id" : "ssno:Transformation"},
     "Intangible" : {"@id" : "schema:Intangible"},

@@ -440,7 +440,7 @@ ssno:Qualification rdf:type owl:Class ;
                                                         ] ;
                                          owl:someValuesFrom ssno:StandardNameTable
                                        ] ;
-                   rdfs:subClassOf ssno:StandardNameModifification ;
+                   rdfs:subClassOf ssno:StandardNameModification ;
                    skos:definition "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
                    skos:example "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
                    skos:prefLabel "Qualification"@en .
@@ -457,8 +457,8 @@ ssno:StandardName rdf:type owl:Class ;
                   skos:prefLabel "StandardName" .
 
 
-###  https://matthiasprobst.github.io/ssno#StandardNameModifification
-ssno:StandardNameModifification rdf:type owl:Class ;
+###  https://matthiasprobst.github.io/ssno#StandardNameModification
+ssno:StandardNameModification rdf:type owl:Class ;
                                 skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                                 skos:prefLabel "standard name modification"@en .
 
@@ -492,7 +492,7 @@ ssno:Transformation rdf:type owl:Class ;
                                                          ] ;
                                           owl:someValuesFrom ssno:StandardNameTable
                                         ] ;
-                    rdfs:subClassOf ssno:StandardNameModifification ;
+                    rdfs:subClassOf ssno:StandardNameModification ;
                     skos:definition "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
                     skos:prefLabel "Transformation"@en .
 
