@@ -7,7 +7,7 @@
       "en" : "sSNO: A simple Standard Name Ontology"
     },
     "iri" : "https://matthiasprobst.github.io/ssno#",
-    "version" : "v1.0.0",
+    "version" : "v1.3.0",
     "author" : [ "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ],
     "labels" : {
       "undefined" : "sSNO"
@@ -31,23 +31,17 @@
         "value" : "2024-01-15",
         "type" : "label"
       } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/4.0/",
-        "type" : "iri"
-      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "ssno",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
-        "type" : "label"
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -58,7 +52,13 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "v1.0.0",
+        "value" : "v1.3.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -146,10 +146,10 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
+    "id" : "50",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -285,7 +285,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "12"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -333,7 +333,7 @@
   }, {
     "instances" : 0,
     "union" : [ "27", "8", "1", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "43"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -388,7 +388,7 @@
   }, {
     "instances" : 0,
     "union" : [ "47", "2" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -438,7 +438,7 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "15", "5", "50" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "49"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#Transformation",
@@ -466,12 +466,12 @@
   }, {
     "instances" : 0,
     "union" : [ "47", "2" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "33"
   }, {
     "instances" : 0,
     "union" : [ "14", "15", "5", "50" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "9"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#StandardName",
@@ -494,7 +494,51 @@
     "label" : {
       "IRI-based" : "StandardName"
     },
+    "individuals" : [ {
+      "iri" : "https://matthiasprobst.github.io/ssno#AnyStandardName",
+      "baseIri" : "https://matthiasprobst.github.io/ssno",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Any Standard Name",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AnyStandardName"
+      }
+    } ],
     "id" : "8"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#StandardNameTable",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "undefined",
+        "value" : "StandardNameTable",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StandardNameTable"
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset",
     "baseIri" : "http://purl.allotrope.org/ontologies/hdf5/1.8",
@@ -525,37 +569,14 @@
     "attributes" : [ "external" ],
     "id" : "50"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#StandardNameTable",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "instances" : 0,
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "undefined",
-        "value" : "StandardNameTable",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "StandardNameTable"
-    },
-    "id" : "1",
-    "superClasses" : [ "2" ]
-  }, {
     "instances" : 0,
     "union" : [ "27", "8" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "36"
   }, {
     "instances" : 0,
     "union" : [ "27", "8" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "59"
   }, {
     "iri" : "http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue",
@@ -791,7 +812,7 @@
   "propertyAttribute" : [ {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "0"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#contact",
@@ -868,17 +889,17 @@
   }, {
     "range" : "6",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "6",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
     "range" : "6",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
@@ -1216,7 +1237,7 @@
       "IRI-based" : "usesQualification"
     },
     "domain" : "27",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "53"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
@@ -1240,7 +1261,7 @@
       "IRI-based" : "standardNames"
     },
     "domain" : "8",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "54"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
@@ -1264,7 +1285,7 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "1",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "55"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
@@ -1289,7 +1310,7 @@
       "IRI-based" : "standardNameTable"
     },
     "domain" : "1",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "56"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
@@ -1313,7 +1334,7 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "1",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "57"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesTransformation",
@@ -1337,7 +1358,7 @@
       "IRI-based" : "usesTransformation"
     },
     "domain" : "28",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "58"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
@@ -1434,7 +1455,7 @@
       "IRI-based" : "standardNameTableUsedBy"
     },
     "domain" : "47",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "63"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
@@ -1459,7 +1480,7 @@
       "IRI-based" : "standardNameTableUsedBy"
     },
     "domain" : "2",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "64"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesTransformation",
@@ -1513,7 +1534,7 @@
       "IRI-based" : "mbox"
     },
     "domain" : "4",
-    "attributes" : [ "inverse functional", "object", "external" ],
+    "attributes" : [ "external", "object", "inverse functional" ],
     "id" : "65"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
@@ -1600,6 +1621,12 @@
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "21",
     "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "long name",
+        "type" : "label"
+      } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
@@ -1641,12 +1668,12 @@
   }, {
     "range" : "46",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "70"
   }, {
     "range" : "46",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "71"
   } ]
 }

@@ -23,61 +23,60 @@ def generate(ttl_file: Union[pathlib.Path, str]):
     g.parse(str(ttl_file), format='ttl')
 
     outfile = str(context_file)
-    f = open(outfile, "w", encoding="utf-8")
-    f.write("{\n  \"@context\": {\n")
+    with open(outfile, "w", encoding="utf-8") as f:
+        f.write("{\n  \"@context\": {\n")
 
-    nm = NamespaceManager(g)
+        nm = NamespaceManager(g)
 
-    vocab_query = """
-    SELECT ?id 
-    WHERE {
-    ?id rdf:type owl:Ontology .
-    }"""
+        vocab_query = """
+        SELECT ?id 
+        WHERE {
+        ?id rdf:type owl:Ontology .
+        }"""
 
-    query_result = g.query(vocab_query)
+        query_result = g.query(vocab_query)
 
-    for row in query_result:
-        f.write(f'    "@vocab": "{row.id}"')
-
-    for ns_prefix, namespace in g.namespaces():
-        if ns_prefix.strip() != "":
-            f.write(f',\n    "{ns_prefix}" : "{namespace}"')
-
-    entities = [
-        "owl:Class",
-        "owl:AnnotationProperty",
-        "rdfs:Datatype",
-        "owl:ObjectProperty",
-        "owl:DatatypeProperty",
-        "owl:NamedIndividual"]
-
-    ids = []
-
-    for entity in entities:
-        query: str = ('SELECT ?id ?label ?type\n'
-                      'WHERE {\n'
-                      f'  ?id rdf:type {entity} .\n'
-                      '  ?id skos:prefLabel ?label.\n'
-                      '  OPTIONAL {?id rdfs:range ?type .}. \n'
-                      '}')
-        logger.debug(f'*** Adding entities of type "{entity}" to the context file ***')
-        query_result = g.query(query)
-
-        logger.debug(f'Total: {len(query_result)}')
         for row in query_result:
-            typestr = ""
-            if isinstance(row.type, URIRef):
-                typestr = f', "@type" : "{nm.normalizeUri(row.type)}"'
-            #            logger.debug(row.id, row.type, type(row.type))
-            if row.label not in ids:
-                logger.debug(row.label)
-                f.write(f',\n    "{row.label}" : {{"@id" : "{nm.normalizeUri(row.id)}"{typestr}}}')
-                ids.append(row.label.lower())
-            else:
-                logger.debug(f'"{row.label}" is already used as a label, therefore {row.id} will be skipped')
+            f.write(f'    "@vocab": "{row.id}"')
 
-    f.write("\n  }\n}")
-    f.close()
+        for ns_prefix, namespace in g.namespaces():
+            if ns_prefix.strip() != "":
+                f.write(f',\n    "{ns_prefix}" : "{namespace}"')
+
+        entities = [
+            "owl:Class",
+            "owl:AnnotationProperty",
+            "rdfs:Datatype",
+            "owl:ObjectProperty",
+            "owl:DatatypeProperty",
+            "owl:NamedIndividual"]
+
+        ids = []
+
+        for entity in entities:
+            query: str = ('SELECT ?id ?label ?type\n'
+                          'WHERE {\n'
+                          f'  ?id rdf:type {entity} .\n'
+                          '  ?id skos:prefLabel ?label.\n'
+                          '  OPTIONAL {?id rdfs:range ?type .}. \n'
+                          '}')
+            logger.debug(f'*** Adding entities of type "{entity}" to the context file ***')
+            query_result = g.query(query)
+
+            logger.debug(f'Total: {len(query_result)}')
+            for row in query_result:
+                typestr = ""
+                if isinstance(row.type, URIRef):
+                    typestr = f', "@type" : "{nm.normalizeUri(row.type)}"'
+                #            logger.debug(row.id, row.type, type(row.type))
+                if row.label not in ids:
+                    logger.debug(row.label)
+                    f.write(f',\n    "{row.label}" : {{"@id" : "{nm.normalizeUri(row.id)}"{typestr}}}')
+                    ids.append(row.label.lower())
+                else:
+                    logger.debug(f'"{row.label}" is already used as a label, therefore {row.id} will be skipped')
+
+        f.write("\n  }\n}")
 
     g.parse(outfile, format='json-ld')
 
