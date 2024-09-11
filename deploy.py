@@ -8,10 +8,10 @@ So first change the ttl file with Protege (), then change the version string in 
 import datetime
 import logging
 import pathlib
+import re
 import shutil
 import subprocess
 import sys
-import re
 from typing import Optional, Dict
 
 ONTOLOGY_NAME = 'ssno'
@@ -30,6 +30,26 @@ logger.addHandler(_stream_handler)
 logger.setLevel(DEFAULT_LOGGING_LEVEL)
 
 __this_dir__ = pathlib.Path(__file__).parent
+
+
+def bugfix_index_html(filename):
+    tmp_filename = filename.with_suffix('.html_tmp')
+    tmp_filename.unlink(missing_ok=True)
+    with open(filename, "r", encoding='utf-8') as f:
+        with open(tmp_filename, "w", encoding='utf-8') as f_out:
+            for line in f.readlines():
+                if 'metadata4ing' in line:
+                    f_out.write(line.replace(
+                        '<tr><td><b>metadata4ing</b></td><td>',
+                        '<tr><td><b>m4i</b></td><td>'))
+                elif '.after(marked.parse(jQuery' in line:
+                    f_out.write(line.replace(
+                        '.after(marked.parse(jQuery',
+                        '.after(marked(jQuery'))
+                else:
+                    f_out.write(line)
+    filename.unlink(missing_ok=True)
+    tmp_filename.rename(filename)
 
 
 def copy_version_to_docs(version_string):
@@ -70,24 +90,9 @@ def copy_version_to_docs(version_string):
 
     assert index_en.exists() is False
 
-    # bugfix namespace table
-    (version_path / 'index.html.tmp').unlink(missing_ok=True)
-    with open(version_path / 'index.html', "r", encoding='utf-8') as f:
-        with open(version_path / 'index.html.tmp', "w", encoding='utf-8') as f_out:
-            for line in f.readlines():
-                if 'metadata4ing' in line:
-                    f_out.write(line.replace(
-                        '<tr><td><b>metadata4ing</b></td><td>',
-                        '<tr><td><b>m4i</b></td><td>'))
-                elif '.after(marked.parse(jQuery' in line:
-                    f_out.write(line.replace(
-                        '.after(marked.parse(jQuery',
-                        '.after(marked(jQuery'))
-                else:
-                    f_out.write(line)
+    bugfix_index_html(version_path / 'index.html')
+    bugfix_index_html(__this_dir__ / 'docs' / 'index.html')
 
-    (version_path / 'index.html').unlink(missing_ok=True)
-    (version_path / 'index.html.tmp').rename(version_path / 'index.html')
     logger.debug('done copying version to docs')
 
 
@@ -208,7 +213,8 @@ def create_version(*,
                     lines = f.readlines()
                 for i, l in enumerate(lines):
                     if '<dt>Latest version:</dt>' in l:
-                        lines[i+1] = f'            <dd><a href="https://matthiasprobst.github.io/ssno">https://matthiasprobst.github.io/ssno/{version_string.strip("v")}</a></dd>\n'
+                        lines[
+                            i + 1] = f'            <dd><a href="https://matthiasprobst.github.io/ssno">https://matthiasprobst.github.io/ssno/{version_string.strip("v")}</a></dd>\n'
                 with open(html_filename, 'w', encoding='utf-8') as f:
                     f.writelines(lines)
     logger.info('Finished building docs')
