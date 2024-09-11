@@ -470,10 +470,9 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Transformation"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -539,14 +538,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://schema.org/name">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Transformation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">The name of the item.</skos:definition>
         <skos:prefLabel xml:lang="en">name</skos:prefLabel>

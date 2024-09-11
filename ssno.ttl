@@ -302,10 +302,9 @@ ssno:ancillaryVariables rdf:type owl:DatatypeProperty ;
 ###  https://matthiasprobst.github.io/ssno#description
 ssno:description rdf:type owl:DatatypeProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( ssno:Qualification
-                                             ssno:StandardName
+                               owl:unionOf ( ssno:StandardName
+                                             ssno:StandardNameModification
                                              ssno:StandardNameTable
-                                             ssno:Transformation
                                            )
                              ] ;
                  rdfs:range xsd:string ;
@@ -350,11 +349,7 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 
 ###  https://schema.org/name
 schema:name rdf:type owl:DatatypeProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( ssno:Qualification
-                                        ssno:Transformation
-                                      )
-                        ] ;
+            rdfs:domain ssno:StandardNameModification ;
             rdfs:range xsd:string ;
             skos:definition "The name of the item."@en ;
             skos:prefLabel "name"@en .

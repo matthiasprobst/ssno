@@ -306,19 +306,16 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://matthiasprobst.github.io/ssno#description
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid29 <http://www.w3.org/2002/07/owl#unionOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Transformation> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#StandardName> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Qualification> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/dc/terms/description> .
@@ -357,15 +354,7 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid34 .
-_:genid34 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Transformation> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Qualification> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://schema.org/name> <http://www.w3.org/2004/02/skos/core#definition> "The name of the item."@en .
 <https://schema.org/name> <http://www.w3.org/2004/02/skos/core#prefLabel> "name"@en .
@@ -394,11 +383,11 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid37 .
-_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.allotrope.org/ontologies/hdf5/1.8#> .
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/2004/02/skos/core#definition> "An HDF5 file root group"@en .
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> <http://www.w3.org/2004/02/skos/core#prefLabel> "HDF5 Root Group"@en .
@@ -425,11 +414,11 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> _:genid40 .
-_:genid40 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/dcat#> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
@@ -442,11 +431,11 @@ _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://matthiasprobst.github.io/ssno#Qualification
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> _:genid42 .
-_:genid42 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2004/02/skos/core#definition> "A qualification derives an existing standard name by a rule. This may alter the units."@en .
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2004/02/skos/core#example> "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en .
@@ -454,11 +443,11 @@ _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://matthiasprobst.github.io/ssno#StandardName
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en .
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName" .
 # 
@@ -469,32 +458,32 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://matthiasprobst.github.io/ssno#StandardNameTable
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardName> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTable> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardName> .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/dcat#Dataset> .
 _:genid45 <http://www.w3.org/2002/07/owl#onProperty> _:genid46 .
-_:genid46 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTable> .
+_:genid46 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/dcat#Dataset> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
 # 
 # https://matthiasprobst.github.io/ssno#Transformation
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> _:genid52 .
-_:genid52 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .

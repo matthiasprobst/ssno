@@ -293,10 +293,9 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Qualification
-                                         :StandardName
+                           owl:unionOf ( :StandardName
+                                         :StandardNameModification
                                          :StandardNameTable
-                                         :Transformation
                                        )
                          ] ;
              rdfs:range xsd:string ;
@@ -341,11 +340,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://schema.org/name
 <https://schema.org/name> rdf:type owl:DatatypeProperty ;
-                          rdfs:domain [ rdf:type owl:Class ;
-                                        owl:unionOf ( :Qualification
-                                                      :Transformation
-                                                    )
-                                      ] ;
+                          rdfs:domain :StandardNameModification ;
                           rdfs:range xsd:string ;
                           <http://www.w3.org/2004/02/skos/core#definition> "The name of the item."@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "name"@en .

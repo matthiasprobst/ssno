@@ -71,24 +71,40 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
-    }, {
       "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
     }, {
-      "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+      "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
     }, {
-      "@id" : "https://matthiasprobst.github.io/ssno#Transformation"
+      "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
     } ]
   } ]
 }, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid34"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ]
+}, {
   "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://matthiasprobst.github.io/ssno#Qualification"
-    }, {
-      "@id" : "https://matthiasprobst.github.io/ssno#Transformation"
-    } ]
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid36"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"
   } ]
 }, {
   "@id" : "_:genid37",
@@ -102,7 +118,7 @@
 }, {
   "@id" : "_:genid38",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"
+    "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"
   } ]
 }, {
   "@id" : "_:genid39",
@@ -126,7 +142,7 @@
 }, {
   "@id" : "_:genid40",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy"
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNames"
   } ]
 }, {
   "@id" : "_:genid41",
@@ -135,12 +151,12 @@
     "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
   } ]
 }, {
   "@id" : "_:genid42",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"
+    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable"
   } ]
 }, {
   "@id" : "_:genid43",
@@ -149,12 +165,12 @@
     "@id" : "_:genid44"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
+    "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
   } ]
 }, {
   "@id" : "_:genid44",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#standardNames"
+    "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable"
   } ]
 }, {
   "@id" : "_:genid45",
@@ -163,12 +179,12 @@
     "@id" : "_:genid46"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#StandardName"
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ]
 }, {
   "@id" : "_:genid46",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable"
+    "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable"
   } ]
 }, {
   "@id" : "_:genid47",
@@ -177,38 +193,10 @@
     "@id" : "_:genid48"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "_:genid50"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Dataset"
-  } ]
-}, {
-  "@id" : "_:genid50",
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable"
-  } ]
-}, {
-  "@id" : "_:genid51",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "_:genid52"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameTable"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid48",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"
   } ]
@@ -260,7 +248,7 @@
     "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid37"
+    "@id" : "_:genid33"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -392,7 +380,7 @@
     "@id" : "http://www.w3.org/ns/dcat#"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid35"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -528,7 +516,7 @@
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid41"
+    "@id" : "_:genid37"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -546,7 +534,7 @@
   "@id" : "https://matthiasprobst.github.io/ssno#StandardName",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid39"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -573,11 +561,11 @@
     "@id" : "http://www.w3.org/ns/dcat#Dataset"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid43"
+  }, {
     "@id" : "_:genid45"
-  }, {
-    "@id" : "_:genid47"
-  }, {
-    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -593,7 +581,7 @@
     "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid51"
+    "@id" : "_:genid47"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -990,7 +978,7 @@
   "@id" : "https://schema.org/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid34"
+    "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
