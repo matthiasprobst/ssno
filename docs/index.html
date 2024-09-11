@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-09-04", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-09-11", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-09-04</dt>
+<dt>Modified on: 2024-09-11</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.3.0">https://matthiasprobst.github.io/ssno/1.3.0</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v1.3.0</dd>
 <dt>Issued on:</dt>
-<dd>2024-09-04</dd>
+<dd>2024-09-11</dd>
 <dt>Authors:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</dd>
 
@@ -220,24 +220,20 @@ This ontology has the following classes and properties.</span>
       <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a>
    </li>
    <li>
-      <a href="#usesQualification"
-         title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a>
+      <a href="#definesStandardNameModification"
+         title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a>
    </li>
    <li>
       <a href="#hasStandardName"
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
    </li>
    <li>
-      <a href="#isQualificationOf"
-         title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a>
+      <a href="#isModificationDefinedIn"
+         title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a>
    </li>
    <li>
       <a href="#isStandardNameOf"
          title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a>
-   </li>
-   <li>
-      <a href="#isTransformationOf"
-         title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
@@ -260,10 +256,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#usesStandardNameTable"
          title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a>
-   </li>
-   <li>
-      <a href="#usesTransformation"
-         title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -544,12 +536,6 @@ This section provides details for each class and property defined by SSNO.
   </dl>
   <dl class="description">
    <dt>
-    is equivalent to
-   </dt>
-   <dd>
-    <span class="logic">inverse</span> <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
     has super-classes
    </dt>
    <dd>
@@ -559,13 +545,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isModificationDefinedIn" title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesStandardNameModification" title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -681,13 +667,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a> <sup class="type-op" title="object property">op</sup>, <a href="#definesStandardNameModification" title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>, <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">version</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isModificationDefinedIn" title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -699,12 +685,6 @@ This section provides details for each class and property defined by SSNO.
   </div>
   <dl class="description">
    <dt>
-    is equivalent to
-   </dt>
-   <dd>
-    <span class="logic">inverse</span> <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
     has super-classes
    </dt>
    <dd>
@@ -714,13 +694,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isModificationDefinedIn" title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://schema.org/name" title="https://schema.org/name">name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#definesStandardNameModification" title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -781,18 +761,16 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a></li>
   <li><a href="#canonicalUnits" title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a></li>
   <li><a href="#contact" title="https://matthiasprobst.github.io/ssno#contact">contact</a></li>
-  <li><a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a></li>
+  <li><a href="#definesStandardNameModification" title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a></li>
   <li><a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a></li>
-  <li><a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a></li>
+  <li><a href="#isModificationDefinedIn" title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a></li>
   <li><a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a></li>
-  <li><a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a></li>
   <li><a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a></li>
   <li><a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a></li>
   <li><a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a></li>
   <li><a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a></li>
   <li><a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a></li>
-  <li><a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a></li>
  </ul>
  <div class="entity" id="after">
   <h3>after<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -900,11 +878,11 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="usesQualification">
-  <h3>has qualification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#usesQualification</p>
+ <div class="entity" id="definesStandardNameModification">
+  <h3>defines standard name modification<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#definesStandardNameModification</p>
   <div class="comment">
-   <span class="markdown">Points to a ssno:Qualification associated with the Standard Name Table.</span>
+   <span class="markdown">Points to a Qualification or Transformation defined by a Standard Name Table</span>
   </div>
   <div class="description">
    <dl>
@@ -918,13 +896,13 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
     </dt>
     <dd>
-     <a href="#isQualificationOf" title="https://matthiasprobst.github.io/ssno#isQualificationOf">is qualification of</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#isModificationDefinedIn" title="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">is modification defined in</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -958,11 +936,11 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="isQualificationOf">
-  <h3>is qualification of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#isQualificationOf</p>
+ <div class="entity" id="isModificationDefinedIn">
+  <h3>is modification defined in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#isModificationDefinedIn</p>
   <div class="comment">
-   <span class="markdown">Points to a Standard Name Table, which uses this qualification.</span>
+   <span class="markdown">Associates a Qualification or Transformation to a Standard Name Table</span>
   </div>
   <div class="description">
    <dl>
@@ -970,7 +948,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -982,7 +960,7 @@ This section provides details for each class and property defined by SSNO.
      is inverse of
     </dt>
     <dd>
-     <a href="#usesQualification" title="https://matthiasprobst.github.io/ssno#usesQualification">has qualification</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#definesStandardNameModification" title="https://matthiasprobst.github.io/ssno#definesStandardNameModification">defines standard name modification</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1012,35 +990,6 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="isTransformationOf">
-  <h3>is transformation of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#isTransformationOf</p>
-  <div class="comment">
-   <span class="markdown">Points to a Standard Name Table, which uses this transformation.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#usesTransformation" title="https://matthiasprobst.github.io/ssno#usesTransformation">uses transformation</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1207,35 +1156,6 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="usesTransformation">
-  <h3>uses transformation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#usesTransformation</p>
-  <div class="comment">
-   <span class="markdown">Points to a ssno:Transformation associated with the Standard Name Table.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#isTransformationOf" title="https://matthiasprobst.github.io/ssno#isTransformationOf">is transformation of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>

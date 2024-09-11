@@ -232,6 +232,26 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#definesStandardNameModification -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#definesStandardNameModification">
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isModificationDefinedIn"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Transformation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:definition xml:lang="en">Points to a Qualification or Transformation defined by a Standard Name Table</skos:definition>
+        <skos:prefLabel xml:lang="en">defines standard name modification</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#hasStandardName -->
 
 
@@ -254,15 +274,21 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#isQualificationOf -->
+    <!-- https://matthiasprobst.github.io/ssno#isModificationDefinedIn -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isQualificationOf">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesQualification"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isModificationDefinedIn">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Transformation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <skos:definition xml:lang="en">Points to a Standard Name Table, which uses this qualification.</skos:definition>
-        <skos:prefLabel xml:lang="en">is qualification of</skos:prefLabel>
+        <skos:definition xml:lang="en">Associates a Qualification or Transformation to a Standard Name Table</skos:definition>
+        <skos:prefLabel xml:lang="en">is modification defined in</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -284,19 +310,6 @@
         </rdfs:range>
         <skos:definition xml:lang="en">Points to a Concept, that describes a numerical variable, which uses the standard name.</skos:definition>
         <skos:prefLabel xml:lang="en">is standard name of</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#isTransformationOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isTransformationOf">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesTransformation"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <skos:definition xml:lang="en">Points to a Standard Name Table, which uses this transformation.</skos:definition>
-        <skos:prefLabel xml:lang="en">is transformation of</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -357,18 +370,6 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#usesQualification -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#usesQualification">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
-        <skos:definition xml:lang="en">Points to a ssno:Qualification associated with the Standard Name Table.</skos:definition>
-        <skos:prefLabel xml:lang="en">has qualification</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://matthiasprobst.github.io/ssno#usesStandardNameTable -->
 
 
@@ -384,18 +385,6 @@
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#usesTransformation -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#usesTransformation">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
-        <skos:definition xml:lang="en">Points to a ssno:Transformation associated with the Standard Name Table.</skos:definition>
-        <skos:prefLabel xml:lang="en">uses transformation</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -692,16 +681,6 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Qualification">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesQualification"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <skos:definition xml:lang="en">A qualification derives an existing standard name by a rule. This may alter the units.</skos:definition>
         <skos:example xml:lang="en">See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html</skos:example>
@@ -785,16 +764,6 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Transformation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesTransformation"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <skos:definition xml:lang="en">A transfromation is a phrase which may be added to the standard name without changing its unit.</skos:definition>
         <skos:prefLabel xml:lang="en">Transformation</skos:prefLabel>
