@@ -622,11 +622,11 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Concise description on how a unit of a standard name is altered."
+    "@value" : "A string defining how the new unit is generated."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
-    "@value" : "The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y]."
+    "@value" : "\"[X] s-1\" where [X] is the unit of the standard name X."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -883,11 +883,33 @@
     "@value" : "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
-    "@value" : "x_derivative_of_y_velocity"
+    "@language" : "en",
+    "@value" : "dynamic_pressure"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "standard name"
+  } ]
+}, {
+  "@id" : "https://matthiasprobst.github.io/ssno#standardNameCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://matthiasprobst.github.io/ssno#Transformation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "standard name character"
   } ]
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#standardNameTable",

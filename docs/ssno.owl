@@ -444,8 +444,8 @@
     <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#altersUnit">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <skos:definition xml:lang="en">Concise description on how a unit of a standard name is altered.</skos:definition>
-        <skos:example xml:lang="en">The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y].</skos:example>
+        <skos:definition xml:lang="en">A string defining how the new unit is generated.</skos:definition>
+        <skos:example xml:lang="en">&quot;[X] s-1&quot; where [X] is the unit of the standard name X.</skos:example>
         <skos:prefLabel xml:lang="en">alters unit</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -528,8 +528,21 @@
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">Name for a standard name, e.g. &quot;x_velocity&quot;. The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.</skos:definition>
-        <skos:example>x_derivative_of_y_velocity</skos:example>
+        <skos:example xml:lang="en">dynamic_pressure</skos:example>
         <skos:prefLabel xml:lang="en">standard name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#standardNameCharacter -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameCharacter">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule.</skos:definition>
+        <skos:example xml:lang="en">in the transformation string &quot;integral_of_Y_wrt_X&quot; the standard name representation characters are be &quot;X&quot; and &quot;Y&quot;</skos:example>
+        <skos:prefLabel xml:lang="en">standard name character</skos:prefLabel>
     </owl:DatatypeProperty>
     
 

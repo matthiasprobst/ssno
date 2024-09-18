@@ -70,6 +70,7 @@
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "xsd:string"},
     "long name" : {"@id" : "ssno:longName", "@type" : "xsd:string"},
     "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"},
+    "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"}
   }

@@ -286,8 +286,8 @@ dcat:version rdf:type owl:DatatypeProperty ;
 ssno:altersUnit rdf:type owl:DatatypeProperty ;
                 rdfs:domain ssno:Transformation ;
                 rdfs:range xsd:string ;
-                skos:definition "Concise description on how a unit of a standard name is altered."@en ;
-                skos:example "The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y]."@en ;
+                skos:definition "A string defining how the new unit is generated."@en ;
+                skos:example "\"[X] s-1\" where [X] is the unit of the standard name X."@en ;
                 skos:prefLabel "alters unit"@en .
 
 
@@ -343,8 +343,17 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
                   rdfs:range xsd:string ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
-                  skos:example "x_derivative_of_y_velocity" ;
+                  skos:example "dynamic_pressure"@en ;
                   skos:prefLabel "standard name"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameCharacter
+ssno:standardNameCharacter rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ssno:Transformation ;
+                           rdfs:range xsd:string ;
+                           skos:definition "The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule."@en ;
+                           skos:example "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
+                           skos:prefLabel "standard name character"@en .
 
 
 ###  https://schema.org/name

@@ -292,8 +292,8 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Transformation> .
 <https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#definition> "Concise description on how a unit of a standard name is altered."@en .
-<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#example> "The transformation of derivative_of_X_wrt_Y alters the units by deviding the unit of X by the unit of Y, hence the string for altersUnits would be [X]/[Y]."@en .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#definition> "A string defining how the new unit is generated."@en .
+<https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#example> "\"[X] s-1\" where [X] is the unit of the standard name X."@en .
 <https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "alters unit"@en .
 # 
 # https://matthiasprobst.github.io/ssno#ancillaryVariables
@@ -349,8 +349,16 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardName> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
-<https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#example> "x_derivative_of_y_velocity" .
+<https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#example> "dynamic_pressure"@en .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
+# 
+# https://matthiasprobst.github.io/ssno#standardNameCharacter
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Transformation> .
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2004/02/skos/core#definition> "The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule."@en .
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2004/02/skos/core#example> "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en .
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en .
 # 
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
