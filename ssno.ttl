@@ -118,6 +118,18 @@ ssno:after rdf:type owl:ObjectProperty ;
            skos:prefLabel "after"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#associatedWith
+ssno:associatedWith rdf:type owl:ObjectProperty ;
+                    rdfs:domain ssno:CharacterRepresentation ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( ssno:Qualification
+                                               ssno:StandardName
+                                             )
+                               ] ;
+                    skos:definition "Associates a character to a thing, which is intended to be a AnyStandardName or a Qualification."@en ;
+                    skos:prefLabel "associated with"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#before
 ssno:before rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf ssno:positioned ;
@@ -161,6 +173,14 @@ ssno:definesStandardNameModification rdf:type owl:ObjectProperty ;
                                                 ] ;
                                      skos:definition "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
                                      skos:prefLabel "defines standard name modification"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#hasCharacter
+ssno:hasCharacter rdf:type owl:ObjectProperty ;
+                  rdfs:domain ssno:Transformation ;
+                  rdfs:range ssno:CharacterRepresentation ;
+                  skos:definition "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en ;
+                  skos:prefLabel "has character"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
@@ -299,6 +319,14 @@ ssno:ancillaryVariables rdf:type owl:DatatypeProperty ;
                         skos:prefLabel "ancillary variables"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#character
+ssno:character rdf:type owl:DatatypeProperty ;
+               rdfs:domain ssno:CharacterRepresentation ;
+               rdfs:range xsd:string ;
+               skos:definition "A character i.e. a single letter or symbol"@en ;
+               skos:prefLabel "character"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#description
 ssno:description rdf:type owl:DatatypeProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -435,6 +463,10 @@ prov:Agent rdf:type owl:Class ;
            rdfs:isDefinedBy prov: ;
            skos:definition "Person or Organization related to a StandardNameTable."@en ;
            skos:prefLabel "Agent"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#CharacterRepresentation
+ssno:CharacterRepresentation rdf:type owl:Class .
 
 
 ###  https://matthiasprobst.github.io/ssno#Qualification
