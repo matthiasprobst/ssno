@@ -153,25 +153,24 @@ owl:sameas rdf:type owl:AnnotationProperty .
          <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#definesStandardNameModification
-:definesStandardNameModification rdf:type owl:ObjectProperty ;
-                                 owl:inverseOf :isStandardNameModificationDefinedIn ;
-                                 rdfs:domain :StandardNameTable ;
-                                 rdfs:range [ rdf:type owl:Class ;
-                                              owl:unionOf ( :Qualification
-                                                            :Transformation
-                                                          )
-                                            ] ;
-                                 <http://www.w3.org/2004/02/skos/core#definition> "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "defines standard name modification"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
 :hasCharacter rdf:type owl:ObjectProperty ;
               rdfs:domain :Transformation ;
               rdfs:range :CharacterRepresentation ;
               <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#hasModifier
+:hasModifier rdf:type owl:ObjectProperty ;
+             rdfs:domain :StandardNameTable ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( :Qualification
+                                        :Transformation
+                                      )
+                        ] ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "has modifier"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
@@ -189,16 +188,17 @@ owl:sameas rdf:type owl:AnnotationProperty .
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn
-:isStandardNameModificationDefinedIn rdf:type owl:ObjectProperty ;
-                                     rdfs:domain [ rdf:type owl:Class ;
-                                                   owl:unionOf ( :Qualification
-                                                                 :Transformation
-                                                               )
-                                                 ] ;
-                                     rdfs:range :StandardNameTable ;
-                                     <http://www.w3.org/2004/02/skos/core#definition> "Associates a Qualification or Transformation to a Standard Name Table"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name modification defined in"@en .
+###  https://matthiasprobst.github.io/ssno#isDefinedBy
+:isDefinedBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :hasModifier ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Qualification
+                                         :Transformation
+                                       )
+                         ] ;
+             rdfs:range :StandardNameTable ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Associates a Qualification or Transformation to a Standard Name Table"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "is defined by"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
@@ -463,7 +463,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#Qualification
 :Qualification rdf:type owl:Class ;
                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty [ owl:inverseOf :isStandardNameModificationDefinedIn
+                                     owl:onProperty [ owl:inverseOf :isDefinedBy
                                                     ] ;
                                      owl:someValuesFrom :StandardNameTable
                                    ] ;
@@ -515,7 +515,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#Transformation
 :Transformation rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty [ owl:inverseOf :isStandardNameModificationDefinedIn
+                                      owl:onProperty [ owl:inverseOf :isDefinedBy
                                                      ] ;
                                       owl:someValuesFrom :StandardNameTable
                                     ] ;

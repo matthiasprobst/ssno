@@ -27,13 +27,13 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.3095538"
-     inkscape:cx="572.71414"
-     inkscape:cy="199.68633"
+     inkscape:zoom="0.92599437"
+     inkscape:cx="552.91913"
+     inkscape:cy="143.08942"
      inkscape:window-width="1920"
-     inkscape:window-height="1129"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
-     inkscape:window-y="1072"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -596,9 +596,9 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-3-9)"
-       d="m 200.34134,56.358371 44.00377,-6.985584"
+       d="m 200.1393,57.974698 39.68903,-0.445656 6.01371,-4.625616"
        id="path6-6-2-6-2"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="ccc" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect3-6-1-0-6-7"
@@ -719,53 +719,43 @@
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="252.28815"
-       y="72.368469"
+       x="250.87386"
+       y="69.33786"
        id="text4-1"><tspan
          sodipodi:role="line"
          id="tspan4-8"
          style="font-size:4.23333px;stroke-width:0.264583"
-         x="252.28815"
-         y="72.368469">Transformation</tspan></text>
+         x="250.87386"
+         y="69.33786">Transformation</tspan></text>
     <ellipse
        style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
        id="ellipse4-7"
-       cx="267.75613"
-       cy="70.780968"
+       cx="266.34186"
+       cy="67.750359"
        ry="7.3239794"
        rx="20.2068" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-3-9)"
-       d="m 198.39836,60.261188 47.56353,10.51978"
+       d="m 239.80553,57.480588 7.06975,5.834842"
        id="path9"
        sodipodi:nodetypes="cc" />
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect3-6-1-0-6-7-2"
-       width="37.57925"
-       height="17.769957"
-       x="204.24033"
-       y="52.103333" />
+       width="31.315989"
+       height="6.6577129"
+       x="203.23012"
+       y="54.325783" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-       x="207.41357"
-       y="56.952312"
+       x="205.79724"
+       y="59.174767"
        id="text1-0-9-6-9-3-6-1-5"><tspan
          sodipodi:role="line"
-         id="tspan1-5-5-4-6-5-9-4-9"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="207.41357"
-         y="56.952312">defines</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="207.41357"
-         y="62.243973"
-         id="tspan9">StandardName</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="207.41357"
-         y="67.535637"
-         id="tspan10">Modification</tspan></text>
+         x="205.79724"
+         y="59.174767"
+         id="tspan10">has modifier</tspan></text>
   </g>
 </svg>

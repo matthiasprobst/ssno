@@ -251,11 +251,22 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#definesStandardNameModification -->
+    <!-- https://matthiasprobst.github.io/ssno#hasCharacter -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#definesStandardNameModification">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"/>
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasCharacter">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
+        <skos:definition xml:lang="en">Links a transformation to a character used in the transformation string to represent a standard name or qualification</skos:definition>
+        <skos:prefLabel xml:lang="en">has character</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#hasModifier -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasModifier">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range>
             <owl:Class>
@@ -266,19 +277,7 @@
             </owl:Class>
         </rdfs:range>
         <skos:definition xml:lang="en">Points to a Qualification or Transformation defined by a Standard Name Table</skos:definition>
-        <skos:prefLabel xml:lang="en">defines standard name modification</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#hasCharacter -->
-
-
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasCharacter">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
-        <skos:definition xml:lang="en">Links a transformation to a character used in the transformation string to represent a standard name or qualification</skos:definition>
-        <skos:prefLabel xml:lang="en">has character</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">has modifier</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -305,10 +304,11 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn -->
+    <!-- https://matthiasprobst.github.io/ssno#isDefinedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isDefinedBy">
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasModifier"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -319,7 +319,7 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Associates a Qualification or Transformation to a Standard Name Table</skos:definition>
-        <skos:prefLabel xml:lang="en">is standard name modification defined in</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">is defined by</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -740,7 +740,7 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"/>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
@@ -833,7 +833,7 @@
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn"/>
+                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>

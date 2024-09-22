@@ -146,11 +146,17 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#definition> "Contact agent (person or organization) for the standard name table."@en .
 <https://matthiasprobst.github.io/ssno#contact> <http://www.w3.org/2004/02/skos/core#prefLabel> "contact"@en .
 # 
-# https://matthiasprobst.github.io/ssno#definesStandardNameModification
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+# https://matthiasprobst.github.io/ssno#hasCharacter
+<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Transformation> .
+<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#CharacterRepresentation> .
+<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en .
+<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
+# 
+# https://matthiasprobst.github.io/ssno#hasModifier
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
 _:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -159,15 +165,8 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Qualification> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/2004/02/skos/core#definition> "Points to a Qualification or Transformation defined by a Standard Name Table"@en .
-<https://matthiasprobst.github.io/ssno#definesStandardNameModification> <http://www.w3.org/2004/02/skos/core#prefLabel> "defines standard name modification"@en .
-# 
-# https://matthiasprobst.github.io/ssno#hasCharacter
-<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#Transformation> .
-<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#CharacterRepresentation> .
-<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en .
-<https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2004/02/skos/core#definition> "Points to a Qualification or Transformation defined by a Standard Name Table"@en .
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has modifier"@en .
 # 
 # https://matthiasprobst.github.io/ssno#hasStandardName
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -191,9 +190,10 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en .
 <https://matthiasprobst.github.io/ssno#hasStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 # 
-# https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn
-<https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
+# https://matthiasprobst.github.io/ssno#isDefinedBy
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#hasModifier> .
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid18 .
 _:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
@@ -202,9 +202,9 @@ _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://matthiasprobst.github.io/ssno#Qualification> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> <http://www.w3.org/2004/02/skos/core#definition> "Associates a Qualification or Transformation to a Standard Name Table"@en .
-<https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name modification defined in"@en .
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/2004/02/skos/core#definition> "Associates a Qualification or Transformation to a Standard Name Table"@en .
+<https://matthiasprobst.github.io/ssno#isDefinedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "is defined by"@en .
 # 
 # https://matthiasprobst.github.io/ssno#isStandardNameOf
 <https://matthiasprobst.github.io/ssno#isStandardNameOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -474,7 +474,7 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid40 .
 _:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid40 <http://www.w3.org/2002/07/owl#onProperty> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
+_:genid41 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isDefinedBy> .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://matthiasprobst.github.io/ssno#Qualification> <http://www.w3.org/2004/02/skos/core#definition> "A qualification derives an existing standard name by a rule. This may alter the units."@en .
@@ -522,7 +522,7 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid50 .
 _:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid50 <http://www.w3.org/2002/07/owl#onProperty> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn> .
+_:genid51 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isDefinedBy> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en .

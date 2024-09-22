@@ -162,19 +162,6 @@ ssno:contact rdf:type owl:ObjectProperty ;
              skos:prefLabel "contact"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#definesStandardNameModification
-ssno:definesStandardNameModification rdf:type owl:ObjectProperty ;
-                                     owl:inverseOf ssno:isStandardNameModificationDefinedIn ;
-                                     rdfs:domain ssno:StandardNameTable ;
-                                     rdfs:range [ rdf:type owl:Class ;
-                                                  owl:unionOf ( ssno:Qualification
-                                                                ssno:Transformation
-                                                              )
-                                                ] ;
-                                     skos:definition "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
-                                     skos:prefLabel "defines standard name modification"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
 ssno:hasCharacter rdf:type owl:ObjectProperty ;
                   rdfs:domain ssno:Transformation ;
@@ -198,16 +185,17 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      skos:prefLabel "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#isStandardNameModificationDefinedIn
-ssno:isStandardNameModificationDefinedIn rdf:type owl:ObjectProperty ;
-                                         rdfs:domain [ rdf:type owl:Class ;
-                                                       owl:unionOf ( ssno:Qualification
-                                                                     ssno:Transformation
-                                                                   )
-                                                     ] ;
-                                         rdfs:range ssno:StandardNameTable ;
-                                         skos:definition "Associates a Qualification or Transformation to a Standard Name Table"@en ;
-                                         skos:prefLabel "is standard name modification defined in"@en .
+###  https://matthiasprobst.github.io/ssno#isDefinedBy
+ssno:isDefinedBy rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ssno:hasModifier ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( ssno:Qualification
+                                             ssno:Transformation
+                                           )
+                             ] ;
+                 rdfs:range ssno:StandardNameTable ;
+                 skos:definition "Associates a Qualification or Transformation to a Standard Name Table"@en ;
+                 skos:prefLabel "is defined by"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
@@ -222,6 +210,18 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                                  ] ;
                       skos:definition "Points to a Concept, that describes a numerical variable, which uses the standard name."@en ;
                       skos:prefLabel "is standard name of"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#hasModifier
+ssno:hasModifier rdf:type owl:ObjectProperty ;
+              rdfs:domain ssno:StandardNameTable ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( ssno:Qualification
+                                         ssno:Transformation
+                                       )
+                         ] ;
+              skos:definition "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
+              skos:prefLabel "has modifier"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#positioned
@@ -472,7 +472,7 @@ ssno:CharacterRepresentation rdf:type owl:Class .
 ###  https://matthiasprobst.github.io/ssno#Qualification
 ssno:Qualification rdf:type owl:Class ;
                    owl:equivalentClass [ rdf:type owl:Restriction ;
-                                         owl:onProperty [ owl:inverseOf ssno:isStandardNameModificationDefinedIn
+                                         owl:onProperty [ owl:inverseOf ssno:isDefinedBy
                                                         ] ;
                                          owl:someValuesFrom ssno:StandardNameTable
                                        ] ;
@@ -524,7 +524,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#Transformation
 ssno:Transformation rdf:type owl:Class ;
                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                          owl:onProperty [ owl:inverseOf ssno:isStandardNameModificationDefinedIn
+                                          owl:onProperty [ owl:inverseOf ssno:isDefinedBy
                                                          ] ;
                                           owl:someValuesFrom ssno:StandardNameTable
                                         ] ;
