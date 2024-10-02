@@ -44,6 +44,10 @@ dcterms:created rdf:type owl:AnnotationProperty .
 dcterms:creator rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
@@ -170,6 +174,19 @@ ssno:hasCharacter rdf:type owl:ObjectProperty ;
                   skos:prefLabel "has character"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasModifier
+ssno:hasModifier rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ssno:isDefinedBy ;
+                 rdfs:domain ssno:StandardNameTable ;
+                 rdfs:range [ rdf:type owl:Class ;
+                              owl:unionOf ( ssno:Qualification
+                                            ssno:Transformation
+                                          )
+                            ] ;
+                 skos:definition "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
+                 skos:prefLabel "has modifier"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasStandardName
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
@@ -187,7 +204,6 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#isDefinedBy
 ssno:isDefinedBy rdf:type owl:ObjectProperty ;
-                 owl:inverseOf ssno:hasModifier ;
                  rdfs:domain [ rdf:type owl:Class ;
                                owl:unionOf ( ssno:Qualification
                                              ssno:Transformation
@@ -210,18 +226,6 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                                  ] ;
                       skos:definition "Points to a Concept, that describes a numerical variable, which uses the standard name."@en ;
                       skos:prefLabel "is standard name of"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#hasModifier
-ssno:hasModifier rdf:type owl:ObjectProperty ;
-              rdfs:domain ssno:StandardNameTable ;
-              rdfs:range [ rdf:type owl:Class ;
-                           owl:unionOf ( ssno:Qualification
-                                         ssno:Transformation
-                                       )
-                         ] ;
-              skos:definition "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
-              skos:prefLabel "has modifier"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#positioned
@@ -325,20 +329,6 @@ ssno:character rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
                skos:definition "A character i.e. a single letter or symbol"@en ;
                skos:prefLabel "character"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#description
-ssno:description rdf:type owl:DatatypeProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( ssno:StandardName
-                                             ssno:StandardNameModification
-                                             ssno:StandardNameTable
-                                           )
-                             ] ;
-                 rdfs:range xsd:string ;
-                 skos:closeMatch dcterms:description ;
-                 skos:definition "Description of a standard name, a standard name table, a qualification or a transformation."@en ;
-                 skos:prefLabel "description"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasPreposition
@@ -489,12 +479,14 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
+                  rdfs:comment "A standard name shall have a definition, which is human-readable description of what the standard name is. For this, please use skos:definition."@en ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
-                  skos:prefLabel "StandardName" .
+                  skos:prefLabel "StandardName"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
 ssno:StandardNameModification rdf:type owl:Class ;
+                              rdfs:comment "Please use skos:definition to provide a human-readable definition of the modification object."@en ;
                               skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                               skos:prefLabel "standard name modification"@en .
 
@@ -517,6 +509,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:someValuesFrom dcat:Dataset
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ;
+                       rdfs:comment "A standard name table shall have a human-readable description. Please use dcterms:description for this."@en ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:prefLabel "StandardNameTable" .
 

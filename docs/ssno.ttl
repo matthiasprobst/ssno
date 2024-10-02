@@ -35,6 +35,10 @@
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
@@ -163,6 +167,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#hasModifier
 :hasModifier rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isDefinedBy ;
              rdfs:domain :StandardNameTable ;
              rdfs:range [ rdf:type owl:Class ;
                           owl:unionOf ( :Qualification
@@ -190,7 +195,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#isDefinedBy
 :isDefinedBy rdf:type owl:ObjectProperty ;
-             owl:inverseOf :hasModifier ;
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :Qualification
                                          :Transformation
@@ -316,20 +320,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
            rdfs:range xsd:string ;
            <http://www.w3.org/2004/02/skos/core#definition> "A character i.e. a single letter or symbol"@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "character"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#description
-:description rdf:type owl:DatatypeProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :StandardName
-                                         :StandardNameModification
-                                         :StandardNameTable
-                                       )
-                         ] ;
-             rdfs:range xsd:string ;
-             <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/dc/terms/description> ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Description of a standard name, a standard name table, a qualification or a transformation."@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasPreposition
@@ -480,12 +470,14 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                    ] ;
                                     owl:someValuesFrom :StandardNameTable
                                   ] ;
+              rdfs:comment "A standard name shall have a definition, which is human-readable description of what the standard name is. For this, please use skos:definition."@en ;
               <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName" .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardName"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
 :StandardNameModification rdf:type owl:Class ;
+                          rdfs:comment "Please use skos:definition to provide a human-readable definition of the modification object."@en ;
                           <http://www.w3.org/2004/02/skos/core#definition> "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name modification"@en .
 
@@ -508,6 +500,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                          owl:someValuesFrom <http://www.w3.org/ns/dcat#Dataset>
                                        ] ;
                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
+                   rdfs:comment "A standard name table shall have a human-readable description. Please use dcterms:description for this."@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
 

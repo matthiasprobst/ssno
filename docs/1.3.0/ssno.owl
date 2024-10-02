@@ -58,6 +58,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
 
@@ -267,6 +274,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasModifier">
+        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range>
             <owl:Class>
@@ -308,7 +316,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isDefinedBy">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#hasModifier"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -502,27 +509,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">A character i.e. a single letter or symbol</skos:definition>
         <skos:prefLabel xml:lang="en">character</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#description -->
-
-
-    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#description">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <skos:closeMatch rdf:resource="http://purl.org/dc/terms/description"/>
-        <skos:definition xml:lang="en">Description of a standard name, a standard name table, a qualification or a transformation.</skos:definition>
-        <skos:prefLabel xml:lang="en">description</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -768,8 +754,9 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A standard name shall have a definition, which is human-readable description of what the standard name is. For this, please use skos:definition.</rdfs:comment>
         <skos:definition xml:lang="en">A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table.</skos:definition>
-        <skos:prefLabel>StandardName</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">StandardName</skos:prefLabel>
     </owl:Class>
     
 
@@ -778,6 +765,7 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification">
+        <rdfs:comment xml:lang="en">Please use skos:definition to provide a human-readable definition of the modification object.</rdfs:comment>
         <skos:definition xml:lang="en">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name modification</skos:prefLabel>
     </owl:Class>
@@ -819,6 +807,7 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">A standard name table shall have a human-readable description. Please use dcterms:description for this.</rdfs:comment>
         <skos:definition xml:lang="en">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</skos:definition>
         <skos:prefLabel>StandardNameTable</skos:prefLabel>
     </owl:Class>
