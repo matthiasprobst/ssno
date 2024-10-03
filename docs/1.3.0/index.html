@@ -235,10 +235,6 @@ This ontology has the following classes and properties.</span>
       <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a>
    </li>
    <li>
-      <a href="#canonicalUnits"
-         title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a>
-   </li>
-   <li>
       <a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a>
    </li>
    <li>
@@ -281,6 +277,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#standardNames"
          title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a>
+   </li>
+   <li>
+      <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a>
    </li>
    <li>
       <a href="#usesStandardNameTable"
@@ -798,7 +797,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#canonicalUnits" title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a> <sup class="type-op" title="object property">op</sup>, <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>, <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -897,7 +896,7 @@ This section provides details for each class and property defined by SSNO.
     is in range of
    </dt>
    <dd>
-    <a href="#canonicalUnits" title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -943,7 +942,6 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent">agent</a></li>
   <li><a href="#associatedWith" title="https://matthiasprobst.github.io/ssno#associatedWith">associated with</a></li>
   <li><a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a></li>
-  <li><a href="#canonicalUnits" title="https://matthiasprobst.github.io/ssno#canonicalUnits">canonical units</a></li>
   <li><a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a></li>
   <li><a href="#hasCharacter" title="https://matthiasprobst.github.io/ssno#hasCharacter">has character</a></li>
   <li><a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a></li>
@@ -956,6 +954,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a></li>
   <li><a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a></li>
   <li><a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a></li>
+  <li><a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a></li>
   <li><a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a></li>
   <li><a href="#http://www.w3.org/ns/prov#wasRoleIn" title="http://www.w3.org/ns/prov#wasRoleIn">was role in</a></li>
  </ul>
@@ -1061,29 +1060,6 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="canonicalUnits">
-  <h3>canonical units<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#canonicalUnits</p>
-  <div class="comment">
-   <span class="markdown">The canonical unit of the standard name</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1409,6 +1385,29 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="unit">
+  <h3>unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#unit</p>
+  <div class="comment">
+   <span class="markdown">The unit of the standard name. The unit of an individual standard name must be convertable to this unit.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>

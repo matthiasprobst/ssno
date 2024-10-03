@@ -165,16 +165,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
         <http://www.w3.org/2004/02/skos/core#prefLabel> "before"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#canonicalUnits
-:canonicalUnits rdf:type owl:ObjectProperty ;
-                rdfs:domain :StandardName ;
-                rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-                rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-                <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> ;
-                <http://www.w3.org/2004/02/skos/core#definition> "The canonical unit of the standard name"@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "canonical units"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
 :hasCharacter rdf:type owl:ObjectProperty ;
               rdfs:domain :Transformation ;
@@ -273,6 +263,15 @@ owl:sameas rdf:type owl:AnnotationProperty .
                rdfs:range :StandardName ;
                <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more standard names defined in a standard name table."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#unit
+:unit rdf:type owl:ObjectProperty ;
+      rdfs:domain :StandardName ;
+      rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+      <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+      <http://www.w3.org/2004/02/skos/core#definition> "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "unit"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
@@ -566,7 +565,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                     owl:someValuesFrom :StandardNameTable
                                   ] ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty :canonicalUnits ;
+                                owl:onProperty :unit ;
                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass <http://qudt.org/schema/qudt/Unit>
                               ] ,

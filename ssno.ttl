@@ -174,16 +174,6 @@ ssno:before rdf:type owl:ObjectProperty ;
             skos:prefLabel "before"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#canonicalUnits
-ssno:canonicalUnits rdf:type owl:ObjectProperty ;
-                    rdfs:domain ssno:StandardName ;
-                    rdfs:range qudt:Unit ;
-                    rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-                    skos:closeMatch qudt:unit ;
-                    skos:definition "The canonical unit of the standard name"@en ;
-                    skos:prefLabel "canonical units"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
 ssno:hasCharacter rdf:type owl:ObjectProperty ;
                   rdfs:domain ssno:Transformation ;
@@ -282,6 +272,15 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:range ssno:StandardName ;
                    skos:definition "Points to one or more standard names defined in a standard name table."@en ;
                    skos:prefLabel "standard names"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#unit
+ssno:unit rdf:type owl:ObjectProperty ;
+          rdfs:domain ssno:StandardName ;
+          rdfs:range qudt:Unit ;
+          skos:closeMatch <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+          skos:definition "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
+          skos:prefLabel "unit"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
@@ -575,7 +574,7 @@ ssno:StandardName rdf:type owl:Class ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty ssno:canonicalUnits ;
+                                    owl:onProperty ssno:unit ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass qudt:Unit
                                   ] ,

@@ -27,9 +27,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.3095538"
-     inkscape:cx="514.67912"
-     inkscape:cy="283.68441"
+     inkscape:zoom="5.2382152"
+     inkscape:cx="365.96435"
+     inkscape:cy="275.38006"
      inkscape:window-width="1920"
      inkscape:window-height="1129"
      inkscape:window-x="-8"
@@ -571,21 +571,21 @@
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect6"
-       width="36.001431"
+       width="14.080005"
        height="6.0811768"
-       x="90.49408"
+       x="95.785744"
        y="70.629158" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-       x="93.547081"
+       x="98.838745"
        y="75.017731"
        id="text6"><tspan
          sodipodi:role="line"
          id="tspan6"
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
-         x="93.547081"
-         y="75.017731">canonicalUnits</tspan></text>
+         x="98.838745"
+         y="75.017731">unit</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3-6-1-0"
