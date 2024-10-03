@@ -133,6 +133,7 @@ This is an ontology draft for the usage of standard names as a simple way of des
 <tr><td><b>schema</b></td><td>&lt;https://schema.org/&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
 <tr><td><b>ssno</b></td><td>&lt;https://matthiasprobst.github.io/ssno#&gt;</td></tr>
+<tr><td><b>unit</b></td><td>&lt;https://qudt.org/vocab/unit/&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
@@ -303,7 +304,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#description"
-         title="https://matthiasprobst.github.io/ssno#description">description</a>
+         title="https://matthiasprobst.github.io/ssno#description">
+         <span>description</span>
+      </a>
    </li>
    <li>
       <a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a>
@@ -789,10 +792,6 @@ This section provides details for each class and property defined by SSNO.
    <dd>
     <span class="logic">inverse</span> <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
-   <dt>
-    has super-classes
-   </dt>
-   <dd></dd>
    <dt>
     is in domain of
    </dt>
@@ -1396,6 +1395,7 @@ This section provides details for each class and property defined by SSNO.
    <span class="markdown">The unit of the standard name. The unit of an individual standard name must be convertable to this unit.</span>
   </div>
   <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
    <dl>
     <dt>
      has domain
@@ -1464,7 +1464,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#altersUnit" title="https://matthiasprobst.github.io/ssno#altersUnit">alters unit</a></li>
   <li><a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a></li>
   <li><a href="#character" title="https://matthiasprobst.github.io/ssno#character">character</a></li>
-  <li><a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a></li>
+  <li><a href="#description" title="https://matthiasprobst.github.io/ssno#description"> <span>description</span> </a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#orcidId" title="http://w3id.org/nfdi4ing/metadata4ing#orcidId">has ORCID ID</a></li>
   <li><a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID" title="http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID">has project ID</a></li>
@@ -1559,9 +1559,6 @@ This section provides details for each class and property defined by SSNO.
  <div class="entity" id="description">
   <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#description</p>
-  <div class="comment">
-   <span class="markdown">Description of a standard name, a standard name table, a qualification or a transformation.</span>
-  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1574,7 +1571,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a> <span class="logic">or</span> <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -1934,9 +1931,6 @@ This section provides details for each class and property defined by SSNO.
  <div class="entity" id="AnyStandardName">
   <h3>Any Standard Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#AnyStandardName</p>
-  <div class="comment">
-   <span class="markdown">A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.</span>
-  </div>
   <dl class="description">
    <dt>
     belongs to
@@ -1948,7 +1942,13 @@ This section provides details for each class and property defined by SSNO.
     has facts
    </dt>
    <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en</span>
+    <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup> <a href="https://qudt.org/vocab/unit/UNITLESS" target="_blank" title="https://qudt.org/vocab/unit/UNITLESS">U N I T L E S S</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en</span>
+   </dd>
+   <dd>
+    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ein generischer Standardname um Qualifications in Relation zu setzen."@de</span>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Any Standard Name"@en</span>

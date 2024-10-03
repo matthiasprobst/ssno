@@ -43,10 +43,10 @@
         "value" : "https://creativecommons.org/licenses/by/4.0/",
         "type" : "iri"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "https://matthiasprobst.github.io/ssno#",
+        "value" : "v1.3.0",
         "type" : "label"
       } ],
       "abstract" : [ {
@@ -55,10 +55,10 @@
         "value" : "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable.",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "v1.3.0",
+        "value" : "https://matthiasprobst.github.io/ssno#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -77,7 +77,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "12",
@@ -86,7 +86,7 @@
     "id" : "13",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
+    "id" : "10",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "14",
@@ -104,14 +104,17 @@
     "id" : "24",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "30",
+    "id" : "29",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "31",
+    "id" : "30",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "32",
+    "id" : "31",
     "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "37",
     "type" : "rdfs:Datatype"
@@ -119,31 +122,28 @@
     "id" : "38",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "39",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "5",
+    "id" : "8",
     "type" : "owl:unionOf"
   }, {
-    "id" : "43",
+    "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "44",
+    "id" : "43",
     "type" : "owl:unionOf"
   }, {
     "id" : "27",
     "type" : "owl:unionOf"
   }, {
-    "id" : "48",
+    "id" : "47",
     "type" : "owl:unionOf"
   }, {
-    "id" : "33",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "50",
+    "id" : "49",
     "type" : "owl:unionOf"
   }, {
-    "id" : "51",
+    "id" : "50",
     "type" : "owl:unionOf"
   }, {
     "id" : "20",
@@ -152,31 +152,31 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "67",
+    "id" : "66",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "68",
+    "id" : "67",
     "type" : "owl:Thing"
   }, {
-    "id" : "55",
+    "id" : "70",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "29",
+    "id" : "54",
     "type" : "rdfs:Datatype"
-  }, {
-    "id" : "36",
-    "type" : "owl:Thing"
   }, {
     "id" : "71",
-    "type" : "rdfs:Datatype"
+    "type" : "rdfs:Literal"
   }, {
-    "id" : "7",
+    "id" : "35",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "owl:Class"
   }, {
     "id" : "76",
@@ -185,37 +185,37 @@
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "45",
+    "id" : "44",
     "type" : "owl:Class"
   }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "42",
-    "type" : "owl:Class"
-  }, {
-    "id" : "81",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "8",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "17",
-    "type" : "owl:Class"
-  }, {
-    "id" : "53",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "41",
     "type" : "owl:Class"
   }, {
+    "id" : "81",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "5",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "49",
+    "id" : "48",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -277,7 +277,7 @@
       "IRI-based" : "Unit"
     },
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "11"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -295,7 +295,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "10",
     "label" : {
       "IRI-based" : "string"
     }
@@ -315,7 +315,7 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "17", "4", "18" ],
+    "union" : [ "17", "7", "18" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "16"
   }, {
@@ -336,14 +336,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "30",
+    "id" : "29",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "31",
+    "id" : "30",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -364,8 +364,15 @@
       "IRI-based" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "32",
-    "superClasses" : [ "33" ]
+    "id" : "31",
+    "superClasses" : [ "32" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -381,17 +388,10 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "39",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
     "instances" : 0,
-    "union" : [ "40", "41", "1", "42" ],
+    "union" : [ "39", "40", "1", "41" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "5"
+    "id" : "8"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#Qualification",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -419,23 +419,23 @@
     "label" : {
       "IRI-based" : "Qualification"
     },
-    "id" : "43",
+    "id" : "42",
     "superClasses" : [ "17" ]
   }, {
     "instances" : 0,
-    "union" : [ "43", "45" ],
+    "union" : [ "42", "44" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "44"
+    "id" : "43"
   }, {
     "instances" : 0,
-    "union" : [ "46", "47" ],
+    "union" : [ "45", "46" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "27"
   }, {
     "instances" : 0,
-    "union" : [ "23", "46", "47" ],
+    "union" : [ "23", "45", "46" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "48"
+    "id" : "47"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -463,22 +463,22 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "32", "49" ],
+    "subClasses" : [ "31", "48" ],
     "attributes" : [ "external" ],
-    "id" : "33"
+    "id" : "32"
   }, {
     "instances" : 0,
-    "union" : [ "43", "4" ],
+    "union" : [ "42", "7" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "49"
+  }, {
+    "instances" : 0,
+    "union" : [ "39", "40", "1", "41" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "50"
   }, {
     "instances" : 0,
-    "union" : [ "40", "41", "1", "42" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "51"
-  }, {
-    "instances" : 0,
-    "union" : [ "43", "45" ],
+    "union" : [ "42", "44" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "20"
   }, {
@@ -503,10 +503,10 @@
       "IRI-based" : "StandardNameTable"
     },
     "id" : "18",
-    "superClasses" : [ "47" ]
+    "superClasses" : [ "46" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "67",
+    "id" : "66",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -514,37 +514,37 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "68",
+    "id" : "67",
     "label" : {
       "undefined" : "Thing"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "55",
+    "id" : "70",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
+    "id" : "54",
     "label" : {
       "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "36",
+    "id" : "35",
     "label" : {
       "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "71",
-    "label" : {
-      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#CharacterRepresentation",
@@ -553,7 +553,7 @@
     "label" : {
       "IRI-based" : "CharacterRepresentation"
     },
-    "id" : "7"
+    "id" : "4"
   }, {
     "iri" : "https://schema.org/Intangible",
     "baseIri" : "https://schema.org",
@@ -575,7 +575,7 @@
     "label" : {
       "IRI-based" : "Intangible"
     },
-    "subClasses" : [ "40", "41", "1" ],
+    "subClasses" : [ "39", "40", "1" ],
     "attributes" : [ "external" ],
     "id" : "2"
   }, {
@@ -612,7 +612,7 @@
       "IRI-based" : "NumericalVariable"
     },
     "attributes" : [ "external" ],
-    "id" : "40",
+    "id" : "39",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Role",
@@ -678,7 +678,7 @@
     "label" : {
       "IRI-based" : "Transformation"
     },
-    "id" : "45",
+    "id" : "44",
     "superClasses" : [ "17" ]
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#StandardName",
@@ -710,19 +710,13 @@
           "language" : "en",
           "value" : "Any Standard Name",
           "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.",
-          "type" : "label"
         } ]
       },
       "labels" : {
         "IRI-based" : "AnyStandardName"
       }
     } ],
-    "id" : "4"
+    "id" : "7"
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset",
     "baseIri" : "http://purl.allotrope.org/ontologies/hdf5/1.8",
@@ -751,17 +745,17 @@
       "IRI-based" : "Dataset"
     },
     "attributes" : [ "external" ],
-    "id" : "42"
+    "id" : "41"
   }, {
     "instances" : 0,
-    "union" : [ "43", "4" ],
+    "union" : [ "42", "7" ],
     "attributes" : [ "union", "anonymous" ],
     "id" : "81"
   }, {
     "instances" : 0,
-    "union" : [ "43", "4" ],
+    "union" : [ "42", "7" ],
     "attributes" : [ "union", "anonymous" ],
-    "id" : "8"
+    "id" : "5"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#StandardNameModification",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -783,7 +777,7 @@
     "label" : {
       "IRI-based" : "StandardNameModification"
     },
-    "subClasses" : [ "43", "45" ],
+    "subClasses" : [ "42", "44" ],
     "id" : "17"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Attribution",
@@ -807,7 +801,7 @@
       "IRI-based" : "Attribution"
     },
     "attributes" : [ "external" ],
-    "id" : "53"
+    "id" : "52"
   }, {
     "iri" : "http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue",
     "baseIri" : "http://www.molmod.info/semantics/pims-ii.ttl",
@@ -836,7 +830,7 @@
       "IRI-based" : "QuantityValue"
     },
     "attributes" : [ "external" ],
-    "id" : "41",
+    "id" : "40",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup",
@@ -866,7 +860,7 @@
       "IRI-based" : "rootGroup"
     },
     "attributes" : [ "external" ],
-    "id" : "46"
+    "id" : "45"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#Dataset",
     "baseIri" : "http://www.w3.org/ns/dcat",
@@ -896,7 +890,7 @@
     },
     "subClasses" : [ "18" ],
     "attributes" : [ "external" ],
-    "id" : "47"
+    "id" : "46"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Organization",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -913,8 +907,8 @@
       "IRI-based" : "Organization"
     },
     "attributes" : [ "external" ],
-    "id" : "49",
-    "superClasses" : [ "33" ]
+    "id" : "48",
+    "superClasses" : [ "32" ]
   } ],
   "property" : [ {
     "id" : "3",
@@ -923,7 +917,7 @@
     "id" : "6",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "9",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "19",
@@ -938,20 +932,23 @@
     "id" : "28",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
     "id" : "34",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "35",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "52",
+    "id" : "51",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "54",
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "56",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "57",
     "type" : "rdfs:SubClassOf"
@@ -966,24 +963,21 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "61",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "62",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "64",
+    "id" : "63",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "65",
+    "id" : "64",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "66",
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "69",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "70",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "72",
@@ -1013,7 +1007,7 @@
     "id" : "82",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "63",
+    "id" : "62",
     "type" : "owl:objectProperty"
   }, {
     "id" : "83",
@@ -1074,33 +1068,9 @@
     "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "5",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "is standard name of",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Points to a Concept, that describes a numerical variable, which uses the standard name.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isStandardNameOf"
-    },
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "3"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#associatedWith",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "8",
+    "range" : "5",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1118,13 +1088,37 @@
     "label" : {
       "IRI-based" : "associatedWith"
     },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "8",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "is standard name of",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to a Concept, that describes a numerical variable, which uses the standard name.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isStandardNameOf"
+    },
     "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "6"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#character",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "11",
+    "range" : "10",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1142,9 +1136,9 @@
     "label" : {
       "IRI-based" : "character"
     },
-    "domain" : "7",
+    "domain" : "4",
     "attributes" : [ "datatype" ],
-    "id" : "10"
+    "id" : "9"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasModifier",
     "inverse" : "21",
@@ -1221,7 +1215,7 @@
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardName",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "29",
+    "range" : "0",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1245,13 +1239,13 @@
     "label" : {
       "IRI-based" : "standardName"
     },
-    "domain" : "4",
+    "domain" : "7",
     "attributes" : [ "datatype" ],
     "id" : "28"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#version",
     "baseIri" : "http://www.w3.org/ns/dcat",
-    "range" : "31",
+    "range" : "30",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1272,11 +1266,11 @@
     "cardinality" : "1",
     "domain" : "18",
     "attributes" : [ "datatype", "external" ],
-    "id" : "34"
+    "id" : "33"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#identifier",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "37",
+    "range" : "36",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1288,13 +1282,13 @@
     "label" : {
       "IRI-based" : "identifier"
     },
-    "domain" : "36",
+    "domain" : "35",
     "attributes" : [ "datatype", "external" ],
-    "id" : "35"
+    "id" : "34"
   }, {
     "iri" : "http://www.w3.org/ns/prov#qualifiedAttribution",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "53",
+    "range" : "52",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1312,13 +1306,13 @@
     "label" : {
       "IRI-based" : "qualifiedAttribution"
     },
-    "domain" : "47",
+    "domain" : "46",
     "attributes" : [ "object", "external" ],
-    "id" : "52"
+    "id" : "51"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameCharacter",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "55",
+    "range" : "54",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1342,9 +1336,9 @@
     "label" : {
       "IRI-based" : "standardNameCharacter"
     },
-    "domain" : "45",
+    "domain" : "44",
     "attributes" : [ "datatype" ],
-    "id" : "54"
+    "id" : "53"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#ancillaryVariables",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -1366,38 +1360,38 @@
     "label" : {
       "IRI-based" : "ancillaryVariables"
     },
-    "domain" : "42",
+    "domain" : "41",
     "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "range" : "17",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "56"
   }, {
     "range" : "17",
-    "domain" : "45",
+    "domain" : "42",
     "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
-    "range" : "17",
-    "domain" : "43",
+    "range" : "46",
+    "domain" : "18",
     "attributes" : [ "object", "anonymous" ],
     "id" : "58"
   }, {
-    "range" : "47",
-    "domain" : "18",
+    "range" : "32",
+    "domain" : "48",
     "attributes" : [ "object", "anonymous" ],
     "id" : "59"
   }, {
-    "range" : "33",
-    "domain" : "49",
+    "range" : "32",
+    "domain" : "31",
     "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
-    "range" : "33",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "61"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#before",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "50",
+    "range" : "49",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1415,14 +1409,14 @@
     "label" : {
       "IRI-based" : "before"
     },
-    "superproperty" : [ "63" ],
-    "domain" : "43",
+    "superproperty" : [ "62" ],
+    "domain" : "42",
     "attributes" : [ "object", "transitive" ],
-    "id" : "62"
+    "id" : "61"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#longName",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "0",
+    "range" : "12",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1440,14 +1434,14 @@
     "label" : {
       "IRI-based" : "longName"
     },
-    "domain" : "42",
+    "domain" : "41",
     "attributes" : [ "datatype" ],
-    "id" : "64"
+    "id" : "63"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasStandardName",
-    "inverse" : "3",
+    "inverse" : "6",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1465,28 +1459,28 @@
     "label" : {
       "IRI-based" : "hasStandardName"
     },
-    "domain" : "51",
+    "domain" : "50",
     "attributes" : [ "object" ],
-    "id" : "65"
+    "id" : "64"
   }, {
     "range" : "2",
     "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "66"
-  }, {
-    "range" : "2",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "69"
+    "id" : "65"
   }, {
     "range" : "2",
     "domain" : "40",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "70"
+    "id" : "68"
+  }, {
+    "range" : "2",
+    "domain" : "39",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
   }, {
     "iri" : "https://schema.org/name",
     "baseIri" : "https://schema.org",
-    "range" : "71",
+    "range" : "70",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1510,7 +1504,7 @@
   }, {
     "iri" : "http://www.w3.org/ns/prov#agent",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "33",
+    "range" : "32",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1528,13 +1522,13 @@
     "label" : {
       "IRI-based" : "agent"
     },
-    "domain" : "53",
+    "domain" : "52",
     "attributes" : [ "object", "external" ],
     "id" : "73"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#orcidId",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "39",
+    "range" : "38",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1546,13 +1540,13 @@
     "label" : {
       "IRI-based" : "orcidId"
     },
-    "domain" : "32",
+    "domain" : "31",
     "attributes" : [ "datatype", "external" ],
     "id" : "74"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1576,7 +1570,7 @@
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#unit",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "9",
+    "range" : "11",
     "annotations" : {
       "closeMatch" : [ {
         "identifier" : "closeMatch",
@@ -1600,13 +1594,13 @@
     "label" : {
       "IRI-based" : "unit"
     },
-    "domain" : "4",
-    "attributes" : [ "object" ],
+    "domain" : "7",
+    "attributes" : [ "functional", "object" ],
     "id" : "77"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasRorId",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "67",
+    "range" : "66",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1624,14 +1618,14 @@
     "label" : {
       "IRI-based" : "hasRorId"
     },
-    "domain" : "49",
+    "domain" : "48",
     "attributes" : [ "datatype", "external" ],
     "id" : "78"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
     "inverse" : "26",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "48",
+    "range" : "47",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1673,14 +1667,14 @@
     "label" : {
       "IRI-based" : "after"
     },
-    "superproperty" : [ "63" ],
-    "domain" : "43",
+    "superproperty" : [ "62" ],
+    "domain" : "42",
     "attributes" : [ "object", "transitive" ],
     "id" : "80"
   }, {
     "iri" : "http://purl.org/dc/terms/identifier",
     "baseIri" : "http://purl.org/dc/terms",
-    "range" : "38",
+    "range" : "37",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -1707,7 +1701,7 @@
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#positioned",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "36",
+    "range" : "35",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1725,14 +1719,14 @@
     "label" : {
       "IRI-based" : "positioned"
     },
-    "domain" : "36",
-    "subproperty" : [ "62", "80" ],
+    "domain" : "35",
+    "subproperty" : [ "61", "80" ],
     "attributes" : [ "object", "transitive" ],
-    "id" : "63"
+    "id" : "62"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#altersUnit",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "30",
+    "range" : "29",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1756,7 +1750,7 @@
     "label" : {
       "IRI-based" : "altersUnit"
     },
-    "domain" : "45",
+    "domain" : "44",
     "attributes" : [ "datatype" ],
     "id" : "83"
   }, {
@@ -1780,8 +1774,8 @@
     "label" : {
       "IRI-based" : "isDefinedBy"
     },
-    "domain" : "43",
-    "attributes" : [ "object", "someValues" ],
+    "domain" : "42",
+    "attributes" : [ "someValues", "object" ],
     "id" : "84"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
@@ -1804,14 +1798,38 @@
     "label" : {
       "IRI-based" : "standardNames"
     },
-    "domain" : "4",
-    "attributes" : [ "object", "someValues" ],
+    "domain" : "7",
+    "attributes" : [ "someValues", "object" ],
     "id" : "85"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "45",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "uses standard name table",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usesStandardNameTable"
+    },
+    "domain" : "18",
+    "attributes" : [ "someValues", "object" ],
+    "id" : "86"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
     "inverse" : "75",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "4",
+    "range" : "7",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1830,8 +1848,8 @@
       "IRI-based" : "standardNameTable"
     },
     "domain" : "18",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "86"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "87"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -1854,31 +1872,7 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "18",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "87"
-  }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "47",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "uses standard name table",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "usesStandardNameTable"
-    },
-    "domain" : "18",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "88"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#isDefinedBy",
@@ -1901,8 +1895,8 @@
     "label" : {
       "IRI-based" : "isDefinedBy"
     },
-    "domain" : "45",
-    "attributes" : [ "object", "someValues" ],
+    "domain" : "44",
+    "attributes" : [ "someValues", "object" ],
     "id" : "89"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
@@ -1925,13 +1919,13 @@
     "label" : {
       "IRI-based" : "keyword"
     },
-    "domain" : "47",
+    "domain" : "46",
     "attributes" : [ "datatype", "external" ],
     "id" : "90"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasRoleIn",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "36",
+    "range" : "35",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1949,13 +1943,13 @@
     "label" : {
       "IRI-based" : "wasRoleIn"
     },
-    "domain" : "36",
+    "domain" : "35",
     "attributes" : [ "object", "external" ],
     "id" : "91"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasValidValues",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "12",
+    "range" : "13",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1973,7 +1967,7 @@
     "label" : {
       "IRI-based" : "hasValidValues"
     },
-    "domain" : "43",
+    "domain" : "42",
     "attributes" : [ "datatype" ],
     "id" : "92"
   }, {
@@ -1998,8 +1992,8 @@
     "label" : {
       "IRI-based" : "standardNameTableUsedBy"
     },
-    "domain" : "46",
-    "attributes" : [ "object", "someValues" ],
+    "domain" : "45",
+    "attributes" : [ "someValues", "object" ],
     "id" : "93"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
@@ -2023,13 +2017,13 @@
     "label" : {
       "IRI-based" : "standardNameTableUsedBy"
     },
-    "domain" : "47",
-    "attributes" : [ "object", "someValues" ],
+    "domain" : "46",
+    "attributes" : [ "someValues", "object" ],
     "id" : "94"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasCharacter",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "7",
+    "range" : "4",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -2047,33 +2041,13 @@
     "label" : {
       "IRI-based" : "hasCharacter"
     },
-    "domain" : "45",
+    "domain" : "44",
     "attributes" : [ "object" ],
     "id" : "95"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "15",
-    "annotations" : {
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://purl.org/dc/terms/description",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "description",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Description of a standard name, a standard name table, a qualification or a transformation.",
-        "type" : "label"
-      } ]
-    },
+    "range" : "71",
     "label" : {
       "IRI-based" : "description"
     },
@@ -2084,7 +2058,7 @@
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/mbox",
     "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "68",
+    "range" : "67",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2108,13 +2082,13 @@
     "label" : {
       "IRI-based" : "mbox"
     },
-    "domain" : "33",
+    "domain" : "32",
     "attributes" : [ "object", "external", "inverse functional" ],
     "id" : "97"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasPreposition",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "13",
+    "range" : "15",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -2138,7 +2112,7 @@
     "label" : {
       "IRI-based" : "hasPreposition"
     },
-    "domain" : "43",
+    "domain" : "42",
     "attributes" : [ "datatype" ],
     "id" : "98"
   }, {
@@ -2157,7 +2131,7 @@
     "label" : {
       "IRI-based" : "hadRole"
     },
-    "domain" : "53",
+    "domain" : "52",
     "attributes" : [ "object", "external" ],
     "id" : "99"
   }, {
@@ -2181,7 +2155,7 @@
     "label" : {
       "IRI-based" : "isDefinedBy"
     },
-    "domain" : "44",
+    "domain" : "43",
     "attributes" : [ "object" ],
     "id" : "21"
   }, {
@@ -2206,7 +2180,7 @@
     "label" : {
       "IRI-based" : "standardNameTable"
     },
-    "domain" : "4",
+    "domain" : "7",
     "attributes" : [ "object" ],
     "id" : "100"
   } ]

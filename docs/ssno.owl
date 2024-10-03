@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ssno="https://matthiasprobst.github.io/ssno#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://matthiasprobst.github.io/ssno#">
@@ -426,6 +427,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#unit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <skos:closeMatch rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#hasUnit"/>
@@ -611,10 +613,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <skos:closeMatch rdf:resource="http://purl.org/dc/terms/description"/>
-        <skos:definition xml:lang="en">Description of a standard name, a standard name table, a qualification or a transformation.</skos:definition>
-        <skos:prefLabel xml:lang="en">description</skos:prefLabel>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
     </owl:DatatypeProperty>
     
 
@@ -900,20 +906,6 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#unit"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table.</skos:definition>
         <skos:prefLabel>StandardName</skos:prefLabel>
     </owl:Class>
@@ -1049,9 +1041,18 @@
 
     <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyStandardName">
         <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <skos:definition xml:lang="en">A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.</skos:definition>
+        <unit rdf:resource="https://qudt.org/vocab/unit/UNITLESS"/>
+        <description xml:lang="en">A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.</description>
+        <description xml:lang="de">Ein generischer Standardname um Qualifications in Relation zu setzen.</description>
         <skos:prefLabel xml:lang="en">Any Standard Name</skos:prefLabel>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://qudt.org/vocab/unit/UNITLESS -->
+
+
+    <owl:NamedIndividual rdf:about="https://qudt.org/vocab/unit/UNITLESS"/>
 </rdf:RDF>
 
 
