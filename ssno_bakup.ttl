@@ -40,10 +40,6 @@ dcterms:abstract rdf:type owl:AnnotationProperty .
 dcterms:created rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
@@ -325,8 +321,6 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#identifier
 <http://w3id.org/nfdi4ing/metadata4ing#identifier> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain owl:Thing ;
-                                                   rdfs:range xsd:string ;
                                                    skos:prefLabel "identifier"@en .
 
 
