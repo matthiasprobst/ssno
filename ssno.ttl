@@ -137,7 +137,7 @@ foaf:mbox rdf:type owl:ObjectProperty ,
 ###  https://matthiasprobst.github.io/ssno#after
 ssno:after rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf ssno:positioned ;
-           rdf:type owl:TransitiveProperty ;
+           rdf:type owl:FunctionalProperty ;
            rdfs:domain ssno:Qualification ;
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( ssno:Qualification
@@ -163,7 +163,7 @@ ssno:associatedWith rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#before
 ssno:before rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf ssno:positioned ;
-            rdf:type owl:TransitiveProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:domain ssno:Qualification ;
             rdfs:range [ rdf:type owl:Class ;
                          owl:unionOf ( ssno:Qualification
@@ -583,8 +583,12 @@ ssno:StandardName rdf:type owl:Class ;
 ssno:StandardNameModification rdf:type owl:Class ;
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                 owl:onProperty ssno:description ;
-                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                owl:onDataRange xsd:string
+                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                  owl:unionOf ( rdfs:Literal
+                                                                                xsd:string
+                                                                              )
+                                                                ]
                                               ] ;
                               skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                               skos:prefLabel "standard name modification"@en .
@@ -609,13 +613,17 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty dcat:version ;
-                                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                                         owl:onProperty ssno:description ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                           owl:unionOf ( rdfs:Literal
+                                                                         xsd:string
+                                                                       )
+                                                         ]
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty ssno:description ;
-                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange xsd:string
+                                         owl:onProperty dcat:version ;
+                                         owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:prefLabel "StandardNameTable" .
