@@ -40,10 +40,6 @@ dcterms:abstract rdf:type owl:AnnotationProperty .
 dcterms:created rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/license
 dcterms:license rdf:type owl:AnnotationProperty .
 
@@ -137,7 +133,7 @@ foaf:mbox rdf:type owl:ObjectProperty ,
 ###  https://matthiasprobst.github.io/ssno#after
 ssno:after rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf ssno:positioned ;
-           rdf:type owl:FunctionalProperty ;
+           rdf:type owl:TransitiveProperty ;
            rdfs:domain ssno:Qualification ;
            rdfs:range [ rdf:type owl:Class ;
                         owl:unionOf ( ssno:Qualification
@@ -163,7 +159,7 @@ ssno:associatedWith rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#before
 ssno:before rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf ssno:positioned ;
-            rdf:type owl:FunctionalProperty ;
+            rdf:type owl:TransitiveProperty ;
             rdfs:domain ssno:Qualification ;
             rdfs:range [ rdf:type owl:Class ;
                          owl:unionOf ( ssno:Qualification
@@ -172,6 +168,16 @@ ssno:before rdf:type owl:ObjectProperty ;
                        ] ;
             skos:definition "Refers to another qualification to indicate the order. The qualification it points to is ordered after this one. It can also point to a standard name, which means that this qualification is used right before it."@en ;
             skos:prefLabel "before"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#canonicalUnits
+ssno:canonicalUnits rdf:type owl:ObjectProperty ;
+                    rdfs:domain ssno:StandardName ;
+                    rdfs:range qudt:Unit ;
+                    rdfs:seeAlso <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+                    skos:closeMatch qudt:unit ;
+                    skos:definition "The canonical unit of the standard name"@en ;
+                    skos:prefLabel "canonical units"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
@@ -274,16 +280,6 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
                    skos:prefLabel "standard names"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#unit
-ssno:unit rdf:type owl:ObjectProperty ,
-                   owl:FunctionalProperty ;
-          rdfs:domain ssno:StandardName ;
-          rdfs:range qudt:Unit ;
-          skos:closeMatch <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
-          skos:definition "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
-          skos:prefLabel "unit"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:domain [ rdf:type owl:Class ;
@@ -325,8 +321,6 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#identifier
 <http://w3id.org/nfdi4ing/metadata4ing#identifier> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain owl:Thing ;
-                                                   rdfs:range xsd:string ;
                                                    skos:prefLabel "identifier"@en .
 
 
@@ -396,11 +390,10 @@ ssno:description rdf:type owl:DatatypeProperty ;
                                              ssno:StandardNameTable
                                            )
                              ] ;
-                 rdfs:range [ rdf:type rdfs:Datatype ;
-                              owl:unionOf ( rdfs:Literal
-                                            xsd:string
-                                          )
-                            ] .
+                 rdfs:range xsd:string ;
+                 skos:closeMatch dcterms:description ;
+                 skos:definition "Description of a standard name, a standard name table, a qualification or a transformation."@en ;
+                 skos:prefLabel "description"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasPreposition
@@ -575,6 +568,16 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:canonicalUnits ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass qudt:Unit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:description ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "StandardName" .
 
@@ -583,12 +586,8 @@ ssno:StandardName rdf:type owl:Class ;
 ssno:StandardNameModification rdf:type owl:Class ;
                               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                 owl:onProperty ssno:description ;
-                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                                  owl:unionOf ( rdfs:Literal
-                                                                                xsd:string
-                                                                              )
-                                                                ]
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onDataRange xsd:string
                                               ] ;
                               skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                               skos:prefLabel "standard name modification"@en .
@@ -613,17 +612,13 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                            ] ;
                        rdfs:subClassOf dcat:Dataset ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty ssno:description ;
-                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                           owl:unionOf ( rdfs:Literal
-                                                                         xsd:string
-                                                                       )
-                                                         ]
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty dcat:version ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty ssno:description ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
                                        ] ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:prefLabel "StandardNameTable" .
@@ -660,14 +655,8 @@ schema:Project rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#AnyStandardName
 ssno:AnyStandardName rdf:type owl:NamedIndividual ,
                               ssno:StandardName ;
-                     ssno:unit <https://qudt.org/vocab/unit/UNITLESS> ;
-                     ssno:description "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en ,
-                                      "Ein generischer Standardname um Qualifications in Relation zu setzen."@de ;
+                     skos:definition "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en ;
                      skos:prefLabel "Any Standard Name"@en .
-
-
-###  https://qudt.org/vocab/unit/UNITLESS
-<https://qudt.org/vocab/unit/UNITLESS> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
