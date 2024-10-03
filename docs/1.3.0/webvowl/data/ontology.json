@@ -113,7 +113,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "35",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "37",
@@ -167,7 +167,7 @@
     "id" : "71",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "35",
+    "id" : "34",
     "type" : "owl:Thing"
   }, {
     "id" : "7",
@@ -369,7 +369,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
+    "id" : "35",
     "label" : {
       "IRI-based" : "string"
     }
@@ -542,7 +542,7 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "35",
+    "id" : "34",
     "label" : {
       "undefined" : "Thing"
     }
@@ -935,7 +935,7 @@
     "id" : "33",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "34",
+    "id" : "36",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "51",
@@ -1050,13 +1050,13 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "96",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "97",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "98",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "99",
     "type" : "owl:objectProperty"
@@ -1243,6 +1243,24 @@
     "attributes" : [ "datatype" ],
     "id" : "28"
   }, {
+    "iri" : "http://w3id.org/nfdi4ing/metadata4ing#identifier",
+    "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
+    "range" : "35",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "identifier",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier"
+    },
+    "domain" : "34",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "33"
+  }, {
     "iri" : "http://www.w3.org/ns/dcat#version",
     "baseIri" : "http://www.w3.org/ns/dcat",
     "range" : "30",
@@ -1266,25 +1284,7 @@
     "cardinality" : "1",
     "domain" : "18",
     "attributes" : [ "datatype", "external" ],
-    "id" : "33"
-  }, {
-    "iri" : "http://w3id.org/nfdi4ing/metadata4ing#identifier",
-    "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
-    "range" : "36",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "identifier",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "identifier"
-    },
-    "domain" : "35",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "34"
+    "id" : "36"
   }, {
     "iri" : "http://www.w3.org/ns/prov#qualifiedAttribution",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -1701,7 +1701,7 @@
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#positioned",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "35",
+    "range" : "34",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1719,7 +1719,7 @@
     "label" : {
       "IRI-based" : "positioned"
     },
-    "domain" : "35",
+    "domain" : "34",
     "subproperty" : [ "61", "80" ],
     "attributes" : [ "transitive", "object" ],
     "id" : "62"
@@ -1925,7 +1925,7 @@
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasRoleIn",
     "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "35",
+    "range" : "34",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1943,7 +1943,7 @@
     "label" : {
       "IRI-based" : "wasRoleIn"
     },
-    "domain" : "35",
+    "domain" : "34",
     "attributes" : [ "external", "object" ],
     "id" : "91"
   }, {
@@ -2045,15 +2045,34 @@
     "attributes" : [ "object" ],
     "id" : "95"
   }, {
-    "iri" : "https://matthiasprobst.github.io/ssno#description",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "71",
-    "label" : {
-      "IRI-based" : "description"
+    "iri" : "http://xmlns.com/foaf/0.1/mbox",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "67",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "mbox",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
+        "type" : "label"
+      } ]
     },
-    "minCardinality" : "1",
-    "domain" : "16",
-    "attributes" : [ "datatype" ],
+    "label" : {
+      "IRI-based" : "mbox"
+    },
+    "domain" : "32",
+    "attributes" : [ "inverse functional", "external", "object" ],
     "id" : "96"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasPreposition",
@@ -2086,34 +2105,15 @@
     "attributes" : [ "datatype" ],
     "id" : "97"
   }, {
-    "iri" : "http://xmlns.com/foaf/0.1/mbox",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "67",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "mbox",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
-        "type" : "label"
-      } ]
-    },
+    "iri" : "https://matthiasprobst.github.io/ssno#description",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "71",
     "label" : {
-      "IRI-based" : "mbox"
+      "IRI-based" : "description"
     },
-    "domain" : "32",
-    "attributes" : [ "inverse functional", "external", "object" ],
+    "minCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
     "id" : "98"
   }, {
     "iri" : "http://www.w3.org/ns/prov#hadRole",
