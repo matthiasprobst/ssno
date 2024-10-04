@@ -794,13 +794,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -837,13 +837,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>, <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#associatedWith" title="https://matthiasprobst.github.io/ssno#associatedWith">associated with</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#associatedWith" title="https://matthiasprobst.github.io/ssno#associatedWith">associated with</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     has members
@@ -1036,6 +1036,18 @@ This section provides details for each class and property defined by SSNO.
    </dt>
    <dd>
     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -1424,7 +1436,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ScalarStandardName" title="https://matthiasprobst.github.io/ssno#ScalarStandardName">Scalar Standard Name</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#VectorStandardName" title="https://matthiasprobst.github.io/ssno#VectorStandardName">Vector Standard Name</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1474,7 +1486,7 @@ This section provides details for each class and property defined by SSNO.
   <h3>standard names<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardNames</p>
   <div class="comment">
-   <span class="markdown">Points to one or more standard names defined in a standard name table.</span>
+   <span class="markdown">Points to one or more scalar or vector standard names defined in a standard name table.</span>
   </div>
   <div class="description">
    <dl>
@@ -1488,7 +1500,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ScalarStandardName" title="https://matthiasprobst.github.io/ssno#ScalarStandardName">Scalar Standard Name</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#VectorStandardName" title="https://matthiasprobst.github.io/ssno#VectorStandardName">Vector Standard Name</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of

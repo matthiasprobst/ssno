@@ -382,7 +382,14 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTable">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#VectorStandardName"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Points to the ssno:StandardNameTable defining the ssno:StandardName.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
@@ -416,8 +423,15 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNames">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <skos:definition xml:lang="en">Points to one or more standard names defined in a standard name table.</skos:definition>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#VectorStandardName"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:definition xml:lang="en">Points to one or more scalar or vector standard names defined in a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">standard names</skos:prefLabel>
     </owl:ObjectProperty>
     

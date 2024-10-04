@@ -70,7 +70,7 @@
     "positioned" : {"@id" : "ssno:positioned"},
     "standard name table" : {"@id" : "ssno:standardNameTable", "@type" : "ssno:StandardNameTable"},
     "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy"},
-    "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
+    "standard names" : {"@id" : "ssno:standardNames"},
     "unit" : {"@id" : "ssno:unit", "@type" : "qudt:Unit"},
     "uses standard name table" : {"@id" : "ssno:usesStandardNameTable", "@type" : "ssno:StandardNameTable"},
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:string"},

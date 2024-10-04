@@ -246,7 +246,11 @@ ssno:positioned rdf:type owl:ObjectProperty ,
 ###  https://matthiasprobst.github.io/ssno#standardNameTable
 ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        owl:inverseOf ssno:standardNames ;
-                       rdfs:domain ssno:StandardName ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( ssno:ScalarStandardName
+                                                   ssno:VectorStandardName
+                                                 )
+                                   ] ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
                        skos:prefLabel "standard name table"@en .
@@ -269,8 +273,12 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#standardNames
 ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
-                   rdfs:range ssno:StandardName ;
-                   skos:definition "Points to one or more standard names defined in a standard name table."@en ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( ssno:ScalarStandardName
+                                              ssno:VectorStandardName
+                                            )
+                              ] ;
+                   skos:definition "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
                    skos:prefLabel "standard names"@en .
 
 

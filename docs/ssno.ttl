@@ -237,7 +237,11 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#standardNameTable
 :standardNameTable rdf:type owl:ObjectProperty ;
                    owl:inverseOf :standardNames ;
-                   rdfs:domain :StandardName ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :ScalarStandardName
+                                               :VectorStandardName
+                                             )
+                               ] ;
                    rdfs:range :StandardNameTable ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
@@ -260,8 +264,12 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#standardNames
 :standardNames rdf:type owl:ObjectProperty ;
                rdfs:domain :StandardNameTable ;
-               rdfs:range :StandardName ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more standard names defined in a standard name table."@en ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :ScalarStandardName
+                                          :VectorStandardName
+                                        )
+                          ] ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
 
 
