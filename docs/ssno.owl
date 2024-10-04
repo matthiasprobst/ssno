@@ -1006,6 +1006,13 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#hasModifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://matthiasprobst.github.io/ssno#VectorQualification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange>
@@ -1047,6 +1054,18 @@
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
         <skos:definition xml:lang="en">A transfromation is a phrase which may be added to the standard name without changing its unit.</skos:definition>
         <skos:prefLabel xml:lang="en">Transformation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#VectorQualification -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#VectorQualification">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <rdfs:comment xml:lang="en">A vector component qualification holding values like &quot;x&quot;, &quot;y&quot; and &quot;z&quot; can modify vector standard names like &quot;velocity&quot; but not scalar standard names like &quot;pressure&quot;.</rdfs:comment>
+        <skos:definition xml:lang="en">Special Qualification accounting for Vector Standard Names. Only one such Qualification must exist at max in a StandardNameTable</skos:definition>
+        <skos:prefLabel xml:lang="en">Vector Qualification</skos:prefLabel>
     </owl:Class>
     
 
@@ -1101,19 +1120,6 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#AnyScalarStandardName -->
-
-
-    <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyScalarStandardName">
-        <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
-        <unit rdf:resource="https://matthiasprobst.github.io/ssno#AnyUnit"/>
-        <description xml:lang="en">A generic Scalar Standard Name. Intended to be used to refer to any Scalar Standard Name, e.g. by relating the position of a qualification to it.</description>
-        <description xml:lang="de">Ein generischer skalarer Standardname um Qualifications in Relation zu setzen.</description>
-        <skos:prefLabel xml:lang="en">Any Scalar Standard Name</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://matthiasprobst.github.io/ssno#AnyStandardName -->
 
 
@@ -1134,19 +1140,6 @@
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <skos:definition xml:lang="en">Representing any physical unit.</skos:definition>
         <skos:prefLabel xml:lang="en">any unit</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://matthiasprobst.github.io/ssno#AnyVectorStandardName -->
-
-
-    <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyVectorStandardName">
-        <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#VectorStandardName"/>
-        <unit rdf:resource="https://matthiasprobst.github.io/ssno#AnyUnit"/>
-        <description xml:lang="en">A generic Vector Standard Name. Intended to be used to refer to any Vector Standard Name, e.g. by relating the position of a qualification to it.</description>
-        <description xml:lang="de">Ein generischer vektorieller Standardname um Qualifications in Relation zu setzen.</description>
-        <skos:prefLabel xml:lang="en">Any Vector Standard Name</skos:prefLabel>
     </owl:NamedIndividual>
 </rdf:RDF>
 

@@ -223,6 +223,10 @@ This ontology has the following classes and properties.</span>
          title="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895">Variable</a>
    </li>
    <li>
+      <a href="#VectorQualification"
+         title="https://matthiasprobst.github.io/ssno#VectorQualification">Vector Qualification</a>
+   </li>
+   <li>
       <a href="#VectorStandardName"
          title="https://matthiasprobst.github.io/ssno#VectorStandardName">Vector Standard Name</a>
    </li>
@@ -363,19 +367,11 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#AnyScalarStandardName"
-         title="https://matthiasprobst.github.io/ssno#AnyScalarStandardName">Any Scalar Standard Name</a>
-   </li>
-   <li>
       <a href="#AnyStandardName"
          title="https://matthiasprobst.github.io/ssno#AnyStandardName">Any Standard Name</a>
    </li>
    <li>
       <a href="#AnyUnit" title="https://matthiasprobst.github.io/ssno#AnyUnit">any unit</a>
-   </li>
-   <li>
-      <a href="#AnyVectorStandardName"
-         title="https://matthiasprobst.github.io/ssno#AnyVectorStandardName">Any Vector Standard Name</a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
 </div>
@@ -413,6 +409,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a></li>
   <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
   <li><a href="#http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895" title="http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895">Variable</a></li>
+  <li><a href="#VectorQualification" title="https://matthiasprobst.github.io/ssno#VectorQualification">Vector Qualification</a></li>
   <li><a href="#VectorStandardName" title="https://matthiasprobst.github.io/ssno#VectorStandardName">Vector Standard Name</a></li>
  </ul>
  <div class="entity" id="http://www.w3.org/ns/prov#Agent">
@@ -711,6 +708,12 @@ This section provides details for each class and property defined by SSNO.
     <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#VectorQualification" title="https://matthiasprobst.github.io/ssno#VectorQualification">Vector Qualification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     is in domain of
    </dt>
    <dd>
@@ -798,12 +801,6 @@ This section provides details for each class and property defined by SSNO.
    </dt>
    <dd>
     <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    has members
-   </dt>
-   <dd>
-    <a href="#AnyScalarStandardName" title="https://matthiasprobst.github.io/ssno#AnyScalarStandardName">Any Scalar Standard Name</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
@@ -1009,6 +1006,24 @@ This section provides details for each class and property defined by SSNO.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="VectorQualification">
+  <h3>Vector Qualification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#VectorQualification</p>
+  <div class="comment">
+   <span class="markdown">A vector component qualification holding values like "x", "y" and "z" can modify vector standard names like "velocity" but not scalar standard names like "pressure".</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Special Qualification accounting for Vector Standard Names. Only one such Qualification must exist at max in a StandardNameTable</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="VectorStandardName">
   <h3>Vector Standard Name<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#VectorStandardName</p>
@@ -1021,12 +1036,6 @@ This section provides details for each class and property defined by SSNO.
    </dt>
    <dd>
     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has members
-   </dt>
-   <dd>
-    <a href="#AnyVectorStandardName" title="https://matthiasprobst.github.io/ssno#AnyVectorStandardName">Any Vector Standard Name</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dt>
     is disjoint with
@@ -2028,38 +2037,9 @@ This section provides details for each class and property defined by SSNO.
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#AnyScalarStandardName" title="https://matthiasprobst.github.io/ssno#AnyScalarStandardName">Any Scalar Standard Name</a></li>
   <li><a href="#AnyStandardName" title="https://matthiasprobst.github.io/ssno#AnyStandardName">Any Standard Name</a></li>
   <li><a href="#AnyUnit" title="https://matthiasprobst.github.io/ssno#AnyUnit">any unit</a></li>
-  <li><a href="#AnyVectorStandardName" title="https://matthiasprobst.github.io/ssno#AnyVectorStandardName">Any Vector Standard Name</a></li>
  </ul>
- <div class="entity" id="AnyScalarStandardName">
-  <h3>Any Scalar Standard Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#AnyScalarStandardName</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#ScalarStandardName" title="https://matthiasprobst.github.io/ssno#ScalarStandardName">Scalar Standard Name</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup> <a href="#AnyUnit" title="https://matthiasprobst.github.io/ssno#AnyUnit">any unit</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"A generic Scalar Standard Name. Intended to be used to refer to any Scalar Standard Name, e.g. by relating the position of a qualification to it."@en</span>
-   </dd>
-   <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ein generischer skalarer Standardname um Qualifications in Relation zu setzen."@de</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Any Scalar Standard Name"@en</span>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="AnyStandardName">
   <h3>Any Standard Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#AnyStandardName</p>
@@ -2108,33 +2088,6 @@ This section provides details for each class and property defined by SSNO.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"any unit"@en</span>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="AnyVectorStandardName">
-  <h3>Any Vector Standard Name<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#AnyVectorStandardName</p>
-  <dl class="description">
-   <dt>
-    belongs to
-   </dt>
-   <dd>
-    <a href="#VectorStandardName" title="https://matthiasprobst.github.io/ssno#VectorStandardName">Vector Standard Name</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has facts
-   </dt>
-   <dd>
-    <a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a> <sup class="type-op" title="object property">op</sup> <a href="#AnyUnit" title="https://matthiasprobst.github.io/ssno#AnyUnit">any unit</a> <sup class="type-ni" title="named individual">ni</sup>
-   </dd>
-   <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"A generic Vector Standard Name. Intended to be used to refer to any Vector Standard Name, e.g. by relating the position of a qualification to it."@en</span>
-   </dd>
-   <dd>
-    <a href="#description" title="https://matthiasprobst.github.io/ssno#description">description</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Ein generischer vektorieller Standardname um Qualifications in Relation zu setzen."@de</span>
-   </dd>
-   <dd>
-    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Any Vector Standard Name"@en</span>
    </dd>
   </dl>
  </div>

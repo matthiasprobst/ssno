@@ -50,6 +50,7 @@
     "standard name modification" : {"@id" : "ssno:StandardNameModification"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "Transformation" : {"@id" : "ssno:Transformation"},
+    "Vector Qualification" : {"@id" : "ssno:VectorQualification"},
     "Vector Standard Name" : {"@id" : "ssno:VectorStandardName"},
     "Intangible" : {"@id" : "schema:Intangible"},
     "Project" : {"@id" : "schema:Project"},
@@ -88,9 +89,7 @@
     "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"},
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
-    "Any Scalar Standard Name" : {"@id" : "ssno:AnyScalarStandardName"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
-    "any unit" : {"@id" : "ssno:AnyUnit"},
-    "Any Vector Standard Name" : {"@id" : "ssno:AnyVectorStandardName"}
+    "any unit" : {"@id" : "ssno:AnyUnit"}
   }
 }

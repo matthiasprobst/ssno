@@ -636,44 +636,56 @@ _:genid65 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.gith
 _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
-_:genid66 <http://www.w3.org/2002/07/owl#onDataRange> _:genid67 .
-_:genid67 <http://www.w3.org/2002/07/owl#unionOf> _:genid69 .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-_:genid66 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#description> .
+_:genid66 <http://www.w3.org/2002/07/owl#onClass> <https://matthiasprobst.github.io/ssno#VectorQualification> .
+_:genid66 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#hasModifier> .
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
-_:genid70 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#version> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/2002/07/owl#onDataRange> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#unionOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid67 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#description> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#version> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "StandardNameTable" .
 # 
 # https://matthiasprobst.github.io/ssno#Transformation
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid71 .
-_:genid71 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-_:genid71 <http://www.w3.org/2002/07/owl#onProperty> _:genid72 .
-_:genid72 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isDefinedBy> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid72 .
+_:genid72 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isDefinedBy> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardNameModification> .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en .
 <https://matthiasprobst.github.io/ssno#Transformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .
 # 
+# https://matthiasprobst.github.io/ssno#VectorQualification
+<https://matthiasprobst.github.io/ssno#VectorQualification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#VectorQualification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#Qualification> .
+<https://matthiasprobst.github.io/ssno#VectorQualification> <http://www.w3.org/2000/01/rdf-schema#comment> "A vector component qualification holding values like \"x\", \"y\" and \"z\" can modify vector standard names like \"velocity\" but not scalar standard names like \"pressure\"."@en .
+<https://matthiasprobst.github.io/ssno#VectorQualification> <http://www.w3.org/2004/02/skos/core#definition> "Special Qualification accounting for Vector Standard Names. Only one such Qualification must exist at max in a StandardNameTable"@en .
+<https://matthiasprobst.github.io/ssno#VectorQualification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vector Qualification"@en .
+# 
 # https://matthiasprobst.github.io/ssno#VectorStandardName
 <https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://matthiasprobst.github.io/ssno#StandardName> .
-<https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
-_:genid73 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
-_:genid73 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#unit> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
+_:genid74 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#unit> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/2004/02/skos/core#definition> "A standard name associated with vector data."@en .
 <https://matthiasprobst.github.io/ssno#VectorStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vector Standard Name"@en .
 # 
@@ -696,14 +708,6 @@ _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# https://matthiasprobst.github.io/ssno#AnyScalarStandardName
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://matthiasprobst.github.io/ssno#ScalarStandardName> .
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <https://matthiasprobst.github.io/ssno#unit> <https://matthiasprobst.github.io/ssno#AnyUnit> .
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <https://matthiasprobst.github.io/ssno#description> "A generic Scalar Standard Name. Intended to be used to refer to any Scalar Standard Name, e.g. by relating the position of a qualification to it."@en .
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <https://matthiasprobst.github.io/ssno#description> "Ein generischer skalarer Standardname um Qualifications in Relation zu setzen."@de .
-<https://matthiasprobst.github.io/ssno#AnyScalarStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Any Scalar Standard Name"@en .
-# 
 # https://matthiasprobst.github.io/ssno#AnyStandardName
 <https://matthiasprobst.github.io/ssno#AnyStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://matthiasprobst.github.io/ssno#AnyStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://matthiasprobst.github.io/ssno#StandardName> .
@@ -717,13 +721,5 @@ _:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#AnyUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
 <https://matthiasprobst.github.io/ssno#AnyUnit> <http://www.w3.org/2004/02/skos/core#definition> "Representing any physical unit."@en .
 <https://matthiasprobst.github.io/ssno#AnyUnit> <http://www.w3.org/2004/02/skos/core#prefLabel> "any unit"@en .
-# 
-# https://matthiasprobst.github.io/ssno#AnyVectorStandardName
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://matthiasprobst.github.io/ssno#VectorStandardName> .
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <https://matthiasprobst.github.io/ssno#unit> <https://matthiasprobst.github.io/ssno#AnyUnit> .
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <https://matthiasprobst.github.io/ssno#description> "A generic Vector Standard Name. Intended to be used to refer to any Vector Standard Name, e.g. by relating the position of a qualification to it."@en .
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <https://matthiasprobst.github.io/ssno#description> "Ein generischer vektorieller Standardname um Qualifications in Relation zu setzen."@de .
-<https://matthiasprobst.github.io/ssno#AnyVectorStandardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "Any Vector Standard Name"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
