@@ -319,7 +319,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
         <skos:definition xml:lang="en">Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit.</skos:definition>
         <skos:prefLabel xml:lang="en">has standard name</skos:prefLabel>
     </owl:ObjectProperty>
@@ -349,7 +349,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isStandardNameOf">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -892,6 +892,18 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#ScalarStandardName -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#ScalarStandardName">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <owl:disjointWith rdf:resource="https://matthiasprobst.github.io/ssno#VectorStandardName"/>
+        <skos:definition xml:lang="en">A standard name associated with scalar data.</skos:definition>
+        <skos:prefLabel xml:lang="en">Scalar Standard Name</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#StandardName -->
 
 
@@ -906,8 +918,29 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#unit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table.</skos:definition>
-        <skos:prefLabel>StandardName</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Standard Name</skos:prefLabel>
     </owl:Class>
     
 
@@ -1018,6 +1051,24 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#VectorStandardName -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#VectorStandardName">
+        <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#unit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A standard name associated with vector data.</skos:definition>
+        <skos:prefLabel xml:lang="en">Vector Standard Name</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- https://schema.org/Intangible -->
 
 
@@ -1050,12 +1101,25 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#AnyScalarStandardName -->
+
+
+    <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyScalarStandardName">
+        <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#ScalarStandardName"/>
+        <unit rdf:resource="https://matthiasprobst.github.io/ssno#AnyUnit"/>
+        <description xml:lang="en">A generic Scalar Standard Name. Intended to be used to refer to any Scalar Standard Name, e.g. by relating the position of a qualification to it.</description>
+        <description xml:lang="de">Ein generischer skalarer Standardname um Qualifications in Relation zu setzen.</description>
+        <skos:prefLabel xml:lang="en">Any Scalar Standard Name</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#AnyStandardName -->
 
 
     <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyStandardName">
         <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <unit rdf:resource="https://qudt.org/vocab/unit/UNITLESS"/>
+        <unit rdf:resource="https://matthiasprobst.github.io/ssno#AnyUnit"/>
         <description xml:lang="en">A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name.</description>
         <description xml:lang="de">Ein generischer Standardname um Qualifications in Relation zu setzen.</description>
         <skos:prefLabel xml:lang="en">Any Standard Name</skos:prefLabel>
@@ -1063,10 +1127,27 @@
     
 
 
-    <!-- https://qudt.org/vocab/unit/UNITLESS -->
+    <!-- https://matthiasprobst.github.io/ssno#AnyUnit -->
 
 
-    <owl:NamedIndividual rdf:about="https://qudt.org/vocab/unit/UNITLESS"/>
+    <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyUnit">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <skos:definition xml:lang="en">Representing any physical unit.</skos:definition>
+        <skos:prefLabel xml:lang="en">any unit</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#AnyVectorStandardName -->
+
+
+    <owl:NamedIndividual rdf:about="https://matthiasprobst.github.io/ssno#AnyVectorStandardName">
+        <rdf:type rdf:resource="https://matthiasprobst.github.io/ssno#VectorStandardName"/>
+        <unit rdf:resource="https://matthiasprobst.github.io/ssno#AnyUnit"/>
+        <description xml:lang="en">A generic Vector Standard Name. Intended to be used to refer to any Vector Standard Name, e.g. by relating the position of a qualification to it.</description>
+        <description xml:lang="de">Ein generischer vektorieller Standardname um Qualifications in Relation zu setzen.</description>
+        <skos:prefLabel xml:lang="en">Any Vector Standard Name</skos:prefLabel>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

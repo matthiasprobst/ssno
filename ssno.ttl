@@ -205,7 +205,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
                                  ] ;
-                     rdfs:range ssno:StandardName ;
+                     rdfs:range ssno:ScalarStandardName ;
                      skos:definition "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
                      skos:prefLabel "has standard name"@en .
 
@@ -224,7 +224,7 @@ ssno:isDefinedBy rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
-                      rdfs:domain ssno:StandardName ;
+                      rdfs:domain ssno:ScalarStandardName ;
                       rdfs:range [ rdf:type owl:Class ;
                                    owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
                                                  <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
@@ -568,6 +568,14 @@ ssno:Qualification rdf:type owl:Class ;
                    skos:prefLabel "Qualification"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#ScalarStandardName
+ssno:ScalarStandardName rdf:type owl:Class ;
+                        rdfs:subClassOf ssno:StandardName ;
+                        owl:disjointWith ssno:VectorStandardName ;
+                        skos:definition "A standard name associated with scalar data."@en ;
+                        skos:prefLabel "Scalar Standard Name"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#StandardName
 ssno:StandardName rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -575,8 +583,22 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:unit ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass qudt:Unit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:description ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                      owl:unionOf ( rdfs:Literal
+                                                                    xsd:string
+                                                                  )
+                                                    ]
+                                  ] ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
-                  skos:prefLabel "StandardName" .
+                  skos:prefLabel "Standard Name"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
@@ -641,6 +663,18 @@ ssno:Transformation rdf:type owl:Class ;
                     skos:prefLabel "Transformation"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#VectorStandardName
+ssno:VectorStandardName rdf:type owl:Class ;
+                        rdfs:subClassOf ssno:StandardName ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty ssno:unit ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass qudt:Unit
+                                        ] ;
+                        skos:definition "A standard name associated with vector data."@en ;
+                        skos:prefLabel "Vector Standard Name"@en .
+
+
 ###  https://schema.org/Intangible
 schema:Intangible rdf:type owl:Class ;
                   skos:definition "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc."@en ;
@@ -657,17 +691,38 @@ schema:Project rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
+###  https://matthiasprobst.github.io/ssno#AnyScalarStandardName
+ssno:AnyScalarStandardName rdf:type owl:NamedIndividual ,
+                                    ssno:ScalarStandardName ;
+                           ssno:unit ssno:AnyUnit ;
+                           ssno:description "A generic Scalar Standard Name. Intended to be used to refer to any Scalar Standard Name, e.g. by relating the position of a qualification to it."@en ,
+                                            "Ein generischer skalarer Standardname um Qualifications in Relation zu setzen."@de ;
+                           skos:prefLabel "Any Scalar Standard Name"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#AnyStandardName
 ssno:AnyStandardName rdf:type owl:NamedIndividual ,
                               ssno:StandardName ;
-                     ssno:unit <https://qudt.org/vocab/unit/UNITLESS> ;
+                     ssno:unit ssno:AnyUnit ;
                      ssno:description "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en ,
                                       "Ein generischer Standardname um Qualifications in Relation zu setzen."@de ;
                      skos:prefLabel "Any Standard Name"@en .
 
 
-###  https://qudt.org/vocab/unit/UNITLESS
-<https://qudt.org/vocab/unit/UNITLESS> rdf:type owl:NamedIndividual .
+###  https://matthiasprobst.github.io/ssno#AnyUnit
+ssno:AnyUnit rdf:type owl:NamedIndividual ,
+                      qudt:Unit ;
+             skos:definition "Representing any physical unit."@en ;
+             skos:prefLabel "any unit"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#AnyVectorStandardName
+ssno:AnyVectorStandardName rdf:type owl:NamedIndividual ,
+                                    ssno:VectorStandardName ;
+                           ssno:unit ssno:AnyUnit ;
+                           ssno:description "A generic Vector Standard Name. Intended to be used to refer to any Vector Standard Name, e.g. by relating the position of a qualification to it."@en ,
+                                            "Ein generischer vektorieller Standardname um Qualifications in Relation zu setzen."@de ;
+                           skos:prefLabel "Any Vector Standard Name"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi

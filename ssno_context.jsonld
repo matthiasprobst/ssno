@@ -45,10 +45,12 @@
     "Person" : {"@id" : "prov:Person"},
     "Role" : {"@id" : "prov:Role"},
     "Qualification" : {"@id" : "ssno:Qualification"},
-    "StandardName" : {"@id" : "ssno:StandardName"},
+    "Scalar Standard Name" : {"@id" : "ssno:ScalarStandardName"},
+    "Standard Name" : {"@id" : "ssno:StandardName"},
     "standard name modification" : {"@id" : "ssno:StandardNameModification"},
     "StandardNameTable" : {"@id" : "ssno:StandardNameTable"},
     "Transformation" : {"@id" : "ssno:Transformation"},
+    "Vector Standard Name" : {"@id" : "ssno:VectorStandardName"},
     "Intangible" : {"@id" : "schema:Intangible"},
     "Project" : {"@id" : "schema:Project"},
     "agent" : {"@id" : "prov:agent", "@type" : "prov:Agent"},
@@ -61,7 +63,7 @@
     "before" : {"@id" : "ssno:before"},
     "has character" : {"@id" : "ssno:hasCharacter", "@type" : "ssno:CharacterRepresentation"},
     "has modifier" : {"@id" : "ssno:hasModifier"},
-    "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
+    "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:ScalarStandardName"},
     "is defined by" : {"@id" : "ssno:isDefinedBy", "@type" : "ssno:StandardNameTable"},
     "is standard name of" : {"@id" : "ssno:isStandardNameOf"},
     "positioned" : {"@id" : "ssno:positioned"},
@@ -86,6 +88,9 @@
     "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"},
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
-    "Any Standard Name" : {"@id" : "ssno:AnyStandardName"}
+    "Any Scalar Standard Name" : {"@id" : "ssno:AnyScalarStandardName"},
+    "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
+    "any unit" : {"@id" : "ssno:AnyUnit"},
+    "Any Vector Standard Name" : {"@id" : "ssno:AnyVectorStandardName"}
   }
 }
