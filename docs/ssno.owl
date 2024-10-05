@@ -59,6 +59,16 @@
     
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
 
@@ -623,7 +633,6 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
                     <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -635,6 +644,8 @@
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <skos:definition xml:lang="en">Description of a Standard Name, a qualification or a transformation.</skos:definition>
+        <skos:prefLabel xml:lang="en">description</skos:prefLabel>
     </owl:DatatypeProperty>
     
 

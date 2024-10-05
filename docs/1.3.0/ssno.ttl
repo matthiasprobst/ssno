@@ -35,6 +35,12 @@
 <http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:range rdfs:Literal ;
+                                       rdfs:domain :StandardNameTable .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
@@ -392,14 +398,15 @@ owl:sameas rdf:type owl:AnnotationProperty .
              rdfs:domain [ rdf:type owl:Class ;
                            owl:unionOf ( :StandardName
                                          :StandardNameModification
-                                         :StandardNameTable
                                        )
                          ] ;
              rdfs:range [ rdf:type rdfs:Datatype ;
                           owl:unionOf ( rdfs:Literal
                                         xsd:string
                                       )
-                        ] .
+                        ] ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Description of a Standard Name, a qualification or a transformation."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasPreposition

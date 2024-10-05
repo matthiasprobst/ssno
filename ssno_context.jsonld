@@ -83,6 +83,7 @@
     "alters unit" : {"@id" : "ssno:altersUnit", "@type" : "xsd:string"},
     "ancillary variables" : {"@id" : "ssno:ancillaryVariables", "@type" : "xsd:string"},
     "character" : {"@id" : "ssno:character", "@type" : "xsd:string"},
+    "description" : {"@id" : "ssno:description"},
     "has preposition" : {"@id" : "ssno:hasPreposition", "@type" : "xsd:string"},
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "xsd:string"},
     "long name" : {"@id" : "ssno:longName", "@type" : "xsd:string"},
