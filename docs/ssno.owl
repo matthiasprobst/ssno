@@ -246,7 +246,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#associatedWith">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Character"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -287,7 +287,7 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasCharacter">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#Character"/>
         <skos:definition xml:lang="en">Links a transformation to a character used in the transformation string to represent a standard name or qualification</skos:definition>
         <skos:prefLabel xml:lang="en">has character</skos:prefLabel>
     </owl:ObjectProperty>
@@ -298,7 +298,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasModifier">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range>
             <owl:Class>
@@ -336,21 +335,14 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#isDefinedBy -->
+    <!-- https://matthiasprobst.github.io/ssno#hasValidValues2 -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#isDefinedBy">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Transformation"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <skos:definition xml:lang="en">Associates a Qualification or Transformation to a Standard Name Table</skos:definition>
-        <skos:prefLabel xml:lang="en">is defined by</skos:prefLabel>
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasValidValues2">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#ValidQualificationValue"/>
+        <skos:definition xml:lang="en">A relationship defining a set of values used by the qualification.</skos:definition>
+        <skos:prefLabel xml:lang="en">has valid values</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -616,7 +608,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#character">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Character"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">A character i.e. a single letter or symbol</skos:definition>
         <skos:prefLabel xml:lang="en">character</skos:prefLabel>
@@ -663,18 +655,6 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#hasValidValues -->
-
-
-    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#hasValidValues">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <skos:definition xml:lang="en">A relationship defining a set of values used by the qualification.</skos:definition>
-        <skos:prefLabel xml:lang="en">has valid values</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://matthiasprobst.github.io/ssno#longName -->
 
 
@@ -683,6 +663,17 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <skos:definition xml:lang="en">A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots.</skos:definition>
         <skos:prefLabel xml:lang="en">long name</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#qualificationValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://matthiasprobst.github.io/ssno#qualificationValue">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#ValidQualificationValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <skos:prefLabel xml:lang="en">qualification value</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -888,10 +879,12 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#CharacterRepresentation -->
+    <!-- https://matthiasprobst.github.io/ssno#Character -->
 
 
-    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#CharacterRepresentation"/>
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Character">
+        <skos:prefLabel xml:lang="en">Charakter</skos:prefLabel>
+    </owl:Class>
     
 
 
@@ -899,17 +892,22 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Qualification">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://matthiasprobst.github.io/ssno#Transformation"/>
         <skos:definition xml:lang="en">A qualification derives an existing standard name by a rule. This may alter the units.</skos:definition>
         <skos:example xml:lang="en">See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html</skos:example>
         <skos:prefLabel xml:lang="en">Qualification</skos:prefLabel>
@@ -974,20 +972,6 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange>
-                    <rdfs:Datatype>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-                        </owl:unionOf>
-                    </rdfs:Datatype>
-                </owl:onDataRange>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name modification</skos:prefLabel>
     </owl:Class>
@@ -1066,19 +1050,33 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Transformation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#isDefinedBy"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameModification"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#description"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange>
+                    <rdfs:Datatype>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+                            <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                        </owl:unionOf>
+                    </rdfs:Datatype>
+                </owl:onDataRange>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A transfromation is a phrase which may be added to the standard name without changing its unit.</skos:definition>
         <skos:prefLabel xml:lang="en">Transformation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://matthiasprobst.github.io/ssno#ValidQualificationValue -->
+
+
+    <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#ValidQualificationValue">
+        <skos:definition xml:lang="en">A valid value for a qualification.</skos:definition>
+        <skos:prefLabel xml:lang="en">Valid Qualification Value</skos:prefLabel>
     </owl:Class>
     
 
@@ -1100,13 +1098,6 @@
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#VectorStandardName">
         <rdfs:subClassOf rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#unit"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A standard name associated with vector data.</skos:definition>
         <skos:prefLabel xml:lang="en">Vector Standard Name</skos:prefLabel>
     </owl:Class>

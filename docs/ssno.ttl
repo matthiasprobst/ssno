@@ -147,7 +147,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#associatedWith
 :associatedWith rdf:type owl:ObjectProperty ;
-                rdfs:domain :CharacterRepresentation ;
+                rdfs:domain :Character ;
                 rdfs:range [ rdf:type owl:Class ;
                              owl:unionOf ( :Qualification
                                            :StandardName
@@ -174,14 +174,13 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#hasCharacter
 :hasCharacter rdf:type owl:ObjectProperty ;
               rdfs:domain :Transformation ;
-              rdfs:range :CharacterRepresentation ;
+              rdfs:range :Character ;
               <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#hasModifier
 :hasModifier rdf:type owl:ObjectProperty ;
-             owl:inverseOf :isDefinedBy ;
              rdfs:domain :StandardNameTable ;
              rdfs:range [ rdf:type owl:Class ;
                           owl:unionOf ( :Qualification
@@ -207,16 +206,12 @@ owl:sameas rdf:type owl:AnnotationProperty .
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#isDefinedBy
-:isDefinedBy rdf:type owl:ObjectProperty ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :Qualification
-                                         :Transformation
-                                       )
-                         ] ;
-             rdfs:range :StandardNameTable ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Associates a Qualification or Transformation to a Standard Name Table"@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "is defined by"@en .
+###  https://matthiasprobst.github.io/ssno#hasValidValues2
+:hasValidValues2 rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Qualification ;
+                 rdfs:range :ValidQualificationValue ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
@@ -387,7 +382,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#character
 :character rdf:type owl:DatatypeProperty ;
-           rdfs:domain :CharacterRepresentation ;
+           rdfs:domain :Character ;
            rdfs:range xsd:string ;
            <http://www.w3.org/2004/02/skos/core#definition> "A character i.e. a single letter or symbol"@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "character"@en .
@@ -418,20 +413,19 @@ owl:sameas rdf:type owl:AnnotationProperty .
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has preposition"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasValidValues
-:hasValidValues rdf:type owl:DatatypeProperty ;
-                rdfs:domain :Qualification ;
-                rdfs:range xsd:string ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#longName
 :longName rdf:type owl:DatatypeProperty ;
           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
           rdfs:range xsd:string ;
           <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "long name"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#qualificationValue
+:qualificationValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :ValidQualificationValue ;
+                    rdfs:range rdfs:Literal ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "qualification value"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#standardName
@@ -557,18 +551,24 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Role"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#CharacterRepresentation
-:CharacterRepresentation rdf:type owl:Class .
+###  https://matthiasprobst.github.io/ssno#Character
+:Character rdf:type owl:Class ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Charakter"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#Qualification
 :Qualification rdf:type owl:Class ;
-               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty [ owl:inverseOf :isDefinedBy
-                                                    ] ;
-                                     owl:someValuesFrom :StandardNameTable
-                                   ] ;
-               rdfs:subClassOf :StandardNameModification ;
+               rdfs:subClassOf :StandardNameModification ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :description ;
+                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                   owl:unionOf ( rdfs:Literal
+                                                                 xsd:string
+                                                               )
+                                                 ]
+                               ] ;
+               owl:disjointWith :Transformation ;
                <http://www.w3.org/2004/02/skos/core#definition> "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
                <http://www.w3.org/2004/02/skos/core#example> "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification"@en .
@@ -609,15 +609,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
 :StandardNameModification rdf:type owl:Class ;
-                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                            owl:onProperty :description ;
-                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                            owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                              owl:unionOf ( rdfs:Literal
-                                                                            xsd:string
-                                                                          )
-                                                            ]
-                                          ] ;
                           <http://www.w3.org/2004/02/skos/core#definition> "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name modification"@en .
 
@@ -664,14 +655,24 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#Transformation
 :Transformation rdf:type owl:Class ;
-                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                      owl:onProperty [ owl:inverseOf :isDefinedBy
-                                                     ] ;
-                                      owl:someValuesFrom :StandardNameTable
-                                    ] ;
-                rdfs:subClassOf :StandardNameModification ;
+                rdfs:subClassOf :StandardNameModification ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :description ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                    owl:unionOf ( rdfs:Literal
+                                                                  xsd:string
+                                                                )
+                                                  ]
+                                ] ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#ValidQualificationValue
+:ValidQualificationValue rdf:type owl:Class ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A valid value for a qualification."@en ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Valid Qualification Value"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#VectorQualification
@@ -684,12 +685,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#VectorStandardName
 :VectorStandardName rdf:type owl:Class ;
-                    rdfs:subClassOf :StandardName ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :unit ;
-                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                      owl:onClass <http://qudt.org/schema/qudt/Unit>
-                                    ] ;
+                    rdfs:subClassOf :StandardName ;
                     <http://www.w3.org/2004/02/skos/core#definition> "A standard name associated with vector data."@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Vector Standard Name"@en .
 
