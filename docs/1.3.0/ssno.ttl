@@ -145,6 +145,15 @@ owl:sameas rdf:type owl:AnnotationProperty .
        <http://www.w3.org/2004/02/skos/core#prefLabel> "after"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#alias
+:alias rdf:type owl:ObjectProperty ,
+                owl:TransitiveProperty ;
+       rdfs:domain :StandardName ;
+       rdfs:range :StandardName ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Indicates that a standard name individual is an alias of another."@en ;
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "alias"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#associatedWith
 :associatedWith rdf:type owl:ObjectProperty ;
                 rdfs:domain :Character ;
@@ -209,7 +218,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#hasValidValues2
 :hasValidValues2 rdf:type owl:ObjectProperty ;
                  rdfs:domain :Qualification ;
-                 rdfs:range :ValidQualificationValue ;
+                 rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en .
 
@@ -279,7 +288,9 @@ owl:sameas rdf:type owl:AnnotationProperty .
                owl:FunctionalProperty ;
       rdfs:domain :StandardName ;
       rdfs:range <http://qudt.org/schema/qudt/Unit> ;
-      <http://www.w3.org/2004/02/skos/core#closeMatch> <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+      <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> ,
+                                                       <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ,
+                                                       <https://ptb.de/si/hasUnit> ;
       <http://www.w3.org/2004/02/skos/core#definition> "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "unit"@en .
 
@@ -421,13 +432,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
           <http://www.w3.org/2004/02/skos/core#prefLabel> "long name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#qualificationValue
-:qualificationValue rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :ValidQualificationValue ;
-                    rdfs:range rdfs:Literal ;
-                    <http://www.w3.org/2004/02/skos/core#prefLabel> "qualification value"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#standardName
 :standardName rdf:type owl:DatatypeProperty ;
               rdfs:domain :StandardName ;
@@ -498,6 +502,13 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <https://ptb.de/si/Real> ;
                                                           <http://www.w3.org/2004/02/skos/core#definition> "A variable that expects a float or integer as a value"@en ;
                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "numerical variable"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#TextVariable
+<http://w3id.org/nfdi4ing/metadata4ing#TextVariable> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://schema.org/Intangible> ;
+                                                     rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "text variable"@en .
 
 
 ###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
@@ -593,15 +604,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                 owl:onProperty :unit ;
                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass <http://qudt.org/schema/qudt/Unit>
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :description ;
-                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                  owl:unionOf ( rdfs:Literal
-                                                                xsd:string
-                                                              )
-                                                ]
                               ] ;
               <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name"@en .
@@ -667,12 +669,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                 ] ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#ValidQualificationValue
-:ValidQualificationValue rdf:type owl:Class ;
-                         <http://www.w3.org/2004/02/skos/core#definition> "A valid value for a qualification."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Valid Qualification Value"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#VectorQualification

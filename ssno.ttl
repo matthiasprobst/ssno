@@ -154,6 +154,15 @@ ssno:after rdf:type owl:ObjectProperty ;
            skos:prefLabel "after"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#alias
+ssno:alias rdf:type owl:ObjectProperty ,
+                    owl:TransitiveProperty ;
+           rdfs:domain ssno:StandardName ;
+           rdfs:range ssno:StandardName ;
+           skos:definition "Indicates that a standard name individual is an alias of another."@en ;
+           skos:prefLabel "alias"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#associatedWith
 ssno:associatedWith rdf:type owl:ObjectProperty ;
                     rdfs:domain ssno:Character ;
@@ -218,7 +227,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#hasValidValues2
 ssno:hasValidValues2 rdf:type owl:ObjectProperty ;
                      rdfs:domain ssno:Qualification ;
-                     rdfs:range ssno:ValidQualificationValue ;
+                     rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
                      skos:definition "A relationship defining a set of values used by the qualification."@en ;
                      skos:prefLabel "has valid values"@en .
 
@@ -288,7 +297,9 @@ ssno:unit rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
           rdfs:domain ssno:StandardName ;
           rdfs:range qudt:Unit ;
-          skos:closeMatch <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ;
+          skos:closeMatch qudt:unit ,
+                          <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ,
+                          <https://ptb.de/si/hasUnit> ;
           skos:definition "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
           skos:prefLabel "unit"@en .
 
@@ -330,6 +341,20 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
                                                             ] ;
                                                  skos:definition "A Research Organization Registry identifier, that points to a research organization"@en ;
                                                  skos:prefLabel "has ROR ID"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasStringValue
+<http://w3id.org/nfdi4ing/metadata4ing#hasStringValue> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                       skos:prefLabel "has string value"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
+<http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                               skos:prefLabel "has variable description"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#identifier
@@ -430,13 +455,6 @@ ssno:longName rdf:type owl:DatatypeProperty ;
               skos:prefLabel "long name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#qualificationValue
-ssno:qualificationValue rdf:type owl:DatatypeProperty ;
-                        rdfs:domain ssno:ValidQualificationValue ;
-                        rdfs:range rdfs:Literal ;
-                        skos:prefLabel "qualification value"@en .
-
-
 ###  https://matthiasprobst.github.io/ssno#standardName
 ssno:standardName rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
@@ -507,6 +525,13 @@ qudt:Unit rdf:type owl:Class ;
                                                           skos:closeMatch <https://ptb.de/si/Real> ;
                                                           skos:definition "A variable that expects a float or integer as a value"@en ;
                                                           skos:prefLabel "numerical variable"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#TextVariable
+<http://w3id.org/nfdi4ing/metadata4ing#TextVariable> rdf:type owl:Class ;
+                                                     rdfs:subClassOf schema:Intangible ;
+                                                     rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                     skos:prefLabel "text variable"@en .
 
 
 ###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
@@ -602,15 +627,6 @@ ssno:StandardName rdf:type owl:Class ;
                                     owl:onProperty ssno:unit ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass qudt:Unit
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty ssno:description ;
-                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onDataRange [ rdf:type rdfs:Datatype ;
-                                                      owl:unionOf ( rdfs:Literal
-                                                                    xsd:string
-                                                                  )
-                                                    ]
                                   ] ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "Standard Name"@en .
@@ -676,12 +692,6 @@ ssno:Transformation rdf:type owl:Class ;
                                     ] ;
                     skos:definition "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
                     skos:prefLabel "Transformation"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#ValidQualificationValue
-ssno:ValidQualificationValue rdf:type owl:Class ;
-                             skos:definition "A valid value for a qualification."@en ;
-                             skos:prefLabel "Valid Qualification Value"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#VectorQualification

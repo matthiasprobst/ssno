@@ -27,8 +27,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.93272306"
-     inkscape:cx="818.03488"
-     inkscape:cy="331.82411"
+     inkscape:cx="715.11044"
+     inkscape:cy="351.12244"
      inkscape:window-width="1920"
      inkscape:window-height="1129"
      inkscape:window-x="-8"
@@ -417,6 +417,82 @@
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path5-5-1-0-5-2" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5-3-6-8-3-5"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5-5-1-2-6-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5-3-6-8-3-5-8"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5-5-1-2-6-0-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5-3-6-8-3-5-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5-5-1-2-6-0-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker5-3-6-8-3-5-8-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path5-5-1-2-6-0-0-1" />
+    </marker>
   </defs>
   <g
      inkscape:label="Ebene 1"
@@ -436,6 +512,26 @@
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3)"
        d="m 129.25434,107.65674 2.85291,14.78145"
        id="path3-3-3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3-5)"
+       d="m 151.15407,134.18022 -3.97131,4.47949"
+       id="path3-3-3-4"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3-5-8)"
+       d="m 164.17701,135.03917 2.14648,4.3792"
+       id="path3-3-3-4-0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3-5-2)"
+       d="m 196.41112,129.80043 2.07898,3.67723"
+       id="path3-3-3-4-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3-5-8-3)"
+       d="m 196.27813,119.8301 1.02416,-2.60584"
+       id="path3-3-3-4-0-2"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-3-3)"
@@ -534,6 +630,24 @@
        cy="48.461063"
        ry="7.3239794"
        rx="20.759705" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="189.30769"
+       y="50.791515"
+       id="text4-8"><tspan
+         sodipodi:role="line"
+         id="tspan4-7"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="189.30769"
+         y="50.791515">TextVariable</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1.04100296,1.04100296;stroke-dashoffset:0"
+       id="ellipse4-2"
+       cx="201.60072"
+       cy="49.204014"
+       ry="4.5961986"
+       rx="15.691016" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -833,7 +947,12 @@
          y="50.912571">hasValidValues</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8)"
-       d="m 139.22694,105.91263 18.69977,11.19432"
+       d="m 139.22694,105.91263 c 5.84898,5.84902 29.87702,11.95414 41.90504,16.32806"
+       id="path12"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8)"
+       d="m 139.22694,105.91263 c 5.84898,5.84902 17.64144,7.24043 17.43388,17.63185"
        id="path5"
        sodipodi:nodetypes="cc" />
     <rect
@@ -890,24 +1009,6 @@
        height="6.0811782"
        x="121.62365"
        y="18.451431" />
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="187.69389"
-       y="50.86834"
-       id="text1-0-9-4-4-0"><tspan
-         sodipodi:role="line"
-         id="tspan1-5-5-0-3-4"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="187.69389"
-         y="50.86834">string</tspan></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-       id="rect3-4-80-8"
-       width="16.429001"
-       height="6.0811782"
-       x="185.49423"
-       y="46.50452" />
     <text
        xml:space="preserve"
        style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
@@ -1301,17 +1402,6 @@
          style="stroke-width:0.265"
          x="8.625082"
          y="70.404739" /></text>
-    <text
-       xml:space="preserve"
-       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
-       x="150.57909"
-       y="122.96727"
-       id="text1-0-9-4-4-0-9-2-5-0-3"><tspan
-         sodipodi:role="line"
-         style="font-size:4.23333px;stroke-width:0.264583"
-         x="150.57909"
-         y="122.96727"
-         id="tspan7">[&quot;sea_ice&quot;, &quot;cloud_top&quot;, ....]</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-6-8-2)"
        d="m 342.07783,100.9528 18.69977,11.19432"
@@ -1507,5 +1597,94 @@
          style="font-size:4.23333px;fill:#000000;fill-opacity:1;stroke-width:0.264583"
          x="255.19531"
          y="48.36829">hasCharacter</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="149.50594"
+       y="131.61732"
+       id="text4-7-0-8-6"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="149.50594"
+         y="131.61732">_:N3d2...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="133.01048"
+       y="143.7338"
+       id="text4-7-0-8-6-1"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6-2"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="133.01048"
+         y="143.7338">&quot;sea_ice&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="159.44073"
+       y="145.34244"
+       id="text4-7-0-8-6-1-1"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6-2-4"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="159.44073"
+         y="145.34244">&quot;Means ...&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="197.75774"
+       y="138.57413"
+       id="text4-7-0-8-6-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6-2-6"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="197.75774"
+         y="138.57413">&quot;cloud_top&quot;</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="ellipse4-9-5-8-6-1"
+       cx="159.21223"
+       cy="130.34721"
+       ry="5.0546384"
+       rx="12.361271" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="184.59703"
+       y="126.08994"
+       id="text4-7-0-8-6-4"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6-3"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="184.59703"
+         y="126.08994">_:N3d2...</tspan></text>
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.347001;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       id="ellipse4-9-5-8-6-1-3"
+       cx="194.30333"
+       cy="124.81982"
+       ry="5.0546384"
+       rx="12.361271" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#000000;stroke:#000000;stroke-width:1;stroke-dasharray:1.041, 1.041;stroke-dashoffset:0"
+       x="148.33134"
+       y="140.20772"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         style="stroke-width:1"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="190.39293"
+       y="115.14718"
+       id="text4-7-0-8-6-1-3-3"><tspan
+         sodipodi:role="line"
+         id="tspan4-5-4-3-6-2-6-2"
+         style="font-size:4.23333px;stroke-width:0.264583"
+         x="190.39293"
+         y="115.14718">&quot;refers to...&quot;</tspan></text>
   </g>
 </svg>
