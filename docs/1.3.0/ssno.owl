@@ -348,10 +348,10 @@
     
 
 
-    <!-- https://matthiasprobst.github.io/ssno#hasValidValues2 -->
+    <!-- https://matthiasprobst.github.io/ssno#hasValidValues -->
 
 
-    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasValidValues2">
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasValidValues">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
         <rdfs:range rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#TextVariable"/>
         <skos:definition xml:lang="en">A relationship defining a set of values used by the qualification.</skos:definition>
@@ -530,6 +530,37 @@
         </rdfs:range>
         <skos:definition xml:lang="en">A Research Organization Registry identifier, that points to a research organization</skos:definition>
         <skos:prefLabel xml:lang="en">has ROR ID</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/nfdi4ing/metadata4ing#hasStringValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/nfdi4ing/metadata4ing#hasStringValue">
+        <rdfs:domain rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#TextVariable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#"/>
+        <skos:prefLabel xml:lang="en">has string value</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable"/>
+                    <rdf:Description rdf:about="http://w3id.org/nfdi4ing/metadata4ing#TextVariable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/nfdi4ing/metadata4ing#"/>
+        <skos:prefLabel xml:lang="en">has variable description</skos:prefLabel>
     </owl:DatatypeProperty>
     
 

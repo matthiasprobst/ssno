@@ -215,12 +215,12 @@ owl:sameas rdf:type owl:AnnotationProperty .
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasValidValues2
-:hasValidValues2 rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Qualification ;
-                 rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
-                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en .
+###  https://matthiasprobst.github.io/ssno#hasValidValues
+:hasValidValues rdf:type owl:ObjectProperty ;
+                rdfs:domain :Qualification ;
+                rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
@@ -332,6 +332,26 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                             ] ;
                                                  <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier, that points to a research organization"@en ;
                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasStringValue
+<http://w3id.org/nfdi4ing/metadata4ing#hasStringValue> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has string value"@en .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
+<http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                                                           <http://w3id.org/nfdi4ing/metadata4ing#TextVariable>
+                                                                                         )
+                                                                           ] ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "has variable description"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#identifier

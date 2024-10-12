@@ -224,12 +224,12 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      skos:prefLabel "has standard name"@en .
 
 
-###  https://matthiasprobst.github.io/ssno#hasValidValues2
-ssno:hasValidValues2 rdf:type owl:ObjectProperty ;
-                     rdfs:domain ssno:Qualification ;
-                     rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
-                     skos:definition "A relationship defining a set of values used by the qualification."@en ;
-                     skos:prefLabel "has valid values"@en .
+###  https://matthiasprobst.github.io/ssno#hasValidValues
+ssno:hasValidValues rdf:type owl:ObjectProperty ;
+                    rdfs:domain ssno:Qualification ;
+                    rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                    skos:definition "A relationship defining a set of values used by the qualification."@en ;
+                    skos:prefLabel "has valid values"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
@@ -353,6 +353,12 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
 <http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                                                           <http://w3id.org/nfdi4ing/metadata4ing#TextVariable>
+                                                                                         )
+                                                                           ] ;
+                                                               rdfs:range xsd:string ;
                                                                rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
                                                                skos:prefLabel "has variable description"@en .
 

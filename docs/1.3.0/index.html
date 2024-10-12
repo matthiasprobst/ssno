@@ -272,8 +272,8 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
    </li>
    <li>
-      <a href="#hasValidValues2"
-         title="https://matthiasprobst.github.io/ssno#hasValidValues2">has valid values</a>
+      <a href="#hasValidValues"
+         title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a>
    </li>
    <li>
       <a href="#isStandardNameOf"
@@ -340,6 +340,14 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasStringValue"
+         title="http://w3id.org/nfdi4ing/metadata4ing#hasStringValue">has string value</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription"
+         title="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">has variable description</a>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a>
@@ -637,7 +645,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription" title="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">has variable description</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -735,7 +743,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues2" title="https://matthiasprobst.github.io/ssno#hasValidValues2">has valid values</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#after" title="https://matthiasprobst.github.io/ssno#after">after</a> <sup class="type-op" title="object property">op</sup>, <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -956,10 +964,16 @@ This section provides details for each class and property defined by SSNO.
     <a href="#https://schema.org/Intangible" title="https://schema.org/Intangible">Intangible</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasStringValue" title="http://w3id.org/nfdi4ing/metadata4ing#hasStringValue">has string value</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription" title="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">has variable description</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#hasValidValues2" title="https://matthiasprobst.github.io/ssno#hasValidValues2">has valid values</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1115,7 +1129,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#hasCharacter" title="https://matthiasprobst.github.io/ssno#hasCharacter">has character</a></li>
   <li><a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a></li>
   <li><a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a></li>
-  <li><a href="#hasValidValues2" title="https://matthiasprobst.github.io/ssno#hasValidValues2">has valid values</a></li>
+  <li><a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a></li>
   <li><a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a></li>
   <li><a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a></li>
@@ -1358,9 +1372,9 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="hasValidValues2">
+ <div class="entity" id="hasValidValues">
   <h3>has valid values<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasValidValues2</p>
+  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasValidValues</p>
   <div class="comment">
    <span class="markdown">A relationship defining a set of values used by the qualification.</span>
   </div>
@@ -1651,6 +1665,8 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#hasPreposition" title="https://matthiasprobst.github.io/ssno#hasPreposition">has preposition</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID" title="http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID">has project ID</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#hasRorId" title="http://w3id.org/nfdi4ing/metadata4ing#hasRorId">has ROR ID</a></li>
+  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#hasStringValue" title="http://w3id.org/nfdi4ing/metadata4ing#hasStringValue">has string value</a></li>
+  <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription" title="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">has variable description</a></li>
   <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#identifier" title="http://w3id.org/nfdi4ing/metadata4ing#identifier">identifier</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#keyword" title="http://www.w3.org/ns/dcat#keyword">keyword</a></li>
@@ -1870,6 +1886,62 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd></dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#hasStringValue">
+  <h3>has string value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#hasStringValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/nfdi4ing/metadata4ing#">http://w3id.org/nfdi4ing/metadata4ing#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://w3id.org/nfdi4ing/metadata4ing#TextVariable" title="http://w3id.org/nfdi4ing/metadata4ing#TextVariable">text variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription">
+  <h3>has variable description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://w3id.org/nfdi4ing/metadata4ing#">http://w3id.org/nfdi4ing/metadata4ing#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable" title="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable">numerical variable</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://w3id.org/nfdi4ing/metadata4ing#TextVariable" title="http://w3id.org/nfdi4ing/metadata4ing#TextVariable">text variable</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
    </dl>
   </div>
  </div>
