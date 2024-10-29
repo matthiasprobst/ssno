@@ -67,7 +67,7 @@
     "before" : {"@id" : "ssno:before"},
     "has character" : {"@id" : "ssno:hasCharacter", "@type" : "ssno:Character"},
     "has modifier" : {"@id" : "ssno:hasModifier"},
-    "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:ScalarStandardName"},
+    "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "<http://w3id.org/nfdi4ing/metadata4ing#TextVariable>"},
     "is standard name of" : {"@id" : "ssno:isStandardNameOf"},
     "positioned" : {"@id" : "ssno:positioned"},

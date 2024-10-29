@@ -210,7 +210,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                              <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                            )
                              ] ;
-                 rdfs:range :ScalarStandardName ;
+                 rdfs:range :StandardName ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en .
 
@@ -225,7 +225,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 :isStandardNameOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain :ScalarStandardName ;
+                  rdfs:domain :StandardName ;
                   rdfs:range [ rdf:type owl:Class ;
                                owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
                                              <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>

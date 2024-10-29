@@ -219,7 +219,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
                                  ] ;
-                     rdfs:range ssno:ScalarStandardName ;
+                     rdfs:range ssno:StandardName ;
                      skos:definition "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
                      skos:prefLabel "has standard name"@en .
 
@@ -234,7 +234,7 @@ ssno:hasValidValues rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#isStandardNameOf
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
-                      rdfs:domain ssno:ScalarStandardName ;
+                      rdfs:domain ssno:StandardName ;
                       rdfs:range [ rdf:type owl:Class ;
                                    owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
                                                  <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
