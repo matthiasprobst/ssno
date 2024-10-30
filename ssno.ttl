@@ -213,9 +213,9 @@ ssno:hasModifier rdf:type owl:ObjectProperty ;
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
                      rdfs:domain [ rdf:type owl:Class ;
-                                   owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
-                                                 <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                   owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
                                                  <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
                                  ] ;
@@ -236,9 +236,9 @@ ssno:hasValidValues rdf:type owl:ObjectProperty ;
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       rdfs:domain ssno:StandardName ;
                       rdfs:range [ rdf:type owl:Class ;
-                                   owl:unionOf ( <http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895>
-                                                 <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                   owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
                                                  <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
                                  ] ;
@@ -256,11 +256,7 @@ ssno:positioned rdf:type owl:ObjectProperty ,
 ###  https://matthiasprobst.github.io/ssno#standardNameTable
 ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        owl:inverseOf ssno:standardNames ;
-                       rdfs:domain [ rdf:type owl:Class ;
-                                     owl:unionOf ( ssno:ScalarStandardName
-                                                   ssno:VectorStandardName
-                                                 )
-                                   ] ;
+                       rdfs:domain ssno:StandardName ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
                        skos:prefLabel "standard name table"@en .
@@ -283,11 +279,7 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#standardNames
 ssno:standardNames rdf:type owl:ObjectProperty ;
                    rdfs:domain ssno:StandardNameTable ;
-                   rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( ssno:ScalarStandardName
-                                              ssno:VectorStandardName
-                                            )
-                              ] ;
+                   rdfs:range ssno:StandardName ;
                    skos:definition "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
                    skos:prefLabel "standard names"@en .
 
@@ -353,11 +345,7 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
 <http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
-                                                               rdfs:domain [ rdf:type owl:Class ;
-                                                                             owl:unionOf ( <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
-                                                                                           <http://w3id.org/nfdi4ing/metadata4ing#TextVariable>
-                                                                                         )
-                                                                           ] ;
+                                                               rdfs:domain <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
                                                                rdfs:range xsd:string ;
                                                                rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
                                                                skos:prefLabel "has variable description"@en .
@@ -491,14 +479,6 @@ schema:name rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895
-<http://emmo.info/emmo#EMMO_1eed0732_e3f1_4b2c_a9c4_b4e75eeb5895> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf schema:Intangible ;
-                                                                  rdfs:isDefinedBy <http://emmo.info/emmo#> ;
-                                                                  skos:definition "A 'Variable' is a symbolic object that stands for a numerical defined 'Mathematical' object like e.g. a number, a vector, a matrix."@en ;
-                                                                  skos:prefLabel "Variable"@en .
-
-
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
 <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> rdf:type owl:Class ;
                                                         rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
@@ -526,7 +506,7 @@ qudt:Unit rdf:type owl:Class ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:Class ;
-                                                          rdfs:subClassOf schema:Intangible ;
+                                                          rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
                                                           rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
                                                           skos:closeMatch <https://ptb.de/si/Real> ;
                                                           skos:definition "A variable that expects a float or integer as a value"@en ;
@@ -535,9 +515,17 @@ qudt:Unit rdf:type owl:Class ;
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#TextVariable
 <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> rdf:type owl:Class ;
-                                                     rdfs:subClassOf schema:Intangible ;
+                                                     rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
                                                      rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
                                                      skos:prefLabel "text variable"@en .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#Property
+<http://www.molmod.info/semantics/pims-ii.ttl#Property> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                                                        skos:closeMatch <http://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> ;
+                                                        skos:definition "Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step"@en ;
+                                                        skos:prefLabel "property"@en .
 
 
 ###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
@@ -546,6 +534,14 @@ qudt:Unit rdf:type owl:Class ;
                                                              rdfs:isDefinedBy <http://www.molmod.info/semantics/pims-ii.ttl#> ;
                                                              skos:definition "Quantity value, i.e., a value that has a numerical magnitude and a physical unit"@en ;
                                                              skos:prefLabel "quantity value"@en .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#Variable
+<http://www.molmod.info/semantics/pims-ii.ttl#Variable> rdf:type owl:Class ;
+                                                        rdfs:subClassOf schema:Intangible ;
+                                                        rdfs:isDefinedBy <http://emmo.info/emmo#> ;
+                                                        skos:definition "A 'Variable' is a symbolic object that stands for a numerical defined 'Mathematical' object like e.g. a number, a vector, a matrix."@en ;
+                                                        skos:prefLabel "Variable"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Dataset
