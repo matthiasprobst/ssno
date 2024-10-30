@@ -301,6 +301,7 @@ ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup>
                                                        dcat:Dataset
+                                                       schema:Project
                                                      )
                                        ] ;
                            rdfs:range ssno:StandardNameTable ;
@@ -454,7 +455,7 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
                   rdfs:domain ssno:StandardName ;
                   rdfs:range xsd:string ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
-                  skos:example "dynamic_pressure"@en ;
+                  skos:example "x_velocity"@en ;
                   skos:prefLabel "standard name"@en .
 
 
@@ -494,7 +495,7 @@ schema:name rdf:type owl:DatatypeProperty ;
                                                                                 owl:someValuesFrom ssno:StandardNameTable
                                                                               ] ;
                                                           rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
-                                                          skos:definition "An HDF5 file root group"@en ;
+                                                          skos:definition "An HDF5 file root group. The entry group into an HDF5 File. Attributes defined here are describing the file content."@en ;
                                                           skos:prefLabel "HDF5 Root Group"@en .
 
 
