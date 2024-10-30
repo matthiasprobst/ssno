@@ -1,13 +1,16 @@
-The core idea is to provide the class <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> and <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardNameTable</a> with a minimal set of properties. A <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> at its core is a simple string value, based on specific construction rules defined by its (standard name) table.
-By enriching numerical data with a <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a>, complex information can be added by only using one attribute. An example of a such a name is "x_derivative_of_y_velocity". The name itself already suggests its meaning, however, a lookup in the respective standard name table would reveals the precise meaning (the name describes the derivative of the y-velocity w.r.t. the x-coordinate).
+The main focus of the ontology is to implement the concepts
+of <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardNames</a>
+and <a href="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> are defined. At its essence,
+a <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> is a simple string value, constructed
+according to specific rules outlined in its
+associated <a href="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>.
 
-The rules of standard name construction is defined in a document associated with the <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardNameTable</a>. The table contains all standard names defied by a project or community. Instances of <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> and StandardNameTable can be used e.g. in combinations with other ontologies like <a href="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/" target="_blank">metadata4ing</a> for a concise description of a numerical variable.
+By assigning a <a href="https://matthiasprobst.github.io/ssno#StandardName">StandardName</a> to numerical data, complex
+information can be conveyed through a single attribute. An instance, a name like "x_derivative_of_y_velocity" gives an
+intuitive sense of its meaning. A detailed lookup in the relevant standard name table clarifies the exact
+interpretation, indicating, in this case, that the name represents the derivative of the y-velocity with respect to the
+x-coordinate.
 
-The below class diagram gives a quick overview of the central classes of the ontology. The ontology is still under development. 
-<img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/SSNO_VERSION/classdiagram.png?raw=true" height="300 px">
 
-Standard names are intended to be used as attributes in HDF5 files. To indicate which standard name table is used for the file a relation between the file and the standard name table can be established as shown below. Note, that it is also possible to associate a standard name table in a more general way, i.e. by associating it with a <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset">dcat:Dataset</a> or a <a href="https://schema.org/Project">schema:Project</a>.
-<img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/SSNO_VERSION/things_and_snt.png?raw=true" height="150 px">
 
-Standard names can be modified in certain ways to create new valid standard names. The modifications are defined by the standard name table using a qualification or a transformation. Both modification rules can be described by the ontology. The modification using qualification, as outlined in the <a href="https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html">CF Standard Name Guidelines</a>, consists of multiple qualification phrases (class <a href="https://matthiasprobst.github.io/ssno/#Qualification" target="_blank">ssno:Qualification</a>) that can be added before or after a basic standard name. Some of the qualifications may have a preposition, e.g. 'at' or 'due to'.
-<img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/SSNO_VERSION/standard_name_modification.png?raw=true" height="500 px">
+
