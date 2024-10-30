@@ -458,6 +458,7 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
                                             )
                               ] ;
                   rdfs:range xsd:string ;
+                  rdfs:comment "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
                   skos:example "x_velocity"@en ;
                   skos:prefLabel "standard name"@en .

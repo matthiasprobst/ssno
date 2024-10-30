@@ -449,6 +449,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                         )
                           ] ;
               rdfs:range xsd:string ;
+              rdfs:comment "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en ;
               <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
               <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .

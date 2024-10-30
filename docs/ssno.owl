@@ -706,6 +706,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName.</rdfs:comment>
         <skos:definition xml:lang="en">Name for a standard name, e.g. &quot;x_velocity&quot;. The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed.</skos:definition>
         <skos:example xml:lang="en">x_velocity</skos:example>
         <skos:prefLabel xml:lang="en">standard name</skos:prefLabel>

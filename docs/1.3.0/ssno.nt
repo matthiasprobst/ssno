@@ -463,6 +463,7 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.allotr
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2000/01/rdf-schema#comment> "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en .
 <https://matthiasprobst.github.io/ssno#standardName> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
