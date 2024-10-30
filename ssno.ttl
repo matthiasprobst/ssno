@@ -452,7 +452,11 @@ ssno:longName rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#standardName
 ssno:standardName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain ssno:StandardName ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                              ssno:StandardName
+                                            )
+                              ] ;
                   rdfs:range xsd:string ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
                   skos:example "x_velocity"@en ;

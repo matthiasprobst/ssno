@@ -443,7 +443,11 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#standardName
 :standardName rdf:type owl:DatatypeProperty ;
-              rdfs:domain :StandardName ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                          :StandardName
+                                        )
+                          ] ;
               rdfs:range xsd:string ;
               <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
               <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en ;
