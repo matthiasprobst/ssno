@@ -516,7 +516,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                         rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
                                                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> ;
                                                         <http://www.w3.org/2004/02/skos/core#definition> "Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "property"@en .
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Property"@en .
 
 
 ###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
@@ -530,8 +530,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  http://www.molmod.info/semantics/pims-ii.ttl#Variable
 <http://www.molmod.info/semantics/pims-ii.ttl#Variable> rdf:type owl:Class ;
                                                         rdfs:subClassOf <https://schema.org/Intangible> ;
-                                                        rdfs:isDefinedBy <http://emmo.info/emmo#> ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "A 'Variable' is a symbolic object that stands for a numerical defined 'Mathematical' object like e.g. a number, a vector, a matrix."@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Variable, i.e., a conventional that is employed for something to which values can be assigned (this may include different notations for the same variable including, e.g., computational representations); this is to be understood very generally, e.g., a variable may be an array or set of elements or have another kind of internal structure"@en ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Variable"@en .
 
 

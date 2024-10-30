@@ -815,7 +815,7 @@
         <rdfs:subClassOf rdf:resource="http://www.molmod.info/semantics/pims-ii.ttl#Variable"/>
         <skos:closeMatch rdf:resource="http://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba"/>
         <skos:definition xml:lang="en">Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step</skos:definition>
-        <skos:prefLabel xml:lang="en">property</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Property</skos:prefLabel>
     </owl:Class>
     
 
@@ -837,8 +837,7 @@
 
     <owl:Class rdf:about="http://www.molmod.info/semantics/pims-ii.ttl#Variable">
         <rdfs:subClassOf rdf:resource="https://schema.org/Intangible"/>
-        <rdfs:isDefinedBy rdf:resource="http://emmo.info/emmo#"/>
-        <skos:definition xml:lang="en">A &apos;Variable&apos; is a symbolic object that stands for a numerical defined &apos;Mathematical&apos; object like e.g. a number, a vector, a matrix.</skos:definition>
+        <skos:definition xml:lang="en">Variable, i.e., a conventional that is employed for something to which values can be assigned (this may include different notations for the same variable including, e.g., computational representations); this is to be understood very generally, e.g., a variable may be an array or set of elements or have another kind of internal structure</skos:definition>
         <skos:prefLabel xml:lang="en">Variable</skos:prefLabel>
     </owl:Class>
     

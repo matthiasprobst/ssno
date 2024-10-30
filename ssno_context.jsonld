@@ -37,7 +37,7 @@
     "Unit" : {"@id" : "qudt:Unit"},
     "numerical variable" : {"@id" : "<http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>"},
     "text variable" : {"@id" : "<http://w3id.org/nfdi4ing/metadata4ing#TextVariable>"},
-    "property" : {"@id" : "<http://www.molmod.info/semantics/pims-ii.ttl#Property>"},
+    "Property" : {"@id" : "<http://www.molmod.info/semantics/pims-ii.ttl#Property>"},
     "quantity value" : {"@id" : "<http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>"},
     "Variable" : {"@id" : "<http://www.molmod.info/semantics/pims-ii.ttl#Variable>"},
     "Dataset" : {"@id" : "dcat:Dataset"},
