@@ -398,7 +398,14 @@
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTable">
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <skos:definition xml:lang="en">Points to the ssno:StandardNameTable defining the ssno:StandardName.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
     </owl:ObjectProperty>
@@ -467,7 +474,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
     </owl:ObjectProperty>
@@ -1004,7 +1018,7 @@
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification">
         <skos:definition xml:lang="en">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</skos:definition>
-        <skos:prefLabel xml:lang="en">standard name modification</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Standard Name Modification</skos:prefLabel>
     </owl:Class>
     
 
@@ -1043,7 +1057,6 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#hasModifier"/>
@@ -1072,7 +1085,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition xml:lang="en">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</skos:definition>
-        <skos:prefLabel>StandardNameTable</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Standard NameTable</skos:prefLabel>
     </owl:Class>
     
 

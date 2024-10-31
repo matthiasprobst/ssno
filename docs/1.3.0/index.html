@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the<br>concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore<br>it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or<br>contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-10-30", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the<br>concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore<br>it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or<br>contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-10-31", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-10-30</dt>
+<dt>Modified on: 2024-10-31</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.3.0">https://matthiasprobst.github.io/ssno/1.3.0</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v1.3.0</dd>
 <dt>Issued on:</dt>
-<dd>2024-10-30</dd>
+<dd>2024-10-31</dd>
 <dt>Authors:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</dd>
 
@@ -211,11 +211,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#StandardNameModification"
-         title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a>
+         title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a>
    </li>
    <li>
       <a href="#StandardNameTable"
-         title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a>
+         title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a>
    </li>
    <li>
       <a href="#http://w3id.org/nfdi4ing/metadata4ing#TextVariable"
@@ -421,8 +421,8 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">Role</a></li>
   <li><a href="#ScalarStandardName" title="https://matthiasprobst.github.io/ssno#ScalarStandardName">Scalar Standard Name</a></li>
   <li><a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a></li>
-  <li><a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a></li>
-  <li><a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a></li>
+  <li><a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a></li>
+  <li><a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#TextVariable" title="http://w3id.org/nfdi4ing/metadata4ing#TextVariable">text variable</a></li>
   <li><a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a></li>
   <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
@@ -523,13 +523,7 @@ This section provides details for each class and property defined by SSNO.
     is equivalent to
    </dt>
    <dd>
-    <span class="logic">inverse</span> <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -541,7 +535,7 @@ This section provides details for each class and property defined by SSNO.
     is in range of
    </dt>
    <dd>
-    <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -593,7 +587,7 @@ This section provides details for each class and property defined by SSNO.
     is equivalent to
    </dt>
    <dd>
-    <span class="logic">inverse</span> <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -762,7 +756,7 @@ This section provides details for each class and property defined by SSNO.
     has super-classes
    </dt>
    <dd>
-    <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a> <sup class="type-c" title="class">c</sup>
+    <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
@@ -872,7 +866,7 @@ This section provides details for each class and property defined by SSNO.
     is equivalent to
    </dt>
    <dd>
-    <span class="logic">inverse</span> <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has super-classes
@@ -905,7 +899,7 @@ This section provides details for each class and property defined by SSNO.
   </dl>
  </div>
  <div class="entity" id="StandardNameModification">
-  <h3>standard name modification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>Standard Name Modification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardNameModification</p>
   <div class="comment">
    <span class="markdown">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</span>
@@ -926,7 +920,7 @@ This section provides details for each class and property defined by SSNO.
   </dl>
  </div>
  <div class="entity" id="StandardNameTable">
-  <h3>StandardNameTable<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <h3>Standard NameTable<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#StandardNameTable</p>
   <div class="comment">
    <span class="markdown">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</span>
@@ -947,9 +941,7 @@ This section provides details for each class and property defined by SSNO.
    <dt>
     has super-classes
    </dt>
-   <dd>
-    <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
-   </dd>
+   <dd></dd>
    <dt>
     is in domain of
    </dt>
@@ -1007,7 +999,7 @@ This section provides details for each class and property defined by SSNO.
     has super-classes
    </dt>
    <dd>
-    <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a> <sup class="type-c" title="class">c</sup>
+    <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1331,7 +1323,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1514,7 +1506,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -1537,7 +1529,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1566,7 +1558,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1625,7 +1617,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -1764,7 +1756,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -1964,7 +1956,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2059,7 +2051,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">standard name modification</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2147,7 +2139,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">StandardNameTable</a> <sup class="type-c" title="class">c</sup>
+     <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
