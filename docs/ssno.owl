@@ -500,6 +500,18 @@
     
 
 
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <skos:definition xml:lang="en">The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/</skos:definition>
+        <skos:prefLabel xml:lang="en">has version</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/identifier -->
 
 
@@ -603,18 +615,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <skos:definition xml:lang="en">A keyword or tag describing the resource.</skos:definition>
         <skos:prefLabel xml:lang="en">keyword</skos:prefLabel>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/dcat#version -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/dcat#version">
-        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <skos:definition xml:lang="en">The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/</skos:definition>
-        <skos:prefLabel>version</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -866,6 +866,15 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <skos:prefLabel xml:lang="en">Concept</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/dcat#Dataset -->
 
 
@@ -1057,6 +1066,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#hasModifier"/>
@@ -1080,7 +1090,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/dcat#version"/>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/hasVersion"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>

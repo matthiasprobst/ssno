@@ -312,6 +312,14 @@ owl:sameas rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :StandardNameTable ;
+                                      rdfs:range rdfs:Literal ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "has version"@en .
+
+
 ###  http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain :StandardNameTable ;
@@ -381,14 +389,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                     rdfs:range rdfs:Literal ;
                                     <http://www.w3.org/2004/02/skos/core#definition> "A keyword or tag describing the resource."@en ;
                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "keyword"@en .
-
-
-###  http://www.w3.org/ns/dcat#version
-<http://www.w3.org/ns/dcat#version> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain :StandardNameTable ;
-                                    rdfs:range rdfs:Literal ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
-                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
 
 
 ###  https://matthiasprobst.github.io/ssno#altersUnit
@@ -548,6 +548,11 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Variable"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Concept"@en .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
                                     owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -661,7 +666,8 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                         ] ;
                                          owl:someValuesFrom <http://www.w3.org/ns/dcat#Dataset>
                                        ] ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasModifier ;
                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                      owl:onClass :VectorQualification
@@ -676,7 +682,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                      ]
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty <http://www.w3.org/ns/dcat#version> ;
+                                     owl:onProperty <http://purl.org/dc/terms/hasVersion> ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;

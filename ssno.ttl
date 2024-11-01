@@ -321,6 +321,14 @@ ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/hasVersion
+dcterms:hasVersion rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ssno:StandardNameTable ;
+                   rdfs:range rdfs:Literal ;
+                   skos:definition "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
+                   skos:prefLabel "has version"@en .
+
+
 ###  http://purl.org/dc/terms/identifier
 dcterms:identifier rdf:type owl:DatatypeProperty ;
                    rdfs:domain ssno:StandardNameTable ;
@@ -390,14 +398,6 @@ dcat:keyword rdf:type owl:DatatypeProperty ;
              rdfs:range rdfs:Literal ;
              skos:definition "A keyword or tag describing the resource."@en ;
              skos:prefLabel "keyword"@en .
-
-
-###  http://www.w3.org/ns/dcat#version
-dcat:version rdf:type owl:DatatypeProperty ;
-             rdfs:domain ssno:StandardNameTable ;
-             rdfs:range rdfs:Literal ;
-             skos:definition "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
-             skos:prefLabel "version" .
 
 
 ###  https://matthiasprobst.github.io/ssno#altersUnit
@@ -557,6 +557,11 @@ qudt:Unit rdf:type owl:Class ;
                                                         skos:prefLabel "Variable"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             skos:prefLabel "Concept"@en .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              owl:equivalentClass [ rdf:type owl:Restriction ;
@@ -670,7 +675,8 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                                             ] ;
                                              owl:someValuesFrom dcat:Dataset
                                            ] ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf skos:Concept ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty ssno:hasModifier ;
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onClass ssno:VectorQualification
@@ -685,7 +691,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                                          ]
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty dcat:version ;
+                                         owl:onProperty dcterms:hasVersion ;
                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                        ] ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;

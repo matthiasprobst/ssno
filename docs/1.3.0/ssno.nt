@@ -335,6 +335,13 @@ _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en .
+<http://purl.org/dc/terms/hasVersion> <http://www.w3.org/2004/02/skos/core#prefLabel> "has version"@en .
+# 
 # http://purl.org/dc/terms/identifier
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
@@ -399,13 +406,6 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#definition> "A keyword or tag describing the resource."@en .
 <http://www.w3.org/ns/dcat#keyword> <http://www.w3.org/2004/02/skos/core#prefLabel> "keyword"@en .
-# 
-# http://www.w3.org/ns/dcat#version
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en .
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/2004/02/skos/core#prefLabel> "version" .
 # 
 # https://matthiasprobst.github.io/ssno#altersUnit
 <https://matthiasprobst.github.io/ssno#altersUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -564,6 +564,10 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.molmod.info/semantics/pims-ii.ttl#Variable> <http://www.w3.org/2004/02/skos/core#definition> "Variable, i.e., a conventional that is employed for something to which values can be assigned (this may include different notations for the same variable including, e.g., computational representations); this is to be understood very generally, e.g., a variable may be an array or set of elements or have another kind of internal structure"@en .
 <http://www.molmod.info/semantics/pims-ii.ttl#Variable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Variable"@en .
 # 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core#prefLabel> "Concept"@en .
+# 
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
@@ -670,6 +674,7 @@ _:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/d
 _:genid64 <http://www.w3.org/2002/07/owl#onProperty> _:genid65 .
 _:genid65 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
 _:genid66 <http://www.w3.org/2002/07/owl#onClass> <https://matthiasprobst.github.io/ssno#VectorQualification> .
 _:genid66 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
@@ -690,7 +695,7 @@ _:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.git
 _:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
 _:genid71 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#version> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasVersion> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard NameTable"@en .
