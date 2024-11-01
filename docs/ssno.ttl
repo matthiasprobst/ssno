@@ -53,9 +53,18 @@
 <http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty ;
+                                   rdfs:comment "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "A topic of the resource."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "subject"@en ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:domain :StandardNameTable .
+
+
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
-                                 rdfs:range xsd:string ;
+                                 rdfs:range xsd:anyURI ;
                                  rdfs:domain :StandardNameTable .
 
 
@@ -316,7 +325,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 <http://purl.org/dc/terms/hasVersion> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain :StandardNameTable ;
                                       rdfs:range rdfs:Literal ;
-                                      <http://www.w3.org/2004/02/skos/core#definition> "The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is a version, edition, or adaptation of the described resource."@en ;
                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has version"@en .
 
 
@@ -550,6 +559,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive."@en ;
                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Concept"@en .
 
 

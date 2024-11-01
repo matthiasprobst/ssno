@@ -58,6 +58,7 @@
     "Vector Standard Name" : {"@id" : "ssno:VectorStandardName"},
     "Intangible" : {"@id" : "schema:Intangible"},
     "Project" : {"@id" : "schema:Project"},
+    "subject" : {"@id" : "dcterms:subject", "@type" : "xsd:string"},
     "agent" : {"@id" : "prov:agent", "@type" : "prov:Agent"},
     "had role" : {"@id" : "prov:hadRole", "@type" : "prov:Role"},
     "qualified attribution" : {"@id" : "prov:qualifiedAttribution", "@type" : "prov:Attribution"},

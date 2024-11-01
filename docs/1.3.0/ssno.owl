@@ -90,11 +90,24 @@
     
 
 
+    <!-- http://purl.org/dc/terms/subject -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
+        <rdfs:comment xml:lang="en">Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.</rdfs:comment>
+        <skos:definition xml:lang="en">A topic of the resource.</skos:definition>
+        <skos:prefLabel xml:lang="en">subject</skos:prefLabel>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
     </owl:AnnotationProperty>
     
@@ -506,7 +519,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/hasVersion">
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <skos:definition xml:lang="en">The version of the Standard Name Table. Best is to adhere to semantic versioning described here: https://semver.org/</skos:definition>
+        <skos:definition xml:lang="en">A related resource that is a version, edition, or adaptation of the described resource.</skos:definition>
         <skos:prefLabel xml:lang="en">has version</skos:prefLabel>
     </owl:DatatypeProperty>
     
@@ -870,6 +883,7 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <skos:definition xml:lang="en">A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.</skos:definition>
         <skos:prefLabel xml:lang="en">Concept</skos:prefLabel>
     </owl:Class>
     
