@@ -174,6 +174,38 @@
     
 
 
+    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#member -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#member">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Group"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Group"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <skos:definition xml:lang="en">Relation between collection and the members of it.</skos:definition>
+        <skos:prefLabel xml:lang="en">member</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
+        <rdfs:domain rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
+        <rdfs:range rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#"/>
+        <skos:definition xml:lang="en">Relation between the HDF file and its root group</skos:definition>
+        <skos:prefLabel xml:lang="en">has root group</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/prov#agent -->
 
 
@@ -434,7 +466,7 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
                     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
                     <rdf:Description rdf:about="https://schema.org/Project"/>
                 </owl:unionOf>
@@ -481,7 +513,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+                    <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
                     <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
                     <rdf:Description rdf:about="https://schema.org/Project"/>
                 </owl:unionOf>
@@ -789,10 +821,32 @@
     
 
 
-    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup -->
+    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#File -->
 
 
-    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#File">
+        <rdfs:isDefinedBy rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#"/>
+        <skos:definition xml:lang="en">A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification</skos:definition>
+        <skos:prefLabel xml:lang="en">HDF5 File</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#Group -->
+
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">
+        <rdfs:isDefinedBy rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#"/>
+        <skos:definition xml:lang="en">A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata.</skos:definition>
+        <skos:prefLabel xml:lang="en">HDF5 Group</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup -->
+
+
+    <owl:Class rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty>
@@ -803,6 +857,7 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#Group"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#"/>
         <skos:definition xml:lang="en">An HDF5 file root group. The entry group into an HDF5 File. Attributes defined here are describing the file content.</skos:definition>
         <skos:prefLabel xml:lang="en">HDF5 Root Group</skos:prefLabel>
@@ -1067,7 +1122,7 @@
                         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>

@@ -30,7 +30,7 @@
      inkscape:cx="244.86957"
      inkscape:cy="123.19289"
      inkscape:window-width="1920"
-     inkscape:window-height="1129"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -247,14 +247,14 @@
     <text
        xml:space="preserve"
        style="font-size:4.0576px;line-height:1.25;font-family:sans-serif;stroke-width:0.2536"
-       x="116.68408"
+       x="121.44659"
        y="14.861886"
        id="text2"><tspan
          sodipodi:role="line"
          id="tspan2"
          style="font-size:4.0576px;stroke-width:0.2536"
-         x="116.68408"
-         y="14.861886">hdf5:rootGroup</tspan></text>
+         x="121.44659"
+         y="14.861886">hdf5:File</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.479244;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-0)"
        d="m 140.13347,20.607992 c -1.94308,20.075911 -12.81425,29.668485 -33.31175,30.012321"

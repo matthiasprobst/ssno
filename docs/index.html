@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-11-01", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-11-02", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-11-01</dt>
+<dt>Modified on: 2024-11-02</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.3.0">https://matthiasprobst.github.io/ssno/1.3.0</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v1.3.0</dd>
 <dt>Issued on:</dt>
-<dd>2024-11-01</dd>
+<dd>2024-11-02</dd>
 <dt>Authors:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</dd>
 
@@ -170,8 +170,16 @@ This ontology has the following classes and properties.</span>
          title="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset">HDF5 Dataset</a>
    </li>
    <li>
-      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
-         title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a>
+   </li>
+   <li>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a>
+   </li>
+   <li>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">HDF5 Root Group</a>
    </li>
    <li>
       <a href="#https://schema.org/Intangible" title="https://schema.org/Intangible">Intangible</a>
@@ -274,6 +282,10 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a>
    </li>
    <li>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a>
+   </li>
+   <li>
       <a href="#hasStandardName"
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
    </li>
@@ -287,6 +299,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a>
+   </li>
+   <li>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a>
    </li>
    <li>
       <a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a>
@@ -413,7 +429,9 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a></li>
   <li><a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a></li>
   <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset">HDF5 Dataset</a></li>
-  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">HDF5 Root Group</a></li>
   <li><a href="#https://schema.org/Intangible" title="https://schema.org/Intangible">Intangible</a></li>
   <li><a href="#http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable" title="http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable">numerical variable</a></li>
   <li><a href="#http://www.w3.org/ns/prov#Organization" title="http://www.w3.org/ns/prov#Organization">Organization</a></li>
@@ -583,13 +601,77 @@ This section provides details for each class and property defined by SSNO.
     is in range of
    </dt>
    <dd>
-    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#File">
+  <h3>HDF5 File<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#File</p>
+  <div class="comment">
+   <span class="markdown">A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.allotrope.org/ontologies/hdf5/1.8#">http://purl.allotrope.org/ontologies/hdf5/1.8#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">
+  <h3>HDF5 Group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#Group</p>
+  <div class="comment">
+   <span class="markdown">A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.allotrope.org/ontologies/hdf5/1.8#">http://purl.allotrope.org/ontologies/hdf5/1.8#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">
   <h3>HDF5 Root Group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup</p>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup</p>
   <div class="comment">
    <span class="markdown">An HDF5 file root group. The entry group into an HDF5 File. Attributes defined here are describing the file content.</span>
   </div>
@@ -609,16 +691,16 @@ This section provides details for each class and property defined by SSNO.
     <span class="logic">inverse</span> <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
-    is in domain of
+    has super-classes
    </dt>
    <dd>
-    <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -952,7 +1034,7 @@ This section provides details for each class and property defined by SSNO.
     <span class="logic">inverse</span> <a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dd>
-    <span class="logic">inverse</span> <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup>
+    <span class="logic">inverse</span> <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dd>
     <span class="logic">inverse</span> <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup> <span class="logic">some</span> <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
@@ -1140,10 +1222,12 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a></li>
   <li><a href="#hasCharacter" title="https://matthiasprobst.github.io/ssno#hasCharacter">has character</a></li>
   <li><a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a></li>
   <li><a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a></li>
   <li><a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a></li>
   <li><a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a></li>
   <li><a href="#http://xmlns.com/foaf/0.1/mbox" title="http://xmlns.com/foaf/0.1/mbox">mbox</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a></li>
   <li><a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a></li>
   <li><a href="#http://www.w3.org/ns/prov#qualifiedAttribution" title="http://www.w3.org/ns/prov#qualifiedAttribution">qualified attribution</a></li>
   <li><a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a></li>
@@ -1355,6 +1439,37 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
+  <h3>has root group<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup</p>
+  <div class="comment">
+   <span class="markdown">Relation between the HDF file and its root group</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.allotrope.org/ontologies/hdf5/1.8#">http://purl.allotrope.org/ontologies/hdf5/1.8#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasStandardName">
   <h3>has standard name<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasStandardName</p>
@@ -1468,6 +1583,29 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#member">
+  <h3>member<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#member</p>
+  <div class="comment">
+   <span class="markdown">Relation between collection and the members of it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset">HDF5 Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="positioned">
   <h3>positioned<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#positioned</p>
@@ -1556,7 +1694,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/Project" title="https://schema.org/Project">Project</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/Project" title="https://schema.org/Project">Project</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -1632,7 +1770,7 @@ This section provides details for each class and property defined by SSNO.
      has domain
     </dt>
     <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">HDF5 Root Group</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/Project" title="https://schema.org/Project">Project</a> <sup class="type-c" title="class">c</sup>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://www.w3.org/ns/dcat#Dataset" title="http://www.w3.org/ns/dcat#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#https://schema.org/Project" title="https://schema.org/Project">Project</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
