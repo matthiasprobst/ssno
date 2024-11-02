@@ -275,7 +275,7 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://matthiasprobst.github.io/ssno#positioned
 <https://matthiasprobst.github.io/ssno#positioned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://matthiasprobst.github.io/ssno#positioned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
-<https://matthiasprobst.github.io/ssno#positioned> <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifiactions or a qualificaiton and a standard name to each other."@en .
+<https://matthiasprobst.github.io/ssno#positioned> <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifications or one qualification and a standard name to each other."@en .
 <https://matthiasprobst.github.io/ssno#positioned> <http://www.w3.org/2004/02/skos/core#prefLabel> "positioned"@en .
 # 
 # https://matthiasprobst.github.io/ssno#standardNameTable
@@ -710,7 +710,7 @@ _:genid63 <http://www.w3.org/2002/07/owl#onProperty> _:genid64 .
 _:genid64 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTable> .
 _:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://matthiasprobst.github.io/ssno#StandardNameTable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid65 .
-_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup> .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.org/ontologies/hdf5/1.8#File> .
 _:genid65 <http://www.w3.org/2002/07/owl#onProperty> _:genid66 .
 _:genid66 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

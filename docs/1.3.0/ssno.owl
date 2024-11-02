@@ -431,7 +431,7 @@
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#positioned">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <skos:definition xml:lang="en">Relates two qualifiactions or a qualificaiton and a standard name to each other.</skos:definition>
+        <skos:definition xml:lang="en">Relates two qualifications or one qualification and a standard name to each other.</skos:definition>
         <skos:prefLabel xml:lang="en">positioned</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -1122,7 +1122,7 @@
                         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
                     </rdf:Description>
                 </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup"/>
+                <owl:someValuesFrom rdf:resource="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <owl:equivalentClass>

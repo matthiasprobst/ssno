@@ -13,6 +13,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix hdf5: <http://purl.allotrope.org/ontologies/hdf5/1.8#> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -110,11 +111,11 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#member
-<http://purl.allotrope.org/ontologies/hdf5/1.8#member> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Group> ;
+hdf5:member rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain hdf5:Group ;
                                                        rdfs:range [ rdf:type owl:Class ;
-                                                                    owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
-                                                                                  <http://purl.allotrope.org/ontologies/hdf5/1.8#Group>
+                                                                    owl:unionOf ( hdf5:Dataset
+                                                                                  hdf5:Group
                                                                                 )
                                                                   ] ;
                                                        skos:definition "Relation between collection and the members of it."@en ;
@@ -122,9 +123,9 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
-<http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdf:type owl:ObjectProperty ;
-                                                          rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#File> ;
-                                                          rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup> ;
+hdf5:rootGroup rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain hdf5:File ;
+                                                          rdfs:range hdf5:RootGroup ;
                                                           rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                           skos:definition "Relation between the HDF file and its root group"@en ;
                                                           skos:prefLabel "has root group"@en .
@@ -243,7 +244,7 @@ ssno:hasModifier rdf:type owl:ObjectProperty ;
 ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
                      rdfs:domain [ rdf:type owl:Class ;
-                                   owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                   owl:unionOf ( hdf5:Dataset
                                                  <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
@@ -266,7 +267,7 @@ ssno:hasValidValues rdf:type owl:ObjectProperty ;
 ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       rdfs:domain ssno:StandardName ;
                       rdfs:range [ rdf:type owl:Class ;
-                                   owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                   owl:unionOf ( hdf5:Dataset
                                                  <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
@@ -279,7 +280,7 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#positioned
 ssno:positioned rdf:type owl:ObjectProperty ,
                          owl:TransitiveProperty ;
-                skos:definition "Relates two qualifiactions or a qualificaiton and a standard name to each other."@en ;
+                skos:definition "Relates two qualifications or one qualification and a standard name to each other."@en ;
                 skos:prefLabel "positioned"@en .
 
 
@@ -301,7 +302,7 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              owl:inverseOf ssno:usesStandardNameTable ;
                              rdfs:domain ssno:StandardNameTable ;
                              rdfs:range [ rdf:type owl:Class ;
-                                          owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#File>
+                                          owl:unionOf ( hdf5:File
                                                         dcat:Dataset
                                                         schema:Project
                                                       )
@@ -333,7 +334,7 @@ ssno:unit rdf:type owl:ObjectProperty ,
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:domain [ rdf:type owl:Class ;
-                                         owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#File>
+                                         owl:unionOf ( hdf5:File
                                                        dcat:Dataset
                                                        schema:Project
                                                      )
@@ -441,7 +442,7 @@ ssno:altersUnit rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#ancillaryVariables
 ssno:ancillaryVariables rdf:type owl:DatatypeProperty ;
-                        rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
+                        rdfs:domain hdf5:Dataset ;
                         rdfs:range xsd:string ;
                         skos:definition "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationship between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
                         skos:prefLabel "ancillary variables"@en .
@@ -482,7 +483,7 @@ ssno:hasPreposition rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#longName
 ssno:longName rdf:type owl:DatatypeProperty ;
-              rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
+              rdfs:domain hdf5:Dataset ;
               rdfs:range xsd:string ;
               skos:definition "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en ;
               skos:prefLabel "long name"@en .
@@ -491,7 +492,7 @@ ssno:longName rdf:type owl:DatatypeProperty ;
 ###  https://matthiasprobst.github.io/ssno#standardName
 ssno:standardName rdf:type owl:DatatypeProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
+                                owl:unionOf ( hdf5:Dataset
                                               ssno:StandardName
                                             )
                               ] ;
@@ -524,34 +525,34 @@ schema:name rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
-<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> rdf:type owl:Class ;
+hdf5:Dataset rdf:type owl:Class ;
                                                         rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                         skos:definition "An HDF5 Dataset."@en ;
                                                         skos:prefLabel "HDF5 Dataset"@en .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#File
-<http://purl.allotrope.org/ontologies/hdf5/1.8#File> rdf:type owl:Class ;
+hdf5:File rdf:type owl:Class ;
                                                      rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                      skos:definition "A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification"@en ;
                                                      skos:prefLabel "HDF5 File"@en .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#Group
-<http://purl.allotrope.org/ontologies/hdf5/1.8#Group> rdf:type owl:Class ;
+hdf5:Group rdf:type owl:Class ;
                                                       rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                       skos:definition "A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata."@en ;
                                                       skos:prefLabel "HDF5 Group"@en .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup
-<http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup> rdf:type owl:Class ;
+hdf5:RootGroup rdf:type owl:Class ;
                                                           owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty [ owl:inverseOf ssno:standardNameTableUsedBy
                                                                                                ] ;
                                                                                 owl:someValuesFrom ssno:StandardNameTable
                                                                               ] ;
-                                                          rdfs:subClassOf <http://purl.allotrope.org/ontologies/hdf5/1.8#Group> ;
+                                                          rdfs:subClassOf hdf5:Group ;
                                                           rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
                                                           skos:definition "An HDF5 file root group. The entry group into an HDF5 File. Attributes defined here are describing the file content."@en ;
                                                           skos:prefLabel "HDF5 Root Group"@en .
@@ -714,7 +715,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable
                                                             ] ;
-                                             owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup>
+                                             owl:someValuesFrom hdf5:File
                                            ] ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty [ owl:inverseOf ssno:usesStandardNameTable

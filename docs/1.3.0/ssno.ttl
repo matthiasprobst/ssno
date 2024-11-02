@@ -270,7 +270,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 ###  https://matthiasprobst.github.io/ssno#positioned
 :positioned rdf:type owl:ObjectProperty ,
                      owl:TransitiveProperty ;
-            <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifiactions or a qualificaiton and a standard name to each other."@en ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifications or one qualification and a standard name to each other."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "positioned"@en .
 
 
@@ -705,7 +705,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty [ owl:inverseOf :usesStandardNameTable
                                                         ] ;
-                                         owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup>
+                                         owl:someValuesFrom <http://purl.allotrope.org/ontologies/hdf5/1.8#File>
                                        ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty [ owl:inverseOf :usesStandardNameTable

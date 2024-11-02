@@ -255,7 +255,7 @@
     "@id" : "_:genid66"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup"
+    "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#File"
   } ]
 }, {
   "@id" : "_:genid66",
@@ -1442,7 +1442,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates two qualifiactions or a qualificaiton and a standard name to each other."
+    "@value" : "Relates two qualifications or one qualification and a standard name to each other."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
