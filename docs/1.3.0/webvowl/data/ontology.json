@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://w3id.org/nfdi4ing/metadata4ing", "http://www.w3.org/2001/XMLSchema", "http://www.molmod.info/semantics/pims-ii.ttl", "http://www.w3.org/ns/dcat", "https://matthiasprobst.github.io/ssno", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/ns/prov", "http://purl.org/dc/terms", "http://xmlns.com/foaf/0.1", "http://purl.allotrope.org/ontologies/hdf5/1.8", "http://www.w3.org/2004/02/skos/core" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://schema.org", "http://w3id.org/nfdi4ing/metadata4ing", "http://www.w3.org/2001/XMLSchema", "http://www.molmod.info/semantics/pims-ii.ttl", "http://www.w3.org/ns/dcat", "https://matthiasprobst.github.io/ssno", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/ns/prov", "http://purl.org/dc/terms", "http://xmlns.com/foaf/0.1", "http://purl.allotrope.org/ontologies/hdf5/1.8", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "en" : "sSNO: A simple Standard Name Ontology"
     },
@@ -206,6 +206,9 @@
     "id" : "94",
     "type" : "owl:Class"
   }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
@@ -236,7 +239,7 @@
     "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
     "id" : "46",
@@ -245,7 +248,7 @@
     "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
+    "id" : "103",
     "type" : "owl:Class"
   }, {
     "id" : "43",
@@ -825,6 +828,30 @@
     "attributes" : [ "external" ],
     "id" : "94"
   }, {
+    "iri" : "http://schema.org/ResearchProject",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Research Project",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A Research project.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResearchProject"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "22" ]
+  }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#Group",
     "baseIri" : "http://purl.allotrope.org/ontologies/hdf5/1.8",
     "instances" : 0,
@@ -899,6 +926,7 @@
     "label" : {
       "IRI-based" : "Project"
     },
+    "subClasses" : [ "60" ],
     "comment" : {
       "en" : "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"
     },
@@ -963,7 +991,7 @@
         "IRI-based" : "AnyStandardName"
       }
     } ],
-    "subClasses" : [ "60", "58" ],
+    "subClasses" : [ "58", "103" ],
     "id" : "2"
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset",
@@ -1071,7 +1099,7 @@
     "label" : {
       "IRI-based" : "ScalarStandardName"
     },
-    "id" : "60",
+    "id" : "58",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue",
@@ -1153,7 +1181,7 @@
     "label" : {
       "IRI-based" : "VectorStandardName"
     },
-    "id" : "58",
+    "id" : "103",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#File",
@@ -1330,20 +1358,17 @@
     "id" : "102",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "103",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "104",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "105",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "106",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "107",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "108",
     "type" : "owl:someValuesFrom"
@@ -1352,34 +1377,34 @@
     "type" : "owl:someValuesFrom"
   }, {
     "id" : "110",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "111",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "112",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "113",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "114",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "115",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "116",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "117",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "118",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "119",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "120",
     "type" : "owl:objectProperty"
@@ -1388,6 +1413,12 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "122",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "124",
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
@@ -1613,7 +1644,7 @@
       "IRI-based" : "alias"
     },
     "domain" : "2",
-    "attributes" : [ "object", "transitive" ],
+    "attributes" : [ "transitive", "object" ],
     "id" : "37"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#identifier",
@@ -1644,7 +1675,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "57"
   }, {
-    "range" : "2",
+    "range" : "22",
     "domain" : "60",
     "attributes" : [ "object", "anonymous" ],
     "id" : "59"
@@ -1992,12 +2023,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "https://ptb.de/si/hasUnit",
+        "value" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://w3id.org/nfdi4ing/metadata4ing#hasUnit",
+        "value" : "https://ptb.de/si/hasUnit",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
@@ -2148,18 +2179,23 @@
     },
     "domain" : "39",
     "subproperty" : [ "79", "98" ],
-    "attributes" : [ "object", "transitive" ],
+    "attributes" : [ "transitive", "object" ],
     "id" : "80"
-  }, {
-    "range" : "1",
-    "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "101"
   }, {
     "range" : "1",
     "domain" : "41",
     "attributes" : [ "object", "anonymous" ],
+    "id" : "101"
+  }, {
+    "range" : "2",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "102"
+  }, {
+    "range" : "1",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#altersUnit",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2189,17 +2225,17 @@
     },
     "domain" : "53",
     "attributes" : [ "datatype" ],
-    "id" : "103"
+    "id" : "105"
   }, {
     "range" : "53",
     "domain" : "41",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "104"
+    "id" : "106"
   }, {
-    "range" : "58",
-    "domain" : "60",
+    "range" : "103",
+    "domain" : "58",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "105"
+    "id" : "107"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNames",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2222,8 +2258,8 @@
       "IRI-based" : "standardNames"
     },
     "domain" : "2",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "106"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "108"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2246,8 +2282,8 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "4",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "107"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "109"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
     "inverse" : "93",
@@ -2271,8 +2307,8 @@
       "IRI-based" : "standardNameTable"
     },
     "domain" : "4",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "108"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "110"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2295,8 +2331,8 @@
       "IRI-based" : "usesStandardNameTable"
     },
     "domain" : "4",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "109"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "111"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
     "baseIri" : "http://www.w3.org/ns/dcat",
@@ -2320,7 +2356,7 @@
     },
     "domain" : "42",
     "attributes" : [ "datatype", "external" ],
-    "id" : "110"
+    "id" : "112"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasRoleIn",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -2344,7 +2380,7 @@
     },
     "domain" : "39",
     "attributes" : [ "object", "external" ],
-    "id" : "111"
+    "id" : "113"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasValidValues",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2368,7 +2404,7 @@
     },
     "domain" : "41",
     "attributes" : [ "object" ],
-    "id" : "112"
+    "id" : "114"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
     "inverse" : "30",
@@ -2392,8 +2428,8 @@
       "IRI-based" : "standardNameTableUsedBy"
     },
     "domain" : "56",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "113"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "115"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTableUsedBy",
     "inverse" : "30",
@@ -2417,8 +2453,8 @@
       "IRI-based" : "standardNameTableUsedBy"
     },
     "domain" : "42",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "114"
+    "attributes" : [ "someValues", "object" ],
+    "id" : "116"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasCharacter",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2442,37 +2478,7 @@
     },
     "domain" : "53",
     "attributes" : [ "object" ],
-    "id" : "115"
-  }, {
-    "iri" : "http://xmlns.com/foaf/0.1/mbox",
-    "baseIri" : "http://xmlns.com/foaf/0.1",
-    "range" : "84",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://xmlns.com/foaf/0.1/",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "mbox",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "mbox"
-    },
-    "domain" : "36",
-    "attributes" : [ "object", "external", "inverse functional" ],
-    "id" : "116"
+    "id" : "117"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#description",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2497,7 +2503,7 @@
     "minCardinality" : "1",
     "domain" : "0",
     "attributes" : [ "datatype" ],
-    "id" : "117"
+    "id" : "118"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasPreposition",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2527,10 +2533,40 @@
     },
     "domain" : "41",
     "attributes" : [ "datatype" ],
-    "id" : "118"
+    "id" : "119"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/mbox",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "84",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://xmlns.com/foaf/0.1/",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "mbox",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A personal mailbox, ie. an Internet mailbox associated with exactly one owner.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "mbox"
+    },
+    "domain" : "36",
+    "attributes" : [ "inverse functional", "object", "external" ],
+    "id" : "120"
   }, {
     "iri" : "http://www.w3.org/ns/prov#hadRole",
-    "inverse" : "111",
+    "inverse" : "113",
     "baseIri" : "http://www.w3.org/ns/prov",
     "range" : "94",
     "annotations" : {
@@ -2546,7 +2582,7 @@
     },
     "domain" : "62",
     "attributes" : [ "object", "external" ],
-    "id" : "119"
+    "id" : "121"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameTable",
     "inverse" : "93",
@@ -2571,7 +2607,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "120"
+    "id" : "122"
   }, {
     "iri" : "http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup",
     "baseIri" : "http://purl.allotrope.org/ontologies/hdf5/1.8",
@@ -2601,7 +2637,7 @@
     },
     "domain" : "43",
     "attributes" : [ "object", "external" ],
-    "id" : "121"
+    "id" : "123"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription",
     "baseIri" : "http://w3id.org/nfdi4ing/metadata4ing",
@@ -2625,6 +2661,6 @@
     },
     "domain" : "65",
     "attributes" : [ "datatype", "external" ],
-    "id" : "122"
+    "id" : "124"
   } ]
 }

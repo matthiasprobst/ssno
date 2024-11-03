@@ -875,6 +875,17 @@
     
 
 
+    <!-- http://schema.org/ResearchProject -->
+
+
+    <owl:Class rdf:about="http://schema.org/ResearchProject">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Project"/>
+        <skos:definition xml:lang="en">A Research project.</skos:definition>
+        <skos:prefLabel xml:lang="en">Research Project</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable -->
 
 
