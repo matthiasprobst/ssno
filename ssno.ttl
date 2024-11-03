@@ -125,7 +125,6 @@ hdf5:member rdf:type owl:ObjectProperty ;
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 hdf5:rootGroup rdf:type owl:ObjectProperty ;
                rdfs:domain hdf5:File ;
-               rdfs:range hdf5:RootGroup ;
                rdfs:isDefinedBy hdf5: ;
                skos:definition "Relation between the HDF file and its root group"@en ;
                skos:prefLabel "has root group"@en .
@@ -543,19 +542,6 @@ hdf5:Group rdf:type owl:Class ;
            rdfs:isDefinedBy hdf5: ;
            skos:definition "A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata."@en ;
            skos:prefLabel "HDF5 Group"@en .
-
-
-###  http://purl.allotrope.org/ontologies/hdf5/1.8#RootGroup
-hdf5:RootGroup rdf:type owl:Class ;
-               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                     owl:onProperty [ owl:inverseOf ssno:standardNameTableUsedBy
-                                                    ] ;
-                                     owl:someValuesFrom ssno:StandardNameTable
-                                   ] ;
-               rdfs:subClassOf hdf5:Group ;
-               rdfs:isDefinedBy hdf5: ;
-               skos:definition "An HDF5 file root group. The entry group into an HDF5 File. Attributes defined here are describing the file content."@en ;
-               skos:prefLabel "HDF5 Root Group"@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
