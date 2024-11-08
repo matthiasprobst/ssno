@@ -1,0 +1,1043 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
+<http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Relation between the HDF file and its root group"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "has root group"@en ;
+                                                          <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ;
+                                                          rdf:type owl:AnnotationProperty ;
+                                                          rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#File> .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
+                                  <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty ;
+                                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty ;
+                                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://www.w3.org/2001/XMLSchema#pattern
+xsd:pattern rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty ;
+                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
+                                                <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#after
+<https://matthiasprobst.github.io/ssno#after> rdf:type owl:AnnotationProperty ;
+                                              rdfs:subPropertyOf <https://matthiasprobst.github.io/ssno#positioned> .
+
+
+###  https://matthiasprobst.github.io/ssno#before
+<https://matthiasprobst.github.io/ssno#before> rdf:type owl:AnnotationProperty ;
+                                               rdfs:subPropertyOf <https://matthiasprobst.github.io/ssno#positioned> .
+
+
+###  https://matthiasprobst.github.io/ssno#positioned
+<https://matthiasprobst.github.io/ssno#positioned> rdf:type owl:AnnotationProperty ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifications or one qualification and a standard name to each other."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "positioned"@en ;
+                                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ,
+                                                                                                      <https://www.w3.org/2002/07/owl#TransitiveProperty> .
+
+
+###  https://www.w3.org/1999/02/22-rdf-syntax-ns#type
+<https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#cardinality
+<https://www.w3.org/2002/07/owl#cardinality> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#disjointWith
+<https://www.w3.org/2002/07/owl#disjointWith> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#equivalentClass
+<https://www.w3.org/2002/07/owl#equivalentClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#inverseOf
+<https://www.w3.org/2002/07/owl#inverseOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#maxQualifiedCardinality
+<https://www.w3.org/2002/07/owl#maxQualifiedCardinality> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#minQualifiedCardinality
+<https://www.w3.org/2002/07/owl#minQualifiedCardinality> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#onClass
+<https://www.w3.org/2002/07/owl#onClass> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#onDataRange
+<https://www.w3.org/2002/07/owl#onDataRange> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#onDatatype
+<https://www.w3.org/2002/07/owl#onDatatype> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#onProperty
+<https://www.w3.org/2002/07/owl#onProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#qualifiedCardinality
+<https://www.w3.org/2002/07/owl#qualifiedCardinality> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#someValuesFrom
+<https://www.w3.org/2002/07/owl#someValuesFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#unionOf
+<https://www.w3.org/2002/07/owl#unionOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#versionIRI
+<https://www.w3.org/2002/07/owl#versionIRI> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#versionInfo
+<https://www.w3.org/2002/07/owl#versionInfo> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.w3.org/2002/07/owl#withRestrictions
+<https://www.w3.org/2002/07/owl#withRestrictions> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://org.semanticweb.owlapi/error#Error7
+<http://org.semanticweb.owlapi/error#Error7> rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#member
+<http://purl.allotrope.org/ontologies/hdf5/1.8#member> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Group> ;
+                                                       rdfs:range <http://org.semanticweb.owlapi/error#Error3> ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Relation between collection and the members of it."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "member"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  http://www.w3.org/ns/dcat#hadRole
+<http://www.w3.org/ns/dcat#hadRole> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://www.w3.org/ns/prov#Attribution> ;
+                                    rdfs:range <http://www.w3.org/ns/dcat#Role> ;
+                                    rdfs:comment "This DCAT property complements prov:hadRole which provides the function of an entity or agent with respect to an activity."@en ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "The function of an entity or agent with respect to another entity or resource."@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "had role"@en ;
+                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  http://www.w3.org/ns/prov#agent
+<http://www.w3.org/ns/prov#agent> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://www.w3.org/ns/prov#Attribution> ;
+                                  rdfs:range <http://www.w3.org/ns/prov#Agent> ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent."@en ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "agent"@en ;
+                                  <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  http://www.w3.org/ns/prov#qualifiedAttribution
+<http://www.w3.org/ns/prov#qualifiedAttribution> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                                 rdfs:range <http://www.w3.org/ns/prov#Attribution> ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "Attribution is the ascribing of an entity to an agent. When an entity e is attributed to agent ag, entity e was generated by some unspecified activity that in turn was associated to agent ag. Thus, this relation is useful when the activity is not known, or irrelevant"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "qualified attribution"@en ;
+                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#after
+<https://matthiasprobst.github.io/ssno#after> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://matthiasprobst.github.io/ssno#Qualification> ;
+                                              rdfs:range <http://org.semanticweb.owlapi/error#Error9> .
+
+
+###  https://matthiasprobst.github.io/ssno#alias
+<https://matthiasprobst.github.io/ssno#alias> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                              rdfs:range <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Indicates that a standard name individual is an alias of another."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "alias"@en ;
+                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ,
+                                                                                                 <https://www.w3.org/2002/07/owl#TransitiveProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#associatedWith
+<https://matthiasprobst.github.io/ssno#associatedWith> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://matthiasprobst.github.io/ssno#Character> ;
+                                                       rdfs:range <http://org.semanticweb.owlapi/error#Error2> ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Associates a character to a thing, which is intended to be a AnyStandardName or a Qualification."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "associated with"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#before
+<https://matthiasprobst.github.io/ssno#before> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <https://matthiasprobst.github.io/ssno#Qualification> ;
+                                               rdfs:range <http://org.semanticweb.owlapi/error#Error6> .
+
+
+###  https://matthiasprobst.github.io/ssno#description
+<https://matthiasprobst.github.io/ssno#description> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://org.semanticweb.owlapi/error#Error21> ;
+                                                    rdfs:range <http://org.semanticweb.owlapi/error#Error10> .
+
+
+###  https://matthiasprobst.github.io/ssno#hasCharacter
+<https://matthiasprobst.github.io/ssno#hasCharacter> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <https://matthiasprobst.github.io/ssno#Transformation> ;
+                                                     rdfs:range <https://matthiasprobst.github.io/ssno#Character> ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en ;
+                                                     <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#hasModifier
+<https://matthiasprobst.github.io/ssno#hasModifier> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                                    rdfs:range <http://org.semanticweb.owlapi/error#Error4> ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Points to a Qualification or Transformation defined by a Standard Name Table"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "has modifier"@en ;
+                                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#hasStandardName
+<https://matthiasprobst.github.io/ssno#hasStandardName> rdf:type owl:ObjectProperty ;
+                                                        rdfs:domain <http://org.semanticweb.owlapi/error#Error18> ;
+                                                        rdfs:range <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "has standard name"@en ;
+                                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ;
+                                                        <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#isStandardNameOf> .
+
+
+###  https://matthiasprobst.github.io/ssno#hasValidValues
+<https://matthiasprobst.github.io/ssno#hasValidValues> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <https://matthiasprobst.github.io/ssno#Qualification> ;
+                                                       rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "A relationship defining a set of values used by the qualification."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has valid values"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#isStandardNameOf
+<https://matthiasprobst.github.io/ssno#isStandardNameOf> rdf:type owl:ObjectProperty ;
+                                                         rdfs:domain <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                         rdfs:range <http://org.semanticweb.owlapi/error#Error1> ;
+                                                         <http://www.w3.org/2004/02/skos/core#definition> "Points to a Concept, that describes a numerical variable, which uses the standard name."@en ;
+                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "is standard name of"@en ;
+                                                         <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameTable
+<https://matthiasprobst.github.io/ssno#standardNameTable> rdf:type owl:ObjectProperty ;
+                                                          rdfs:domain <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                          rdfs:range <http://org.semanticweb.owlapi/error#Error11> ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en ;
+                                                          <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ;
+                                                          <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> rdf:type owl:ObjectProperty ;
+                                                                rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                                                rdfs:range <http://org.semanticweb.owlapi/error#Error8> ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "Points to a concept, which uses a standard name table."@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en ;
+                                                                <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> ;
+                                                                <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNames
+<https://matthiasprobst.github.io/ssno#standardNames> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                                      rdfs:range <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en ;
+                                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#unit
+<https://matthiasprobst.github.io/ssno#unit> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                             rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+                                             <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> ,
+                                                                                              <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ,
+                                                                                              <https://ptb.de/si/hasUnit> ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
+                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "unit"@en ;
+                                             <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#FunctionalProperty> ,
+                                                                                                <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
+<https://matthiasprobst.github.io/ssno#usesStandardNameTable> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://org.semanticweb.owlapi/error#Error13> ;
+                                                              rdfs:range <http://org.semanticweb.owlapi/error#Error5> ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en ;
+                                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                       rdfs:range rdfs:Literal ;
+                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                      rdfs:range rdfs:Literal ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "A related resource that is a version, edition, or adaptation of the described resource."@en ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "has version"@en ;
+                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN). Persistent identifiers should be provided as HTTP URIs." ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier"@en ;
+                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "A topic of the resource."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "subject"@en ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameTable> ;
+                                 rdfs:range xsd:anyURI ;
+                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasRorId
+<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
+                                                 rdfs:domain <http://www.w3.org/ns/prov#Organization> ;
+                                                 rdfs:range <http://org.semanticweb.owlapi/error#Error7> ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A Research Organization Registry identifier, that points to a research organization"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "has ROR ID"@en ;
+                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasStringValue
+<http://w3id.org/nfdi4ing/metadata4ing#hasStringValue> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has string value"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
+<http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:domain <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "has variable description"@en ;
+                                                               <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#identifier
+<http://w3id.org/nfdi4ing/metadata4ing#identifier> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://www.w3.org/2002/07/owl#Thing> ;
+                                                   rdfs:range xsd:string ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "identifier"@en ;
+                                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
+<http://w3id.org/nfdi4ing/metadata4ing#orcidId> rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
+                                                rdfs:domain <http://www.w3.org/ns/prov#Person> ;
+                                                rdfs:range xsd:string ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "has ORCID ID"@en ;
+                                                <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID
+<http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
+                                                           rdfs:domain <https://schema.org/Project> ;
+                                                           rdfs:range xsd:string ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "An alphanumeric identifier for a project."@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "has project ID"@en ;
+                                                           <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://www.w3.org/ns/dcat#keyword
+<http://www.w3.org/ns/dcat#keyword> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
+                                    rdfs:range rdfs:Literal ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "A keyword or tag describing the resource."@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "keyword"@en ;
+                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
+                                 rdfs:range <https://www.w3.org/2002/07/owl#Thing> ;
+                                 rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A personal mailbox, ie. an Internet mailbox associated with exactly one owner."@en ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "mbox"@en ;
+                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#InverseFunctionalProperty> ,
+                                                                                    <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#altersUnit
+<https://matthiasprobst.github.io/ssno#altersUnit> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <https://matthiasprobst.github.io/ssno#Transformation> ;
+                                                   rdfs:range xsd:string ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A string defining how the new unit is generated."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "\"[X] s-1\" where [X] is the unit of the standard name X."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "alters unit"@en ;
+                                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#ancillaryVariables
+<https://matthiasprobst.github.io/ssno#ancillaryVariables> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
+                                                           rdfs:range xsd:string ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "Used to provide metadata about the data the property is provided with. E.g. uncertainties can be expressed/linked like this. As stated in the cf-conventions, the \"nature of the relationship between variables associated via ancillary_variables must be determined by other attributes\" https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s04.html)"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "ancillary variables"@en ;
+                                                           <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#character
+<https://matthiasprobst.github.io/ssno#character> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:domain <https://matthiasprobst.github.io/ssno#Character> ;
+                                                  rdfs:range xsd:string ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "A character i.e. a single letter or symbol"@en ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "character"@en ;
+                                                  <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#hasPreposition
+<https://matthiasprobst.github.io/ssno#hasPreposition> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:domain <https://matthiasprobst.github.io/ssno#Qualification> ;
+                                                       rdfs:range xsd:string ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "A data property that stores prepositional qualifiers like \"at,\" \"in,\" \"due to,\" and \"assuming.\" to be used with Qualifications."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#example> "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "has preposition"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#longName
+<https://matthiasprobst.github.io/ssno#longName> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
+                                                 rdfs:range xsd:string ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "A human-readable label of a variable which is should be used in addition with a standard_name. As intended in the cf-conventions (https://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/build/ch03s02.html), it may be used for labeling plots."@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "long name"@en ;
+                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#standardName
+<https://matthiasprobst.github.io/ssno#standardName> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:domain <http://org.semanticweb.owlapi/error#Error12> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:comment "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en ;
+                                                     <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameCharacter
+<https://matthiasprobst.github.io/ssno#standardNameCharacter> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <https://matthiasprobst.github.io/ssno#Transformation> ;
+                                                              rdfs:range xsd:string ;
+                                                              <http://www.w3.org/2004/02/skos/core#definition> "The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule."@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#example> "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
+                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en ;
+                                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain <https://matthiasprobst.github.io/ssno#StandardNameModification> ;
+                          rdfs:range xsd:string ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The name of the item."@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "name"@en ;
+                          <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://org.semanticweb.owlapi/error#Error1
+<http://org.semanticweb.owlapi/error#Error1> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error10
+<http://org.semanticweb.owlapi/error#Error10> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error11
+<http://org.semanticweb.owlapi/error#Error11> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error12
+<http://org.semanticweb.owlapi/error#Error12> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error13
+<http://org.semanticweb.owlapi/error#Error13> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error14
+<http://org.semanticweb.owlapi/error#Error14> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error15
+<http://org.semanticweb.owlapi/error#Error15> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error16
+<http://org.semanticweb.owlapi/error#Error16> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error17
+<http://org.semanticweb.owlapi/error#Error17> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error18
+<http://org.semanticweb.owlapi/error#Error18> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error19
+<http://org.semanticweb.owlapi/error#Error19> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error2
+<http://org.semanticweb.owlapi/error#Error2> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error20
+<http://org.semanticweb.owlapi/error#Error20> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error21
+<http://org.semanticweb.owlapi/error#Error21> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error3
+<http://org.semanticweb.owlapi/error#Error3> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error4
+<http://org.semanticweb.owlapi/error#Error4> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error5
+<http://org.semanticweb.owlapi/error#Error5> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error6
+<http://org.semanticweb.owlapi/error#Error6> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error8
+<http://org.semanticweb.owlapi/error#Error8> rdf:type owl:Class .
+
+
+###  http://org.semanticweb.owlapi/error#Error9
+<http://org.semanticweb.owlapi/error#Error9> rdf:type owl:Class .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> rdf:type owl:Class ;
+                                                        rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "An HDF5 Dataset."@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "HDF5 Dataset"@en ;
+                                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#Group
+<http://purl.allotrope.org/ontologies/hdf5/1.8#Group> rdf:type owl:Class ;
+                                                      rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata."@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "HDF5 Group"@en ;
+                                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Unit of measure."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
+<http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                                                          rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                          <http://www.w3.org/2004/02/skos/core#closeMatch> <https://ptb.de/si/Real> ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "A variable that expects a float or integer as a value"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "numerical variable"@en ;
+                                                          <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://w3id.org/nfdi4ing/metadata4ing#TextVariable
+<http://w3id.org/nfdi4ing/metadata4ing#TextVariable> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                                                     rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "text variable"@en ;
+                                                     <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#Property
+<http://www.molmod.info/semantics/pims-ii.ttl#Property> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                                                        <http://www.w3.org/2004/02/skos/core#closeMatch> <https://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Property"@en ;
+                                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue
+<http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://schema.org/Intangible> ;
+                                                             rdfs:isDefinedBy <http://www.molmod.info/semantics/pims-ii.ttl#> ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "Quantity value, i.e., a value that has a numerical magnitude and a physical unit"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "quantity value"@en ;
+                                                             <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.molmod.info/semantics/pims-ii.ttl#Variable
+<http://www.molmod.info/semantics/pims-ii.ttl#Variable> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <https://schema.org/Intangible> ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "Variable, i.e., a conventional that is employed for something to which values can be assigned (this may include different notations for the same variable including, e.g., computational representations); this is to be understood very generally, e.g., a variable may be an array or set of elements or have another kind of internal structure"@en ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Variable"@en ;
+                                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Concept"@en ;
+                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
+                                    rdfs:isDefinedBy <http://www.w3.org/ns/dcat#> ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "A collection of data, published or curated by a single agent, and available for access or download in one or more representations."@en ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en ;
+                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+                                    <https://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+
+_:genid2 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+          <https://www.w3.org/2002/07/owl#onProperty> [ <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy>
+                                                      ] ;
+          <https://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+
+
+###  http://www.w3.org/ns/dcat#Role
+<http://www.w3.org/ns/dcat#Role> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                 rdfs:comment "Used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the values be managed as a controlled vocabulary of agent roles, such as ISO-19115-1 CI_RoleCode (https://standards.iso.org/iso/19115/resources/Codelists/gml/CI_RoleCode.xml)"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships."@en ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Role"@en ;
+                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "Person or Organization related to a StandardNameTable."@en ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Agent"@en ;
+                                  <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/ns/prov#Attribution
+<http://www.w3.org/ns/prov#Attribution> rdf:type owl:Class ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Attribution is the ascribing of an entity to an agent. When an entity e is attributed to agent ag, entity e was generated by some unspecified activity that in turn was associated to agent ag. Thus, this relation is useful when the activity is not known, or irrelevant."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Attribution"@en ;
+                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Organization"@en ;
+                                         <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  http://www.w3.org/ns/prov#Person
+<http://www.w3.org/ns/prov#Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Person"@en ;
+                                   <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://matthiasprobst.github.io/ssno#Character
+<https://matthiasprobst.github.io/ssno#Character> rdf:type owl:Class ;
+                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Charakter"@en ;
+                                                  <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://matthiasprobst.github.io/ssno#Qualification
+<https://matthiasprobst.github.io/ssno#Qualification> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error14> ,
+                                                                      <https://matthiasprobst.github.io/ssno#StandardNameModification> ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#example> "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification"@en ;
+                                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+                                                      <https://www.w3.org/2002/07/owl#disjointWith> <https://matthiasprobst.github.io/ssno#Transformation> .
+
+
+###  https://matthiasprobst.github.io/ssno#ScalarStandardName
+<https://matthiasprobst.github.io/ssno#ScalarStandardName> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "A standard name associated with scalar data."@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Scalar Standard Name"@en ;
+                                                           <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+                                                           <https://www.w3.org/2002/07/owl#disjointWith> <https://matthiasprobst.github.io/ssno#VectorStandardName> .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardName
+<https://matthiasprobst.github.io/ssno#StandardName> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error20> ;
+                                                     <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
+                                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name"@en ;
+                                                     <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+                                                     <https://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+
+_:genid4 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+          <https://www.w3.org/2002/07/owl#onProperty> [ <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames>
+                                                      ] ;
+          <https://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardNameModification
+<https://matthiasprobst.github.io/ssno#StandardNameModification> rdf:type owl:Class ;
+                                                                 <http://www.w3.org/2004/02/skos/core#definition> "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name Modification"@en ;
+                                                                 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://matthiasprobst.github.io/ssno#StandardNameTable
+<https://matthiasprobst.github.io/ssno#StandardNameTable> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error15> ,
+                                                                          <http://org.semanticweb.owlapi/error#Error16> ,
+                                                                          <http://org.semanticweb.owlapi/error#Error17> ,
+                                                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard NameTable"@en ;
+                                                          <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+                                                          <https://www.w3.org/2002/07/owl#equivalentClass> _:genid6 ,
+                                                                                                           _:genid8 ,
+                                                                                                           _:genid10 .
+
+_:genid6 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+          <https://www.w3.org/2002/07/owl#onProperty> [ <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNameTable>
+                                                      ] ;
+          <https://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardName> .
+
+_:genid8 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+          <https://www.w3.org/2002/07/owl#onProperty> [ <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable>
+                                                      ] ;
+          <https://www.w3.org/2002/07/owl#someValuesFrom> <http://purl.allotrope.org/ontologies/hdf5/1.8#File> .
+
+_:genid10 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#onProperty> [ <https://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#usesStandardNameTable>
+                                                       ] ;
+           <https://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/dcat#Dataset> .
+
+
+###  https://matthiasprobst.github.io/ssno#Transformation
+<https://matthiasprobst.github.io/ssno#Transformation> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error19> ,
+                                                                       <https://matthiasprobst.github.io/ssno#StandardNameModification> ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en ;
+                                                       <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://matthiasprobst.github.io/ssno#VectorQualification
+<https://matthiasprobst.github.io/ssno#VectorQualification> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://matthiasprobst.github.io/ssno#Qualification> ;
+                                                            rdfs:comment "A vector component qualification holding values like \"x\", \"y\" and \"z\" can modify vector standard names like \"velocity\" but not scalar standard names like \"pressure\"."@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "Special Qualification accounting for Vector Standard Names. Only one such Qualification must exist at max in a StandardNameTable"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Vector Qualification"@en ;
+                                                            <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://matthiasprobst.github.io/ssno#VectorStandardName
+<https://matthiasprobst.github.io/ssno#VectorStandardName> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://matthiasprobst.github.io/ssno#StandardName> ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "A standard name associated with vector data."@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Vector Standard Name"@en ;
+                                                           <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://schema.org/Intangible
+<https://schema.org/Intangible> rdf:type owl:Class ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc."@en ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Intangible"@en ;
+                                <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://schema.org/Project
+<https://schema.org/Project> rdf:type owl:Class ;
+                             rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"@en ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Project"@en ;
+                             <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+###  https://schema.org/ResearchProject
+<https://schema.org/ResearchProject> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/Project> ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A Research project."@en ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Project"@en ;
+                                     <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://matthiasprobst.github.io/ssno#
+<https://matthiasprobst.github.io/ssno#> rdf:type owl:NamedIndividual ;
+                                         <http://purl.org/dc/terms/title> "sSNO: A simple Standard Name Ontology"@en ;
+                                         <http://purl.org/dc/terms/abstract> "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](https://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
+                                         <http://purl.org/dc/terms/created> "2024-01-15" ;
+                                         <http://purl.org/dc/terms/creator> "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ;
+                                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                         <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/4.0/> ;
+                                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "ssno" ;
+                                         <http://purl.org/vocab/vann/preferredNamespaceUri> "https://matthiasprobst.github.io/ssno#" ;
+                                         rdfs:label "sSNO" ;
+                                         <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Ontology> ;
+                                         <https://www.w3.org/2002/07/owl#versionIRI> <https://matthiasprobst.github.io/ssno/1.3.0> ;
+                                         <https://www.w3.org/2002/07/owl#versionInfo> "v1.3.0" .
+
+
+###  https://matthiasprobst.github.io/ssno#AnyStandardName
+<https://matthiasprobst.github.io/ssno#AnyStandardName> rdf:type owl:NamedIndividual ;
+                                                        <https://matthiasprobst.github.io/ssno#unit> <https://matthiasprobst.github.io/ssno#AnyUnit> ;
+                                                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Any Standard Name"@en ;
+                                                        <https://matthiasprobst.github.io/ssno#description> "A generic Standard Name. Intended to be used to refer to any Standard Name, e.g. by relating the position of a qualification to it, i.e. to be placed before or after a Standard Name."@en ,
+                                                                                                            "Ein generischer Standardname um Qualifications in Relation zu setzen."@de ;
+                                                        <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://matthiasprobst.github.io/ssno#StandardName> ,
+                                                                                                           <https://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+###  https://matthiasprobst.github.io/ssno#AnyUnit
+<https://matthiasprobst.github.io/ssno#AnyUnit> rdf:type owl:NamedIndividual ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "Representing any physical unit."@en ;
+                                                <http://www.w3.org/2004/02/skos/core#prefLabel> "any unit"@en ;
+                                                <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> ,
+                                                                                                   <https://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+_:genid12 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+          <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid14 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid16 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid18 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid20 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid22 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid24 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid26 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:Datatype ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid28 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:Datatype ;
+           <https://www.w3.org/2002/07/owl#onDatatype> xsd:string ;
+           <https://www.w3.org/2002/07/owl#withRestrictions> [ ] .
+
+_:genid30 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid32 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid34 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid36 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^xsd:nonNegativeInteger ;
+           <https://www.w3.org/2002/07/owl#onClass> <https://matthiasprobst.github.io/ssno#VectorQualification> ;
+           <https://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#hasModifier> .
+
+_:genid37 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^xsd:nonNegativeInteger ;
+           <https://www.w3.org/2002/07/owl#onDataRange> _:genid38 ;
+           <https://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#description> .
+
+_:genid38 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:Datatype ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid40 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> ;
+           <https://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#unit> ;
+           <https://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^xsd:nonNegativeInteger .
+
+_:genid41 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^xsd:nonNegativeInteger ;
+           <https://www.w3.org/2002/07/owl#onDataRange> _:genid42 ;
+           <https://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#description> .
+
+_:genid42 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:Datatype ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid44 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid46 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid48 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid50 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^xsd:nonNegativeInteger ;
+           <https://www.w3.org/2002/07/owl#onDataRange> _:genid51 ;
+           <https://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#description> .
+
+_:genid51 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> rdfs:Datatype ;
+           <https://www.w3.org/2002/07/owl#unionOf> [ ] .
+
+_:genid53 <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Restriction> ;
+           <https://www.w3.org/2002/07/owl#cardinality> "1"^^xsd:nonNegativeInteger ;
+           <https://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasVersion> .
+
+[ xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.allotrope.org/ontologies/hdf5/1.8#File> rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#prefLabel> "HDF5 File"@en ;
+                                                      <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#Class> .
+
+
+<http://purl.org/dc/terms/modified> <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+<https://matthiasprobst.github.io/ssno#after> <http://www.w3.org/2004/02/skos/core#definition> "Refers to another qualification to indicate the order. The qualification it points to is ordered before this one. It can also point to a standard name, which means that this qualification is used right after it."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "after"@en ;
+                                              <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#FunctionalProperty> ,
+                                                                                                 <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+<https://matthiasprobst.github.io/ssno#before> <http://www.w3.org/2004/02/skos/core#definition> "Refers to another qualification to indicate the order. The qualification it points to is ordered after this one. It can also point to a standard name, which means that this qualification is used right before it."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "before"@en ;
+                                               <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#FunctionalProperty> ,
+                                                                                                  <https://www.w3.org/2002/07/owl#ObjectProperty> .
+
+
+<https://matthiasprobst.github.io/ssno#description> <http://www.w3.org/2004/02/skos/core#definition> "Description of a Standard Name, a qualification or a transformation."@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en ;
+                                                    <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#DatatypeProperty> .
+
+
+<https://www.w3.org/2002/07/owl#sameas> <https://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://www.w3.org/2002/07/owl#AnnotationProperty> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
