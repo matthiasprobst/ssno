@@ -988,6 +988,9 @@
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#Character",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Charakter"
@@ -1036,6 +1039,8 @@
   "@id" : "https://matthiasprobst.github.io/ssno#StandardName",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
     "@id" : "_:genid60"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
@@ -1052,6 +1057,9 @@
 }, {
   "@id" : "https://matthiasprobst.github.io/ssno#StandardNameModification",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."

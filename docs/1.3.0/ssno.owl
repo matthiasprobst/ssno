@@ -999,6 +999,7 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#Character">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:prefLabel xml:lang="en">Charakter</skos:prefLabel>
     </owl:Class>
     
@@ -1057,6 +1058,7 @@
                 <owl:someValuesFrom rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
             </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#unit"/>
@@ -1074,6 +1076,7 @@
 
 
     <owl:Class rdf:about="https://matthiasprobst.github.io/ssno#StandardNameModification">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:definition xml:lang="en">A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it.</skos:definition>
         <skos:prefLabel xml:lang="en">Standard Name Modification</skos:prefLabel>
     </owl:Class>

@@ -155,8 +155,6 @@ prov:qualifiedAttribution rdf:type owl:ObjectProperty ;
                           skos:prefLabel "qualified attribution"@en .
 
 
-
-
 ###  http://xmlns.com/foaf/0.1/mbox
 foaf:mbox rdf:type owl:ObjectProperty ,
                    owl:InverseFunctionalProperty ;
@@ -645,6 +643,7 @@ prov:Person rdf:type owl:Class ;
 
 ###  https://matthiasprobst.github.io/ssno#Character
 ssno:Character rdf:type owl:Class ;
+               rdfs:subClassOf skos:Concept ;
                skos:prefLabel "Charakter"@en .
 
 
@@ -681,7 +680,8 @@ ssno:StandardName rdf:type owl:Class ;
                                                        ] ;
                                         owl:someValuesFrom ssno:StandardNameTable
                                       ] ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf skos:Concept ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty ssno:unit ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass qudt:Unit
@@ -692,6 +692,7 @@ ssno:StandardName rdf:type owl:Class ;
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
 ssno:StandardNameModification rdf:type owl:Class ;
+                              rdfs:subClassOf skos:Concept ;
                               skos:definition "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                               skos:prefLabel "Standard Name Modification"@en .
 

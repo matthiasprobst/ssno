@@ -632,6 +632,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#Character
 :Character rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Charakter"@en .
 
 
@@ -668,7 +669,8 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                                    ] ;
                                     owl:someValuesFrom :StandardNameTable
                                   ] ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
+              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :unit ;
                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass <http://qudt.org/schema/qudt/Unit>
@@ -679,6 +681,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 
 ###  https://matthiasprobst.github.io/ssno#StandardNameModification
 :StandardNameModification rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                           <http://www.w3.org/2004/02/skos/core#definition> "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en ;
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name Modification"@en .
 

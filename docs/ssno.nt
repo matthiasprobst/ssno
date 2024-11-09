@@ -641,6 +641,7 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://matthiasprobst.github.io/ssno#Character
 <https://matthiasprobst.github.io/ssno#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://matthiasprobst.github.io/ssno#Character> <http://www.w3.org/2004/02/skos/core#prefLabel> "Charakter"@en .
 # 
 # https://matthiasprobst.github.io/ssno#Qualification
@@ -678,6 +679,7 @@ _:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst
 _:genid58 <http://www.w3.org/2002/07/owl#onProperty> _:genid59 .
 _:genid59 <http://www.w3.org/2002/07/owl#inverseOf> <https://matthiasprobst.github.io/ssno#standardNames> .
 _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://matthiasprobst.github.io/ssno#StandardName> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
 _:genid60 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt/Unit> .
 _:genid60 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
@@ -688,6 +690,7 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://matthiasprobst.github.io/ssno#StandardNameModification
 <https://matthiasprobst.github.io/ssno#StandardNameModification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://matthiasprobst.github.io/ssno#StandardNameModification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://matthiasprobst.github.io/ssno#StandardNameModification> <http://www.w3.org/2004/02/skos/core#definition> "A concept which defines the construction of a standard name, e.g. by adding specific phrases following well-defined rules. It extends or changes a base standard name and hence may or may not change the unit of it."@en .
 <https://matthiasprobst.github.io/ssno#StandardNameModification> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name Modification"@en .
 # 
