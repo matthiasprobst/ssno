@@ -1,4 +1,5 @@
 @prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix m4i: <http://w3id.org/nfdi4ing/metadata4ing#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -130,20 +131,20 @@ hdf5:rootGroup rdf:type owl:ObjectProperty ;
                skos:prefLabel "has root group"@en .
 
 
+###  http://www.w3.org/ns/dcat#hadRole
+dcat:hadRole rdf:type owl:ObjectProperty ;
+             rdfs:domain prov:Attribution ;
+             rdfs:range dcat:Role ;
+             skos:definition "The function of an entity or agent with respect to another entity or resource."@en ;
+             skos:prefLabel "had role"@en .
+
+
 ###  http://www.w3.org/ns/prov#agent
 prov:agent rdf:type owl:ObjectProperty ;
            rdfs:domain prov:Attribution ;
            rdfs:range prov:Agent ;
            skos:definition "The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent."@en ;
            skos:prefLabel "agent"@en .
-
-
-###  http://www.w3.org/ns/prov#hadRole
-prov:hadRole rdf:type owl:ObjectProperty ;
-             owl:inverseOf prov:wasRoleIn ;
-             rdfs:domain prov:Attribution ;
-             rdfs:range prov:Role ;
-             skos:prefLabel "had role"@en .
 
 
 ###  http://www.w3.org/ns/prov#qualifiedAttribution
@@ -154,10 +155,6 @@ prov:qualifiedAttribution rdf:type owl:ObjectProperty ;
                           skos:prefLabel "qualified attribution"@en .
 
 
-###  http://www.w3.org/ns/prov#wasRoleIn
-prov:wasRoleIn rdf:type owl:ObjectProperty ;
-               skos:definition "prov:wasRoleIn references the association (e.g. between an agent and an activity) in which a role shall be defined. Inverse property of prov:hadRole."@en ;
-               skos:prefLabel "was role in"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/mbox
@@ -244,7 +241,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                      owl:inverseOf ssno:isStandardNameOf ;
                      rdfs:domain [ rdf:type owl:Class ;
                                    owl:unionOf ( hdf5:Dataset
-                                                 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 m4i:NumericalVariable
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
@@ -257,7 +254,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
 ###  https://matthiasprobst.github.io/ssno#hasValidValues
 ssno:hasValidValues rdf:type owl:ObjectProperty ;
                     rdfs:domain ssno:Qualification ;
-                    rdfs:range <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
+                    rdfs:range m4i:TextVariable ;
                     skos:definition "A relationship defining a set of values used by the qualification."@en ;
                     skos:prefLabel "has valid values"@en .
 
@@ -267,7 +264,7 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
                       rdfs:domain ssno:StandardName ;
                       rdfs:range [ rdf:type owl:Class ;
                                    owl:unionOf ( hdf5:Dataset
-                                                 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable>
+                                                 m4i:NumericalVariable
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#Property>
                                                  <http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue>
                                                )
@@ -324,7 +321,7 @@ ssno:unit rdf:type owl:ObjectProperty ,
           rdfs:domain ssno:StandardName ;
           rdfs:range qudt:Unit ;
           skos:closeMatch qudt:unit ,
-                          <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ,
+                          m4i:hasUnit ,
                           <https://ptb.de/si/hasUnit> ;
           skos:definition "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
           skos:prefLabel "unit"@en .
@@ -369,57 +366,57 @@ dcterms:identifier rdf:type owl:DatatypeProperty ;
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasRorId
-<http://w3id.org/nfdi4ing/metadata4ing#hasRorId> rdf:type owl:DatatypeProperty ;
-                                                 rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
-                                                 rdfs:domain prov:Organization ;
-                                                 rdfs:range [ rdf:type rdfs:Datatype ;
-                                                              owl:onDatatype xsd:string ;
-                                                              owl:withRestrictions ( [ xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
-                                                                                     ]
-                                                                                   )
-                                                            ] ;
-                                                 skos:definition "A Research Organization Registry identifier, that points to a research organization"@en ;
-                                                 skos:prefLabel "has ROR ID"@en .
+m4i:hasRorId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf m4i:identifier ;
+             rdfs:domain prov:Organization ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:onDatatype xsd:string ;
+                          owl:withRestrictions ( [ xsd:pattern "https://ror.org/[0-9][0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][a-z0-9][0-9][0-9]"
+                                                 ]
+                                               )
+                        ] ;
+             skos:definition "A Research Organization Registry identifier, that points to a research organization"@en ;
+             skos:prefLabel "has ROR ID"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasStringValue
-<http://w3id.org/nfdi4ing/metadata4ing#hasStringValue> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:domain <http://w3id.org/nfdi4ing/metadata4ing#TextVariable> ;
-                                                       rdfs:range xsd:string ;
-                                                       rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
-                                                       skos:prefLabel "has string value"@en .
+m4i:hasStringValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain m4i:TextVariable ;
+                   rdfs:range xsd:string ;
+                   rdfs:isDefinedBy m4i: ;
+                   skos:prefLabel "has string value"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription
-<http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription> rdf:type owl:DatatypeProperty ;
-                                                               rdfs:domain <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
-                                                               rdfs:range xsd:string ;
-                                                               rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
-                                                               skos:prefLabel "has variable description"@en .
+m4i:hasVariableDescription rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                           rdfs:range xsd:string ;
+                           rdfs:isDefinedBy m4i: ;
+                           skos:prefLabel "has variable description"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#identifier
-<http://w3id.org/nfdi4ing/metadata4ing#identifier> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:domain owl:Thing ;
-                                                   rdfs:range xsd:string ;
-                                                   skos:prefLabel "identifier"@en .
+m4i:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:string ;
+               skos:prefLabel "identifier"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#orcidId
-<http://w3id.org/nfdi4ing/metadata4ing#orcidId> rdf:type owl:DatatypeProperty ;
-                                                rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
-                                                rdfs:domain prov:Person ;
-                                                rdfs:range xsd:string ;
-                                                skos:prefLabel "has ORCID ID"@en .
+m4i:orcidId rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf m4i:identifier ;
+            rdfs:domain prov:Person ;
+            rdfs:range xsd:string ;
+            skos:prefLabel "has ORCID ID"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID
-<http://w3id.org/nfdi4ing/metadata4ing#projectReferenceID> rdf:type owl:DatatypeProperty ;
-                                                           rdfs:subPropertyOf <http://w3id.org/nfdi4ing/metadata4ing#identifier> ;
-                                                           rdfs:domain schema:Project ;
-                                                           rdfs:range xsd:string ;
-                                                           skos:definition "An alphanumeric identifier for a project."@en ;
-                                                           skos:prefLabel "has project ID"@en .
+m4i:projectReferenceID rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf m4i:identifier ;
+                       rdfs:domain schema:Project ;
+                       rdfs:range xsd:string ;
+                       skos:definition "An alphanumeric identifier for a project."@en ;
+                       skos:prefLabel "has project ID"@en .
 
 
 ###  http://www.w3.org/ns/dcat#keyword
@@ -558,19 +555,19 @@ qudt:Unit rdf:type owl:Class ;
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
-<http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
-                                                          rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
-                                                          skos:closeMatch <https://ptb.de/si/Real> ;
-                                                          skos:definition "A variable that expects a float or integer as a value"@en ;
-                                                          skos:prefLabel "numerical variable"@en .
+m4i:NumericalVariable rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                      rdfs:isDefinedBy m4i: ;
+                      skos:closeMatch <https://ptb.de/si/Real> ;
+                      skos:definition "A variable that expects a float or integer as a value"@en ;
+                      skos:prefLabel "numerical variable"@en .
 
 
 ###  http://w3id.org/nfdi4ing/metadata4ing#TextVariable
-<http://w3id.org/nfdi4ing/metadata4ing#TextVariable> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
-                                                     rdfs:isDefinedBy <http://w3id.org/nfdi4ing/metadata4ing#> ;
-                                                     skos:prefLabel "text variable"@en .
+m4i:TextVariable rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
+                 rdfs:isDefinedBy m4i: ;
+                 skos:prefLabel "text variable"@en .
 
 
 ###  http://www.molmod.info/semantics/pims-ii.ttl#Property
@@ -614,6 +611,13 @@ dcat:Dataset rdf:type owl:Class ;
              skos:prefLabel "Dataset"@en .
 
 
+###  http://www.w3.org/ns/dcat#Role
+dcat:Role rdf:type owl:Class ;
+          rdfs:subClassOf skos:Concept ;
+          skos:definition "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end."@en ;
+          skos:prefLabel "Role"@en .
+
+
 ###  http://www.w3.org/ns/prov#Agent
 prov:Agent rdf:type owl:Class ;
            rdfs:isDefinedBy prov: ;
@@ -637,12 +641,6 @@ prov:Organization rdf:type owl:Class ;
 prov:Person rdf:type owl:Class ;
             rdfs:subClassOf prov:Agent ;
             skos:prefLabel "Person"@en .
-
-
-###  http://www.w3.org/ns/prov#Role
-prov:Role rdf:type owl:Class ;
-          skos:definition "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end."@en ;
-          skos:prefLabel "Role"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#Character

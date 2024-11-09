@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-11-03", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2024-11-09", "version":"v1.3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-11-03</dt>
+<dt>Modified on: 2024-11-09</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/1.3.0">https://matthiasprobst.github.io/ssno/1.3.0</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v1.3.0</dd>
 <dt>Issued on:</dt>
-<dd>2024-11-03</dd>
+<dd>2024-11-09</dd>
 <dt>Authors:</dt>
 <dd>Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</dd>
 
@@ -210,7 +210,7 @@ This ontology has the following classes and properties.</span>
       <a href="#http://schema.org/ResearchProject" title="http://schema.org/ResearchProject">Research Project</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">Role</a>
+      <a href="#http://www.w3.org/ns/dcat#Role" title="http://www.w3.org/ns/dcat#Role">Role</a>
    </li>
    <li>
       <a href="#ScalarStandardName"
@@ -271,7 +271,7 @@ This ontology has the following classes and properties.</span>
       <a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a>
+      <a href="#http://www.w3.org/ns/dcat#hadRole" title="http://www.w3.org/ns/dcat#hadRole">had role</a>
    </li>
    <li>
       <a href="#hasCharacter"
@@ -328,9 +328,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#usesStandardNameTable"
          title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/ns/prov#wasRoleIn" title="http://www.w3.org/ns/prov#wasRoleIn">was role in</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -440,7 +437,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#Qualification" title="https://matthiasprobst.github.io/ssno#Qualification">Qualification</a></li>
   <li><a href="#http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue" title="http://www.molmod.info/semantics/pims-ii.ttl#QuantityValue">quantity value</a></li>
   <li><a href="#http://schema.org/ResearchProject" title="http://schema.org/ResearchProject">Research Project</a></li>
-  <li><a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">Role</a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#Role" title="http://www.w3.org/ns/dcat#Role">Role</a></li>
   <li><a href="#ScalarStandardName" title="https://matthiasprobst.github.io/ssno#ScalarStandardName">Scalar Standard Name</a></li>
   <li><a href="#StandardName" title="https://matthiasprobst.github.io/ssno#StandardName">Standard Name</a></li>
   <li><a href="#StandardNameModification" title="https://matthiasprobst.github.io/ssno#StandardNameModification">Standard Name Modification</a></li>
@@ -498,7 +495,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/dcat#hadRole" title="http://www.w3.org/ns/dcat#hadRole">had role</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -537,7 +534,7 @@ This section provides details for each class and property defined by SSNO.
     has sub-classes
    </dt>
    <dd>
-    <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
+    <a href="#http://www.w3.org/ns/dcat#Role" title="http://www.w3.org/ns/dcat#Role">Role</a> <sup class="type-c" title="class">c</sup>, <a href="#StandardNameTable" title="https://matthiasprobst.github.io/ssno#StandardNameTable">Standard NameTable</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -900,18 +897,24 @@ This section provides details for each class and property defined by SSNO.
    </dd>
   </dl>
  </div>
- <div class="entity" id="http://www.w3.org/ns/prov#Role">
+ <div class="entity" id="http://www.w3.org/ns/dcat#Role">
   <h3>Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Role</p>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#Role</p>
   <div class="comment">
    <span class="markdown">A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end.</span>
   </div>
   <dl class="description">
    <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://www.w3.org/ns/dcat#hadRole" title="http://www.w3.org/ns/dcat#hadRole">had role</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1199,7 +1202,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#alias" title="https://matthiasprobst.github.io/ssno#alias">alias</a></li>
   <li><a href="#associatedWith" title="https://matthiasprobst.github.io/ssno#associatedWith">associated with</a></li>
   <li><a href="#before" title="https://matthiasprobst.github.io/ssno#before">before</a></li>
-  <li><a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#hadRole" title="http://www.w3.org/ns/dcat#hadRole">had role</a></li>
   <li><a href="#hasCharacter" title="https://matthiasprobst.github.io/ssno#hasCharacter">has character</a></li>
   <li><a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a></li>
   <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a></li>
@@ -1215,7 +1218,6 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a></li>
   <li><a href="#unit" title="https://matthiasprobst.github.io/ssno#unit">unit</a></li>
   <li><a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a></li>
-  <li><a href="#http://www.w3.org/ns/prov#wasRoleIn" title="http://www.w3.org/ns/prov#wasRoleIn">was role in</a></li>
  </ul>
  <div class="entity" id="after">
   <h3>after<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -1347,9 +1349,12 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="http://www.w3.org/ns/prov#hadRole">
+ <div class="entity" id="http://www.w3.org/ns/dcat#hadRole">
   <h3>had role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#hadRole</p>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#hadRole</p>
+  <div class="comment">
+   <span class="markdown">The function of an entity or agent with respect to another entity or resource.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1362,13 +1367,7 @@ This section provides details for each class and property defined by SSNO.
      has range
     </dt>
     <dd>
-     <a href="#http://www.w3.org/ns/prov#Role" title="http://www.w3.org/ns/prov#Role">Role</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#wasRoleIn" title="http://www.w3.org/ns/prov#wasRoleIn">was role in</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#http://www.w3.org/ns/dcat#Role" title="http://www.w3.org/ns/dcat#Role">Role</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1757,23 +1756,6 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="http://www.w3.org/ns/prov#wasRoleIn">
-  <h3>was role in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasRoleIn</p>
-  <div class="comment">
-   <span class="markdown">prov:wasRoleIn references the association (e.g. between an agent and an activity) in which a role shall be defined. Inverse property of prov:hadRole.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     is inverse of
-    </dt>
-    <dd>
-     <a href="#http://www.w3.org/ns/prov#hadRole" title="http://www.w3.org/ns/prov#hadRole">had role</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
