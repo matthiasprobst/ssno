@@ -517,6 +517,13 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2004/02/skos/core#example> "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en .
 <https://matthiasprobst.github.io/ssno#standardNameCharacter> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en .
 # 
+# https://schema.org/keywords
+<https://schema.org/keywords> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.org/keywords> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://schema.org/keywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.org/keywords> <http://www.w3.org/2004/02/skos/core#definition> "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property."@en .
+<https://schema.org/keywords> <http://www.w3.org/2004/02/skos/core#prefLabel> "keywords"@en .
+# 
 # https://schema.org/name
 <https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://schema.org/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameModification> .

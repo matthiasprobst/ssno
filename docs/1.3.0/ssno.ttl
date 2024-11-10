@@ -495,6 +495,14 @@ owl:sameas rdf:type owl:AnnotationProperty .
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en .
 
 
+###  https://schema.org/keywords
+<https://schema.org/keywords> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :StandardNameTable ;
+                              rdfs:range xsd:string ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property."@en ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "keywords"@en .
+
+
 ###  https://schema.org/name
 <https://schema.org/name> rdf:type owl:DatatypeProperty ;
                           rdfs:domain :StandardNameModification ;

@@ -506,6 +506,14 @@ ssno:standardNameCharacter rdf:type owl:DatatypeProperty ;
                            skos:prefLabel "standard name character"@en .
 
 
+###  https://schema.org/keywords
+schema:keywords rdf:type owl:DatatypeProperty ;
+                rdfs:domain ssno:StandardNameTable ;
+                rdfs:range xsd:string ;
+                skos:definition "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property."@en ;
+                skos:prefLabel "keywords"@en .
+
+
 ###  https://schema.org/name
 schema:name rdf:type owl:DatatypeProperty ;
             rdfs:domain ssno:StandardNameModification ;

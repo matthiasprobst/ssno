@@ -101,6 +101,7 @@
     "long name" : {"@id" : "ssno:longName", "@type" : "xsd:string"},
     "standard name" : {"@id" : "ssno:standardName", "@type" : "xsd:string"},
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
+    "keywords" : {"@id" : "schema:keywords", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
     "any unit" : {"@id" : "ssno:AnyUnit"}
