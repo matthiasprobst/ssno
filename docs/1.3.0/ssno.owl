@@ -1078,6 +1078,13 @@
                 <owl:onClass rdf:resource="http://qudt.org/schema/qudt/Unit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#standardName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <skos:definition xml:lang="en">A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">Standard Name</skos:prefLabel>
     </owl:Class>

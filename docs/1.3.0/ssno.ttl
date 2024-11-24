@@ -682,6 +682,11 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                 owl:onProperty :unit ;
                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass <http://qudt.org/schema/qudt/Unit>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :standardName ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
                               ] ;
               <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name"@en .

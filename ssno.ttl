@@ -693,6 +693,11 @@ ssno:StandardName rdf:type owl:Class ;
                                     owl:onProperty ssno:unit ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass qudt:Unit
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:standardName ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
                                   ] ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "Standard Name"@en .
