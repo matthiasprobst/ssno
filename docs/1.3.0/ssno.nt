@@ -563,12 +563,6 @@ _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#definition> "Unit of measure."@en .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 # 
-# http://schema.org/ResearchProject
-<http://schema.org/ResearchProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://schema.org/ResearchProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Project> .
-<http://schema.org/ResearchProject> <http://www.w3.org/2004/02/skos/core#definition> "A Research project."@en .
-<http://schema.org/ResearchProject> <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Project"@en .
-# 
 # http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.molmod.info/semantics/pims-ii.ttl#Variable> .
@@ -790,6 +784,12 @@ _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://schema.org/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/Project> <http://www.w3.org/2000/01/rdf-schema#comment> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"@en .
 <https://schema.org/Project> <http://www.w3.org/2004/02/skos/core#prefLabel> "Project"@en .
+# 
+# https://schema.org/ResearchProject
+<https://schema.org/ResearchProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/ResearchProject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Project> .
+<https://schema.org/ResearchProject> <http://www.w3.org/2004/02/skos/core#definition> "A Research project."@en .
+<https://schema.org/ResearchProject> <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Project"@en .
 # 
 # 
 # 

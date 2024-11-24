@@ -39,7 +39,7 @@
     "HDF5 File" : {"@id" : "hdf5:File"},
     "HDF5 Group" : {"@id" : "hdf5:Group"},
     "Unit" : {"@id" : "qudt:Unit"},
-    "Research Project" : {"@id" : "<http://schema.org/ResearchProject>"},
+    "Research Project" : {"@id" : "schema:ResearchProject"},
     "numerical variable" : {"@id" : "m4i:NumericalVariable"},
     "text variable" : {"@id" : "m4i:TextVariable"},
     "Property" : {"@id" : "pims-ii:Property"},

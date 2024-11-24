@@ -542,13 +542,6 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Unit"@en .
 
 
-###  http://schema.org/ResearchProject
-<http://schema.org/ResearchProject> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://schema.org/Project> ;
-                                    <http://www.w3.org/2004/02/skos/core#definition> "A Research project."@en ;
-                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Project"@en .
-
-
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:Class ;
                                                           rdfs:subClassOf <http://www.molmod.info/semantics/pims-ii.ttl#Variable> ;
@@ -780,6 +773,13 @@ owl:sameas rdf:type owl:AnnotationProperty .
 <https://schema.org/Project> rdf:type owl:Class ;
                              rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"@en ;
                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Project"@en .
+
+
+###  https://schema.org/ResearchProject
+<https://schema.org/ResearchProject> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://schema.org/Project> ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "A Research project."@en ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Research Project"@en .
 
 
 #################################################################

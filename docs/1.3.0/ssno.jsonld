@@ -541,20 +541,6 @@
     "@value" : "Unit"
   } ]
 }, {
-  "@id" : "http://schema.org/ResearchProject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://schema.org/Project"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "A Research project."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Research Project"
-  } ]
-}, {
   "@id" : "http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -1606,6 +1592,20 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Project"
+  } ]
+}, {
+  "@id" : "https://schema.org/ResearchProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://schema.org/Project"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Research project."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Research Project"
   } ]
 }, {
   "@id" : "https://schema.org/keywords",

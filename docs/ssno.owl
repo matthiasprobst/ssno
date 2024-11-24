@@ -854,17 +854,6 @@
     
 
 
-    <!-- http://schema.org/ResearchProject -->
-
-
-    <owl:Class rdf:about="http://schema.org/ResearchProject">
-        <rdfs:subClassOf rdf:resource="https://schema.org/Project"/>
-        <skos:definition xml:lang="en">A Research project.</skos:definition>
-        <skos:prefLabel xml:lang="en">Research Project</skos:prefLabel>
-    </owl:Class>
-    
-
-
     <!-- http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable -->
 
 
@@ -1234,6 +1223,17 @@
     <owl:Class rdf:about="https://schema.org/Project">
         <rdfs:comment xml:lang="en">An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim</rdfs:comment>
         <skos:prefLabel xml:lang="en">Project</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/ResearchProject -->
+
+
+    <owl:Class rdf:about="https://schema.org/ResearchProject">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Project"/>
+        <skos:definition xml:lang="en">A Research project.</skos:definition>
+        <skos:prefLabel xml:lang="en">Research Project</skos:prefLabel>
     </owl:Class>
     
 

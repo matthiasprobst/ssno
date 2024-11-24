@@ -554,8 +554,8 @@ qudt:Unit rdf:type owl:Class ;
           skos:prefLabel "Unit"@en .
 
 
-###  http://schema.org/ResearchProject
-<http://schema.org/ResearchProject> rdf:type owl:Class ;
+###  https://schema.org/ResearchProject
+<https://schema.org/ResearchProject> rdf:type owl:Class ;
                                     rdfs:subClassOf schema:Project ;
                                     skos:definition "A Research project."@en ;
                                     skos:prefLabel "Research Project"@en .
