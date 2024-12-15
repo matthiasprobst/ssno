@@ -4,10 +4,12 @@
 @prefix : <> .
 <https://matthiasprobst.github.io/ssno/1.3.0> a prov:Entity;
 	 dc:title "SSNO: A simple Standard Name Ontology";
-	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-8729-0482>;
+	 dc:creator <https://orcid.org/0000-0001-8729-0482>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-9560-500X>;
+	 dc:contributor <https://orcid.org/0000-0001-9560-500X>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://matthiasprobst.github.io/ssno/1.3.0>;
 	 prov:wasRevisionOf <https://matthiasprobst.github.io/ssno/1.2.1>;
 	 prov:wasGeneratedAt "2024-04-02";
 .
-:agent0 a prov:Agent; foaf:name "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery".
