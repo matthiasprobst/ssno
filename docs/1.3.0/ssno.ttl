@@ -25,6 +25,7 @@
     schema:affiliation <https://ror.org/04t3en479> ;
     schema:email "matth.probst@gmail.com" ;
     schema:familyName "Probst" ;
+    <http://w3id.org/nfdi4ing/metadata4ing#orcidId> "0000-0001-8729-0482" ;
     schema:givenName "Matthias" .
     
 <https://ror.org/04t3en479> a schema:Organization ;
