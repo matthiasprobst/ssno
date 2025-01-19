@@ -10,7 +10,7 @@
                                           owl:versionIRI <https://matthiasprobst.github.io/ssno/1.3.0> ;
                                           <http://purl.org/dc/terms/abstract> "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           <http://purl.org/dc/terms/created> "2024-01-15" ;
-                                          <http://purl.org/dc/terms/creator> "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ;
+                                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-8729-0482> ;
                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                           <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/4.0/> ;
                                           <http://purl.org/dc/terms/title> "sSNO: A simple Standard Name Ontology"@en ;
@@ -18,6 +18,19 @@
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://matthiasprobst.github.io/ssno#" ;
                                           rdfs:label "sSNO" ;
                                           owl:versionInfo "v1.3.0" .
+
+
+###  Creator:
+<https://orcid.org/0000-0001-8729-0482> a schema:Person ;
+    schema:affiliation <https://ror.org/04t3en479> ;
+    schema:email "matth.probst@gmail.com" ;
+    schema:familyName "Probst" ;
+    <http://w3id.org/nfdi4ing/metadata4ing#orcidId> "0000-0001-8729-0482" ;
+    schema:givenName "Matthias" .
+
+<https://ror.org/04t3en479> a schema:Organization ;
+    schema:name "Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery" .
+
 
 #################################################################
 #    Annotation properties
