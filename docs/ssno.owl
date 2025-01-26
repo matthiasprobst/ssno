@@ -493,7 +493,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">
-        <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range>
             <owl:Class>
@@ -552,7 +551,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-        <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
+        <skos:definition xml:lang="en">Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
     </owl:ObjectProperty>
     
