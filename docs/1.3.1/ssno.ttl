@@ -296,11 +296,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
 :standardNameTable rdf:type owl:ObjectProperty ;
                    owl:inverseOf :standardNames ;
                    rdfs:domain :StandardName ;
-                   rdfs:range [ rdf:type owl:Class ;
-                                owl:unionOf ( <http://www.w3.org/ns/dcat#Dataset>
-                                              :StandardNameTable
-                                            )
-                              ] ;
+                   rdfs:range :StandardNameTable ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 

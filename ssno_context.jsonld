@@ -81,7 +81,7 @@
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "m4i:TextVariable"},
     "is standard name of" : {"@id" : "ssno:isStandardNameOf"},
     "positioned" : {"@id" : "ssno:positioned"},
-    "standard name table" : {"@id" : "ssno:standardNameTable"},
+    "standard name table" : {"@id" : "ssno:standardNameTable", "@type" : "ssno:StandardNameTable"},
     "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy"},
     "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
     "unit" : {"@id" : "ssno:unit", "@type" : "qudt:Unit"},

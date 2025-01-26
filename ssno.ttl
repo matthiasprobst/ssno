@@ -308,11 +308,7 @@ ssno:positioned rdf:type owl:ObjectProperty ,
 ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        owl:inverseOf ssno:standardNames ;
                        rdfs:domain ssno:StandardName ;
-                       rdfs:range [ rdf:type owl:Class ;
-                                    owl:unionOf ( dcat:Dataset
-                                                  ssno:StandardNameTable
-                                                )
-                                  ] ;
+                       rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
                        skos:prefLabel "standard name table"@en .
 
