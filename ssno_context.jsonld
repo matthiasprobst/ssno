@@ -85,7 +85,7 @@
     "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy"},
     "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
     "unit" : {"@id" : "ssno:unit", "@type" : "qudt:Unit"},
-    "uses standard name table" : {"@id" : "ssno:usesStandardNameTable"},
+    "uses standard name table" : {"@id" : "ssno:usesStandardNameTable", "@type" : "ssno:StandardNameTable"},
     "has version" : {"@id" : "dcterms:hasVersion", "@type" : "rdfs:Literal"},
     "identifier" : {"@id" : "dcterms:identifier", "@type" : "xsd:string"},
     "has ROR ID" : {"@id" : "m4i:hasRorId"},
@@ -105,8 +105,8 @@
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "keywords" : {"@id" : "schema:keywords", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
-    "KIT" : {"@id" : "<https://ror.org/04t3en479>"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
-    "any unit" : {"@id" : "ssno:AnyUnit"}
+    "any unit" : {"@id" : "ssno:AnyUnit"},
+    "KIT" : {"@id" : "<https://ror.org/04t3en479>"}
   }
 }

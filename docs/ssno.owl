@@ -551,14 +551,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
-                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:definition xml:lang="en">Relates a thing, e.g. a netCDF4 file, an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
     </owl:ObjectProperty>
