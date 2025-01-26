@@ -731,6 +731,7 @@ owl:sameas rdf:type owl:AnnotationProperty .
                                          owl:someValuesFrom <http://www.w3.org/ns/dcat#Dataset>
                                        ] ;
                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   <http://www.w3.org/ns/dcat#Dataset> ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasModifier ;
                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;

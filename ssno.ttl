@@ -743,6 +743,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                              owl:someValuesFrom dcat:Dataset
                                            ] ;
                        rdfs:subClassOf skos:Concept ,
+                                       dcat:Dataset ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty ssno:hasModifier ;
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
