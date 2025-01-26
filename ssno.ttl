@@ -19,17 +19,34 @@
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/1.3.0> ;
+                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/1.3.1> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
-                                          dcterms:creator "Matthias Probst (https://orcid.org/0000-0001-8729-0482), Institut für Thermische Strömungsmaschinen" ;
+                                          dcterms:creator <https://orcid.org/0000-0001-8729-0482> ;
                                           dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                           dcterms:rights <https://creativecommons.org/licenses/by/4.0/> ;
                                           dcterms:title "sSNO: A simple Standard Name Ontology"@en ;
                                           vann:preferredNamespacePrefix "ssno" ;
                                           vann:preferredNamespaceUri "https://matthiasprobst.github.io/ssno#" ;
                                           rdfs:label "sSNO" ;
-                                          owl:versionInfo "v1.3.0" .
+                                          owl:versionInfo "v1.3.1" .
+
+###  https://orcid.org/0000-0001-8729-0482
+<https://orcid.org/0000-0001-8729-0482> rdf:type owl:NamedIndividual ,
+                                                 <https://schema.org/Person> ;
+                                        <http://w3id.org/nfdi4ing/metadata4ing#orcidId> "0000-0001-8729-0482" ;
+                                        <https://schema.org/affiliation> <https://ror.org/04t3en479> ;
+                                        <https://schema.org/email> "matth.probst@gmail.com" ;
+                                        <https://schema.org/familyName> "Probst" ;
+                                        <https://schema.org/givenName> "Matthias" .
+
+
+
+###  https://ror.org/04t3en479
+<https://ror.org/04t3en479> rdf:type owl:NamedIndividual ,
+                                     <https://schema.org/Organization> ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "KIT"@en ;
+                            <https://schema.org/name> "Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery" .
 
 #################################################################
 #    Annotation properties
@@ -132,6 +149,13 @@ hdf5:rootGroup rdf:type owl:ObjectProperty ;
                skos:prefLabel "has root group"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ,
+                         owl:TransitiveProperty ;
+                skos:prefLabel "has exact match"@en .
+
+
 ###  http://www.w3.org/ns/dcat#hadRole
 dcat:hadRole rdf:type owl:ObjectProperty ;
              rdfs:domain prov:Attribution ;
@@ -181,7 +205,9 @@ ssno:after rdf:type owl:ObjectProperty ;
 
 
 ###  https://matthiasprobst.github.io/ssno#alias
-ssno:alias rdf:type owl:ObjectProperty ,
+ssno:alias rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf skos:exactMatch ;
+           rdf:type owl:SymmetricProperty ,
                     owl:TransitiveProperty ;
            rdfs:domain ssno:StandardName ;
            rdfs:range ssno:StandardName ;
@@ -554,13 +580,6 @@ qudt:Unit rdf:type owl:Class ;
           skos:prefLabel "Unit"@en .
 
 
-###  https://schema.org/ResearchProject
-<https://schema.org/ResearchProject> rdf:type owl:Class ;
-                                    rdfs:subClassOf schema:Project ;
-                                    skos:definition "A Research project."@en ;
-                                    skos:prefLabel "Research Project"@en .
-
-
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 m4i:NumericalVariable rdf:type owl:Class ;
                       rdfs:subClassOf pims-ii:Variable ;
@@ -792,6 +811,13 @@ schema:Intangible rdf:type owl:Class ;
 schema:Project rdf:type owl:Class ;
                rdfs:comment "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim"@en ;
                skos:prefLabel "Project"@en .
+
+
+###  https://schema.org/ResearchProject
+schema:ResearchProject rdf:type owl:Class ;
+                       rdfs:subClassOf schema:Project ;
+                       skos:definition "A Research project."@en ;
+                       skos:prefLabel "Research Project"@en .
 
 
 #################################################################

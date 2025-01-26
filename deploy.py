@@ -222,10 +222,10 @@ def create_version(*,
 
 
 if __name__ == "__main__":
-    prev_version_string = 'v1.2.1'
-    version_string = 'v1.3.0'
+    prev_version_string = 'v1.3.0'
+    version_string = 'v1.3.1'
     img_version_string = 'v1.3.0'
-    doi_url = "https://doi.org/10.5281/zenodo.10909129"
+    doi_url = "https://doi.org/10.5281/zenodo.14743356"
     overwrite = True
 
     version_dir = __this_dir__ / 'docs' / version_string.strip('v')

@@ -39,7 +39,6 @@
     "HDF5 File" : {"@id" : "hdf5:File"},
     "HDF5 Group" : {"@id" : "hdf5:Group"},
     "Unit" : {"@id" : "qudt:Unit"},
-    "Research Project" : {"@id" : "schema:ResearchProject"},
     "numerical variable" : {"@id" : "m4i:NumericalVariable"},
     "text variable" : {"@id" : "m4i:TextVariable"},
     "Property" : {"@id" : "pims-ii:Property"},
@@ -63,9 +62,11 @@
     "Vector Standard Name" : {"@id" : "ssno:VectorStandardName"},
     "Intangible" : {"@id" : "schema:Intangible"},
     "Project" : {"@id" : "schema:Project"},
+    "Research Project" : {"@id" : "schema:ResearchProject"},
     "subject" : {"@id" : "dcterms:subject", "@type" : "xsd:string"},
     "member" : {"@id" : "hdf5:member"},
     "has root group" : {"@id" : "hdf5:rootGroup"},
+    "has exact match" : {"@id" : "skos:exactMatch"},
     "had role" : {"@id" : "dcat:hadRole", "@type" : "dcat:Role"},
     "agent" : {"@id" : "prov:agent", "@type" : "prov:Agent"},
     "qualified attribution" : {"@id" : "prov:qualifiedAttribution", "@type" : "prov:Attribution"},
@@ -104,6 +105,7 @@
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "keywords" : {"@id" : "schema:keywords", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
+    "KIT" : {"@id" : "<https://ror.org/04t3en479>"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
     "any unit" : {"@id" : "ssno:AnyUnit"}
   }
