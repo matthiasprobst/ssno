@@ -1,2 +1,3 @@
 # requirements for running deploy.py
 rdflib
+pivmetalib==2.0.0

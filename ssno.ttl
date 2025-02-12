@@ -19,7 +19,7 @@
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/1.3.1> ;
+                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/1.3.2> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
                                           dcterms:creator <https://orcid.org/0000-0001-8729-0482> ;
@@ -29,7 +29,7 @@
                                           vann:preferredNamespacePrefix "ssno" ;
                                           vann:preferredNamespaceUri "https://matthiasprobst.github.io/ssno#" ;
                                           rdfs:label "sSNO" ;
-                                          owl:versionInfo "v1.3.1" .
+                                          owl:versionInfo "v1.3.2" .
 
 #################################################################
 #    Annotation properties
@@ -92,12 +92,20 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 owl:sameas rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#closeMatch
 skos:closeMatch rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#example
@@ -148,6 +156,11 @@ hdf5:rootGroup rdf:type owl:ObjectProperty ;
                skos:prefLabel "has root group"@en .
 
 
+###  http://purl.org/dc/terms/relation
+dcterms:relation rdf:type owl:ObjectProperty ;
+                 skos:prefLabel "relation"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#exactMatch
 skos:exactMatch rdf:type owl:ObjectProperty ,
                          owl:SymmetricProperty ,
@@ -167,7 +180,7 @@ dcat:hadRole rdf:type owl:ObjectProperty ;
 prov:agent rdf:type owl:ObjectProperty ;
            rdfs:domain prov:Attribution ;
            rdfs:range prov:Agent ;
-           skos:definition "The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent."@en ;
+           skos:definition "The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a sub-property of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent."@en ;
            skos:prefLabel "agent"@en .
 
 
@@ -315,6 +328,7 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf dcterms:relation ;
                              rdfs:domain ssno:StandardNameTable ;
                              rdfs:range [ rdf:type owl:Class ;
                                           owl:unionOf ( hdf5:File
@@ -322,6 +336,7 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                                                         schema:Project
                                                       )
                                         ] ;
+                             skos:changeNote "change: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en ;
                              skos:definition "Points to a concept, which uses a standard name table."@en ;
                              skos:prefLabel "standard name table used by"@en .
 
@@ -348,6 +363,7 @@ ssno:unit rdf:type owl:ObjectProperty ,
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
 ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf dcterms:relation ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( hdf5:File
                                                        dcat:Dataset
@@ -355,6 +371,7 @@ ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                                                      )
                                        ] ;
                            rdfs:range ssno:StandardNameTable ;
+                           skos:changeNote "change: ssno:usesStandardNameTable is subtype of dcterms:relation"@en ;
                            skos:definition "Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                            skos:prefLabel "uses standard name table"@en .
 
@@ -488,7 +505,7 @@ ssno:hasPreposition rdf:type owl:DatatypeProperty ;
                     rdfs:domain ssno:Qualification ;
                     rdfs:range xsd:string ;
                     skos:definition "A data property that stores prepositional qualifiers like \"at,\" \"in,\" \"due to,\" and \"assuming.\" to be used with Qualifications."@en ;
-                    skos:example "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualificaiton."@en ;
+                    skos:example "The CF Convention uses the qualification 'in process' where 'in' is the preposition and 'process' the qualification."@en ;
                     skos:prefLabel "has preposition"@en .
 
 
@@ -518,7 +535,7 @@ ssno:standardName rdf:type owl:DatatypeProperty ;
 ssno:standardNameCharacter rdf:type owl:DatatypeProperty ;
                            rdfs:domain ssno:Transformation ;
                            rdfs:range xsd:string ;
-                           skos:definition "The character whcih is used in a standard name transformation string to indivate the position a standard name used in the modification rule."@en ;
+                           skos:definition "The character which is used in a standard name transformation string to indicate the position a standard name used in the modification rule."@en ;
                            skos:example "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
                            skos:prefLabel "standard name character"@en .
 
@@ -545,23 +562,37 @@ schema:name rdf:type owl:DatatypeProperty ;
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset
 hdf5:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf hdf5:NamedObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ssno:hasStandardName ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass ssno:StandardName
+                             ] ;
+             owl:disjointWith hdf5:Group ;
              rdfs:isDefinedBy hdf5: ;
-             skos:definition "An HDF5 Dataset."@en ;
+             skos:definition "A multi-dimensional array of data elements, together with supporting metadata."@en ;
              skos:prefLabel "HDF5 Dataset"@en .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#File
 hdf5:File rdf:type owl:Class ;
           rdfs:isDefinedBy hdf5: ;
-          skos:definition "A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification"@en ;
+          skos:definition "A container for storing grouped collections of multi-dimensional arrays containing scientific data following the HDF 5 specification."@en ;
           skos:prefLabel "HDF5 File"@en .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#Group
 hdf5:Group rdf:type owl:Class ;
+           rdfs:subClassOf hdf5:NamedObject ;
            rdfs:isDefinedBy hdf5: ;
            skos:definition "A grouping structure containing instances of zero or more groups or datasets, together with supporting metadata."@en ;
            skos:prefLabel "HDF5 Group"@en .
+
+
+###  http://purl.allotrope.org/ontologies/hdf5/1.8#NamedObject
+hdf5:NamedObject rdf:type owl:Class ;
+                 rdfs:isDefinedBy hdf5: ;
+                 skos:prefLabel "named object"@en .
 
 
 ###  http://qudt.org/schema/qudt/Unit
@@ -772,7 +803,7 @@ ssno:Transformation rdf:type owl:Class ;
                                                                     )
                                                       ]
                                     ] ;
-                    skos:definition "A transfromation is a phrase which may be added to the standard name without changing its unit."@en ;
+                    skos:definition "A transformation is a phrase which may be added to the standard name without changing its unit."@en ;
                     skos:prefLabel "Transformation"@en .
 
 
@@ -851,7 +882,7 @@ ssno:AnyUnit rdf:type owl:NamedIndividual ,
 ###  https://ror.org/04t3en479
 <https://ror.org/04t3en479> rdf:type owl:NamedIndividual ,
                                      schema:Organization ;
-                            schema:name "Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery" ;
+                            foaf:name "Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery" ;
                             skos:prefLabel "KIT"@en .
 
 

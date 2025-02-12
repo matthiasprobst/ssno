@@ -14,7 +14,7 @@
           "@id": "_:b0",
           "@type": "StandardName",
           "standard name": "x_velocity",
-          "canonical units": "m/s",
+          "unit": "m/s",
           "description": "Velocity in x-axis direction.",
           "standard name table": "https://doi.org/10.5281/zenodo.10428817"
         },
@@ -22,7 +22,7 @@
           "@id": "_:b1",
           "@type": "StandardName",
           "standard name": "y_velocity",
-          "canonical units": "m/s",
+          "unit": "m/s",
           "description": "Velocity in y-axis direction.",
           "standard name table": "https://doi.org/10.5281/zenodo.10428817"
         }

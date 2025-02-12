@@ -3,7 +3,7 @@ import logging
 import pathlib
 import unittest
 
-from pivmetalib import ssno
+from ssnolib import ssno
 
 logger = logging.getLogger('ssno')
 
@@ -23,7 +23,7 @@ class TestUserGuide(unittest.TestCase):
         self.assertEqual(len(snt), 1)
         self.assertEqual(snt[0].identifier, "https://doi.org/10.5281/zenodo.10428817")
         self.assertEqual(sn[0].standard_name, 'x_velocity')
-        self.assertEqual(sn[0].canonical_units, 'http://qudt.org/vocab/unit/M-PER-SEC')
+        self.assertEqual(sn[0].unit, 'http://qudt.org/vocab/unit/M-PER-SEC')
 
 
     def test_json_2(self):
@@ -32,5 +32,8 @@ class TestUserGuide(unittest.TestCase):
         self.assertEqual(snt[0].description, 'My table description')
         self.assertEqual(len(snt), 1)
         self.assertEqual(len(snt[0].standard_names), 2)
-        self.assertEqual(sorted(snt[0].standard_names)[0].standard_name, 'x_velocity')
-        self.assertEqual(sorted(snt[0].standard_names)[1].standard_name, 'y_velocity')
+        standard_names = sorted([s.standard_name for s in snt[0].standard_names])
+        self.assertListEqual(
+            standard_names,
+            ['x_velocity', 'y_velocity']
+        )

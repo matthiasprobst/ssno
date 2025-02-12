@@ -22,9 +22,27 @@ class TestGraph(unittest.TestCase):
         for s, p, o in g:
             print(s, p, o)
 
-            assert isinstance(p, rdflib.URIRef), f'Error: {s} is not a URIRef'
-            if p not in (rdflib.RDF.first, rdflib.RDF.rest,
-                         rdflib.OWL.unionOf) and o != rdflib.OWL.Class and o != rdflib.OWL.Restriction and p != rdflib.OWL.onProperty and p != rdflib.OWL.inverseOf and p != rdflib.OWL.someValuesFrom and p != rdflib.OWL.allValuesFrom:
+            assert isinstance(p, rdflib.URIRef), f'Error: {p} is not a URIRef'
+            if p not in (rdflib.RDF.first,
+                         rdflib.RDF.rest,
+                         rdflib.OWL.qualifiedCardinality,
+                         rdflib.OWL.minQualifiedCardinality,
+                         rdflib.OWL.maxQualifiedCardinality,
+                         rdflib.OWL.withRestrictions,
+                         rdflib.OWL.someValuesFrom,
+                         rdflib.OWL.allValuesFrom,
+                         rdflib.OWL.cardinality,
+                         rdflib.OWL.onDataRange,
+                         rdflib.OWL.onDatatype,
+                         rdflib.OWL.onProperty,
+                         rdflib.OWL.onClass,
+                         rdflib.OWL.inverseOf,
+                         rdflib.URIRef("http://www.w3.org/2001/XMLSchema#pattern"),
+                         rdflib.OWL.unionOf) and o not in (
+                    rdflib.OWL.Class,
+                    rdflib.OWL.Restriction,
+                    rdflib.RDFS.Datatype
+            ):
                 assert isinstance(s, rdflib.URIRef), f'Error: {s} is not a URIRef'
         assert len(g) > 0, f'Error: No triples found in {onto_purl}.'
         assert g, f'Error: {onto_purl} is not a graph'

@@ -1,5 +1,4 @@
 -r requirements.txt
-pivmetalib @ git+https://github.com/matthiasprobst/pivmetalib@main
 xmltodict
 jupyterlab
 pandas
