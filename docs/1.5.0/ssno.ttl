@@ -271,8 +271,18 @@ owl:sameas rdf:type owl:AnnotationProperty .
               <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasDomainConceptSet
+:hasDomainConceptSet rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
+                     rdfs:domain :StandardNameTable ;
+                     rdfs:range :DomainConceptSet ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Links a a domain concept to a standard name table. An exaple for a domain concept defined by a standard name table can be devices used in an experiment and which a transformation relates to."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "has domain concept set"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasModifier
 :hasModifier rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
              rdfs:domain :StandardNameTable ;
              rdfs:range [ rdf:type owl:Class ;
                           owl:unionOf ( :Qualification

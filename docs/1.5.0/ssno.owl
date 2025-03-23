@@ -441,10 +441,24 @@
     
 
 
+    <!-- https://matthiasprobst.github.io/ssno#hasDomainConceptSet -->
+
+
+    <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasDomainConceptSet">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#DomainConceptSet"/>
+        <skos:definition xml:lang="en">Links a a domain concept to a standard name table. An exaple for a domain concept defined by a standard name table can be devices used in an experiment and which a transformation relates to.</skos:definition>
+        <skos:prefLabel xml:lang="en">has domain concept set</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://matthiasprobst.github.io/ssno#hasModifier -->
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#hasModifier">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <rdfs:range>
             <owl:Class>

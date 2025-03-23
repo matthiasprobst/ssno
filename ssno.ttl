@@ -283,8 +283,18 @@ ssno:hasCharacter rdf:type owl:ObjectProperty ;
                   skos:prefLabel "has character"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#hasDomainConceptSet
+ssno:hasDomainConceptSet rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf dcterms:relation ;
+                         rdfs:domain ssno:StandardNameTable ;
+                         rdfs:range ssno:DomainConceptSet ;
+                         skos:definition "Links a a domain concept to a standard name table. An exaple for a domain concept defined by a standard name table can be devices used in an experiment and which a transformation relates to."@en ;
+                         skos:prefLabel "has domain concept set"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasModifier
 ssno:hasModifier rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf dcterms:relation ;
                  rdfs:domain ssno:StandardNameTable ;
                  rdfs:range [ rdf:type owl:Class ;
                               owl:unionOf ( ssno:Qualification

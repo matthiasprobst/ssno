@@ -252,8 +252,17 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#definition> "Links a transformation to a character used in the transformation string to represent a standard name or qualification"@en .
 <https://matthiasprobst.github.io/ssno#hasCharacter> <http://www.w3.org/2004/02/skos/core#prefLabel> "has character"@en .
 # 
+# https://matthiasprobst.github.io/ssno#hasDomainConceptSet
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#DomainConceptSet> .
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/2004/02/skos/core#definition> "Links a a domain concept to a standard name table. An exaple for a domain concept defined by a standard name table can be devices used in an experiment and which a transformation relates to."@en .
+<https://matthiasprobst.github.io/ssno#hasDomainConceptSet> <http://www.w3.org/2004/02/skos/core#prefLabel> "has domain concept set"@en .
+# 
 # https://matthiasprobst.github.io/ssno#hasModifier
 <https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/relation> .
 <https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#hasModifier> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
 _:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid16 .

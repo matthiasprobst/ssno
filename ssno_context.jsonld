@@ -81,6 +81,7 @@
     "before" : {"@id" : "ssno:before"},
     "dataset" : {"@id" : "ssno:dataset", "@type" : "dcat:Dataset"},
     "has character" : {"@id" : "ssno:hasCharacter", "@type" : "ssno:Character"},
+    "has domain concept set" : {"@id" : "ssno:hasDomainConceptSet", "@type" : "ssno:DomainConceptSet"},
     "has modifier" : {"@id" : "ssno:hasModifier"},
     "has standard name" : {"@id" : "ssno:hasStandardName", "@type" : "ssno:StandardName"},
     "has valid values" : {"@id" : "ssno:hasValidValues", "@type" : "m4i:TextVariable"},
