@@ -53,6 +53,7 @@
     "Organization" : {"@id" : "prov:Organization"},
     "Person" : {"@id" : "prov:Person"},
     "Charakter" : {"@id" : "ssno:Character"},
+    "Domain Concept Set" : {"@id" : "ssno:DomainConceptSet"},
     "Qualification" : {"@id" : "ssno:Qualification"},
     "Scalar Standard Name" : {"@id" : "ssno:ScalarStandardName"},
     "Standard Name" : {"@id" : "ssno:StandardName"},
