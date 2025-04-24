@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SSNO Viewer</title>
+  <style>
+    body { margin: 0; }
+    .node-label {
+      font-size: 12px;
+      padding: 1px 4px;
+      border-radius: 4px;
+      background-color: rgba(0,0,0,0.5);
+      user-select: none;
+    }
+  </style>
+  <script type="importmap">{ "imports": {
+    "react": "https://esm.sh/react",
+    "react-dom": "https://esm.sh/react-dom/client"
+  }}</script>
+</head>
+<body>
+  <div id="graph" style="width:100vw; height:100vh;"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone"></script>
+  <script src="https://cdn.jsdelivr.net/npm/rdflib/dist/rdflib.min.js"></script>
+  <script type="text/jsx" data-type="module">
+    import React from 'react';
+    import { createRoot } from 'react-dom';
+    import ForceGraph3D from 'https://esm.sh/react-force-graph-3d?external=react';
+    import { CSS2DRenderer, CSS2DObject } from 'https://esm.sh/three/examples/jsm/renderers/CSS2DRenderer.js';
+    import SpriteText from 'https://esm.sh/three-spritetext';
+
+    const simplify = uri => uri.split(/[\/#]/).pop();
+    const prefixFromURI = uri => {
+      const match = uri.match(/:\/\/(www\.)?([^\/#]+)[\/#]/);
+      if (match) return match[2];
+      const parts = uri.split(/[\/#]/);
+      return parts.length > 2 ? parts[parts.length - 2] : 'unknown';
+    };
+
+    const parseTTLtoGraphData = (ttlText) => {
+      const store = $rdf.graph();
+      const mimeType = 'text/turtle';
+      const baseUri = "http://example.org/";
+
+      $rdf.parse(ttlText, store, baseUri, mimeType);
+
+      const nodesMap = new Map();
+      const links = [];
+      const prefixColorMap = {};
+      const colorPalette = [
+        '#e6194b','#3cb44b','#ffe119','#4363d8','#f58231','#911eb4','#46f0f0','#f032e6',
+        '#bcf60c','#fabebe','#008080','#e6beff','#9a6324','#fffac8','#800000','#aaffc3',
+        '#808000','#ffd8b1','#000075','#808080'
+      ];
+      let colorIndex = 0;
+
+      const getColorForPrefix = (uri) => {
+        const prefix = prefixFromURI(uri);
+        if (!(prefix in prefixColorMap)) {
+          prefixColorMap[prefix] = colorPalette[colorIndex % colorPalette.length];
+          colorIndex++;
+        }
+        return prefixColorMap[prefix];
+      };
+
+      store.statements.forEach(st => {
+        const sURI = st.subject.value;
+        const oURI = st.object.termType === 'NamedNode' ? st.object.value : null;
+        const s = simplify(sURI);
+        const o = oURI ? simplify(oURI) : null;
+        const p = simplify(st.predicate.value);
+
+        if (!nodesMap.has(s)) {
+          nodesMap.set(s, {
+            id: s,
+            name: s,
+            val: Math.floor(Math.random() * 10 + 1),
+            color: getColorForPrefix(sURI),
+            uri: sURI
+          });
+        }
+
+        if (o && !nodesMap.has(o)) {
+          nodesMap.set(o, {
+            id: o,
+            name: o,
+            val: Math.floor(Math.random() * 10 + 1),
+            color: getColorForPrefix(oURI),
+            uri: oURI
+          });
+        }
+
+        if (o) {
+          links.push({ source: s, target: o, label: p });
+        }
+      });
+
+      return { nodes: Array.from(nodesMap.values()), links };
+    };
+
+    const renderGraph = (data) => {
+      createRoot(document.getElementById('graph')).render(
+        <ForceGraph3D
+          graphData={data}
+          extraRenderers={[new CSS2DRenderer()]}
+        linkDirectionalArrowLength={3.5}
+        linkDirectionalArrowRelPos={1}
+          nodeThreeObject={node => {
+            const nodeEl = document.createElement('div');
+            nodeEl.textContent = node.id;
+            nodeEl.style.color = node.color;
+            nodeEl.className = 'node-label';
+            return new CSS2DObject(nodeEl);
+          }}
+          nodeThreeObjectExtend={true}
+          linkThreeObjectExtend={true}
+          linkThreeObject={link => {
+            const sprite = new SpriteText(link.label);
+            sprite.color = 'lightgrey';
+            sprite.textHeight = 1.5;
+            return sprite;
+          }}
+          linkPositionUpdate={(sprite, { start, end }) => {
+            const middlePos = Object.assign(...['x', 'y', 'z'].map(c => ({
+              [c]: start[c] + (end[c] - start[c]) / 2
+            })));
+            Object.assign(sprite.position, middlePos);
+          }}
+          onNodeClick={node => {
+            if (node.uri) {
+              window.open(node.uri, '_blank');
+            }
+          }}
+        />
+      );
+    };
+
+    // 🔗 Load TTL from remote GitHub repo
+    const ttlURL = 'https://raw.githubusercontent.com/matthiasprobst/ssno/main/ssno.ttl?raw=true';
+
+    fetch(ttlURL)
+      .then(res => res.text())
+      .then(ttlText => {
+        const graphData = parseTTLtoGraphData(ttlText);
+        renderGraph(graphData);
+      })
+      .catch(err => {
+        console.error("Failed to load Turtle file:", err);
+      });
+  </script>
+</body>
+</html>
