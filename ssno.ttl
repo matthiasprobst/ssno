@@ -19,7 +19,7 @@
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/1.5.1> ;
+                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/2.0.0> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
                                           dcterms:creator <https://orcid.org/0000-0001-8729-0482> ;
@@ -674,18 +674,6 @@ pims-ii:Variable rdf:type owl:Class ;
                  skos:prefLabel "Variable"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class ;
-             owl:disjointWith skos:ConceptScheme ;
-             skos:definition "A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive."@en ;
-             skos:prefLabel "Concept"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-skos:ConceptScheme rdf:type owl:Class ;
-                   skos:prefLabel "ConceptScheme"@en .
-
-
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -734,8 +722,7 @@ foaf:Agent rdf:type owl:Class .
 ###  https://matthiasprobst.github.io/ssno#Character
 ssno:Character rdf:type owl:Class ;
                rdfs:subClassOf skos:Concept ;
-               skos:prefLabel "Character"@en ,
-                              "Charakter"@de .
+               skos:prefLabel "Character"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#DomainConceptSet
@@ -835,7 +822,8 @@ ssno:StandardNameTable rdf:type owl:Class ;
                        rdfs:isDefinedBy <https://cfconventions.org/> ;
                        rdfs:seeAlso <https://cfconventions.org/> ;
                        skos:changeNote "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices."@en ,
-                                       "v2.0.0: Added seeAlso, isDefinedBy and source pointing to https://cfconventions.org/."@en ;
+                                       "v2.0.0: Added seeAlso, isDefinedBy and source pointing to https://cfconventions.org/."@en ,
+                                       "v2.0.0: Removed ssno:hasVersion and use schema:version instead."@en ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:editorialNote "This class models concept schemes that capture a subset of the CF conventions’ standard names."@en ;
                        skos:prefLabel "Standard NameTable"@en ;
