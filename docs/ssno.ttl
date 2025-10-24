@@ -188,8 +188,18 @@
                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "has exact match"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "has top concept"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
-<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "is in scheme"@en .
 
 
 ###  http://www.w3.org/ns/dcat#hadRole
@@ -201,7 +211,8 @@
 
 
 ###  http://www.w3.org/ns/dcat#theme
-<http://www.w3.org/ns/dcat#theme> rdf:type owl:ObjectProperty .
+<http://www.w3.org/ns/dcat#theme> rdf:type owl:ObjectProperty ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "theme"@en .
 
 
 ###  http://www.w3.org/ns/prov#agent
@@ -374,6 +385,7 @@
                    rdfs:domain :StandardName ;
                    rdfs:range :StandardNameTable ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
+                   <http://www.w3.org/2004/02/skos/core#editorialNote> "v2.0.0: Is not subproperty of skos:inScheme"@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 
 
@@ -395,17 +407,12 @@
 
 ###  https://matthiasprobst.github.io/ssno#standardNames
 :standardNames rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#hasTopConcept> ;
                rdfs:domain :StandardNameTable ;
                rdfs:range :StandardName ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Points to one or more standard names defined in a standard name table."@en ;
+               <http://www.w3.org/2004/02/skos/core#editorialNote> "v2.0.0: is now subproperty of skos:hasTopConcept"@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "standard names"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#theme
-:theme rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf <http://www.w3.org/ns/dcat#theme> ;
-       rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
-       rdfs:range :StandardName .
 
 
 ###  https://matthiasprobst.github.io/ssno#unit
@@ -488,6 +495,11 @@
                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "has project ID"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty ;
+                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "notation"@en .
+
+
 ###  http://www.w3.org/ns/dcat#keyword
 <http://www.w3.org/ns/dcat#keyword> rdf:type owl:DatatypeProperty ;
                                     rdfs:domain <http://www.w3.org/ns/dcat#Dataset> ;
@@ -521,6 +533,19 @@
            <http://www.w3.org/2004/02/skos/core#prefLabel> "character"@en .
 
 
+###  https://matthiasprobst.github.io/ssno#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :DomainConceptSet
+                                         :StandardName
+                                         :StandardNameModification
+                                       )
+                         ] ;
+             rdfs:range rdf:langString ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Description of a Standard Name, a qualification or a transformation."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
+
+
 ###  https://matthiasprobst.github.io/ssno#hasPreposition
 :hasPreposition rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Qualification ;
@@ -540,13 +565,9 @@
 
 ###  https://matthiasprobst.github.io/ssno#standardName
 :standardName rdf:type owl:DatatypeProperty ;
-              rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
-                                          :StandardName
-                                        )
-                          ] ;
+              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+              rdfs:domain :StandardName ;
               rdfs:range xsd:string ;
-              rdfs:comment "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en ;
               <http://www.w3.org/2004/02/skos/core#definition> "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
               <http://www.w3.org/2004/02/skos/core#example> "x_velocity"@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name"@en .
@@ -559,6 +580,13 @@
                        <http://www.w3.org/2004/02/skos/core#definition> "The character which is used in a standard name transformation string to indicate the position a standard name used in the modification rule."@en ;
                        <http://www.w3.org/2004/02/skos/core#example> "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameLiteral
+:standardNameLiteral rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
+                     rdfs:range xsd:string ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name literal"@en .
 
 
 ###  https://schema.org/keywords
@@ -663,7 +691,8 @@
 
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
@@ -676,7 +705,8 @@
                                                       owl:onProperty [ owl:inverseOf :standardNameTableUsedBy
                                                                      ] ;
                                                       owl:someValuesFrom :StandardNameTable
-                                                    ] .
+                                                    ] ;
+                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Role
@@ -733,7 +763,6 @@
                                                                   )
                                                     ]
                                   ] ;
-                  <http://www.w3.org/2004/02/skos/core#changeNote> "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Represents a predefined group of valid domain-specific concepts such as devices."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Domain Concept Set"@en .
 
@@ -743,7 +772,6 @@
                rdfs:subClassOf :DomainConceptSet ,
                                :StandardNameModification ;
                owl:disjointWith :Transformation ;
-               <http://www.w3.org/2004/02/skos/core#changeNote> "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
                <http://www.w3.org/2004/02/skos/core#example> "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Qualification"@en .
@@ -761,6 +789,10 @@
 :StandardName rdf:type owl:Class ;
               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                owl:someValuesFrom :StandardNameTable
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty [ owl:inverseOf :standardNames
                                                ] ;
                                 owl:someValuesFrom :StandardNameTable
@@ -772,11 +804,22 @@
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :standardName ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:onDatatype xsd:string ;
+                                                    owl:withRestrictions ( [ xsd:pattern "^[a-z][a-z0-9_]*$"
+                                                                           ]
+                                                                         )
+                                                  ]
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :standardName ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
                               ] ;
+              owl:hasKey ( <http://www.w3.org/2004/02/skos/core#inScheme>
+                           <http://www.w3.org/2004/02/skos/core#notation>
+                         ) ;
               rdfs:isDefinedBy <https://cfconventions.org/> ;
-              <http://www.w3.org/2004/02/skos/core#changeNote> "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
-              <http://www.w3.org/2004/02/skos/core#comment> "Use dcterms:description for a description of the standard name."@en ;
               <http://www.w3.org/2004/02/skos/core#definition> "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name"@en .
 
@@ -829,7 +872,6 @@
 ###  https://matthiasprobst.github.io/ssno#Transformation
 :Transformation rdf:type owl:Class ;
                 rdfs:subClassOf :StandardNameModification ;
-                <http://www.w3.org/2004/02/skos/core#changeNote> "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transformation is a phrase which may be added to the standard name without changing its unit."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Transformation"@en .
 
@@ -884,10 +926,6 @@
 <http://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> rdf:type owl:NamedIndividual .
 
 
-###  http://qudt.org/schema/qudt/unit
-<http://qudt.org/schema/qudt/unit> rdf:type owl:NamedIndividual .
-
-
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> rdf:type owl:NamedIndividual ;
                                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <https://ptb.de/si/Real> .
@@ -916,13 +954,6 @@
                   <http://qudt.org/schema/qudt/Unit> ;
          <http://www.w3.org/2004/02/skos/core#definition> "Representing any physical unit."@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "any unit"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#unit
-:unit rdf:type owl:NamedIndividual ;
-      <http://www.w3.org/2004/02/skos/core#closeMatch> <http://qudt.org/schema/qudt/unit> ,
-                                                       <http://w3id.org/nfdi4ing/metadata4ing#hasUnit> ,
-                                                       <https://ptb.de/si/hasUnit> .
 
 
 ###  https://orcid.org/0000-0001-8729-0482
@@ -961,10 +992,6 @@
 
 <http://www.molmod.info/semantics/pims-ii.ttl#Property> <http://www.w3.org/2004/02/skos/core#definition> "Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step"@en ;
                                                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Property"@en .
-
-
-:unit <http://www.w3.org/2004/02/skos/core#definition> "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
-      <http://www.w3.org/2004/02/skos/core#prefLabel> "unit"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

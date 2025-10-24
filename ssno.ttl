@@ -200,8 +200,18 @@ skos:exactMatch rdf:type owl:ObjectProperty ,
                 skos:prefLabel "has exact match"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:ObjectProperty ;
+                   rdfs:domain skos:ConceptScheme ;
+                   rdfs:range skos:Concept ;
+                   skos:prefLabel "has top concept"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#inScheme
-skos:inScheme rdf:type owl:ObjectProperty .
+skos:inScheme rdf:type owl:ObjectProperty ;
+              rdfs:domain skos:Concept ;
+              rdfs:range skos:ConceptScheme ;
+              skos:prefLabel "is in scheme"@en .
 
 
 ###  http://www.w3.org/ns/dcat#hadRole
@@ -213,8 +223,20 @@ dcat:hadRole rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:ObjectProperty .
+dcat:theme rdf:type owl:ObjectProperty ;
+           skos:prefLabel "theme"@en .
 
+###  https://matthiasprobst.github.io/ssno#description
+ssno:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( ssno:DomainConceptSet
+                                         ssno:StandardName
+                                         ssno:StandardNameModification
+                                       )
+                         ] ;
+             rdfs:range rdf:langString ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Description of a Standard Name, a qualification or a transformation."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "description"@en .
 
 ###  http://www.w3.org/ns/prov#agent
 prov:agent rdf:type owl:ObjectProperty ;
@@ -386,6 +408,7 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        rdfs:domain ssno:StandardName ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
+                       skos:editorialNote "v2.0.0: Is not subproperty of skos:inScheme"@en ;
                        skos:prefLabel "standard name table"@en .
 
 
@@ -407,17 +430,12 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#standardNames
 ssno:standardNames rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf skos:hasTopConcept ;
                    rdfs:domain ssno:StandardNameTable ;
                    rdfs:range ssno:StandardName ;
-                   skos:definition "Points to one or more scalar or vector standard names defined in a standard name table."@en ;
+                   skos:definition "Points to one or more standard names defined in a standard name table."@en ;
+                   skos:editorialNote "v2.0.0: is now subproperty of skos:hasTopConcept"@en ;
                    skos:prefLabel "standard names"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#theme
-ssno:theme rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf dcat:theme ;
-           rdfs:domain dcat:Dataset ;
-           rdfs:range ssno:StandardName .
 
 
 ###  https://matthiasprobst.github.io/ssno#unit
@@ -500,6 +518,11 @@ m4i:projectReferenceID rdf:type owl:DatatypeProperty ;
                        skos:prefLabel "has project ID"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty ;
+              skos:prefLabel "notation"@en .
+
+
 ###  http://www.w3.org/ns/dcat#keyword
 dcat:keyword rdf:type owl:DatatypeProperty ;
              rdfs:domain dcat:Dataset ;
@@ -552,13 +575,9 @@ ssno:longName rdf:type owl:DatatypeProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#standardName
 ssno:standardName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( hdf5:Dataset
-                                              ssno:StandardName
-                                            )
-                              ] ;
+                  rdfs:subPropertyOf skos:notation ;
+                  rdfs:domain ssno:StandardName ;
                   rdfs:range xsd:string ;
-                  rdfs:comment "If ssno:standardName is associated with an HDF5 Dataset then the corresponding standard name table must be assigned to the root group in order to elaborate the properties of the ssno:StandardName."@en ;
                   skos:definition "Name for a standard name, e.g. \"x_velocity\". The construction of a standard name string is defined by the standard name table. E.g. no spaces are allowed and specific pre- and suffixes are allowed."@en ;
                   skos:example "x_velocity"@en ;
                   skos:prefLabel "standard name"@en .
@@ -571,6 +590,13 @@ ssno:standardNameCharacter rdf:type owl:DatatypeProperty ;
                            skos:definition "The character which is used in a standard name transformation string to indicate the position a standard name used in the modification rule."@en ;
                            skos:example "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
                            skos:prefLabel "standard name character"@en .
+
+
+###  https://matthiasprobst.github.io/ssno#standardNameLiteral
+ssno:standardNameLiteral rdf:type owl:DatatypeProperty ;
+                         rdfs:domain hdf5:Dataset ;
+                         rdfs:range xsd:string ;
+                         skos:prefLabel "standard name literal"@en .
 
 
 ###  https://schema.org/keywords
@@ -674,13 +700,23 @@ pims-ii:Variable rdf:type owl:Class ;
                  skos:prefLabel "Variable"@en .
 
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             owl:disjointWith skos:ConceptScheme .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty [ owl:inverseOf ssno:standardNameTableUsedBy
                                               ] ;
                                owl:someValuesFrom ssno:StandardNameTable
-                             ] .
+                             ] ;
+             skos:prefLabel "Dataset"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Role
@@ -737,7 +773,6 @@ ssno:DomainConceptSet rdf:type owl:Class ;
                                                                       )
                                                         ]
                                       ] ;
-                      skos:changeNote "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                       skos:definition "Represents a predefined group of valid domain-specific concepts such as devices."@en ;
                       skos:prefLabel "Domain Concept Set"@en .
 
@@ -747,7 +782,6 @@ ssno:Qualification rdf:type owl:Class ;
                    rdfs:subClassOf ssno:DomainConceptSet ,
                                    ssno:StandardNameModification ;
                    owl:disjointWith ssno:Transformation ;
-                   skos:changeNote "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                    skos:definition "A qualification derives an existing standard name by a rule. This may alter the units."@en ;
                    skos:example "See here https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html"@en ;
                    skos:prefLabel "Qualification"@en .
@@ -769,18 +803,31 @@ ssno:StandardName rdf:type owl:Class ;
                                                    ] ;
                                     owl:someValuesFrom ssno:StandardNameTable
                                   ] ,
+                                  [ a owl:Restriction ; owl:onProperty skos:inScheme ;
+    owl:someValuesFrom ssno:StandardNameTable ],
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty ssno:unit ;
                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass qudt:Unit
                                   ] ,
-                                  [ a owl:Restriction ;
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty ssno:standardName ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger ]
-                                   ;
+                                    owl:allValuesFrom [ rdf:type rdfs:Datatype ;
+                                                        owl:onDatatype xsd:string ;
+                                                        owl:withRestrictions ( [ xsd:pattern "^[a-z][a-z0-9_]*$"
+                                                                               ]
+                                                                             )
+                                                      ]
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ssno:standardName ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  owl:hasKey ( skos:inScheme
+                               skos:notation
+                             ) ;
                   rdfs:isDefinedBy <https://cfconventions.org/> ;
-                  skos:changeNote "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
-                  skos:comment "Use dcterms:description for a description of the standard name."@en ;
                   skos:definition "A standard name is defined by a canonical unit and a description. It generally is defined by a standard name table."@en ;
                   skos:prefLabel "Standard Name"@en .
 
@@ -821,8 +868,8 @@ ssno:StandardNameTable rdf:type owl:Class ;
                        dcterms:source <https://cfconventions.org/> ;
                        rdfs:isDefinedBy <https://cfconventions.org/> ;
                        rdfs:seeAlso <https://cfconventions.org/> ;
-                       skos:changeNote "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices."@en ,
-                                       "v2.0.0: Added seeAlso, isDefinedBy and source pointing to https://cfconventions.org/."@en ,
+                       skos:changeNote "v2.0.0: Added seeAlso, isDefinedBy and source pointing to https://cfconventions.org/."@en ,
+                                       "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices."@en ,
                                        "v2.0.0: Removed ssno:hasVersion and use schema:version instead."@en ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
                        skos:editorialNote "This class models concept schemes that capture a subset of the CF conventions’ standard names."@en ;
@@ -833,7 +880,6 @@ ssno:StandardNameTable rdf:type owl:Class ;
 ###  https://matthiasprobst.github.io/ssno#Transformation
 ssno:Transformation rdf:type owl:Class ;
                     rdfs:subClassOf ssno:StandardNameModification ;
-                    skos:changeNote "v2.0.0: Removed ssno:description and advise to use dcterms:description instead."@en ;
                     skos:definition "A transformation is a phrase which may be added to the standard name without changing its unit."@en ;
                     skos:prefLabel "Transformation"@en .
 
@@ -888,10 +934,6 @@ schema:ResearchProject rdf:type owl:Class ;
 <http://emmo.info/emmo#EMMO_b7bcff25_ffc3_474e_9ab5_01b1664bd4ba> rdf:type owl:NamedIndividual .
 
 
-###  http://qudt.org/schema/qudt/unit
-qudt:unit rdf:type owl:NamedIndividual .
-
-
 ###  http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable
 m4i:NumericalVariable rdf:type owl:NamedIndividual ;
                       skos:closeMatch <https://ptb.de/si/Real> .
@@ -920,13 +962,6 @@ ssno:AnyUnit rdf:type owl:NamedIndividual ,
                       qudt:Unit ;
              skos:definition "Representing any physical unit."@en ;
              skos:prefLabel "any unit"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#unit
-ssno:unit rdf:type owl:NamedIndividual ;
-          skos:closeMatch qudt:unit ,
-                          m4i:hasUnit ,
-                          <https://ptb.de/si/hasUnit> .
 
 
 ###  https://orcid.org/0000-0001-8729-0482
@@ -965,10 +1000,6 @@ m4i:NumericalVariable rdfs:isDefinedBy m4i: ;
 
 pims-ii:Property skos:definition "Property, i.e., a variable that can be considered (as an investigated property, i.e., target property) within a processing step"@en ;
                  skos:prefLabel "Property"@en .
-
-
-ssno:unit skos:definition "The unit of the standard name. The unit of an individual standard name must be convertable to this unit."@en ;
-          skos:prefLabel "unit"@en .
 
 
 ###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
