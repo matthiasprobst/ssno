@@ -22,6 +22,7 @@
                                           owl:versionIRI <https://matthiasprobst.github.io/ssno/2.0.0> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
+                                          dcterms:source <https://cfconventions.org/> ;
                                           dcterms:creator <https://orcid.org/0000-0001-8729-0482> ;
                                           dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                           dcterms:rights <https://creativecommons.org/licenses/by/4.0/> ;
@@ -166,22 +167,19 @@ schema:givenName rdf:type owl:AnnotationProperty .
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#member
 hdf5:member rdf:type owl:ObjectProperty ;
-            rdfs:domain hdf5:Group ;
-            rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( hdf5:Dataset
-                                       hdf5:Group
-                                     )
-                       ] ;
-            skos:definition "Relation between collection and the members of it."@en ;
-            skos:prefLabel "member"@en .
-
+           rdfs:comment "Relation between collection and the members of it. [Allotrope]" ;
+           rdfs:label "member" ;
+           skos:definition "Relation between collection and the members of it. [Allotrope]" ;
+           skos:prefLabel "member" .
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 hdf5:rootGroup rdf:type owl:ObjectProperty ;
-               rdfs:domain hdf5:File ;
+              rdfs:domain hdf5:File ;
                rdfs:isDefinedBy hdf5: ;
-               skos:definition "Relation between the HDF file and its root group"@en ;
-               skos:prefLabel "has root group"@en .
+              rdfs:range hdf5:Group ;
+              rdfs:label "root group" ;
+              skos:definition "Relation between the HDF file and its root group. [Allotrope]"@en ;
+              skos:prefLabel "root group"@en .
 
 
 ###  http://purl.org/dc/terms/relation
@@ -388,7 +386,6 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        skos:editorialNote "v2.0.0: Declared as subproperty of skos:inScheme."@en ;
                        skos:prefLabel "standard name table"@en .
 
-
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
 ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf dcterms:relation ;
@@ -579,13 +576,6 @@ ssno:standardNameCharacter rdf:type owl:DatatypeProperty ;
                            skos:definition "The character which is used in a standard name transformation string to indicate the position a standard name used in the modification rule."@en ;
                            skos:example "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
                            skos:prefLabel "standard name character"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#standardNameLiteral
-ssno:standardNameLiteral rdf:type owl:DatatypeProperty ;
-                         rdfs:domain hdf5:Dataset ;
-                         rdfs:range xsd:string ;
-                         skos:prefLabel "standard name literal"@en .
 
 
 ###  https://schema.org/keywords

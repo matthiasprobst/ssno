@@ -13,6 +13,7 @@
                                           <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-8729-0482> ;
                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                           <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/4.0/> ;
+                                          <http://purl.org/dc/terms/source> <https://cfconventions.org/> ;
                                           <http://purl.org/dc/terms/title> "sSNO: A simple Standard Name Ontology"@en ;
                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "ssno" ;
                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://matthiasprobst.github.io/ssno#" ;
@@ -154,22 +155,20 @@
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#member
 <http://purl.allotrope.org/ontologies/hdf5/1.8#member> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Group> ;
-                                                       rdfs:range [ rdf:type owl:Class ;
-                                                                    owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset>
-                                                                                  <http://purl.allotrope.org/ontologies/hdf5/1.8#Group>
-                                                                                )
-                                                                  ] ;
-                                                       <http://www.w3.org/2004/02/skos/core#definition> "Relation between collection and the members of it."@en ;
-                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "member"@en .
+                                                       rdfs:comment "Relation between collection and the members of it. [Allotrope]" ;
+                                                       rdfs:label "member" ;
+                                                       <http://www.w3.org/2004/02/skos/core#definition> "Relation between collection and the members of it. [Allotrope]" ;
+                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "member" .
 
 
 ###  http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup
 <http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup> rdf:type owl:ObjectProperty ;
                                                           rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#File> ;
+                                                          rdfs:range <http://purl.allotrope.org/ontologies/hdf5/1.8#Group> ;
                                                           rdfs:isDefinedBy <http://purl.allotrope.org/ontologies/hdf5/1.8#> ;
-                                                          <http://www.w3.org/2004/02/skos/core#definition> "Relation between the HDF file and its root group"@en ;
-                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "has root group"@en .
+                                                          rdfs:label "root group" ;
+                                                          <http://www.w3.org/2004/02/skos/core#definition> "Relation between the HDF file and its root group. [Allotrope]"@en ;
+                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "root group"@en .
 
 
 ###  http://purl.org/dc/terms/relation
@@ -568,13 +567,6 @@
                        <http://www.w3.org/2004/02/skos/core#definition> "The character which is used in a standard name transformation string to indicate the position a standard name used in the modification rule."@en ;
                        <http://www.w3.org/2004/02/skos/core#example> "in the transformation string \"integral_of_Y_wrt_X\" the standard name representation characters are be \"X\" and \"Y\""@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name character"@en .
-
-
-###  https://matthiasprobst.github.io/ssno#standardNameLiteral
-:standardNameLiteral rdf:type owl:DatatypeProperty ;
-                     rdfs:domain <http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset> ;
-                     rdfs:range xsd:string ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name literal"@en .
 
 
 ###  https://schema.org/keywords

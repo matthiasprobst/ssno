@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2025-10-24", "version":"v2.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery","url":"https://orcid.org/0000-0001-8729-0482"}], "contributor":[{"@type":"Person","name":"Balazs Pritz (https://orcid.org/0000-0001-9560-500X), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery","url":"https://orcid.org/0000-0001-9560-500X"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://matthiasprobst.github.io/ssno","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://matthiasprobst.github.io/ssno","name":"SSNO: A simple Standard Name Ontology", "headline":"This is an ontology draft for the usage of standard names as a simple way of describing complex data.<br>It is motivated by the <a href="http://cfconventions.org/" target="_blank">CF Conventions </a>, which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called "simple". With this ontology, its usage shall be applicable to other research topics, too.<br><br>The ontology is still under development. Please feel free to participate in this ontology by posting problems or contributions in the <a href=https://github.com/matthiasprobst/ssno target="_blank">Git repository</a>.", "dateReleased":"2024-04-02", "dateModified":"2025-10-27", "version":"v2.0.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery","url":"https://orcid.org/0000-0001-8729-0482"}], "contributor":[{"@type":"Person","name":"Balazs Pritz (https://orcid.org/0000-0001-9560-500X), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery","url":"https://orcid.org/0000-0001-9560-500X"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,7 +70,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-10-24</dt>
+<dt>Modified on: 2025-10-27</dt>
 <dt>This version:</dt>
 <dd><a href="https://matthiasprobst.github.io/ssno/2.0.0">https://matthiasprobst.github.io/ssno/2.0.0</a></dd>
 <dt>Latest version:</dt>
@@ -80,7 +80,7 @@ $(function(){
 <dt>Revision:</dt>
 <dd>v2.0.0</dd>
 <dt>Issued on:</dt>
-<dd>2025-10-24</dd>
+<dd>2025-10-27</dd>
 <dt>Authors:</dt>
 <dd><a href="https://orcid.org/0000-0001-8729-0482">Matthias Probst (https://orcid.org/0000-0001-8729-0482), Karlsruhe Institute of Technology, Institute of Thermal Turbomachinery</a></dd>
 
@@ -312,10 +312,6 @@ This ontology has the following classes and properties.</span>
          title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a>
    </li>
    <li>
-      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
-         title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a>
-   </li>
-   <li>
       <a href="#hasStandardName"
          title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a>
    </li>
@@ -345,6 +341,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a>
+   </li>
+   <li>
+      <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup"
+         title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">root group</a>
    </li>
    <li>
       <a href="#standardNameTable"
@@ -435,10 +435,6 @@ This ontology has the following classes and properties.</span>
       <a href="#standardNameCharacter"
          title="https://matthiasprobst.github.io/ssno#standardNameCharacter">standard name character</a>
    </li>
-   <li>
-      <a href="#standardNameLiteral"
-         title="https://matthiasprobst.github.io/ssno#standardNameLiteral">standard name literal</a>
-   </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -464,7 +460,7 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">SSNO: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">The standard name construction rules are detailed in a document associated with the <a href="https://matthiasprobst.github.io/ssno#StandardNameTabel">StandardNameTable</a>. This table encompasses all standard names defined by a specific project or community. Instances of StandardName and StandardNameTable can be applied in conjunction with other ontologies, such as <a href="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/" target="_blank">metadata4ing</a>, to offer a clear, standardized description of a numerical variable.<br><br>The following class diagram provides a brief overview of the key classes within the ontology.<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/2.0.0/classdiagram.png?raw=true" height="300 px"><br><br>Standard names as in the CF conventions are intended to be used for describing netCDF data. In this adopted ontology version the focus is set on HDF5 files. To specify which standard name table applies to a file, a relationship can be established between the file and the corresponding standard name table, as illustrated below. It is also possible to associate a standard name table in a broader context, for instance, by linking it to a <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset" target="_blank">dcat:Dataset</a> or a <a href="https://schema.org/Project" target="_blank">schema:Project</a>.<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/2.0.0/things_and_snt.png?raw=true" height="150 px"><br><br>In some cases, standard names can be adapted to form new, valid names. These adaptations, managed by the standard name table, can take the form of qualifications or transformations. Both types of modifications are describable within the ontology. Qualification-based modifications, as specified in the <a href="https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html">CF Standard Name Guidelines</a>, involve adding qualification phrases (represented by the class <a href="https://matthiasprobst.github.io/ssno/#Qualification" target="_blank">ssno:Qualification</a>) before or after a core standard name. Certain qualifications may also include prepositions, such as "at" or "due to."<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/2.0.0/standard_name_modification.png?raw=true" height="500 px"></span></div>
+<span class="markdown">The standard name construction rules are detailed in a document associated with the <a href="https://matthiasprobst.github.io/ssno#StandardNameTabel">StandardNameTable</a>. This table encompasses all standard names defined by a specific project or community. Instances of StandardName and StandardNameTable can be applied in conjunction with other ontologies, such as <a href="https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/" target="_blank">metadata4ing</a>, to offer a clear, standardized description of a numerical variable.<br><br>The following class diagram provides a brief overview of the key classes within the ontology.<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/1.5.0/classdiagram.png?raw=true" height="300 px"><br><br>Standard names as in the CF conventions are intended to be used for describing netCDF data. In this adopted ontology version the focus is set on HDF5 files. To specify which standard name table applies to a file, a relationship can be established between the file and the corresponding standard name table, as illustrated below. It is also possible to associate a standard name table in a broader context, for instance, by linking it to a <a href="https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset" target="_blank">dcat:Dataset</a> or a <a href="https://schema.org/Project" target="_blank">schema:Project</a>.<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/1.5.0/things_and_snt.png?raw=true" height="150 px"><br><br>In some cases, standard names can be adapted to form new, valid names. These adaptations, managed by the standard name table, can take the form of qualifications or transformations. Both types of modifications are describable within the ontology. Qualification-based modifications, as specified in the <a href="https://cfconventions.org/Data/cf-standard-names/docs/guidelines.html">CF Standard Name Guidelines</a>, involve adding qualification phrases (represented by the class <a href="https://matthiasprobst.github.io/ssno/#Qualification" target="_blank">ssno:Qualification</a>) before or after a core standard name. Certain qualifications may also include prepositions, such as "at" or "due to."<br><img alt="class diagram" src="https://github.com/matthiasprobst/ssno/blob/main/documentation/imgs/1.5.0/standard_name_modification.png?raw=true" height="500 px"></span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -682,13 +678,13 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#longName" title="https://matthiasprobst.github.io/ssno#longName">long name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#standardNameLiteral" title="https://matthiasprobst.github.io/ssno#standardNameLiteral">standard name literal</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#ancillaryVariables" title="https://matthiasprobst.github.io/ssno#ancillaryVariables">ancillary variables</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a> <sup class="type-op" title="object property">op</sup>, <a href="#longName" title="https://matthiasprobst.github.io/ssno#longName">long name</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#isStandardNameOf" title="https://matthiasprobst.github.io/ssno#isStandardNameOf">is standard name of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -717,7 +713,7 @@ This section provides details for each class and property defined by SSNO.
     is in domain of
    </dt>
    <dd>
-    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">root group</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -749,16 +745,10 @@ This section provides details for each class and property defined by SSNO.
     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#NamedObject" title="http://purl.allotrope.org/ontologies/hdf5/1.8#NamedObject">named object</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#member" title="http://purl.allotrope.org/ontologies/hdf5/1.8#member">member</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">root group</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is disjoint with
@@ -1350,7 +1340,6 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#hasDomainConceptSet" title="https://matthiasprobst.github.io/ssno#hasDomainConceptSet">has domain concept set</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#exactMatch" title="http://www.w3.org/2004/02/skos/core#exactMatch">has exact match</a></li>
   <li><a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a></li>
-  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">has root group</a></li>
   <li><a href="#hasStandardName" title="https://matthiasprobst.github.io/ssno#hasStandardName">has standard name</a></li>
   <li><a href="#hasValidValues" title="https://matthiasprobst.github.io/ssno#hasValidValues">has valid values</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#inScheme" title="http://www.w3.org/2004/02/skos/core#inScheme">is in scheme</a></li>
@@ -1360,6 +1349,7 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#positioned" title="https://matthiasprobst.github.io/ssno#positioned">positioned</a></li>
   <li><a href="#http://www.w3.org/ns/prov#qualifiedAttribution" title="http://www.w3.org/ns/prov#qualifiedAttribution">qualified attribution</a></li>
   <li><a href="#http://purl.org/dc/terms/relation" title="http://purl.org/dc/terms/relation">relation</a></li>
+  <li><a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup" title="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">root group</a></li>
   <li><a href="#standardNameTable" title="https://matthiasprobst.github.io/ssno#standardNameTable">standard name table</a></li>
   <li><a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a></li>
   <li><a href="#standardNames" title="https://matthiasprobst.github.io/ssno#standardNames">standard names</a></li>
@@ -1650,31 +1640,6 @@ This section provides details for each class and property defined by SSNO.
    </dl>
   </div>
  </div>
- <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
-  <h3>has root group<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup</p>
-  <div class="comment">
-   <span class="markdown">Relation between the HDF file and its root group</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="http://purl.allotrope.org/ontologies/hdf5/1.8#">http://purl.allotrope.org/ontologies/hdf5/1.8#</a>
-   </dd>
-  </dl>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
  <div class="entity" id="hasStandardName">
   <h3>has standard name<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#hasStandardName</p>
@@ -1818,23 +1783,10 @@ This section provides details for each class and property defined by SSNO.
   <h3>member<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#member</p>
   <div class="comment">
-   <span class="markdown">Relation between collection and the members of it.</span>
+   <span class="markdown">Relation between collection and the members of it. [Allotrope]</span>
   </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset">HDF5 Dataset</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
+  <div class="comment">
+   <span class="markdown">Relation between collection and the members of it. [Allotrope]</span>
   </div>
  </div>
  <div class="entity" id="positioned">
@@ -1887,6 +1839,37 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#dataset" title="https://matthiasprobst.github.io/ssno#dataset">dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDomainConceptSet" title="https://matthiasprobst.github.io/ssno#hasDomainConceptSet">has domain concept set</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasModifier" title="https://matthiasprobst.github.io/ssno#hasModifier">has modifier</a> <sup class="type-op" title="object property">op</sup>, <a href="#standardNameTableUsedBy" title="https://matthiasprobst.github.io/ssno#standardNameTableUsedBy">standard name table used by</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStandardNameTable" title="https://matthiasprobst.github.io/ssno#usesStandardNameTable">uses standard name table</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup">
+  <h3>root group<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.allotrope.org/ontologies/hdf5/1.8#rootGroup</p>
+  <div class="comment">
+   <span class="markdown">Relation between the HDF file and its root group. [Allotrope]</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.allotrope.org/ontologies/hdf5/1.8#">http://purl.allotrope.org/ontologies/hdf5/1.8#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#File" title="http://purl.allotrope.org/ontologies/hdf5/1.8#File">HDF5 File</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Group" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Group">HDF5 Group</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2083,7 +2066,6 @@ This section provides details for each class and property defined by SSNO.
   <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">notation</a></li>
   <li><a href="#standardName" title="https://matthiasprobst.github.io/ssno#standardName">standard name</a></li>
   <li><a href="#standardNameCharacter" title="https://matthiasprobst.github.io/ssno#standardNameCharacter">standard name character</a></li>
-  <li><a href="#standardNameLiteral" title="https://matthiasprobst.github.io/ssno#standardNameLiteral">standard name literal</a></li>
  </ul>
  <div class="entity" id="altersUnit">
   <h3>alters unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
@@ -2544,26 +2526,6 @@ This section provides details for each class and property defined by SSNO.
     </dt>
     <dd>
      <a href="#Transformation" title="https://matthiasprobst.github.io/ssno#Transformation">Transformation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="standardNameLiteral">
-  <h3>standard name literal<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://matthiasprobst.github.io/ssno#standardNameLiteral</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset" title="http://purl.allotrope.org/ontologies/hdf5/1.8#Dataset">HDF5 Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
