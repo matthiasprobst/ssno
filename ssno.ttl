@@ -157,8 +157,8 @@ schema:familyName rdf:type owl:AnnotationProperty .
 schema:givenName rdf:type owl:AnnotationProperty .
 
 
-###  https://www.w3.org/ns/prov#hadPrimarySource
-<https://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -372,6 +372,12 @@ ssno:isStandardNameOf rdf:type owl:ObjectProperty ;
 
 ###  https://matthiasprobst.github.io/ssno#positioned
 ssno:positioned rdf:type owl:ObjectProperty ;
+           rdfs:domain ssno:Qualification ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( ssno:Qualification
+                                      ssno:StandardName
+                                    )
+                      ] ;
                 skos:definition "Relates two qualifications or one qualification and a standard name to each other."@en ;
                 skos:prefLabel "positioned"@en .
 
@@ -383,7 +389,7 @@ ssno:standardNameTable rdf:type owl:ObjectProperty ;
                        rdfs:domain ssno:StandardName ;
                        rdfs:range ssno:StandardNameTable ;
                        skos:definition "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
-                       skos:editorialNote "v2.0.0: Declared as subproperty of skos:inScheme."@en ;
+                       skos:changeNote "v2.0.0: Declared as subproperty of skos:inScheme."@en ;
                        skos:prefLabel "standard name table"@en .
 
 ###  https://matthiasprobst.github.io/ssno#standardNameTableUsedBy
@@ -835,7 +841,7 @@ ssno:StandardNameTable rdf:type owl:Class ;
                                        "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices."@en ,
                                        "v2.0.0: Removed ssno:hasVersion and use schema:version instead."@en ;
                        skos:definition "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
-                       skos:editorialNote "This class models concept schemes that capture a subset of the CF conventions’ standard names."@en ;
+                       skos:editorialNote "This class models the concept scheme that captures a subset of the CF conventions' standard names."@en ;
                        skos:prefLabel "Standard Name Table"@en ;
                        <http://www.w3.org/ns/dx/prof/isProfileOf> <https://cfconventions.org/> .
 

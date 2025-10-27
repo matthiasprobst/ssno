@@ -41,8 +41,9 @@ class TestGraph(unittest.TestCase):
                          rdflib.OWL.unionOf) and o not in (
                     rdflib.OWL.Class,
                     rdflib.OWL.Restriction,
+                    rdflib.OWL.ObjectProperty,
                     rdflib.RDFS.Datatype
             ):
-                assert isinstance(s, rdflib.URIRef), f'Error: {s} is not a URIRef'
+                assert isinstance(s, rdflib.URIRef), f'Error: {s} ({p} {o}) is not a URIRef'
         assert len(g) > 0, f'Error: No triples found in {onto_purl}.'
         assert g, f'Error: {onto_purl} is not a graph'

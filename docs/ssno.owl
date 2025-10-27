@@ -7,7 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:prof="http://www.w3.org/ns/dx/prof/"
-     xmlns:prov="https://www.w3.org/ns/prov#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:ssno="https://matthiasprobst.github.io/ssno#"
@@ -255,10 +255,10 @@
     
 
 
-    <!-- https://www.w3.org/ns/prov#hadPrimarySource -->
+    <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
 
 
-    <owl:AnnotationProperty rdf:about="https://www.w3.org/ns/prov#hadPrimarySource"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadPrimarySource"/>
     
 
 

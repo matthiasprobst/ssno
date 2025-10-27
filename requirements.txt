@@ -1,3 +1,4 @@
 # requirements for running deploy.py
 rdflib
+ontolutils>=0.21.1
 pivmetalib==2.0.0

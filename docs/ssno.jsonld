@@ -1744,6 +1744,6 @@
   "@id" : "https://schema.org/version",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://www.w3.org/ns/prov#hadPrimarySource",
+  "@id" : "http://www.w3.org/ns/prov#hadPrimarySource",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

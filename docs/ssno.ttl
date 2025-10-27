@@ -145,8 +145,8 @@
 <https://schema.org/givenName> rdf:type owl:AnnotationProperty .
 
 
-###  https://www.w3.org/ns/prov#hadPrimarySource
-<https://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
