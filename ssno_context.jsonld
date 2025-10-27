@@ -69,7 +69,6 @@
     "has exact match" : {"@id" : "skos:exactMatch"},
     "is in scheme" : {"@id" : "skos:inScheme", "@type" : "skos:ConceptScheme"},
     "had role" : {"@id" : "dcat:hadRole", "@type" : "dcat:Role"},
-    "theme" : {"@id" : "dcat:theme"},
     "agent" : {"@id" : "prov:agent", "@type" : "prov:Agent"},
     "qualified attribution" : {"@id" : "prov:qualifiedAttribution", "@type" : "prov:Attribution"},
     "mbox" : {"@id" : "foaf:mbox", "@type" : "owl:Thing"},

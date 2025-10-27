@@ -198,11 +198,6 @@
                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "had role"@en .
 
 
-###  http://www.w3.org/ns/dcat#theme
-<http://www.w3.org/ns/dcat#theme> rdf:type owl:ObjectProperty ;
-                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "theme"@en .
-
-
 ###  http://www.w3.org/ns/prov#agent
 <http://www.w3.org/ns/prov#agent> rdf:type owl:ObjectProperty ;
                                   rdfs:domain <http://www.w3.org/ns/prov#Attribution> ;

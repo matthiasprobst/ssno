@@ -343,15 +343,6 @@
     
 
 
-    <!-- http://www.w3.org/ns/dcat#theme -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/dcat#theme">
-        <skos:prefLabel xml:lang="en">theme</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.w3.org/ns/prov#agent -->
 
 

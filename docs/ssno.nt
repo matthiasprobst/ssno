@@ -163,10 +163,6 @@
 <http://www.w3.org/ns/dcat#hadRole> <http://www.w3.org/2004/02/skos/core#definition> "The function of an entity or agent with respect to another entity or resource."@en .
 <http://www.w3.org/ns/dcat#hadRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "had role"@en .
 # 
-# http://www.w3.org/ns/dcat#theme
-<http://www.w3.org/ns/dcat#theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/dcat#theme> <http://www.w3.org/2004/02/skos/core#prefLabel> "theme"@en .
-# 
 # http://www.w3.org/ns/prov#agent
 <http://www.w3.org/ns/prov#agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/prov#agent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Attribution> .

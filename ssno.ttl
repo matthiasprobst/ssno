@@ -209,11 +209,6 @@ dcat:hadRole rdf:type owl:ObjectProperty ;
              skos:prefLabel "had role"@en .
 
 
-###  http://www.w3.org/ns/dcat#theme
-dcat:theme rdf:type owl:ObjectProperty ;
-           skos:prefLabel "theme"@en .
-
-
 ###  http://www.w3.org/ns/prov#agent
 prov:agent rdf:type owl:ObjectProperty ;
            rdfs:domain prov:Attribution ;
