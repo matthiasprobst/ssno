@@ -2,14 +2,14 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://matthiasprobst.github.io/ssno/1.5.1> a prov:Entity;
+<https://matthiasprobst.github.io/ssno/2.0.0> a prov:Entity;
 	 dc:title "SSNO: A simple Standard Name Ontology";
 	 prov:wasAttributedTo <https://orcid.org/0000-0001-8729-0482>;
 	 dc:creator <https://orcid.org/0000-0001-8729-0482>;
 	 prov:wasAttributedTo <https://orcid.org/0000-0001-9560-500X>;
 	 dc:contributor <https://orcid.org/0000-0001-9560-500X>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:specializationOf <https://matthiasprobst.github.io/ssno/1.5.1>;
+	 prov:specializationOf <https://matthiasprobst.github.io/ssno/2.0.0>;
 	 prov:wasRevisionOf <https://matthiasprobst.github.io/ssno/1.5.0>;
 	 prov:wasGeneratedAt "2024-04-02";
 .

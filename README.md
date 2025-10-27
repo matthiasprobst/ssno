@@ -14,6 +14,11 @@ The ontology is stored in the turtle file [ssno.ttl](ssno.ttl), the context JSON
 is [ssno_context.jsonld](https://raw.githubusercontent.com/matthiasprobst/ssno/main/ssno_context.jsonld).
 A [Guide](Guide.md) helps with the first steps, a [jupyter notebook](./examples/Tutorial.ipynb) is provided, too.
 
+
+<a href="documentation/ontology_in_3d.html" target="_blank">
+  <img src="documentation/3dgraph.png" alt="Description of Image" />
+</a>
+
 ## Documentation
 
 The documentation of the ontology is available [online](https://matthiasprobst.github.io/ssno/) and a tutorial guide is
