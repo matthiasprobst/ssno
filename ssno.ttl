@@ -421,6 +421,7 @@ ssno:standardNames rdf:type owl:ObjectProperty ;
 ssno:unit rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
           rdfs:domain ssno:StandardName ;
+          skos:prefLabel "unit"@en ;
           rdfs:range qudt:Unit .
 
 

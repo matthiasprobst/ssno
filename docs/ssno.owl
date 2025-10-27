@@ -206,6 +206,13 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadPrimarySource"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
 
@@ -252,13 +259,6 @@
 
 
     <owl:AnnotationProperty rdf:about="https://schema.org/givenName"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadPrimarySource"/>
     
 
 
@@ -589,6 +589,15 @@
 
 
     <owl:ObjectProperty rdf:about="https://matthiasprobst.github.io/ssno#positioned">
+        <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#Qualification"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#Qualification"/>
+                    <rdf:Description rdf:about="https://matthiasprobst.github.io/ssno#StandardName"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <skos:definition xml:lang="en">Relates two qualifications or one qualification and a standard name to each other.</skos:definition>
         <skos:prefLabel xml:lang="en">positioned</skos:prefLabel>
     </owl:ObjectProperty>
@@ -603,8 +612,8 @@
         <owl:inverseOf rdf:resource="https://matthiasprobst.github.io/ssno#standardNames"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
+        <skos:changeNote xml:lang="en">v2.0.0: Declared as subproperty of skos:inScheme.</skos:changeNote>
         <skos:definition xml:lang="en">Points to the ssno:StandardNameTable defining the ssno:StandardName.</skos:definition>
-        <skos:editorialNote xml:lang="en">v2.0.0: Declared as subproperty of skos:inScheme.</skos:editorialNote>
         <skos:prefLabel xml:lang="en">standard name table</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -657,6 +666,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://matthiasprobst.github.io/ssno#StandardName"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <skos:prefLabel xml:lang="en">unit</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1320,7 +1330,7 @@
         <skos:changeNote xml:lang="en">v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices.</skos:changeNote>
         <skos:changeNote xml:lang="en">v2.0.0: Removed ssno:hasVersion and use schema:version instead.</skos:changeNote>
         <skos:definition xml:lang="en">A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact.</skos:definition>
-        <skos:editorialNote xml:lang="en">This class models concept schemes that capture a subset of the CF conventions’ standard names.</skos:editorialNote>
+        <skos:editorialNote xml:lang="en">This class models the concept scheme that captures a subset of the CF conventions&apos; standard names.</skos:editorialNote>
         <skos:prefLabel xml:lang="en">Standard Name Table</skos:prefLabel>
         <prof:isProfileOf rdf:resource="https://cfconventions.org/"/>
     </owl:Class>

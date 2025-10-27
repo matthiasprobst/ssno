@@ -88,6 +88,7 @@
     "standard name table" : {"@id" : "ssno:standardNameTable", "@type" : "ssno:StandardNameTable"},
     "standard name table used by" : {"@id" : "ssno:standardNameTableUsedBy"},
     "standard names" : {"@id" : "ssno:standardNames", "@type" : "ssno:StandardName"},
+    "unit" : {"@id" : "ssno:unit", "@type" : "qudt:Unit"},
     "uses standard name table" : {"@id" : "ssno:usesStandardNameTable", "@type" : "ssno:StandardNameTable"},
     "has ROR ID" : {"@id" : "m4i:hasRorId"},
     "has string value" : {"@id" : "m4i:hasStringValue", "@type" : "xsd:string"},

@@ -117,6 +117,10 @@
 <http://www.w3.org/ns/dx/prof/isProfileOf> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
 
@@ -143,10 +147,6 @@
 
 ###  https://schema.org/givenName
 <https://schema.org/givenName> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/ns/prov#hadPrimarySource
-<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -361,6 +361,12 @@
 
 ###  https://matthiasprobst.github.io/ssno#positioned
 :positioned rdf:type owl:ObjectProperty ;
+            rdfs:domain :Qualification ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Qualification
+                                       :StandardName
+                                     )
+                       ] ;
             <http://www.w3.org/2004/02/skos/core#definition> "Relates two qualifications or one qualification and a standard name to each other."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "positioned"@en .
 
@@ -371,8 +377,8 @@
                    owl:inverseOf :standardNames ;
                    rdfs:domain :StandardName ;
                    rdfs:range :StandardNameTable ;
+                   <http://www.w3.org/2004/02/skos/core#changeNote> "v2.0.0: Declared as subproperty of skos:inScheme."@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Points to the ssno:StandardNameTable defining the ssno:StandardName."@en ;
-                   <http://www.w3.org/2004/02/skos/core#editorialNote> "v2.0.0: Declared as subproperty of skos:inScheme."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table"@en .
 
 
@@ -406,7 +412,8 @@
 :unit rdf:type owl:ObjectProperty ,
                owl:FunctionalProperty ;
       rdfs:domain :StandardName ;
-      rdfs:range <http://qudt.org/schema/qudt/Unit> .
+      rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "unit"@en .
 
 
 ###  https://matthiasprobst.github.io/ssno#usesStandardNameTable
@@ -826,7 +833,7 @@
                                                                     "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices."@en ,
                                                                     "v2.0.0: Removed ssno:hasVersion and use schema:version instead."@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A standard name table holds a list of all available standard names used in a certain context (project, domain, ...) and gives further information about version and contact."@en ;
-                   <http://www.w3.org/2004/02/skos/core#editorialNote> "This class models concept schemes that capture a subset of the CF conventions’ standard names."@en ;
+                   <http://www.w3.org/2004/02/skos/core#editorialNote> "This class models the concept scheme that captures a subset of the CF conventions' standard names."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Name Table"@en ;
                    <http://www.w3.org/ns/dx/prof/isProfileOf> <https://cfconventions.org/> .
 
