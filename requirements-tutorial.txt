@@ -2,3 +2,4 @@
 xmltodict
 jupyterlab
 pandas
+ssnolib~=2.0.0
