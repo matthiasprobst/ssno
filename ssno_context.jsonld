@@ -71,7 +71,6 @@
     "had role" : {"@id" : "dcat:hadRole", "@type" : "dcat:Role"},
     "agent" : {"@id" : "prov:agent", "@type" : "prov:Agent"},
     "qualified attribution" : {"@id" : "prov:qualifiedAttribution", "@type" : "prov:Attribution"},
-    "mbox" : {"@id" : "foaf:mbox", "@type" : "owl:Thing"},
     "after" : {"@id" : "ssno:after"},
     "alias" : {"@id" : "ssno:alias", "@type" : "ssno:StandardName"},
     "associated with" : {"@id" : "ssno:associatedWith"},
@@ -107,6 +106,7 @@
     "standard name character" : {"@id" : "ssno:standardNameCharacter", "@type" : "xsd:string"},
     "keywords" : {"@id" : "schema:keywords", "@type" : "xsd:string"},
     "name" : {"@id" : "schema:name", "@type" : "xsd:string"},
+    "version" : {"@id" : "schema:version"},
     "Any Standard Name" : {"@id" : "ssno:AnyStandardName"},
     "any unit" : {"@id" : "ssno:AnyUnit"},
     "KIT" : {"@id" : "<https://ror.org/04t3en479>"}
