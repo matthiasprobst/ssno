@@ -16,6 +16,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pims-ii: <http://www.molmod.info/semantics/pims-ii.ttl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -323,7 +324,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                                                  m4i:NumericalVariable
                                                  pims-ii:Property
                                                  pims-ii:QuantityValue
-                                                 <http://www.w3.org/ns/sosa/ObservableProperty>
+                                                 sosa:ObservableProperty
                                                )
                                  ] ;
                      rdfs:range ssno:StandardName ;
