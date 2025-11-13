@@ -16,11 +16,10 @@
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pims-ii: <http://www.molmod.info/semantics/pims-ii.ttl#> .
-@prefix soas: <http://www.w3.org/ns/sosa/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/2.1.0> ;
+                                          owl:versionIRI <https://matthiasprobst.github.io/ssno/2.2.0> ;
                                           dcterms:abstract "This is an ontology draft for the usage of standard names as a simple way of describing complex data. It is motivated by the [cf-conventions](http://cfconventions.org/), which introduced the concept of standard names originally. However, SSNO may (at this stage) not cover all aspects of the original, therefore it is called \"simple\". With this ontology, its usage shall be applicable to other research topics, too. The core idea is to provide the class StandardName and StandardNameTable with a minimal set of properties. The rules of standard name construction is defined in a document associated with the standard name table. The table contains all standard names defied by a project or community. Instances of StandardName and StandardNameTable can be used e.g. in combinations with other ontologies like [metadata4ing](https://nfdi4ing.pages.rwth-aachen.de/metadata4ing/metadata4ing/) for a concise description of a numerical variable."@en ;
                                           dcterms:created "2024-01-15" ;
                                           dcterms:creator <https://orcid.org/0000-0001-8729-0482> ;
@@ -31,7 +30,7 @@
                                           vann:preferredNamespacePrefix "ssno" ;
                                           vann:preferredNamespaceUri "https://matthiasprobst.github.io/ssno#" ;
                                           rdfs:label "ssno" ;
-                                          owl:versionInfo "v2.1.0" .
+                                          owl:versionInfo "v2.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -324,7 +323,7 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                                                  m4i:NumericalVariable
                                                  pims-ii:Property
                                                  pims-ii:QuantityValue
-                                                 soas:ObservableProperty
+                                                 <http://www.w3.org/ns/sosa/ObservableProperty>
                                                )
                                  ] ;
                      rdfs:range ssno:StandardName ;
@@ -731,6 +730,12 @@ prov:Organization rdf:type owl:Class ;
 prov:Person rdf:type owl:Class ;
             rdfs:subClassOf prov:Agent ;
             skos:prefLabel "Person"@en .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               skos:definition "Observable Property - An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                               skos:prefLabel "Observable Property"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent
