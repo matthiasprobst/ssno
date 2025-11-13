@@ -16,6 +16,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pims-ii: <http://www.molmod.info/semantics/pims-ii.ttl#> .
+@prefix soas: <http://www.w3.org/ns/sosa/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -323,10 +324,11 @@ ssno:hasStandardName rdf:type owl:ObjectProperty ;
                                                  m4i:NumericalVariable
                                                  pims-ii:Property
                                                  pims-ii:QuantityValue
+                                                 soas:ObservableProperty
                                                )
                                  ] ;
                      rdfs:range ssno:StandardName ;
-                     skos:definition "Points to a ssno:StandardName associated with the Concept. The Concept should is expected to be describing a numerical quantity because a ssno:StandardName defines and describe a numerical quantity by providing a description and expected canonical unit."@en ;
+                     skos:definition "Links an entity that describes a numerical quantity to its ssno:StandardName. A ssno:StandardName defines that quantity by providing a textual description and an expected canonical unit."@en ;
                      skos:prefLabel "has standard name"@en .
 
 
