@@ -49,6 +49,7 @@
     "Attribution" : {"@id" : "prov:Attribution"},
     "Organization" : {"@id" : "prov:Organization"},
     "Person" : {"@id" : "prov:Person"},
+    "Observable Property" : {"@id" : "sosa:ObservableProperty"},
     "Character" : {"@id" : "ssno:Character"},
     "Domain Concept Set" : {"@id" : "ssno:DomainConceptSet"},
     "Qualification" : {"@id" : "ssno:Qualification"},
