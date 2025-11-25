@@ -375,11 +375,12 @@
                          rdfs:domain :StandardNameTable ;
                          rdfs:range [ rdf:type owl:Class ;
                                       owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#File>
-                                                    <http://www.w3.org/ns/dcat#Dataset>
+                                                    <http://www.w3.org/ns/dcat#Resource>
                                                     <https://schema.org/Project>
                                                   )
                                     ] ;
-                         <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en ;
+                         <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en ,
+                                                                          "v2.2.0: ssno:standardNameTableUsedBy loosened range to dcat:Resource"@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "Points to a concept, which uses a standard name table."@en ;
                          <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
 
@@ -405,12 +406,13 @@
                        rdfs:subPropertyOf <http://purl.org/dc/terms/relation> ;
                        rdfs:domain [ rdf:type owl:Class ;
                                      owl:unionOf ( <http://purl.allotrope.org/ontologies/hdf5/1.8#File>
-                                                   <http://www.w3.org/ns/dcat#Dataset>
+                                                   <http://www.w3.org/ns/dcat#Resource>
                                                    <https://schema.org/Project>
                                                  )
                                    ] ;
                        rdfs:range :StandardNameTable ;
-                       <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"@en ;
+                       <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"@en ,
+                                                                        "v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource"@en ;
                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .
 
@@ -680,12 +682,18 @@
 
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class ;
-                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    rdfs:subClassOf <http://www.w3.org/ns/dcat#Resource> ,
+                                                    [ rdf:type owl:Restriction ;
                                                       owl:onProperty :usesStandardNameTable ;
                                                       owl:someValuesFrom :StandardNameTable
                                                     ] ;
                                     owl:disjointWith <https://schema.org/Project> ;
                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+<http://www.w3.org/ns/dcat#Resource> rdf:type owl:Class ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Resource"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Role

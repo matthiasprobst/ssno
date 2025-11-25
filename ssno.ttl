@@ -11,12 +11,12 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssno: <https://matthiasprobst.github.io/ssno#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix schema: <https://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix pims-ii: <http://www.molmod.info/semantics/pims-ii.ttl#> .
-@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <https://matthiasprobst.github.io/ssno#> rdf:type owl:Ontology ;
@@ -388,11 +388,12 @@ ssno:standardNameTableUsedBy rdf:type owl:ObjectProperty ;
                              rdfs:domain ssno:StandardNameTable ;
                              rdfs:range [ rdf:type owl:Class ;
                                           owl:unionOf ( hdf5:File
-                                                        dcat:Dataset
+                                                        dcat:Resource
                                                         schema:Project
                                                       )
                                         ] ;
-                             skos:changeNote "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en ;
+                             skos:changeNote "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en ,
+                                             "v2.2.0: ssno:standardNameTableUsedBy loosened range to dcat:Resource"@en ;
                              skos:definition "Points to a concept, which uses a standard name table."@en ;
                              skos:prefLabel "standard name table used by"@en .
 
@@ -418,12 +419,13 @@ ssno:usesStandardNameTable rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf dcterms:relation ;
                            rdfs:domain [ rdf:type owl:Class ;
                                          owl:unionOf ( hdf5:File
-                                                       dcat:Dataset
+                                                       dcat:Resource
                                                        schema:Project
                                                      )
                                        ] ;
                            rdfs:range ssno:StandardNameTable ;
-                           skos:changeNote "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"@en ;
+                           skos:changeNote "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"@en ,
+                                           "v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource"@en ;
                            skos:definition "Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en ;
                            skos:prefLabel "uses standard name table"@en .
 
@@ -693,12 +695,18 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
+             rdfs:subClassOf dcat:Resource ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty ssno:usesStandardNameTable ;
                                owl:someValuesFrom ssno:StandardNameTable
                              ] ;
              owl:disjointWith schema:Project ;
              skos:prefLabel "Dataset"@en .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class ;
+              skos:prefLabel "Resource"@en .
 
 
 ###  http://www.w3.org/ns/dcat#Role
@@ -734,9 +742,9 @@ prov:Person rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/sosa/ObservableProperty
-<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
-                                               skos:definition "Observable Property - An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-                                               skos:prefLabel "Observable Property"@en .
+sosa:ObservableProperty rdf:type owl:Class ;
+                        skos:definition "Observable Property - An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                        skos:prefLabel "Observable Property"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Agent

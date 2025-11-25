@@ -374,12 +374,13 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Project> .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/dcat#Dataset> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/dcat#Resource> .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.allotrope.org/ontologies/hdf5/1.8#File> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"@en .
+<https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#changeNote> "v2.2.0: ssno:standardNameTableUsedBy loosened range to dcat:Resource"@en .
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#definition> "Points to a concept, which uses a standard name table."@en .
 <https://matthiasprobst.github.io/ssno#standardNameTableUsedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard name table used by"@en .
 # 
@@ -407,13 +408,14 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://schema.org/Project> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/dcat#Dataset> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/dcat#Resource> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.allotrope.org/ontologies/hdf5/1.8#File> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2000/01/rdf-schema#range> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#changeNote> "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"@en .
+<https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#changeNote> "v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource"@en .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#definition> "Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."@en .
 <https://matthiasprobst.github.io/ssno#usesStandardNameTable> <http://www.w3.org/2004/02/skos/core#prefLabel> "uses standard name table"@en .
 # 
@@ -677,12 +679,17 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Resource> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
 _:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://matthiasprobst.github.io/ssno#StandardNameTable> .
 _:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://matthiasprobst.github.io/ssno#usesStandardNameTable> .
 _:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2002/07/owl#disjointWith> <https://schema.org/Project> .
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dataset"@en .
+# 
+# http://www.w3.org/ns/dcat#Resource
+<http://www.w3.org/ns/dcat#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/dcat#Resource> <http://www.w3.org/2004/02/skos/core#prefLabel> "Resource"@en .
 # 
 # http://www.w3.org/ns/dcat#Role
 <http://www.w3.org/ns/dcat#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

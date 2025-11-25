@@ -75,7 +75,7 @@
     "@list" : [ {
       "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#File"
     }, {
-      "@id" : "http://www.w3.org/ns/dcat#Dataset"
+      "@id" : "http://www.w3.org/ns/dcat#Resource"
     }, {
       "@id" : "https://schema.org/Project"
     } ]
@@ -87,7 +87,7 @@
     "@list" : [ {
       "@id" : "http://purl.allotrope.org/ontologies/hdf5/1.8#File"
     }, {
-      "@id" : "http://www.w3.org/ns/dcat#Dataset"
+      "@id" : "http://www.w3.org/ns/dcat#Resource"
     }, {
       "@id" : "https://schema.org/Project"
     } ]
@@ -715,6 +715,8 @@
   "@id" : "http://www.w3.org/ns/dcat#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Resource"
+  }, {
     "@id" : "_:genid53"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
@@ -723,6 +725,13 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Dataset"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Resource"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat#Role",
@@ -1591,6 +1600,9 @@
   "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
     "@language" : "en",
     "@value" : "v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation"
+  }, {
+    "@language" : "en",
+    "@value" : "v2.2.0: ssno:standardNameTableUsedBy loosened range to dcat:Resource"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1645,6 +1657,9 @@
   "http://www.w3.org/2004/02/skos/core#changeNote" : [ {
     "@language" : "en",
     "@value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"
+  }, {
+    "@language" : "en",
+    "@value" : "v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",

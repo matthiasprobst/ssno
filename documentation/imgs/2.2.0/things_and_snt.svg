@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.3190696"
-     inkscape:cx="244.86957"
-     inkscape:cy="123.19289"
+     inkscape:zoom="0.93272306"
+     inkscape:cx="470.12883"
+     inkscape:cy="-11.257361"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -83,21 +83,21 @@
     <ellipse
        style="fill:none;stroke:#000000;stroke-width:0.332596;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.997786, 0.997786;stroke-dashoffset:0"
        id="path1-9-7-3-6"
-       cx="80.495026"
-       cy="13.297555"
-       rx="15.769724"
-       ry="7.3104286" />
+       cx="81.202324"
+       cy="13.247409"
+       ry="7.3104286"
+       rx="15.580134" />
     <text
        xml:space="preserve"
        style="font-size:4.0576px;line-height:1.25;font-family:sans-serif;stroke-width:0.2536"
-       x="67.121307"
-       y="14.558408"
+       x="66.469383"
+       y="14.508262"
        id="text1-9-36"><tspan
          sodipodi:role="line"
          id="tspan1-7-2"
          style="font-size:4.0576px;stroke-width:0.2536"
-         x="67.121307"
-         y="14.558408">dcat:Dataset</tspan></text>
+         x="66.469383"
+         y="14.508262">dcat:Resource</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.479244;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker5-3-0)"
        d="m 24.396146,20.607992 c 1.943081,20.075911 12.814241,29.668485 33.311735,30.012321"

@@ -44,6 +44,7 @@
     "quantity value" : {"@id" : "pims-ii:QuantityValue"},
     "Variable" : {"@id" : "pims-ii:Variable"},
     "Dataset" : {"@id" : "dcat:Dataset"},
+    "Resource" : {"@id" : "dcat:Resource"},
     "Role" : {"@id" : "dcat:Role"},
     "Agent" : {"@id" : "prov:Agent"},
     "Attribution" : {"@id" : "prov:Attribution"},

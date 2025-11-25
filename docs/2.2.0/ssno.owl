@@ -608,12 +608,13 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Resource"/>
                     <rdf:Description rdf:about="https://schema.org/Project"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
         <skos:changeNote xml:lang="en">v1.5.0: ssno:standardNameTableUsedBy is subtype of dcterms:relation</skos:changeNote>
+        <skos:changeNote xml:lang="en">v2.2.0: ssno:standardNameTableUsedBy loosened range to dcat:Resource</skos:changeNote>
         <skos:definition xml:lang="en">Points to a concept, which uses a standard name table.</skos:definition>
         <skos:prefLabel xml:lang="en">standard name table used by</skos:prefLabel>
     </owl:ObjectProperty>
@@ -653,13 +654,14 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.allotrope.org/ontologies/hdf5/1.8#File"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+                    <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Resource"/>
                     <rdf:Description rdf:about="https://schema.org/Project"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:changeNote xml:lang="en">v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation</skos:changeNote>
+        <skos:changeNote xml:lang="en">v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource</skos:changeNote>
         <skos:definition xml:lang="en">Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
     </owl:ObjectProperty>
@@ -1087,6 +1089,7 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://matthiasprobst.github.io/ssno#usesStandardNameTable"/>
@@ -1095,6 +1098,15 @@
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://schema.org/Project"/>
         <skos:prefLabel xml:lang="en">Dataset</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Resource -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Resource">
+        <skos:prefLabel xml:lang="en">Resource</skos:prefLabel>
     </owl:Class>
     
 
