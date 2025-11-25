@@ -222,7 +222,7 @@ def create_version(*,
 
 
 if __name__ == "__main__":
-    prev_version_string = 'v2.2.0'
+    prev_version_string = 'v2.1.0'
     version_string = 'v2.2.0'
     img_version_string = 'v2.2.0'
     doi_url = "https://doi.org/10.5281/zenodo.17604194"

@@ -10,3 +10,4 @@ __pycache__/*
 *.pyc
 widoco.jar
 build_onto_doc_tmp.bat
+*.jar

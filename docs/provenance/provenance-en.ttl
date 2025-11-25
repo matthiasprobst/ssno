@@ -10,6 +10,6 @@
 	 dc:contributor <https://orcid.org/0000-0001-9560-500X>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://matthiasprobst.github.io/ssno/2.2.0>;
-	 prov:wasRevisionOf <https://matthiasprobst.github.io/ssno/2.2.0>;
+	 prov:wasRevisionOf <https://matthiasprobst.github.io/ssno/2.1.0>;
 	 prov:wasGeneratedAt "2024-04-02";
 .
