@@ -1659,11 +1659,11 @@
     "@value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation"
   }, {
     "@language" : "en",
-    "@value" : "v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource"
+    "@value" : "v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file."
+    "@value" : "Relates an HDF5 file, a DCAT Resource or a schem Project to a standard name table which is associated to the standard names used in the file."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",

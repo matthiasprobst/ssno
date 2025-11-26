@@ -661,8 +661,8 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://matthiasprobst.github.io/ssno#StandardNameTable"/>
         <skos:changeNote xml:lang="en">v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation</skos:changeNote>
-        <skos:changeNote xml:lang="en">v2.2.0: ssno:standardNameTableUsedBy loosened domain to dcat:Resource</skos:changeNote>
-        <skos:definition xml:lang="en">Relates a thing, e.g. an HDF5 file or another resource to a standard name table which is associated to the standard names used in the file.</skos:definition>
+        <skos:changeNote xml:lang="en">v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource</skos:changeNote>
+        <skos:definition xml:lang="en">Relates an HDF5 file, a DCAT Resource or a schem Project to a standard name table which is associated to the standard names used in the file.</skos:definition>
         <skos:prefLabel xml:lang="en">uses standard name table</skos:prefLabel>
     </owl:ObjectProperty>
     
