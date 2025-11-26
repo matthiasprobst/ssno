@@ -152,13 +152,13 @@
     "id" : "60",
     "type" : "owl:unionOf"
   }, {
-    "id" : "11",
+    "id" : "13",
     "type" : "owl:unionOf"
   }, {
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:unionOf"
   }, {
     "id" : "27",
@@ -575,7 +575,7 @@
     "instances" : 0,
     "union" : [ "56", "58", "2", "59" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "11"
+    "id" : "13"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -610,7 +610,7 @@
     "instances" : 0,
     "union" : [ "48", "8", "9" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "13"
+    "id" : "11"
   }, {
     "instances" : 0,
     "union" : [ "48", "64" ],
@@ -658,12 +658,12 @@
       }, {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices.",
+        "value" : "v2.0.0: Removed ssno:hasVersion and use schema:version instead.",
         "type" : "label"
       }, {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v2.0.0: Removed ssno:hasVersion and use schema:version instead.",
+        "value" : "v2.0.0: Modelled as skos:ConceptScheme to better align with SKOS best practices.",
         "type" : "label"
       } ],
       "definition" : [ {
@@ -1582,10 +1582,10 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "130",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "131",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "132",
     "type" : "owl:disjointWith"
@@ -1627,33 +1627,9 @@
     "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
-    "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "11",
-    "annotations" : {
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "is standard name of",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Points to a Concept, that describes a numerical variable, which uses the standard name.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isStandardNameOf"
-    },
-    "domain" : "9",
-    "attributes" : [ "object" ],
-    "id" : "10"
-  }, {
     "iri" : "https://matthiasprobst.github.io/ssno#associatedWith",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
-    "range" : "13",
+    "range" : "11",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -1672,6 +1648,30 @@
       "IRI-based" : "associatedWith"
     },
     "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://matthiasprobst.github.io/ssno#isStandardNameOf",
+    "baseIri" : "https://matthiasprobst.github.io/ssno",
+    "range" : "13",
+    "annotations" : {
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "is standard name of",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Points to a Concept, that describes a numerical variable, which uses the standard name.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isStandardNameOf"
+    },
+    "domain" : "9",
     "attributes" : [ "object" ],
     "id" : "12"
   }, {
@@ -1724,7 +1724,7 @@
     "comment" : {
       "undefined" : "Relation between collection and the members of it. [Allotrope]"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasModifier",
@@ -1789,18 +1789,18 @@
       "changeNote" : [ {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource",
+        "value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation",
         "type" : "label"
       }, {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation",
+        "value" : "v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource",
         "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relates an HDF5 file, a DCAT Resource or a schem Project to a standard name table which is associated to the standard names used in the file.",
+        "value" : "Relates an HDF5 file, a DCAT Resource or a schema Project to a standard name table which is associated to the standard names used in the file.",
         "type" : "label"
       } ]
     },
@@ -1913,7 +1913,7 @@
       "IRI-based" : "hadRole"
     },
     "domain" : "46",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "45"
   }, {
     "iri" : "https://schema.org/version",
@@ -1986,7 +1986,7 @@
     },
     "domain" : "4",
     "subproperty" : [ "71" ],
-    "attributes" : [ "external", "object", "key" ],
+    "attributes" : [ "object", "key", "external" ],
     "id" : "69"
   }, {
     "range" : "41",
@@ -2015,7 +2015,7 @@
       "IRI-based" : "qualifiedAttribution"
     },
     "domain" : "50",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "73"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#standardNameCharacter",
@@ -2153,7 +2153,7 @@
     },
     "domain" : "19",
     "subproperty" : [ "42" ],
-    "attributes" : [ "transitive", "symmetric", "external", "object" ],
+    "attributes" : [ "transitive", "symmetric", "object", "external" ],
     "id" : "43"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#longName",
@@ -2181,7 +2181,7 @@
     "id" : "91"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#hasStandardName",
-    "inverse" : "10",
+    "inverse" : "12",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
     "range" : "9",
     "annotations" : {
@@ -2221,7 +2221,7 @@
     },
     "domain" : "19",
     "subproperty" : [ "67", "95", "96", "25", "34" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "28"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasStringValue",
@@ -2294,7 +2294,7 @@
       "IRI-based" : "agent"
     },
     "domain" : "46",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "102"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#dataset",
@@ -2557,7 +2557,7 @@
       "IRI-based" : "notation"
     },
     "domain" : "19",
-    "attributes" : [ "datatype", "external", "key" ],
+    "attributes" : [ "datatype", "key", "external" ],
     "id" : "119"
   }, {
     "range" : "77",
@@ -2625,7 +2625,7 @@
     "attributes" : [ "datatype" ],
     "id" : "127"
   }, {
-    "range" : "30",
+    "range" : "50",
     "domain" : "51",
     "attributes" : [ "anonymous", "object" ],
     "id" : "128"
@@ -2634,6 +2634,11 @@
     "domain" : "4",
     "attributes" : [ "anonymous", "object" ],
     "id" : "129"
+  }, {
+    "range" : "30",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "130"
   }, {
     "iri" : "https://matthiasprobst.github.io/ssno#usesStandardNameTable",
     "baseIri" : "https://matthiasprobst.github.io/ssno",
@@ -2648,18 +2653,18 @@
       "changeNote" : [ {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource",
+        "value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation",
         "type" : "label"
       }, {
         "identifier" : "changeNote",
         "language" : "en",
-        "value" : "v1.5.0: ssno:usesStandardNameTable is subtype of dcterms:relation",
+        "value" : "v2.2.0: ssno:usesStandardNameTable loosened domain to dcat:Resource",
         "type" : "label"
       } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
-        "value" : "Relates an HDF5 file, a DCAT Resource or a schem Project to a standard name table which is associated to the standard names used in the file.",
+        "value" : "Relates an HDF5 file, a DCAT Resource or a schema Project to a standard name table which is associated to the standard names used in the file.",
         "type" : "label"
       } ]
     },
@@ -2668,12 +2673,7 @@
     },
     "superproperty" : [ "28" ],
     "domain" : "50",
-    "attributes" : [ "object", "someValues" ],
-    "id" : "130"
-  }, {
-    "range" : "30",
-    "domain" : "50",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "131"
   }, {
     "range" : "64",
@@ -2715,7 +2715,7 @@
     },
     "superproperty" : [ "69" ],
     "domain" : "26",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "135"
   }, {
     "iri" : "http://www.w3.org/ns/dcat#keyword",
@@ -2771,7 +2771,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {
-    "range" : "50",
+    "range" : "30",
     "domain" : "51",
     "attributes" : [ "anonymous", "object" ],
     "id" : "139"
@@ -2914,7 +2914,7 @@
       "undefined" : "root group"
     },
     "domain" : "51",
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "143"
   }, {
     "iri" : "http://w3id.org/nfdi4ing/metadata4ing#hasVariableDescription",
